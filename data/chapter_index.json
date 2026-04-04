@@ -1,0 +1,359 @@
+{
+  "project": "ソムリエPRO",
+  "version": "1.0",
+  "created_at": "2026-04-02T14:40:40.248292",
+  "total_chapters": 26,
+  "total_pages": 788,
+  "total_chars": 1637257,
+  "categories": [
+    {
+      "id": "FOUNDATION",
+      "title": "基礎概論",
+      "icon": "📚"
+    },
+    {
+      "id": "ASIA_OCEANIA",
+      "title": "アジア & オセアニア",
+      "icon": "🌏"
+    },
+    {
+      "id": "EUROPE_MAJOR",
+      "title": "ヨーロッパ大国",
+      "icon": "🏰"
+    },
+    {
+      "id": "AMERICAS",
+      "title": "アメリカ大陸",
+      "icon": "🌎"
+    },
+    {
+      "id": "EUROPE_MINOR",
+      "title": "ヨーロッパ小国・新興",
+      "icon": "🗺️"
+    },
+    {
+      "id": "AFRICA",
+      "title": "アフリカ",
+      "icon": "🌍"
+    },
+    {
+      "id": "PROFESSIONAL",
+      "title": "プロフェッショナル",
+      "icon": "🎓"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "ch00_wine_overview",
+      "number": 0,
+      "title": "ワイン概論",
+      "title_en": "Wine Overview",
+      "category": "FOUNDATION",
+      "icon": "🍇",
+      "description": "ワインの歴史、ブドウ栽培、醸造法の基礎",
+      "page_count": 34,
+      "char_count": 74119,
+      "file": "chapters/ch00_wine_overview.json"
+    },
+    {
+      "id": "ch01_spirits_overview",
+      "number": 1,
+      "title": "酒類飲料概論",
+      "title_en": "Spirits & Beverages Overview",
+      "category": "FOUNDATION",
+      "icon": "🥃",
+      "description": "日本酒、ビール、ウイスキー、ブランデー、スピリッツ、リキュール",
+      "page_count": 39,
+      "char_count": 84157,
+      "file": "chapters/ch01_spirits_overview.json"
+    },
+    {
+      "id": "ch02_beverages_overview",
+      "number": 2,
+      "title": "飲料概論",
+      "title_en": "Non-Alcoholic Beverages",
+      "category": "FOUNDATION",
+      "icon": "☕",
+      "description": "ミネラルウォーター、コーヒー、紅茶、日本茶",
+      "page_count": 10,
+      "char_count": 19711,
+      "file": "chapters/ch02_beverages_overview.json"
+    },
+    {
+      "id": "ch03_japan",
+      "number": 3,
+      "title": "日本",
+      "title_en": "Japan",
+      "category": "ASIA_OCEANIA",
+      "icon": "🇯🇵",
+      "description": "日本ワインの歴史、主要産地、品種、GI制度",
+      "page_count": 46,
+      "char_count": 91309,
+      "file": "chapters/ch03_japan.json"
+    },
+    {
+      "id": "ch04_australia_nz",
+      "number": 4,
+      "title": "オーストラリア & ニュージーランド",
+      "title_en": "Australia & New Zealand",
+      "category": "ASIA_OCEANIA",
+      "icon": "🇦🇺",
+      "description": "オーストラリアとニュージーランドのワイン産業",
+      "page_count": 45,
+      "char_count": 91108,
+      "file": "chapters/ch04_australia_nz.json"
+    },
+    {
+      "id": "ch05_france",
+      "number": 5,
+      "title": "フランス",
+      "title_en": "France",
+      "category": "EUROPE_MAJOR",
+      "icon": "🇫🇷",
+      "description": "ボルドー、ブルゴーニュ、シャンパーニュ、ローヌ、ロワール、アルザス等",
+      "page_count": 121,
+      "char_count": 260851,
+      "file": "chapters/ch05_france.json"
+    },
+    {
+      "id": "ch06_italy",
+      "number": 6,
+      "title": "イタリア",
+      "title_en": "Italy",
+      "category": "EUROPE_MAJOR",
+      "icon": "🇮🇹",
+      "description": "ピエモンテ、トスカーナ、ヴェネト、シチリア等",
+      "page_count": 66,
+      "char_count": 140154,
+      "file": "chapters/ch06_italy.json"
+    },
+    {
+      "id": "ch07_spain",
+      "number": 7,
+      "title": "スペイン",
+      "title_en": "Spain",
+      "category": "EUROPE_MAJOR",
+      "icon": "🇪🇸",
+      "description": "リオハ、リベラ・デル・ドゥエロ、カバ、シェリー等",
+      "page_count": 39,
+      "char_count": 76859,
+      "file": "chapters/ch07_spain.json"
+    },
+    {
+      "id": "ch08_germany",
+      "number": 8,
+      "title": "ドイツ",
+      "title_en": "Germany",
+      "category": "EUROPE_MAJOR",
+      "icon": "🇩🇪",
+      "description": "モーゼル、ラインガウ、ファルツ、リースリング",
+      "page_count": 33,
+      "char_count": 70287,
+      "file": "chapters/ch08_germany.json"
+    },
+    {
+      "id": "ch09_portugal",
+      "number": 9,
+      "title": "ポルトガル",
+      "title_en": "Portugal",
+      "category": "EUROPE_MAJOR",
+      "icon": "🇵🇹",
+      "description": "ポート、マデイラ、ヴィーニョ・ヴェルデ、ドウロ",
+      "page_count": 23,
+      "char_count": 45957,
+      "file": "chapters/ch09_portugal.json"
+    },
+    {
+      "id": "ch10_usa",
+      "number": 10,
+      "title": "アメリカ",
+      "title_en": "United States of America",
+      "category": "AMERICAS",
+      "icon": "🇺🇸",
+      "description": "カリフォルニア、オレゴン、ワシントン、ナパ・ヴァレー",
+      "page_count": 52,
+      "char_count": 112930,
+      "file": "chapters/ch10_usa.json"
+    },
+    {
+      "id": "ch11_chile",
+      "number": 11,
+      "title": "チリ",
+      "title_en": "Chile",
+      "category": "AMERICAS",
+      "icon": "🇨🇱",
+      "description": "セントラル・ヴァレー、カサブランカ、カルメネール",
+      "page_count": 17,
+      "char_count": 35186,
+      "file": "chapters/ch11_chile.json"
+    },
+    {
+      "id": "ch12_south_america",
+      "number": 12,
+      "title": "アルゼンチン & 南米",
+      "title_en": "Argentina & South America",
+      "category": "AMERICAS",
+      "icon": "🇦🇷",
+      "description": "アルゼンチン（メンドーサ、マルベック）、ウルグアイ（タナ）",
+      "page_count": 18,
+      "char_count": 34834,
+      "file": "chapters/ch12_south_america.json"
+    },
+    {
+      "id": "ch13_canada",
+      "number": 13,
+      "title": "カナダ",
+      "title_en": "Canada",
+      "category": "AMERICAS",
+      "icon": "🇨🇦",
+      "description": "アイスワイン、オンタリオ、ブリティッシュ・コロンビア",
+      "page_count": 17,
+      "char_count": 34698,
+      "file": "chapters/ch13_canada.json"
+    },
+    {
+      "id": "ch14_austria",
+      "number": 14,
+      "title": "オーストリア",
+      "title_en": "Austria",
+      "category": "EUROPE_MINOR",
+      "icon": "🇦🇹",
+      "description": "グリューナー・ヴェルトリーナー、ヴァッハウ",
+      "page_count": 25,
+      "char_count": 54151,
+      "file": "chapters/ch14_austria.json"
+    },
+    {
+      "id": "ch15_hungary",
+      "number": 15,
+      "title": "ハンガリー",
+      "title_en": "Hungary",
+      "category": "EUROPE_MINOR",
+      "icon": "🇭🇺",
+      "description": "トカイ（貴腐ワイン）、エゲル（ビカヴェール）",
+      "page_count": 28,
+      "char_count": 57927,
+      "file": "chapters/ch15_hungary.json"
+    },
+    {
+      "id": "ch16_central_eastern_europe",
+      "number": 16,
+      "title": "中欧・東欧",
+      "title_en": "Central & Eastern Europe",
+      "category": "EUROPE_MINOR",
+      "icon": "🌍",
+      "description": "スロヴェニア、クロアチア、ブルガリア、ルーマニア、モルドバ、ルクセンブルク",
+      "page_count": 35,
+      "char_count": 70168,
+      "file": "chapters/ch16_central_eastern_europe.json"
+    },
+    {
+      "id": "ch17_greece_georgia",
+      "number": 17,
+      "title": "ギリシャ & ジョージア",
+      "title_en": "Greece & Georgia",
+      "category": "EUROPE_MINOR",
+      "icon": "🇬🇷",
+      "description": "ワイン発祥の地。クヴェヴリ醸造、レツィーナ",
+      "page_count": 31,
+      "char_count": 61104,
+      "file": "chapters/ch17_greece_georgia.json"
+    },
+    {
+      "id": "ch18_switzerland_uk",
+      "number": 18,
+      "title": "スイス & 英国",
+      "title_en": "Switzerland & United Kingdom",
+      "category": "EUROPE_MINOR",
+      "icon": "🇨🇭",
+      "description": "スイスのシャスラ、英国のスパークリングワイン",
+      "page_count": 24,
+      "char_count": 51428,
+      "file": "chapters/ch18_switzerland_uk.json"
+    },
+    {
+      "id": "ch19_south_africa",
+      "number": 19,
+      "title": "南アフリカ",
+      "title_en": "South Africa",
+      "category": "AFRICA",
+      "icon": "🇿🇦",
+      "description": "ステレンボッシュ、ピノタージュ、ケープ・ワインランド",
+      "page_count": 12,
+      "char_count": 24331,
+      "file": "chapters/ch19_south_africa.json"
+    },
+    {
+      "id": "ch20_tasting",
+      "number": 20,
+      "title": "テイスティング",
+      "title_en": "Wine Tasting",
+      "category": "PROFESSIONAL",
+      "icon": "👃",
+      "description": "テイスティング技法、外観・香り・味わいの評価",
+      "page_count": 11,
+      "char_count": 23905,
+      "file": "chapters/ch20_tasting.json"
+    },
+    {
+      "id": "ch21_cheese",
+      "number": 21,
+      "title": "チーズ",
+      "title_en": "Cheese",
+      "category": "PROFESSIONAL",
+      "icon": "🧀",
+      "description": "チーズの分類、製法、ワインとの組み合わせ",
+      "page_count": 19,
+      "char_count": 41907,
+      "file": "chapters/ch21_cheese.json"
+    },
+    {
+      "id": "ch22_pairing",
+      "number": 22,
+      "title": "料理とワインの相性",
+      "title_en": "Food & Wine Pairing",
+      "category": "PROFESSIONAL",
+      "icon": "🍽️",
+      "description": "ペアリングの基本原則、相性の科学",
+      "page_count": 6,
+      "char_count": 9788,
+      "file": "chapters/ch22_pairing.json"
+    },
+    {
+      "id": "ch23_wine_management",
+      "number": 23,
+      "title": "ワインの購入・保管・熟成・販売",
+      "title_en": "Wine Management",
+      "category": "PROFESSIONAL",
+      "icon": "📦",
+      "description": "ワインの購入、保管条件、セラー管理、販売",
+      "page_count": 17,
+      "char_count": 33826,
+      "file": "chapters/ch23_wine_management.json"
+    },
+    {
+      "id": "ch24_sommelier",
+      "number": 24,
+      "title": "ソムリエの職責とサービス実技",
+      "title_en": "Sommelier Duties & Service",
+      "category": "PROFESSIONAL",
+      "icon": "🎩",
+      "description": "ソムリエの役割、サービス手順、デキャンタージュ",
+      "page_count": 13,
+      "char_count": 18184,
+      "file": "chapters/ch24_sommelier.json"
+    },
+    {
+      "id": "ch25_jsa_exam",
+      "number": 25,
+      "title": "J.S.A.呼称資格認定試験",
+      "title_en": "J.S.A. Certification Exam",
+      "category": "PROFESSIONAL",
+      "icon": "📝",
+      "description": "試験概要、出題傾向、合格基準",
+      "page_count": 7,
+      "char_count": 18378,
+      "file": "chapters/ch25_jsa_exam.json"
+    }
+  ]
+}

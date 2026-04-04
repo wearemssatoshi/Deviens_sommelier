@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界のワインを体系的に学べるアプリ Deviens sommelier</title>
+    <meta name="description" content="全26章のプロフェッショナル・ワイン知識ナレッジベース。世界のワイン産地を体系的に学ぶ。">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FFFFFF">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3.0">
+    <link rel="icon" href="assets/img/app_icon_512.png">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <button class="hamburger" id="hamburgerBtn" aria-label="メニュー">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="header-brand">
+                <span class="brand-text">Deviens <span class="brand-accent">sommelier</span></span>
+            </div>
+            <nav class="header-nav" id="categoryNav"></nav>
+            <div class="header-search">
+                <input type="text" id="searchInput" placeholder="キーワードで検索" autocomplete="off">
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="mobile-menu-overlay hidden" id="mobileMenuOverlay">
+        <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+        <div class="mobile-menu-panel" id="mobileMenuPanel">
+            <div class="mobile-menu-header">
+                <span class="brand-text">Deviens <span class="brand-accent">sommelier</span></span>
+                <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+            </div>
+            <nav class="mobile-menu-nav" id="mobileMenuNav"></nav>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <p class="hero-kicker">WINE KNOWLEDGE PLATFORM</p>
+            <h1 class="hero-title">世界のワインを体系的に学べるアプリ Deviens sommelier</h1>
+            <p class="hero-desc">全26チャプターで、各国のワイン産地・品種・<br>歴史・醸造法を体系的に凝縮。</p>
+            <div class="hero-meta">
+                <span class="hero-meta-item"><strong>26</strong> Chapters</span>
+                <span class="hero-meta-sep">|</span>
+                <span class="hero-meta-item"><strong>7</strong> Categories</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPTERS -->
+    <main class="chapters" id="chapters">
+        <!-- Featured (first card large) -->
+        <div class="featured" id="featuredCard"></div>
+        
+        <!-- Grid -->
+        <div class="grid" id="chapterGrid"></div>
+    </main>
+
+    <!-- CHAPTER DETAIL (side peek) -->
+    <div class="detail-overlay hidden" id="detailOverlay">
+        <div class="detail-backdrop" id="detailBackdrop"></div>
+        <div class="detail-panel">
+            <button class="detail-close" id="detailClose">✕</button>
+            <div class="detail-hero" id="detailHero"></div>
+            <div class="detail-body" id="detailBody"></div>
+        </div>
+    </div>
+
+    <!-- QUIZ UI (Full Screen Overlay) -->
+    <div class="quiz-overlay hidden" id="quizOverlay">
+        <div class="quiz-container">
+            <button class="quiz-close" id="quizClose">✕</button>
+            
+            <!-- Loading State -->
+            <div class="quiz-state hidden" id="quizStateLoading">
+                <div class="quiz-spinner"></div>
+                <h2>クイズを生成中...</h2>
+                <p>Gemini AIがナレッジベースから10問を一括生成しています</p>
+            </div>
+
+            <!-- Question State -->
+            <div class="quiz-state hidden" id="quizStateQuestion">
+                <div class="quiz-progress" id="quizProgress">問題 1 / 10</div>
+                <h2 class="quiz-question-text" id="quizQuestionText">問題文がここに表示されます</h2>
+                <div class="quiz-choices" id="quizChoices">
+                    <!-- Buttons inserted here dynamically -->
+                </div>
+            </div>
+
+            <!-- Results State -->
+            <div class="quiz-state hidden" id="quizStateResults">
+                <h2 class="quiz-score-title">スコア</h2>
+                <div class="quiz-score-number" id="quizScoreNumber">0 / 10</div>
+                <div class="quiz-results-list" id="quizResultsList">
+                    <!-- Result items inserted here -->
+                </div>
+                <button class="quiz-btn-primary" id="quizRetryBtn">もう一度挑戦する</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI CONCIERGE -->
+    <div class="ai-concierge" id="aiConcierge">
+        <div class="ai-panel" id="aiPanel">
+            <div class="ai-panel-header">
+                <div class="ai-panel-title">
+                    <span class="ai-panel-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                    </span>
+                    <span>Sommelier AI</span>
+                </div>
+                <button class="ai-panel-close" id="aiClose">✕</button>
+            </div>
+            <div class="ai-panel-body" id="aiBody">
+                <div class="ai-welcome">
+                    <div class="ai-welcome-icon">📚</div>
+                    <div class="ai-welcome-title">AI Wine Concierge</div>
+                    <div class="ai-welcome-desc">プロフェッショナル・ワイン知識に基づいて<br>正確にお答えします</div>
+                    <div class="ai-suggestions">
+                        <button class="ai-suggestion" data-q="フランスのA.O.C.制度とは？">フランスのA.O.C.制度とは？</button>
+                        <button class="ai-suggestion" data-q="ピノ・ノワールの特徴を教えて">ピノ・ノワールの特徴は？</button>
+                        <button class="ai-suggestion" data-q="マロラクティック発酵とは何ですか？">マロラクティック発酵とは？</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-panel-input">
+                <input type="text" id="aiInput" placeholder="ワインの知識について質問..." autocomplete="off">
+                <button class="ai-send" id="aiSend">→</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION BAR -->
+    <nav class="bottom-nav" id="bottomNav">
+        <button class="bottom-nav-item active" id="navHome" data-nav="home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>ホーム</span>
+        </button>
+        <button class="bottom-nav-item" id="navQuiz" data-nav="quiz">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            <span>クイズ</span>
+        </button>
+        <button class="bottom-nav-item" id="navAi" data-nav="ai">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+            <span>AI</span>
+        </button>
+        <button class="bottom-nav-item" id="navDash" data-nav="dash">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            <span>進捗</span>
+        </button>
+    </nav>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-brand">Deviens sommelier</span>
+            <span class="footer-copy">SVD Wine Knowledge Platform</span>
+        </div>
+    </footer>
+
+    <!-- DASHBOARD OVERLAY -->
+    <div class="dash-overlay hidden" id="dashOverlay">
+        <div class="dash-container">
+            <button class="dash-close" id="dashClose" onclick="document.getElementById('dashOverlay').classList.add('hidden')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <div class="dash-body" id="dashBody">
+                <div class="dash-loading">
+                    <div class="quiz-spinner"></div>
+                    <p>学習データを分析中...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js?v=2.0"></script>
+    <script src="ai_concierge.js?v=2.0"></script>
+    <script src="quiz_generator.js?v=3.0"></script>
+    <script src="dashboard.js?v=2.0"></script>
+</body>
+</html>
