@@ -127,14 +127,16 @@ function handleSaveResult(params) {
   const detailsJson = JSON.stringify(params.details || []);
   const timestamp = getJSTTimestamp();
 
-  // UPSERT
+  // UPSERT (Extraセッションは上書きせずAPPENDして成長履歴を残す)
   const data = sheet.getDataRange().getValues();
   let existingRow = -1;
-  for (let i = 1; i < data.length; i++) {
-    const rowDateStr = data[i][0] instanceof Date ? Utilities.formatDate(data[i][0], 'Asia/Tokyo', 'yyyy-MM-dd') : String(data[i][0]);
-    if (rowDateStr === date && String(data[i][1]) === session) {
-      existingRow = i + 1;
-      break;
+  if (session !== 'extra') {
+    for (let i = 1; i < data.length; i++) {
+      const rowDateStr = data[i][0] instanceof Date ? Utilities.formatDate(data[i][0], 'Asia/Tokyo', 'yyyy-MM-dd') : String(data[i][0]);
+      if (rowDateStr === date && String(data[i][1]) === session) {
+        existingRow = i + 1;
+        break;
+      }
     }
   }
 
