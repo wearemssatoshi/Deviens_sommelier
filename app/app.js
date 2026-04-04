@@ -580,6 +580,16 @@ function showDetail(ch) {
 
     bodyEl.innerHTML = keyPointsHtml + keywordsHtml + overviewHtml + examTipsHtml + classTablesHtml + timelineHtml;
     
+    // Bind AI Concierge triggers to keywords
+    document.querySelectorAll('.detail-kw-tag').forEach(tag => {
+        tag.addEventListener('click', () => {
+            hideDetail();
+            document.dispatchEvent(new CustomEvent('open-ai-concierge', { 
+                detail: { initialPrompt: `「${tag.textContent}」というキーワードについて、ソムリエ試験対策の観点から詳しく深掘りして解説してください！` } 
+            }));
+        });
+    });
+
     overlay.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
     

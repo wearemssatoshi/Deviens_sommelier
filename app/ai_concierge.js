@@ -42,6 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Listen for custom trigger to open panel and inject prompt
+    document.addEventListener('open-ai-concierge', (e) => {
+        const concierge = document.getElementById('aiConcierge');
+        isAiOpen = true;
+        concierge.classList.add('open');
+        
+        // Update nav item state
+        document.querySelectorAll('.bottom-nav-item').forEach(i => i.classList.remove('active'));
+        document.getElementById('navAi')?.classList.add('active');
+
+        if (e.detail && e.detail.initialPrompt) {
+            document.getElementById('aiInput').value = e.detail.initialPrompt;
+            submitQuery();
+        }
+    });
+
     // Preload knowledge base in background
     preloadKnowledgeBase();
 });

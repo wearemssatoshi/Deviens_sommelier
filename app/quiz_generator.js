@@ -13,7 +13,8 @@
     const SESSIONS = [
         { id: 'morning', label: '朝テスト',   icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>', desc: '出勤前・午前中のスキマ時間に' },
         { id: 'break',   label: '休憩テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>', desc: '昼休み・休憩時間のリフレッシュに' },
-        { id: 'evening', label: '帰り道テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>', desc: '帰宅途中・夜のまとめに' }
+        { id: 'evening', label: '帰り道テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>', desc: '帰宅途中・夜のまとめに' },
+        { id: 'extra',   label: '補習（無制限）', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>', desc: '1日に何度でも反復練習' }
     ];
 
     // ========== DOM ELEMENTS ==========
@@ -29,7 +30,8 @@
         choicesBox: document.getElementById('quizChoices'),
         scoreNumber: document.getElementById('quizScoreNumber'),
         resultsList: document.getElementById('quizResultsList'),
-        retryBtn: document.getElementById('quizRetryBtn')
+        retryBtn: document.getElementById('quizRetryBtn'),
+        hallucinationBtn: document.getElementById('quizHallucinationBtn')
     };
 
     // ========== STATE ==========
@@ -63,6 +65,9 @@
         document.addEventListener('quiz:open', openQuiz);
         elements.closeBtn.addEventListener('click', closeQuiz);
         elements.retryBtn.addEventListener('click', resetAndRestart);
+        if (elements.hallucinationBtn) {
+            elements.hallucinationBtn.addEventListener('click', handleHallucinationCheck);
+        }
 
         // Restore user from localStorage
         const savedUser = localStorage.getItem('sommelier_quiz_user');
@@ -77,6 +82,15 @@
         } catch (e) {
             console.error("Failed to load chapters for quiz", e);
         }
+    }
+
+    // ========== HALLUCINATION CHECK ==========
+    function handleHallucinationCheck() {
+        const qText = quizState.questions.map((q, i) => `【第${i+1}問】\n問題: ${q.question}\n正解: ${q.choices[q.correct_index]}\n解説: ${q.explanation}`).join('\n\n');
+        const payload = `先ほど解いたクイズ（${quizState.selectedChapter?.title}）について、問題内容や解説に「事実の捏造（ハルシネーション）」や不適切な表現がないか精度検証をお願いします。\n\n${qText}`;
+        
+        closeQuiz();
+        document.dispatchEvent(new CustomEvent('open-ai-concierge', { detail: { initialPrompt: payload } }));
     }
 
     // ========== SETUP SCREEN ==========
@@ -219,7 +233,8 @@
 
         if (completedCount > 0) {
             const pct = Math.round((totalScore / totalQuestions) * 100);
-            html += `<div class="today-summary">${completedCount}/3 セッション完了 · 正答率 ${pct}%</div>`;
+            const mainCount = Math.min(3, SESSIONS.filter(s => s.id !== 'extra' && quizState.todayProgress[s.id]).length);
+            html += `<div class="today-summary">メイン ${mainCount}/3 セッション完了 · 全体正答率 ${pct}%</div>`;
         }
 
         container.innerHTML = html;
