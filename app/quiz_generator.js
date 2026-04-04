@@ -327,7 +327,8 @@
             const res = await fetch(`${GAS_URL}?action=getUsers`);
             const data = await res.json();
             if (data.status === 'success' && data.data.users.length > 0) {
-                container.innerHTML = data.data.users.map(u => {
+                const safeUsers = data.data.users.filter(u => !u.name.startsWith('AIza'));
+                container.innerHTML = safeUsers.map(u => {
                     const meta = typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[u.name] ? SOMMELIER_USERS[u.name] : null;
                     return `
                     <button class="quiz-user-card" data-uid="${u.user_id}" data-name="${u.name}">
