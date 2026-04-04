@@ -108,10 +108,18 @@
             <div class="quiz-setup-inner">
                 <div class="quiz-user-bar">
                     <span class="quiz-user-greeting">
-                        <span class="user-avatar-sm">${(quizState.currentUser?.name || '?').charAt(0)}</span>
-                        ${quizState.currentUser?.name || 'ゲスト'}
+                        ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[quizState.currentUser?.name]?.photo 
+                            ? `<img src="${SOMMELIER_USERS[quizState.currentUser?.name].photo}" alt="${quizState.currentUser?.name}" class="user-avatar-img">`
+                            : `<span class="user-avatar-sm">${(quizState.currentUser?.name || '?').charAt(0)}</span>`
+                        }
+                        <div class="user-card-info" style="gap:1px; line-height: 1.1;">
+                            <span style="font-weight:600; font-size:14px;">${quizState.currentUser?.name || 'ゲスト'}</span>
+                            ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[quizState.currentUser?.name]?.status 
+                                ? `<span class="user-status-badge" style="font-size:9px; padding: 1px 4px;">${SOMMELIER_USERS[quizState.currentUser?.name].status}</span>`
+                                : ''}
+                        </div>
                     </span>
-                    <button class="quiz-switch-user" id="quizSwitchUser">受講者を変更</button>
+                    <button class="quiz-switch-user" id="quizSwitchUser">変更</button>
                 </div>
 
                 <h2 class="quiz-setup-title">Deviens sommelier</h2>
@@ -319,12 +327,21 @@
             const res = await fetch(`${GAS_URL}?action=getUsers`);
             const data = await res.json();
             if (data.status === 'success' && data.data.users.length > 0) {
-                container.innerHTML = data.data.users.map(u => `
+                container.innerHTML = data.data.users.map(u => {
+                    const meta = typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[u.name] ? SOMMELIER_USERS[u.name] : null;
+                    return `
                     <button class="quiz-user-card" data-uid="${u.user_id}" data-name="${u.name}">
-                        <span class="user-avatar">${u.name.charAt(0)}</span>
-                        <span class="user-name">${u.name}</span>
+                        ${meta && meta.photo 
+                            ? `<img src="${meta.photo}" alt="${u.name}" class="user-avatar-img">` 
+                            : `<span class="user-avatar">${u.name.charAt(0)}</span>`
+                        }
+                        <div class="user-card-info">
+                            <span class="user-name">${u.name}</span>
+                            ${meta && meta.status ? `<span class="user-status-badge">${meta.status}</span>` : ''}
+                        </div>
                     </button>
-                `).join('');
+                    `;
+                }).join('');
 
                 container.querySelectorAll('.quiz-user-card').forEach(card => {
                     card.addEventListener('click', () => {
