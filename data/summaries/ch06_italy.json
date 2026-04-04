@@ -37,5 +37,98 @@
     "トスカーナ"
   ],
   "summary": "### イタリアワインの多様性と歴史的背景\n\nイタリアワインの最大の魅力は、その計り知れない多様性にある。南北に長く伸びた国土は山岳、丘陵地帯に富み、多様な標高、傾斜、気候、土壌が複雑に絡み合い、ワインの個性を豊かにしている。古代ギリシャ人がこの地を「エノトリア・テルス（ワインの大地）」と称賛した歴史は、ブドウ栽培にとって理想的な環境であったことを物語っている。1861年まで統一国家でなかった歴史も、地方ごとの独自の文化やワインへのアプローチの違いを生み出す要因となっている。\n\n### 世界有数の生産国と品質分類\n\nイタリアは、ワイン用ブドウ栽培面積661,811ha、ワイン生産量約4,250万hℓを誇り、フランス、スペインとともに世界の三大生産国の一角を占めている。品質分類体系は、D.O.C.G.（統制保証原産地呼称）、D.O.C.（統制原産地呼称）、そしてI.G.T.（地理的表示ワイン）の3段階で構成されている。\n\n### 品質革新と固有品種の再評価\n\nトスカーナのサンジョヴェーゼ、ピエモンテのネッビオーロがイタリアを代表するブドウ品種である。1970年代末からは「イタリアワイン・ルネッサンス」と呼ばれる品質革新が起こり、国際品種を用いたスーパータスカンがブラインド試飲でボルドー銘酒を凌駕するほどの評価を得た。近年では、各地の固有品種の再評価や、伝統的な醸造法の見直しが進み、その多様性はさらに深まっている。",
-  "summary_chars": 615
+  "summary_chars": 615,
+  "deep_content": {
+    "exam_tips": [
+      "イタリアワインの最大の特徴は「多様性」であり、古代ギリシャ人から「エノトリア・テルス（ワインの大地）」と讃えられた。",
+      "ピエモンテ州はD.O.C.G.が最も多く、ネッビオーロ種から造られる「バローロ」と「バルバレスコ」は「ワインの王」「ピエモンテの女王」と称される。",
+      "バローロの法定熟成期間は38ヶ月（うち木樽18ヶ月）、リゼルヴァは62ヶ月。バルバレスコの法定熟成期間は26ヶ月（うち木樽9ヶ月）、リゼルヴァは50ヶ月。",
+      "トスカーナ州はサンジョヴェーゼ種が主体。代表的なD.O.C.G.にキアンティ・クラッシコ、ブルネッロ・ディ・モンタルチーノ、ヴィーノ・ノビレ・ディ・モンテプルチャーノがある。",
+      "ブルネッロ・ディ・モンタルチーノはサンジョヴェーゼ100%で、収穫年から5年目の1月1日から販売可能（うち木樽熟成2年）。",
+      "ヴェネト州はイタリア最大のワイン生産量を誇る州の一つ。陰干しブドウ（アパッシメント）で造る力強い辛口「アマローネ・デッラ・ヴァルポリチェッラ」と甘口「レチョート」が有名。",
+      "ロンバルディア州のフランチャコルタは、瓶内二次発酵で造られる高品質スパークリングワイン。最低熟成期間は18ヶ月（サテン、ロゼは24ヶ月、リゼルヴァは60ヶ月）。",
+      "プロセッコは主にヴェネト州とフリウリ・ヴェネツィア・ジューリア州でグレーラ種を使い、シャルマ方式で造られるイタリアを代表するスパークリングワイン。",
+      "イタリアのワイン法はD.O.P.（保護原産地呼称）、I.G.P.（保護地理表示）、Vinoの3段階。D.O.P.には従来のD.O.C.G.とD.O.C.が含まれる。",
+      "南部イタリアの重要品種として、カンパーニア州とバジリカータ州の「アリアニコ」、プーリア州の「プリミティーヴォ」「ネグロアマーロ」、シチリア州の「ネーロ・ダヴォラ」は必須。",
+      "カンパーニア州のタウラージD.O.C.G.とバジリカータ州のアリアニコ・デル・ヴルトゥレ・スペリオーレD.O.C.G.は、アリアニコ種から造られる南の偉大な長期熟成型赤ワイン。",
+      "シチリア州の酒精強化ワイン「マルサーラ」は、色（Oro, Ambra, Rubino）と甘さ（Secco, Semi-secco, Dolce）、熟成期間で分類される。",
+      "トスカーナ州の「ヴィン・サント」は陰干しブドウをカラテッリと呼ばれる小樽で長期間酸化熟成させて造る甘口ワイン。",
+      "フリウリ・ヴェネツィア・ジューリア州とトレンティーノ・アルト・アディジェ州は、高品質な白ワインの産地として名高い。",
+      "単一ワイナリーに与えられた唯一の呼称は、トスカーナ州の「Bolgheri Sassicaia D.O.C.」である。"
+    ],
+    "classification_tables": {
+      "主要D.O.C.G.ワイン規定": [
+        "州 | D.O.C.G.名 | 主要品種 | タイプ | 最低熟成期間（Riserva）",
+        "ピエモンテ州 | Barolo | Nebbiolo 100% | 赤 | 38ヶ月（うち木樽18ヶ月） | （62ヶ月）",
+        "ピエモンテ州 | Barbaresco | Nebbiolo 100% | 赤 | 26ヶ月（うち木樽9ヶ月） | （50ヶ月）",
+        "ピエモンテ州 | Asti | Moscato Bianco 100% | 白甘口発泡 | -",
+        "ロンバルディア州 | Franciacorta | Chardonnay, Pinot Nero, Pinot Bianco | 白・ロゼ発泡 | 18ヶ月（瓶内） | （Millesimato: 30ヶ月, Riserva: 60ヶ月）",
+        "ロンバルディア州 | Sforzato di Valtellina | Nebbiolo (Chiavennasca) 90%以上 | 赤（陰干し） | 20ヶ月（うち木樽12ヶ月）",
+        "ヴェネト州 | Amarone della Valpolicella | Corvina, Corvinone, Rondinella | 赤（陰干し） | 2年 | （Riserva: 4年）",
+        "トスカーナ州 | Brunello di Montalcino | Sangiovese (Brunello) 100% | 赤 | 5年目の1/1から販売可（うち木樽2年） | （6年目から）",
+        "トスカーナ州 | Chianti Classico | Sangiovese 80%以上 | 赤 | 収穫翌年10/1から販売可 | （Riserva: 24ヶ月, Gran Selezione: 30ヶ月）",
+        "トスカーナ州 | Vino Nobile di Montepulciano | Sangiovese (Prugnolo Gentile) 70%以上 | 赤 | 2年 | （Riserva: 3年）",
+        "カンパーニア州 | Taurasi | Aglianico 85%以上 | 赤 | 3年（うち木樽1年） | （Riserva: 4年）",
+        "シチリア州 | Cerasuolo di Vittoria | Nero d'Avola 50-70%, Frappato 30-50% | 赤 | - | -"
+      ],
+      "州別・代表的なブドウ品種": [
+        "州 | 白ブドウ品種 | 黒ブドウ品種",
+        "ヴァッレ・ダオスタ州 | Prié Blanc | Petit Rouge, Fumin",
+        "ピエモンテ州 | Cortese, Arneis, Moscato Bianco | Nebbiolo, Barbera, Dolcetto",
+        "ロンバルディア州 | Chardonnay, Pinot Bianco | Nebbiolo (Chiavennasca), Pinot Nero, Croatina",
+        "トレンティーノ・アルト・アディジェ州 | Gewürztraminer, Pinot Bianco, Nosiola | Schiava, Lagrein, Teroldego",
+        "ヴェネト州 | Garganega, Glera, Trebbiano di Soave | Corvina, Rondinella, Raboso",
+        "フリウリ・ヴェネツィア・ジューリア州 | Friulano, Ribolla Gialla, Verduzzo | Refosco, Schioppettino",
+        "トスカーナ州 | Vernaccia, Malvasia Bianca | Sangiovese, Canaiolo Nero",
+        "ウンブリア州 | Grechetto, Procanico | Sagrantino, Sangiovese",
+        "マルケ州 | Verdicchio, Pecorino, Passerina | Montepulciano, Sangiovese",
+        "カンパーニア州 | Fiano, Greco, Falanghina | Aglianico, Piedirosso",
+        "プーリア州 | Bombino Bianco, Verdeca | Primitivo, Negroamaro, Nero di Troia",
+        "バジリカータ州 | Malvasia Bianca di Basilicata | Aglianico",
+        "シチリア州 | Catarratto, Grillo, Carricante | Nero d'Avola, Nerello Mascalese, Frappato",
+        "サルデーニャ州 | Vermentino, Vernaccia di Oristano | Cannonau, Carignano, Monica"
+      ],
+      "イタリアワインの品質分類": [
+        "EU新規定 | 伝統的呼称 | 概要",
+        "D.O.P. (保護原産地呼称) | D.O.C.G. (統制保証原産地呼称) | D.O.C.より規定が厳しく、国の検査が必要な最上級ワイン。",
+        "D.O.P. (保護原産地呼称) | D.O.C. (統制原産地呼称) | 生産地域、品種、収量などが規定された上級ワイン。",
+        "I.G.P. (保護地理表示) | I.G.T. (地理的表示付き) | 産地を広域的に表示。ワインの85%以上がその土地産であることなどが条件。",
+        "Vino (地理表示なし) | Vino da Tavola (テーブルワイン) | 地理的表示のない最もシンプルなカテゴリーのワイン。"
+      ]
+    },
+    "timeline": [
+      {
+        "year": "紀元前8世紀",
+        "event": "ギリシャ人がイタリア南部にブドウ栽培と醸造技術を伝え、「エノトリア・テルス（ワインの大地）」と呼ぶ。"
+      },
+      {
+        "year": "1716",
+        "event": "トスカーナ大公コジモ3世が、Chianti、Pomino、Carmignano、Val d'Arno di Sopraの4つのワイン生産地の境界を定める。これは原産地呼称制度の最初の例とされる。"
+      },
+      {
+        "year": "1861",
+        "event": "イタリア王国が成立。統一国家としての歩みが始まる。"
+      },
+      {
+        "year": "1870年前後",
+        "event": "のちのイタリア初代首相となるベッティーノ・リカゾーリ男爵が、今日のキアンティワインのベースとなる品種構成の公式を定める。"
+      },
+      {
+        "year": "1963",
+        "event": "イタリア初の原産地呼称法（D.O.C.法）が公布され、D.O.C.とD.O.C.G.の格付けが導入される。"
+      },
+      {
+        "year": "1970年代末",
+        "event": "「イタリアワイン・ルネッサンス」が始まる。伝統の殻を破った革新的なワイン「スーパータスカン」などが世界の注目を集める。"
+      },
+      {
+        "year": "2010",
+        "event": "EUの新ワイン規則に合わせた新しいイタリアワイン法が施行され、格付けがD.O.P.、I.G.P.、Vinoの3段階に再編される。"
+      },
+      {
+        "year": "2014",
+        "event": "「ピエモンテのブドウ畑の景観:ランゲ・ロエロ・モンフェッラート」が世界文化遺産に登録される。"
+      }
+    ]
+  }
 }
