@@ -195,11 +195,16 @@
             startQuizGeneration(chapterId);
         });
 
-        // Switch user
+        // Switch user (logout + re-auth)
         document.getElementById('quizSwitchUser').addEventListener('click', () => {
+            DSMAuth.logout();
             quizState.currentUser = null;
-            localStorage.removeItem('sommelier_quiz_user');
-            showLoginScreen();
+            DSMAuth.requireAuth((user) => {
+                quizState.currentUser = user;
+                createSetupScreen();
+                loadTodayProgress().then(() => renderTodayProgress());
+                showState('setup');
+            });
         });
 
         renderTodayProgress();
@@ -761,8 +766,10 @@ ${contextText}
                     })
                 });
                 console.log('[Quiz] Result saved to GAS');
+                DSMToast.success(`+${tokens?.total || 0}T トークン獲得！`);
             } catch (e) {
                 console.warn('[Quiz] GAS save failed, localStorage fallback used', e);
+                DSMToast.error('サーバー保存に失敗しました（ローカル保存済み）');
             }
         }
     }

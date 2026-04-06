@@ -3236,3 +3236,106 @@ body {
     transition: opacity 0.2s;
 }
 .dsm-auth-btn:hover { opacity: 0.85; }
+
+/* ========== DSM TOAST NOTIFICATIONS ========== */
+.dsm-toast-container {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    pointer-events: none;
+    max-width: 360px;
+    width: 90%;
+}
+.dsm-toast {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font-sans);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    pointer-events: auto;
+    opacity: 0;
+    transform: translateY(-12px);
+    transition: all 0.3s ease;
+}
+.dsm-toast-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.dsm-toast-hide {
+    opacity: 0;
+    transform: translateY(-12px);
+}
+.dsm-toast-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+.dsm-toast-success {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+.dsm-toast-success .dsm-toast-icon {
+    background: #22c55e;
+    color: white;
+}
+.dsm-toast-error {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+.dsm-toast-error .dsm-toast-icon {
+    background: #ef4444;
+    color: white;
+}
+.dsm-toast-info {
+    background: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+.dsm-toast-info .dsm-toast-icon {
+    background: #3b82f6;
+    color: white;
+}
+
+/* ========== LOGOUT BUTTON ========== */
+.dash-logout-row {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+.dash-logout-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 24px;
+    background: none;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    transition: all 0.2s;
+}
+.dash-logout-btn:hover {
+    border-color: #D4002A;
+    color: #D4002A;
+}

@@ -190,3 +190,54 @@ const DSMAuth = (function() {
         STORAGE_KEY_TOKENS
     };
 })();
+
+/**
+ * DEVIENS SOMMELIER — Unified Toast Notification System
+ * 
+ * Usage:
+ *   DSMToast.success('保存しました');
+ *   DSMToast.error('接続エラー');
+ *   DSMToast.info('ナレッジベースを読み込み中...');
+ */
+const DSMToast = (function() {
+    let _container = null;
+
+    function _ensureContainer() {
+        if (_container) return _container;
+        _container = document.createElement('div');
+        _container.id = 'dsmToastContainer';
+        _container.className = 'dsm-toast-container';
+        document.body.appendChild(_container);
+        return _container;
+    }
+
+    function _show(message, type, durationMs) {
+        const container = _ensureContainer();
+        const toast = document.createElement('div');
+        toast.className = `dsm-toast dsm-toast-${type}`;
+
+        const icons = { success: '✓', error: '✕', info: 'ℹ' };
+        toast.innerHTML = `
+            <span class="dsm-toast-icon">${icons[type] || 'ℹ'}</span>
+            <span class="dsm-toast-msg">${message}</span>
+        `;
+
+        container.appendChild(toast);
+
+        // Trigger animation
+        requestAnimationFrame(() => toast.classList.add('dsm-toast-show'));
+
+        // Auto-dismiss
+        setTimeout(() => {
+            toast.classList.remove('dsm-toast-show');
+            toast.classList.add('dsm-toast-hide');
+            setTimeout(() => toast.remove(), 300);
+        }, durationMs || 3000);
+    }
+
+    return {
+        success: (msg, ms) => _show(msg, 'success', ms || 3000),
+        error:   (msg, ms) => _show(msg, 'error',   ms || 4000),
+        info:    (msg, ms) => _show(msg, 'info',    ms || 3000)
+    };
+})();
