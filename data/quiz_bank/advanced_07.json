@@ -1,0 +1,552 @@
+[
+  {
+    "question": "ボルドー地方のA.O.C. Pomerolの土壌に関する記述として、最も適切なものを次の中から選びなさい。",
+    "choices": [
+      "全域が純粋な粘土質土壌で構成されており、メルロ (Merlot) の栽培に最適である。",
+      "Château Pétrusの畑は新生代第三紀の小石で覆われた特異な土壌を持つ。",
+      "ドルドーニュ (Dordogne) 川の支流であるイル (Isle) 川によって運ばれた小石が表土を覆う畑が多いが、底土は粘土質である。",
+      "酸化鉄を全く含まない石灰質土壌が主体で、ワインに強いミネラル感を与える。"
+    ],
+    "correct_index": 2,
+    "explanation": "ポムロール (Pomerol) の土壌は多様ですが、純粋な粘土質はペトリュス (Pétrus) の畑など一部に限られます。多くの畑は、イル (Isle) 川由来の新生代第三紀の小石で表土が覆われていますが、その下層（底土）は保水力のある粘土質であり、これがメルロ (Merlot) の栽培に適しています。また、粘土には酸化鉄が含まれます。"
+  },
+  {
+    "question": "1881年に開拓使の顧問であったルイス・ベーマー (Louis Boehmer) によって日本に持ち込まれた欧・中東系品種として、記録にないものを1つ選びなさい。",
+    "choices": [
+      "ピノ・ノワール (Pinot Noir)",
+      "ゲヴュルツトラミネール (Gewürztraminer)",
+      "ピノ・ブラン (Pinot Blanc)",
+      "リースリング (Riesling)"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには、1881年にルイス・ベーマーによってピノ・ノワール、ピノ・ブラン、ゲヴュルツトラミネールなど欧・中東系品種17品種が日本に持ち込まれたと記録されていますが、リースリングに関する記述はありません。"
+  },
+  {
+    "question": "2024年にカリフォルニア州 (California) で新設されたA.V.A.で、深さ10m以上に及ぶ砂の表土のためにフィロキセラが生息できず、ジンファンデル (Zinfandel) などの古木が自根で残ることで知られる産地を1つ選びなさい。",
+    "choices": [
+      "Contra Costa A.V.A.",
+      "Snake River Valley A.V.A.",
+      "The Hamptons A.V.A.",
+      "Livermore Valley A.V.A."
+    ],
+    "correct_index": 0,
+    "explanation": "Contra Costa A.V.A.は、同名のカウンティ内に2024年に新設されたA.V.A.である。深い砂の表土が特徴で、フィロキセラ禍を免れた自根のジンファンデルやムールヴェードルの古木が存在する。"
+  },
+  {
+    "question": "日本の「酒税の保全及び酒類業組合等に関する法律」および関連法規に基づく酒類の容器への表示について、表示が法律で義務付けられている事項として誤っているものを1つ選びなさい。",
+    "choices": [
+      "発泡性を有する旨の表示",
+      "使用した食品添加物の表示",
+      "未成年者の飲酒防止の表示",
+      "妊産婦の飲酒に対する注意表示"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストによると、「妊産婦の飲酒に対する注意表示」は(任意表示)と記載されています。一方、「発泡性を有する旨の表示」、「食品添加物」、「未成年者の飲酒防止の表示」は義務表示事項として扱われています。"
+  },
+  {
+    "question": "2023年より、従来の辛口白ワインに加えて赤ワインの生産も認められるようになったボルドー地方のA.O.C.を1つ選びなさい。",
+    "choices": [
+      "Graves de Vayres",
+      "Sainte-Foy-Bordeaux",
+      "Entre-Deux-Mers",
+      "Blaye Côtes de Bordeaux"
+    ],
+    "correct_index": 2,
+    "explanation": "A.O.C. Entre-Deux-Mersは、ドルドーニュ川 (Dordogne) とガロンヌ川 (Garonne) に挟まれた地域で、伝統的に辛口白ワインのA.O.C.として知られていましたが、2023年から赤ワインもA.O.C.として認められるようになりました。"
+  },
+  {
+    "question": "スペインのD.O. Terra Alta (テラ・アルタ) において、2022年にスペインのD.O.P.ワインの中で初めて承認されたオレンジワインのカテゴリー名称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Vins Brisats",
+      "Vinos Naranjas",
+      "Vins de Piel",
+      "Vins de Maceració"
+    ],
+    "correct_index": 0,
+    "explanation": "D.O. Terra Altaでは2022年1月にオレンジワインのカテゴリーが承認され、その名称はVins Brisatsと定められました。Brisatsとはカタルーニャ語で果皮、種、果梗を意味し、これらを果汁に漬け込み発酵させる製法に由来します。"
+  },
+  {
+    "question": "ラムの製造において、特に濃厚な酒質のヘビーラムを造る際に、乳酸菌を増殖させて使用される液体のことを指す用語として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Skimming",
+      "Dunder",
+      "Lees",
+      "Vinasse"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「乳酸菌を増殖させたダンダーといわれる液を使用したり、養酵母を使用せずに自然発酵することによって濃厚な酒質のラムを製造する。」と記載されています。この液体はダンダー (Dunder) と呼ばれます。"
+  },
+  {
+    "question": "A.O.C. Cortonの赤ワインにおいて、単一区画から造られた場合に区画名を付記することが許可されていない区画名を1つ選びなさい。",
+    "choices": [
+      "Clos du Roi",
+      "Le Charlemagne",
+      "Bressandes",
+      "Renardes"
+    ],
+    "correct_index": 1,
+    "explanation": "A.O.C. Cortonでは多くの区画で赤ワインに区画名を付記できますが、仕様書により「Le Charlemagne」、「Pougets」、「Charlemagne」の区画から造られる赤ワインは、区画名の付記が許可されていません。これらは主に白ワインのA.O.C. Corton-Charlemagneとして知られています。"
+  },
+  {
+    "question": "スイスのワイン産地と、その産地が属する言語圏の組み合わせとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "Valais (ヴァレー) - Deutschschweiz (ドイツ語圏)",
+      "Genève (ジュネーヴ) - Svizzera Italiana (イタリア語圏)",
+      "Neuchâtel (ヌーシャテル) - Deutschschweiz (ドイツ語圏)",
+      "Ticino (ティチーノ) - Svizzera Italiana (イタリア語圏)"
+    ],
+    "correct_index": 3,
+    "explanation": "Ticino (ティチーノ) はイタリア語圏 (Svizzera Italiana) に属する唯一のカントン（州）です。Valais, Genève, Neuchâtelはいずれもフランス語圏 (Suisse Romande) に属します。"
+  },
+  {
+    "question": "日本で栽培されている欧・中東系品種 (Vitis Vinifera) のうち、白ワイン用品種の栽培量が多い順として適切なものを次の中から選びなさい。",
+    "choices": [
+      "シャルドネ (Chardonnay) > ケルナー (Kerner) > ソーヴィニヨン・ブラン (Sauvignon Blanc)",
+      "シャルドネ (Chardonnay) > ソーヴィニヨン・ブラン (Sauvignon Blanc) > ケルナー (Kerner)",
+      "ケルナー (Kerner) > シャルドネ (Chardonnay) > ソーヴィニヨン・ブラン (Sauvignon Blanc)",
+      "ソーヴィニヨン・ブラン (Sauvignon Blanc) > シャルドネ (Chardonnay) > ケルナー (Kerner)"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストによると、日本の欧・中東系品種群の白ワイン用品種では、シャルドネが最も多く、ケルナー、ソーヴィニヨン・ブランの順に続きます。"
+  },
+  {
+    "question": "クロアチアのDalmacija (ダルマチア) 地方、Pelješac (ペリェシャツ) 半島にあり、2021年に新たにEU原産地呼称として認められた産地を1つ選びなさい。",
+    "choices": [
+      "Dingač (ディンガチュ)",
+      "Postup (ポストゥプ)",
+      "Komarna (コマルナ)",
+      "Hrvatska Istra (フルヴァツカ・イストラ)"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストに「Pelješac半島にあるKomarnaは2021年、EU原産地呼称となった」と記載されています。DingačとPostupは同じくPelješac半島にある著名な産地ですが、2021年に昇格したわけではありません。"
+  },
+  {
+    "question": "スペインで最も貧しい州ともいわれ、D.O. Ribera del Guadiana (リベラ・デル・グアディアーナ) のみを有するExtremadura (エストレマドゥーラ) 州で主に栽培されている白ブドウ品種として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Verdejo (ベルデホ)",
+      "Albariño (アルバリーニョ)",
+      "Godello (ゴデーリョ)",
+      "Alarije (アラリへ)"
+    ],
+    "correct_index": 3,
+    "explanation": "Extremadura州のD.O. Ribera del Guadianaで主に栽培されている白ブドウ品種は、Alarije (アラリへ) と Pardina (パルディーナ) です。VerdejoはRueda、AlbariñoはRías Baixasが主要産地です。"
+  },
+  {
+    "question": "Vitis属のブドウ品種のうち、北米系種 (North American Species) に該当しないものを1つ選びなさい。",
+    "choices": [
+      "Vitis riparia",
+      "Vitis rupestris",
+      "Vitis coignetiae",
+      "Vitis labrusca"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストの「ASIAN SPECIES アジア系種」のリストにVitis coignetiae（ヤマブドウ）が記載されています。Vitis riparia、Vitis rupestris、Vitis labruscaはいずれも北米系種 (North American Species) に分類されます。"
+  },
+  {
+    "question": "アルゼンチン (Argentina) のウコ・ヴァレー (Uco Valley) にあるI.G.パラヘ・アルタミラ (Paraje Altamira) の生産者たちが、そのテロワールの個性を訴えるために2019年に創設した団体の名称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "MOVI",
+      "PiPA",
+      "VIGNO",
+      "LCBO"
+    ],
+    "correct_index": 1,
+    "explanation": "2019年1月、I.G.パラヘ・アルタミラの小規模なワイン生産者たちが創設した団体はPiPA (Productores Independientes de Paraje Altamira) である。MOVIとVIGNOはチリの生産者団体、LCBOはカナダ・オンタリオ州の酒類統制局である。"
+  },
+  {
+    "question": "1985年のジエチレングリコール混入事件以降のオーストリアワインに関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "事件の発覚は1985年6月で、ドイツ保健省がオーストリアワイン消費への注意喚起を発令した。",
+      "事件を契機に、厳格なワイン法が1985年8月29日に施行された。",
+      "産地の個性を明確にするD.A.C.制度は、事件の翌年である1986年に制定された。",
+      "事件以前、1980年代までにオーストリアの畑の9割で樹高の高いレンツ・モーザー (Lenz Moser) 仕立てが採用されていた。"
+    ],
+    "correct_index": 2,
+    "explanation": "オーストリアのD.A.C. (Districtus Austriae Controllatus) 制度は、2001年に産地ごとのワイン委員会が設立され、同年のワイン法修正によって制定されました。1986年ではありません。"
+  },
+  {
+    "question": "ロワール地方のA.O.C. Cour Chevernyにおいて、使用が認められている唯一のブドウ品種を1つ選びなさい。",
+    "choices": [
+      "シュナン・ブラン (Chenin Blanc)",
+      "フィエ・グリ (Fié Gris)",
+      "ムニュ・ピノ (Menu Pineau)",
+      "ロモランタン (Romorantin)"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C. Cour Chevernyは、この土地固有の品種であるロモランタン (Romorantin) 100%で造られる辛口または甘口の白ワインにのみ認められています。この品種は他の地域ではほとんど栽培されていません。"
+  },
+  {
+    "question": "ニューヨーク州 (New York) のロング・アイランド (Long Island) にある2つのサブ・リージョンに関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "北側のNorth Fork of Long Island A.V.A.は、ロングアイランド湾に面し、比較的穏やかな気候である。",
+      "ワイナリーのほとんどは、北側のNorth Fork of Long Island A.V.A.に集中している。",
+      "南側のThe Hamptons A.V.A.は、大西洋に面し、野菜やジャガイモの優良産地としての歴史を持つ。",
+      "南側のThe Hamptons A.V.A.の土壌は、全体的に水はけの良い砂質土壌で統一されている。"
+    ],
+    "correct_index": 3,
+    "explanation": "The Hamptons A.V.A.の土壌は、水はけが良く極度に乾燥したやせた土壌と、深く肥沃な土壌の両方が存在するとされており、「全体的に統一されている」という記述は誤りである。"
+  },
+  {
+    "question": "A.O.C. Rivesaltesにおいて、AmbréおよびTuiléのタイプに義務付けられている最低酸化熟成期間として適切なものを次の中から選びなさい。",
+    "choices": [
+      "3年間",
+      "1年間",
+      "2年間",
+      "5年間"
+    ],
+    "correct_index": 0,
+    "explanation": "ヴァン・ドゥー・ナチュレル (Vin Doux Naturel) であるA.O.C. Rivesaltesの規定では、Ambré（アンブレ）とTuilé（テュイレ）のタイプは、最低3年間の酸化熟成が義務付けられています。5年以上熟成させたものには「Hors d'age」と表記できます。"
+  },
+  {
+    "question": "ボルドー地方のA.O.C. Chablis Grand Cruの畑に特徴的な土壌で、Exogyra virgulaと呼ばれる小さな牡蠣の化石が見られることで知られる地質年代を1つ選びなさい。",
+    "choices": [
+      "ジュラ紀後期オックスフォーディアン (Oxfordian)",
+      "ジュラ紀後期キンメリジャン (Kimmeridgian)",
+      "白亜紀 (Cretaceous)",
+      "新生代第三紀 (Tertiary)"
+    ],
+    "correct_index": 1,
+    "explanation": "シャブリ・グラン・クリュ (Chablis Grand Cru) の畑は、ジュラ紀後期のキンメリジャン (Kimmeridgian) と呼ばれる泥灰質石灰岩土壌で構成されています。この土壌にはエグゾジラ・ヴィルギュラ (Exogyra virgula) という小さな牡蠣の化石が豊富に含まれており、ワインに特徴的なミネラル感をもたらすと考えられています。"
+  },
+  {
+    "question": "新潟県におけるワイン用ブドウの品種別生産量について、最も生産量が多い品種を1つ選びなさい。",
+    "choices": [
+      "マスカット・ベーリーA (Muscat Bailey A)",
+      "メルロ (Merlot)",
+      "シャルドネ (Chardonnay)",
+      "ローズ・シオター (Rose Ciotat)"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストによると、新潟県のワイン用ブドウ生産量で最も多いのはメルロ (Merlot) で33t、次いでマスカット・ベーリーA (Muscat Bailey A) が29tと続きます。"
+  },
+  {
+    "question": "カラブリア州 Calabria のD.O.P.ワインで、ビアンコ Bianco 村で造られる甘口ワイン「グレコ・ディ・ビアンコ Greco di Bianco」が、かつて呼ばれていた名称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Greco di Gerace",
+      "Greco di Tufo",
+      "Greco di Cosenza",
+      "Greco di Cirò"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストに「以前はGreco di Geraceと呼ばれていた歴史あるワインだ」と記載があります。グレコ・ディ・トゥーフォ Greco di Tufo はカンパーニア州 Campania の著名なD.O.C.G.であり、他の選択肢は紛らわしい地名を組み合わせたものです。"
+  },
+  {
+    "question": "2007年にV.D.Q.S.からA.O.C.に昇格し、赤ワインにおいて主要品種であるメルロ (Merlot) を40%以上使用することが規定されているラングドック地方のA.O.C.を1つ選びなさい。",
+    "choices": [
+      "Malepère",
+      "Cabardès",
+      "Limoux",
+      "Corbières"
+    ],
+    "correct_index": 0,
+    "explanation": "A.O.C. Malepèreは2007年にV.D.Q.S.から昇格しました。赤ワインの規定では、主要品種メルロ (Merlot) を40%以上、補助品種（カベルネ・フラン Cabernet Franc、コット Côt）を合計または単独で20%以上、かつ少なくとも2品種以上を用いて醸造することが定められています。"
+  },
+  {
+    "question": "白カビタイプのチーズの表面に噴霧され、マッシュルーム様の香りを生成し熟成を促すカビ菌の学名として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Penicillium candidum",
+      "Penicillium roqueforti",
+      "Saccharomyces cerevisiae",
+      "Brettanomyces bruxellensis"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「表面にペニシリウム・カンディダムという白カビ菌を噴霧し、熟成させると、表面はマット状の白カビで覆われたチーズが出来上がる。」と記載されています。Penicillium roquefortiは青カビチーズに使用される青カビ菌、Saccharomyces cerevisiaeはワイン醸造などで使用される酵母、Brettanomyces bruxellensisはブレタノマイセス属の酵母で、しばしばオフフレーバーの原因とされます。"
+  },
+  {
+    "question": "ハンガリーのワイン産地のうち、Felső-Magyarország borrégió (フェルシェー・マジャロルサーグ・ボッレーギオー) に属さないP.D.O.を1つ選びなさい。",
+    "choices": [
+      "Bükk (ブュック)",
+      "Eger (エゲル)",
+      "Kőszeg (ケーセグ)",
+      "Debrői Hárslevelű (デブレーイ・ハールシュレヴェリュー)"
+    ],
+    "correct_index": 2,
+    "explanation": "Kőszeg (ケーセグ) P.D.O.は、Felső-Pannon borrégió (フェルシェー・パンノン・ボッレーギオー) に属します。Bükk, Eger, Debrői HárslevelűはFelső-Magyarország borrégióに属するP.D.O.です。"
+  },
+  {
+    "question": "マルケ州 Marche のD.O.C.G.「コーネロ Conero」に定められている最低熟成期間として正しいものを1つ選びなさい。",
+    "choices": [
+      "18ヵ月",
+      "22ヵ月",
+      "24ヵ月",
+      "30ヵ月"
+    ],
+    "correct_index": 2,
+    "explanation": "コーネロ Conero D.O.C.G.は、D.O.C.ロッソ・コーネロ Rosso Conero のリゼルヴァ Riserva のみが昇格したもので、最低24ヵ月の熟成が義務付けられています。一方、同州のD.O.C.G.であるカステッリ・ディ・イエージ・ヴェルディッキオ・リゼルヴァ Castelli di Jesi Verdicchio Riserva の法定熟成期間は18ヵ月です。"
+  },
+  {
+    "question": "A.O.C. Malepèreのロゼワインの品種規定に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "主要品種はカベルネ・フラン (Cabernet Franc) である。",
+      "カベルネ・フラン (Cabernet Franc) を40%以上含まなければならない。",
+      "メルロ (Merlot) は補助品種として使用が認められている。",
+      "主要品種であるカベルネ・フラン (Cabernet Franc) を単一で使用して醸造することができる。"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C. Malepèreのロゼは、主要品種カベルネ・フラン (Cabernet Franc) を40%以上使用することが定められています。しかし、醸造規定では「少なくとも2品種以上を用い」と明記されているため、単一品種での醸造は認められていません。"
+  },
+  {
+    "question": "ワインサービスにおいて、澱引きなどの際に使用される「じょうご」を指すフランス語表記として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Seau à champagne",
+      "Coupe-capsule",
+      "Panier",
+      "Entonnoir"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストのサービス器具一覧において、「じょうご」に対応するフランス語表記は「Filtre, Entonnoir」と記載されています。Seau à champagneはワインクーラー、Coupe-capsuleはキャップシュル・カッター、Panierはパニエを指します。"
+  },
+  {
+    "question": "南ローヌ地方のA.O.C. Muscat de Beaumes de Veniseが認められている2つの村の正しい組み合わせを次の中から選びなさい。",
+    "choices": [
+      "Beaumes de Venise, Lafare",
+      "Beaumes de Venise, Suzette",
+      "Beaumes de Venise, La Roque-Alric",
+      "Beaumes de Venise, Aubignan"
+    ],
+    "correct_index": 3,
+    "explanation": "天然甘口ワインのA.O.C. Muscat de Beaumes de Veniseは、ヴォクリューズ (Vaucluse) 県に位置するボーム・ド・ヴニーズ (Beaumes de Venise) とオーヴィニャン (Aubignan) の2つの村にのみ認められています。Lafare, Suzette, La Roque-Alricは赤ワインのA.O.C. Beaumes de Veniseの生産村です。"
+  },
+  {
+    "question": "ブルゴーニュ地方のA.O.C. Chambolle-Musignyの土壌を特徴づける地質年代として適切なものを次の中から選びなさい。",
+    "choices": [
+      "ジュラ紀後期キンメリジャン (Kimmeridgian)",
+      "ジュラ紀中期バジョシアン (Bajocian)",
+      "ジュラ紀前期リアス (Lias)",
+      "ジュラ紀後期オックスフォーディアン (Oxfordian)"
+    ],
+    "correct_index": 1,
+    "explanation": "A.O.C. Chambolle-Musignyの畑は、標高250-300mに位置し、その土壌はジュラ紀中期バジョシアン (Bajocian) の石灰岩を主体としています。この土壌が、ワインにフィネスとしなやかさをもたらす要因とされています。"
+  },
+  {
+    "question": "オーストリア、Burgenland (ブルゲンラント) 州のLeithaberg D.A.C. (ライタベルクD.A.C.) において、白ワインの生産に認められていないブドウ品種を1つ選びなさい。",
+    "choices": [
+      "Chardonnay (シャルドネ)",
+      "Welschriesling (ヴェルシュリースリング)",
+      "Grüner Veltliner (グリューナー・ヴェルトリーナー)",
+      "Neuburger (ノイブルガー)"
+    ],
+    "correct_index": 1,
+    "explanation": "Leithaberg D.A.C.の白ワイン用ブドウ品種として認められているのは、Chardonnay, Pinot Blanc, Grüner Veltliner, Neuburgerの4品種です。WelschrieslingはこのD.A.C.の規定品種には含まれていません。"
+  },
+  {
+    "question": "A.O.C. Alsace Grand Cruにおいて、HengstおよびVorbourgでピノ・ノワール (Pinot Noir) の赤ワインを生産する場合に求められる最低果汁糖度を1つ選びなさい。",
+    "choices": [
+      "185 g/l",
+      "216 g/l",
+      "207 g/l",
+      "177 g/l"
+    ],
+    "correct_index": 1,
+    "explanation": "特定のアルザス・グラン・クリュではピノ・ノワールの赤ワインが認められており、その規定は非常に厳格です。Hengst（ヘングスト）とVorbourg（フォルブール）では、最低果汁糖度が216g/lと定められています。これはKirchberg de Barr（207g/l）や通常のA.O.C. Alsace（177g/l）よりも高い数値です。"
+  },
+  {
+    "question": "1990年に日本の農林水産省が策定した「ミネラルウォーター類の品質表示ガイドライン」で定められた4つの品名に該当しないものを1つ選びなさい。",
+    "choices": [
+      "ナチュラルウォーター (Natural Water)",
+      "ボトルドウォーター (Bottled Water)",
+      "アーティザンウォーター (Artesian Water)",
+      "ナチュラルミネラルウォーター (Natural Mineral Water)"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには、日本のガイドラインで定められた品名は「『ナチュラルウォーター』『ナチュラルミネラルウォーター』『ミネラルウォーター』および『ボトルドウォーター』の4つ」と記載されています。アーティザンウォーター (Artesian Water) はこの4つの品名には含まれません。"
+  },
+  {
+    "question": "北ローヌ地方のA.O.C. Crozes-Hermitageが、従来の同名の村のみからドローム (Drôme) 県の11ヵ村に拡大された年号として正しいものを1つ選びなさい。",
+    "choices": [
+      "1937年",
+      "1952年",
+      "1968年",
+      "1983年"
+    ],
+    "correct_index": 1,
+    "explanation": "A.O.C. Crozes-Hermitageは元々同名の村のみに認められていましたが、1952年にA.O.C.の規定が改められ、エルミタージュの丘を取り囲むドローム県の11ヵ村にまで産地が拡大されました。"
+  },
+  {
+    "question": "カリフォルニアワインの近代化に多大な貢献をしたロシア人醸造家 André Tchelistcheff が指導したとされる人物として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Robert Mondavi",
+      "Mike Grgich",
+      "Joseph Phelps",
+      "Alice Waters"
+    ],
+    "correct_index": 3,
+    "explanation": "André TchelistcheffはRobert Mondavi、Louis Martini、Joseph Phelps、Mike Grgichなど、近代カリフォルニアワインを牽引する多くのワインメーカーを指導した。Alice Watersは、地元の有機農産物を使ったカリフォルニア・キュイジーヌの元祖とされるレストラン「Chez Panisse」のシェフであり、ワインメーカーではない。"
+  },
+  {
+    "question": "A.O.C. Alsaceにおける「Gentil」の表記に関する規定として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "高貴品種を50%以上使用しなければならない。",
+      "リースリング (Riesling) は高貴品種に含まれる。",
+      "各品種を別々に醸造した後にアッサンブラージュする。",
+      "複数の品種を一緒に醸造する混醸が認められている。"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C. Alsaceの「Gentil」は、高貴4品種（リースリング、ミュスカ、ピノ・グリ、ゲヴュルツトラミネール）を50%以上使用し、各品種を個別に醸造した後にアッサンブラージュすることが規定されています。「Edelzwicker」とは異なり、混醸は認められていません。"
+  },
+  {
+    "question": "カナダ (Canada) のInniskillin Winesが、世界的な評価を得るきっかけとなった、樹上で凍ったヴィダル (Vidal) 種から最初のアイスワイン (Icewine) を製造した年を1つ選びなさい。",
+    "choices": [
+      "1811年",
+      "1966年",
+      "1975年",
+      "1983年"
+    ],
+    "correct_index": 3,
+    "explanation": "Inniskillin Winesは1975年にワイン製造ライセンスを獲得し、1983年にヴィダル種から造った最初のアイスワインが世界的な評価を得た。1811年はカナダで初めてワイン造りが始まった年、1966年はロバート・モンダヴィがワイナリーを設立した年である。"
+  },
+  {
+    "question": "1936年にロワール地方で最初にA.O.C.として認定されたワインの中から、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Savennières",
+      "Sancerre",
+      "Vouvray",
+      "Quincy"
+    ],
+    "correct_index": 0,
+    "explanation": "1936年にロワール地方で最初にA.O.C.として認定されたのは、ミュスカデ・セーヴル・エ・メーヌ、ミュスカデ・コトー・デュ・レイヨン、アンジュー、コトー・デュ・レイヨン、シノン、ソミュール、ソミュール・シャンピニー、ヴーヴレー、サンセール、カンシーです。Savennièresはこれに含まれません。"
+  },
+  {
+    "question": "料理とワインの組み合わせについて、日本では「マリアージュ」という言葉が使われることが多いが、フランスで一般的により頻繁に使われるとされる用語として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Assemblage",
+      "Partage",
+      "Accord",
+      "Terroir"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには「〈マリアージュ〉は日本でよく聞かれるフランス語だが、フランスでは滅多に使われず、ラコール(l'accord=協調)またはアルモニー(harmonie=調和)といわれることが多い。」と記載されています。したがって、Accordが正解です。"
+  },
+  {
+    "question": "ポルトガルワインの歴史において、現在のポルトガルの原型が生まれたとされる、ポルトゥカーレ伯領とコインブラ伯領が統合した年号として適切なものを次の中から選びなさい。",
+    "choices": [
+      "紀元前500年頃",
+      "1096年",
+      "1147年",
+      "8世紀"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「1096年にポルトゥカーレ伯領とコインブラ伯領が統合したことにより現在のポルトガルの原型が生まれた」と記載されています。紀元前500年頃はフェニキア人によるワイン造りの伝来、1147年はテンプル騎士団によるサンタレン奪回の年です。"
+  },
+  {
+    "question": "国産ワインの表示に関する自主基準を制定した「ワイン表示問題検討協議会」を構成する団体として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "山梨県ワイン酒造組合",
+      "新潟県ワイン協会",
+      "道産ワイン懇談会",
+      "山形県ワイン酒造組合"
+    ],
+    "correct_index": 1,
+    "explanation": "ワイン表示問題検討協議会は、日本ワイナリー協会、道産ワイン懇談会、山形県ワイン酒造組合、山梨県ワイン酒造組合、長野県ワイン協会の5団体で構成されています。新潟県ワイン協会は構成団体に含まれません。"
+  },
+  {
+    "question": "ニュージーランド (New Zealand) で栽培されるソーヴィニヨン・ブラン (Sauvignon Blanc) の大部分を占めるマス・セレクション「Savvy MS」の起源となったクローンを1つ選びなさい。",
+    "choices": [
+      "UCD Clone 1",
+      "ENTAV-INRA Clone 530",
+      "Dijon Clone 115",
+      "DRC Abel Clone"
+    ],
+    "correct_index": 0,
+    "explanation": "ニュージーランドのソーヴィニヨン・ブランの大部分を占める「Savvy MS」は、「ソーヴィニヨン・ブランのマス・セレクション」を意味し、元々は「UCD Clone 1」がニュージーランドで繁殖を繰り返し定着したものである。"
+  },
+  {
+    "question": "ウルグアイ (Uruguay) の伝統的なブドウの仕立て方で、Y字型に仕立てることで風通しを良くし湿気や病害に強くするメリットがある「LIRA仕立て」が、ブドウ樹全体の栽培に占める割合として適切なものを次の中から選びなさい。",
+    "choices": [
+      "約15%",
+      "約25%",
+      "約68%",
+      "約80%"
+    ],
+    "correct_index": 1,
+    "explanation": "ウルグアイのブドウ樹の仕立て方は、垣根仕立てが全体の68%で最も多く、伝統的なLIRA仕立ては25%である。LIRA仕立ては機械収穫ができないため近年は減少傾向にある。"
+  },
+  {
+    "question": "ヴェネト州 Veneto で栽培されるトレッビアーノ・ディ・ソアーヴェ Trebbiano di Soave は、ヴェルディッキオ Verdicchio と同じグループに属するとされていますが、このヴェルディッキオ Verdicchio が主体となるマルケ州 Marche のD.O.C.G.として適切なものを次の中から選びなさい。",
+    "choices": [
+      "オッフィーダ Offida",
+      "コーネロ Conero",
+      "カステッリ・ディ・イエージ・ヴェルディッキオ・リゼルヴァ Castelli di Jesi Verdicchio Riserva",
+      "カステル・デル・モンテ・ボンビーノ・ネーロ Castel del Monte Bombino Nero"
+    ],
+    "correct_index": 2,
+    "explanation": "トレッビアーノ・ディ・ソアーヴェ Trebbiano di Soave とヴェルディッキオ Verdicchio が近縁であるという知識と、ヴェルディッキオ Verdicchio を主体とするマルケ州 Marche のD.O.C.G.がカステッリ・ディ・イエージ・ヴェルディッキオ・リゼルヴァ Castelli di Jesi Verdicchio Riserva であることを結びつける必要があります。オッフィーダ Offida はペコリーノ Pecorino やパッセリーナ Passerina、モンテプルチャーノ Montepulciano、コーネロ Conero はモンテプルチャーノ Montepulciano、カステル・デル・モンテ・ボンビーノ・ネーロ Castel del Monte Bombino Nero はボンビーノ・ネーロ Bombino Nero が主体です。"
+  },
+  {
+    "question": "A.O.C. Rivesaltesのタイプ「Tuilé」を生産する際に、主要品種の中に必ず加えなければならないと規定されているブドウ品種を1つ選びなさい。",
+    "choices": [
+      "グルナッシュ (Grenache)",
+      "マカブー (Macabeu)",
+      "ミュスカ・ダレクサンドリー (Muscat d'Alexandrie)",
+      "トゥルバ (Tourbat)"
+    ],
+    "correct_index": 0,
+    "explanation": "A.O.C. Rivesaltesの規定では、酸化熟成タイプの「Tuilé（テュイレ）」を生産する場合、主要品種（グルナッシュ・ノワール、グルナッシュ・ブラン、グルナッシュ・グリ、マカブー、トゥルバ）を単一または複数用いる中で、必ずグルナッシュ (Grenache) を加えなければならないと定められています。"
+  },
+  {
+    "question": "オレゴン州 (Oregon) の主要ワイン産地が連なるエリアの東側に位置するカスケード山脈 (Cascade Range) の最高峰であるフッド山 (Mt. Hood) の標高として適切なものを次の中から選びなさい。",
+    "choices": [
+      "約910m",
+      "約1,200m",
+      "約3,429m",
+      "約4,050m"
+    ],
+    "correct_index": 2,
+    "explanation": "オレゴン州の最高峰であるフッド山 (Mt. Hood) の標高は3,429mである。ちなみに、海岸山脈の標高は1,200mまで、Snake River Valley A.V.A.の標高は760〜910m、4,050haはレイク・カウンティのブドウ栽培面積である。"
+  },
+  {
+    "question": "ブリティッシュ・コロンビア州 (British Columbia) 最大のワイン産地であるオカナガン・ヴァレー (Okanagan Valley) のブドウ栽培面積が、同州全体の栽培面積に占める割合として適切なものを次の中から選びなさい。",
+    "choices": [
+      "約60%",
+      "約75%",
+      "約87%",
+      "約95%"
+    ],
+    "correct_index": 2,
+    "explanation": "オカナガン・ヴァレーの総栽培面積は3,903haで、ブリティッシュ・コロンビア州の全栽培面積の87%を擁している。オレゴン州のピノ・ノワールの栽培面積比率が約60%である。"
+  },
+  {
+    "question": "チリ (Chile) のブドウ栽培地域をケッペンの気候区分で分類した際、「ステップ気候 (Steppe climate)」に該当する地域の緯度として適切なものを次の中から選びなさい。",
+    "choices": [
+      "南緯25度〜32度",
+      "南緯25度まで",
+      "南緯32度〜38度",
+      "南緯38度以南"
+    ],
+    "correct_index": 0,
+    "explanation": "チリのブドウ栽培地域におけるケッペンの気候区分では、ステップ気候は南緯25度から32度（ラ・セレナからサンティアゴ北部まで）の間に位置する。南緯25度までは沙漠気候に分類される。"
+  },
+  {
+    "question": "D.O.C.プロセッコ・ロゼ Prosecco Rosé の規定に関して、誤っているものを次の中から1つ選びなさい。",
+    "choices": [
+      "主要品種であるグレーラ Glera にピノ・ネーロ Pinot Nero を10〜15%ブレンドする。",
+      "製造方法はシャルマ方式 Metodo Martinotti である。",
+      "タンク内での二次発酵は最低60日間と定められている。",
+      "ヴィンテージの表記は任意である。"
+    ],
+    "correct_index": 3,
+    "explanation": "D.O.C.プロセッコ・ロゼ Prosecco Rosé は、参照テキストに「ヴィンテージ表記が義務付けられている」と記載されています。したがって、「ヴィンテージの表記は任意である」という選択肢が誤りです。その他の選択肢はすべて正しい規定です。"
+  },
+  {
+    "question": "江戸時代に発行された『和漢三才図会』(1712年頃) におけるブドウ産地の評価に関する記述として、適切なものを次の中から選びなさい。",
+    "choices": [
+      "「河内の富田林産は粒が大きく味もたいへん良い。甲斐がこれに次ぐ」",
+      "「駿州産は粒が大きく味もたいへん良い。河内の富田林がこれに次ぐ」",
+      "「甲斐産は粒が大きく味もたいへん良い。駿州がこれに次ぎ、河内の富田林がこれに次ぐ」",
+      "「武蔵産は粒が大きく味もたいへん良い。甲斐がこれに次ぐ」"
+    ],
+    "correct_index": 2,
+    "explanation": "『和漢三才図会』(1712年頃)では、「甲斐産は粒が大きく味もたいへん良い。駿州がこれに次ぎ、河内の富田林がこれに次ぐ」と記述されており、甲斐（山梨）が最高評価を受けていました。"
+  },
+  {
+    "question": "モリーゼ州 Molise だけで栽培され、一時期見捨てられていたものの近年再評価されているこの州の代表的な黒ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "ラグレイン Lagrein",
+      "ティンティリア Tintilia",
+      "エナンティオ Enantio",
+      "ウーヴァ・ディ・トロイア Uva di Troia"
+    ],
+    "correct_index": 1,
+    "explanation": "ティンティリア Tintilia はモリーゼ州を代表する土着の黒ブドウ品種です。ラグレイン Lagrein とエナンティオ Enantio はトレンティーノ・アルト・アディジェ州 Trentino-Alto Adige、ウーヴァ・ディ・トロイア Uva di Troia（ネーロ・ディ・トロイア Nero di Troia）はプーリア州 Puglia の主要品種です。"
+  }
+]

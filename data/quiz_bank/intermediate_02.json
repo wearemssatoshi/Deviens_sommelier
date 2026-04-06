@@ -1,0 +1,552 @@
+[
+  {
+    "question": "リグーリア州に関する記述として誤っているものを1つ選びなさい。",
+    "choices": [
+      "州都ジェノヴァ（Genova）を境に東側はリヴィエーラ・ディ・レヴァンテ（Riviera di Levante）と呼ばれる。",
+      "主要な白ブドウ品種はヴェルメンティーノ（Vermentino）である。",
+      "ワイン生産量はイタリア全20州の中で最も少ない。",
+      "白ワインの生産比率が60%を超えている。"
+    ],
+    "correct_index": 2,
+    "explanation": "リグーリア州のワイン生産量は、ヴァッレ・ダオスタ（Valle d'Aosta）州に次いで2番目に少ない州です。最も生産量が少ないのはヴァッレ・ダオスタ州です。その他の選択肢はすべて正しい記述です。"
+  },
+  {
+    "question": "ウルグアイの優良品質ワイン Vino de Calidad Preferente (V.C.P.) の規定に関して、誤っているものを1つ選びなさい。",
+    "choices": [
+      "ヴィティス・ヴィニフェラ (Vitis vinifera) 種のブドウのみから造られる。",
+      "エチケットに品種名を記載する場合、その品種を85%以上使用する必要がある。",
+      "ワインの最低アルコール度数は11.5%以上でなければならない。",
+      "750mlもしくはそれ以下のガラスの瓶で販売される。"
+    ],
+    "correct_index": 2,
+    "explanation": "ウルグアイのV.C.P.の規定では、最低アルコール度数は10.5%以上と定められています。したがって、「11.5%以上」という記述は誤りです。"
+  },
+  {
+    "question": "オーストラリアのヴィクトリア (Victoria) 州にあり、1860年に設立された同国最古級のワイナリーの一つで、1927年植樹のマルサンヌ (Marsanne) の古木が現存することで知られるワイナリーを1つ選びなさい。",
+    "choices": [
+      "Tahbilk",
+      "Penfolds",
+      "Yalumba",
+      "d'Arenberg"
+    ],
+    "correct_index": 0,
+    "explanation": "ゴールバーン・ヴァレー (Goulburn Valley) にあるタビルク (Tahbilk) は1860年設立の歴史あるワイナリーで、特に1927年に植えられたマルサンヌ (Marsanne) の古木から造られるワインが有名です。"
+  },
+  {
+    "question": "ハンガリー語で「ワイン」を意味する単語として適切なものを次の中から選びなさい。",
+    "choices": [
+      "szőlő",
+      "Magyar",
+      "vin",
+      "bor"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストに「ハンガリー語でブドウは\"szőlő\"、ワインは\"bor\"という。」と記載されているため正解です。szőlőは「ブドウ」を意味します。"
+  },
+  {
+    "question": "ルーション地方のA.O.C.バニュルス (Banyuls) において、最低5年熟成させたアンブレ (Ambré) またはテュイレ (Tuilé) に表記することが認められている用語を1つ選びなさい。",
+    "choices": [
+      "Hors d'âge",
+      "Rancio",
+      "Réserve",
+      "Grand Cru"
+    ],
+    "correct_index": 0,
+    "explanation": "A.O.C.バニュルスでは、最低5年間熟成させたアンブレまたはテュイレのタイプに「Hors d'âge（オール・ダージュ）」と表記することが認められています。「Rancio（ランシオ）」は、特有のランシオ香が生じた場合に表記できます。"
+  },
+  {
+    "question": "スペイン、ガリシア州 (Galicia) のD.O.P.チーズの中で、牛乳を原料とし、燻製される円錐形のチーズを1つ選びなさい。",
+    "choices": [
+      "Queso Tetilla",
+      "Arzúa-Ulloa",
+      "Manchego",
+      "San Simón da Costa"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストのガリシア州の地方料理と食材の項目に「San Simón da Costa（D.O.P.チーズ、牛乳、非加熱圧搾円錐形、燻製される）」と記載があるため正解です。Queso Tetillaは乳房の形、Arzúa-Ulloaは円盤形で燻製されません。"
+  },
+  {
+    "question": "現行のドイツワイン法において、ワインの品質が特別に高いことを示す任意表記としてラベルに記載することが認められている名称に、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Premium",
+      "Alte Reben",
+      "Qualitätswein",
+      "Edition"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには「“Premium”、“Alte Reben”、“Edition”などと同様に、相当の理由や証拠があればラベルに記載することが認められている」とあります。Qualitätsweinはドイツワイン法における品質等級の一つであり、任意表記ではないため誤りです。"
+  },
+  {
+    "question": "日本の乳等省令において定義されている「プロセスチーズ（Processed Cheese）」の説明として適切なものを次の中から選びなさい。",
+    "choices": [
+      "乳を酵素その他の凝固剤により凝固させた凝乳から乳清の一部を除去したもの。",
+      "乳清を加熱し、たんぱく質を凝固させて製造したもの。",
+      "ナチュラルチーズを粉砕し、加熱溶融し、乳化したもの。",
+      "ナチュラルチーズに香辛料や果物を加えて熟成させたもの。"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストの通り、日本の乳等省令では「プロセスチーズ（Processed Cheese）」は「ナチュラルチーズを粉砕し、加熱溶融し、乳化したものをいう」と定められています。選択肢1はナチュラルチーズ（Natural Cheese）の定義です。"
+  },
+  {
+    "question": "地理的表示を使用する際に、酒類の容器または包装に併せて使用することが義務付けられている表示として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Geographical Indication",
+      "GI",
+      "地理的表示",
+      "Geographic Indication"
+    ],
+    "correct_index": 3,
+    "explanation": "地理的表示を使用する場合、「地理的表示」、「Geographical Indication」、「GI」のいずれかの併記が義務付けられています。選択肢の「Geographic Indication」はスペルが誤っているため該当しません。"
+  },
+  {
+    "question": "ルーション地方のA.O.C.リヴザルト (Rivesaltes) において、タイプがアンブレ (Ambré) とテュイレ (Tuilé) のワインに義務付けられている最低酸化熟成期間として正しいものを1つ選びなさい。",
+    "choices": [
+      "1年間",
+      "3年間",
+      "5年間",
+      "収穫翌年の5月1日まで"
+    ],
+    "correct_index": 1,
+    "explanation": "A.O.C.リヴザルトのアンブレとテュイレは、最低3年間の酸化熟成が義務付けられています。5年以上熟成させたものには「Hors d'âge」と表記できます。"
+  },
+  {
+    "question": "山形県のワイン産業に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "日本ワインの年間生産量は、山梨県、長野県に次いで全国第3位である。",
+      "日本ワインの原料として最も多く生産されるブドウ品種はデラウェア (Delaware) である。",
+      "ワイン用ブドウの栽培は、置賜地方、村山地方、庄内地方で行われている。",
+      "気象特性は、日本海側が海洋性気候、内陸側が盆地気候と大きく2分される。"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「日本ワインの年間生産量は1,045kl、750ml換算で約139.3万本。山梨県、長野県、北海道に続き、全国第4位。」と記載されているため、「全国第3位」とする選択肢が誤りです。"
+  },
+  {
+    "question": "ブドウの剪定方法であるコルドン・ロワイヤ（Cordon Royat）に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "名前は、開発されたRoyat農楽学校に由来する。",
+      "長梢を毎年更新していく、代表的な長梢剪定の一種である。",
+      "主幹から左右に伸ばす枝は、フランス語で腕を意味するBrasと呼ばれる。",
+      "短梢の基部が古くなると膨らむため、数年ごとに樹形を整える切り戻しが必要になる。"
+    ],
+    "correct_index": 1,
+    "explanation": "コルドン・ロワイヤ（Cordon Royat）は、参照テキストに「『短梢剪定』として広く用いられるもの」と記載されており、代表的な短梢剪定の一種です。したがって、「長梢剪定の一種である」という記述が誤りです。"
+  },
+  {
+    "question": "日本のワイン造り発祥の地とされる山梨県甲府盆地東部に関する記述として、適切なものを次の中から選びなさい。",
+    "choices": [
+      "ブドウ園は主に標高600m以上にひらかれている。",
+      "この地域に集中するワイナリーは、山梨県全体の約7割以上を占める。",
+      "標高が低くなるにつれて、土壌は粘土質を多く含む傾向にある。",
+      "この地域を流れる主要な河川は、千曲川、犀川、天竜川である。"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「現在実質的に稼働している約80軒のワイナリーのうち7割以上がここに集中している」と記載されています。他の選択肢は、標高（300〜600m）、土壌（標高が高くなるにつれて粘土質）、河川（笛吹川、重川、日川）に関する記述が誤っています。"
+  },
+  {
+    "question": "1870年代にフレンチ・バスク移民のパスカル・アリアゲによってウルグアイに持ち込まれ、同国を代表するブドウ品種となったタナ (Tannat) のシノニムを1つ選びなさい。",
+    "choices": [
+      "Harriague",
+      "Bonarda",
+      "Pais",
+      "Malbec"
+    ],
+    "correct_index": 0,
+    "explanation": "ウルグアイのタナ (Tannat) は、持ち込んだパスカル・アリアゲ (Pascal Harriague) の名にちなんで、アリアゲ (Harriague) という別名で知られています。"
+  },
+  {
+    "question": "アメリカ、カリフォルニア州のA.V.A.に関する記述として適切なものを次の中から選びなさい。",
+    "choices": [
+      "High Valley A.V.A.は、凝縮したフレーバーと豊かな酸をもつソーヴィニヨン・ブラン (Sauvignon Blanc) で知られている。",
+      "Big Valley District A.V.A.は、ナパ・ヴァレー (Napa Valley) の中で最も冷涼な地区である。",
+      "Mount Veeder A.V.A.は、ヴァカ山脈 (Vaca Mountains) 側に位置し、力強いスタイルのワインを生む。",
+      "High Valley A.V.A.は、1870年代からブドウ栽培が行われ、樹齢100年を超えるジンファンデル (Zinfandel) が存在する。"
+    ],
+    "correct_index": 3,
+    "explanation": "High Valley A.V.A.は1870年代からブドウ栽培が行われてきた歴史あるエリアで、樹齢100年を超えるジンファンデルが存在します。選択肢AはBig Valley District A.V.A.、選択肢CのMount Veeder A.V.A.はマヤカマス山脈 (Mayacamas Mountains) 側に位置します。"
+  },
+  {
+    "question": "ラングドック地方において、2024年に単一のA.O.C.として認定された地理的名称を1つ選びなさい。",
+    "choices": [
+      "ラングドック・サン・サテュルナン (Languedoc Saint-Saturnin)",
+      "グレ・ド・モンペリエ (Grès de Montpellier)",
+      "ラングドック・ソミエール (Languedoc Sommières)",
+      "ラングドック・ペズナス (Languedoc Pézenas)"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストによると、ラングドックの11の地理的名称のうち、グレ・ド・モンペリエが2024年に単一のA.O.C.として認定されました。"
+  },
+  {
+    "question": "フランス本土はその国土の形状からしばしば「ヘキサゴン」と呼ばれますが、その原語表記として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Hexagone",
+      "Hectagone",
+      "Hexogne",
+      "Hectogone"
+    ],
+    "correct_index": 0,
+    "explanation": "フランス本土は六角形をしていることから、フランス語で「六角形」を意味する「l'Hexagone」と呼ばれます。正しい綴りはHexagoneです。"
+  },
+  {
+    "question": "スペインのバスク州 (País Vasco) を構成する県として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "アラバ (Álava)",
+      "ビスカヤ (Vizcaya)",
+      "ナバーラ (Navarra)",
+      "ギプスコア (Guipúzcoa)"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストにはバスク州が「アラバ、ビスカヤ、ギプスコア」の3県で構成されると記載されています。ナバーラ (Navarra) は隣接する別の自治州であるため、これが該当しない選択肢となります。"
+  },
+  {
+    "question": "国税庁の調査によるワイン原料用国産生ブドウの受入数量において、白ワイン用品種の中で最も受入数量が多いブドウ品種を1つ選びなさい。",
+    "choices": [
+      "シャルドネ Chardonnay",
+      "ケルナー Kerner",
+      "ソーヴィニヨン・ブラン Sauvignon Blanc",
+      "デラウェア Delaware"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストの表によると、白ワイン用品種の中で最も受入数量が多いのはデラウェア (Delaware) で1,131tです。シャルドネ (Chardonnay) は978tで2番目に多くなっています。"
+  },
+  {
+    "question": "シュッド・ウエスト地方のA.O.C.ペシャルマン (Pécharmant) におけるブドウ品種の作付け比率に関する規定として正しいものを1つ選びなさい。",
+    "choices": [
+      "メルロ (Merlot) を50%以上使用しなければならない。",
+      "カベルネ・フラン (Cabernet Franc) の比率は30%以下でなければならない。",
+      "4品種を必ずブレンドしなければならない。",
+      "いずれの品種も単独で65%を超えてはならない。"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C.ペシャルマンでは、認められている品種（メルロ、カベルネ・フラン、カベルネ・ソーヴィニヨン、マルベック）の作付け比率において、いずれの品種も単独で65%を超えてはならないと規定されています。"
+  },
+  {
+    "question": "サクランボを原料とする蒸留酒は、フランスではキルシュ（Kirsch）と呼ばれますが、ドイツでの呼称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Wasser（ヴァッサー）",
+      "Cidre（シードル）",
+      "Schnaps（シュナップス）",
+      "Poire（ポワレ）"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「サクランボを発酵、蒸留したブランデーは…フランスでは『キルシェ』、ドイツでは『ヴァッサー』と呼ばれる。」と記載されています。"
+  },
+  {
+    "question": "バローロ（Barolo） D.O.C.G.を構成するコムーネ（村）と、そこに属する著名な畑の組み合わせとして、適切でないものを1つ選びなさい。",
+    "choices": [
+      "カスティリオーネ・ファッレット（Castiglione Falletto） - モンプリヴァート（Monprivato）",
+      "セッラルンガ・ダルバ（Serralunga d'Alba） - ブッシア（Bussia）",
+      "モンフォルテ・ダルバ（Monforte d'Alba） - ジネストラ（Ginestra）",
+      "セッラルンガ・ダルバ（Serralunga d'Alba） - ヴィーニャ・リオンダ（Vigna Rionda）"
+    ],
+    "correct_index": 1,
+    "explanation": "ブッシア（Bussia）地区はモンフォルテ・ダルバ（Monforte d'Alba）村に属する著名な畑です。セッラルンガ・ダルバ（Serralunga d'Alba）村にはヴィーニャ・リオンダ（Vigna Rionda）、ラッツァリート（Lazzarito）、オルナート（Ornato）などの畑があります。"
+  },
+  {
+    "question": "ジョージアのP.D.O.ワイン、ツィナンダリ (Tsinandali) の主要な白ブドウ品種の組み合わせとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "ルカツィテリ (Rkatsiteli) と ムツヴァネ・カフリ (Mtsvane Kakhuri)",
+      "キシ (Kisi) と ヒフヴィ (Khikhvi)",
+      "サペラヴィ (Saperavi) と アレクサンドロウリ (Aleksandrouli)",
+      "ムツヴァネ・カフリ (Mtsvane Kakhuri) と キシ (Kisi)"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストのツィナンダリ (Tsinandali) の項目に「主要ブドウ品種 ルカツィテリ、ムツヴァネ・カフリ」と記載があるため正解です。"
+  },
+  {
+    "question": "ロワール渓谷地方において、1936年に最初にA.O.C.として認定されたアペラシオンに該当しないものを1つ選びなさい。",
+    "choices": [
+      "サンセール (Sancerre)",
+      "ヴーヴレー (Vouvray)",
+      "アンジュー・ヴィラージュ (Anjou Villages)",
+      "シノン (Chinon)"
+    ],
+    "correct_index": 2,
+    "explanation": "1936年にロワールで最初にA.O.C.認定されたのは、ミュスカデ・セーヴル・エ・メーヌ、アンジュー、シノン、ヴーヴレー、サンセールなど10のアペラシオンです。アンジュー・ヴィラージュは後年になって制定されたA.O.C.です。"
+  },
+  {
+    "question": "1716年にトスカーナ大公コジモ3世が、世界で初めてワインの産地境界を定めた際に指定した4つの地域に含まれるものを1つ選びなさい。",
+    "choices": [
+      "カルミニャーノ（Carmignano）",
+      "ブルネッロ・ディ・モンタルチーノ（Brunello di Montalcino）",
+      "ヴィーノ・ノービレ・ディ・モンテプルチャーノ（Vino Nobile di Montepulciano）",
+      "ヴェルナッチャ・ディ・サン・ジミニャーノ（Vernaccia di San Gimignano）"
+    ],
+    "correct_index": 0,
+    "explanation": "1716年にトスカーナ大公コジモ3世が境界を定めたのは、カルミニャーノ（Carmignano）、キアンティ（Chianti）、ポミーノ（Pomino）、ヴァル・ダルノ・ディ・ソプラ（Val d'Arno di Sopra）の4つです。これは世界初の原産地保護の例とされています。"
+  },
+  {
+    "question": "カンパーニア州のD.O.C.G.ワイン、アリアニコ・デル・タブルノ（Aglianico del Taburno） Rosso Riservaにおける、木樽での最低熟成期間として適切なものを次の中から選びなさい。",
+    "choices": [
+      "3ヶ月",
+      "6ヶ月",
+      "9ヶ月",
+      "12ヶ月"
+    ],
+    "correct_index": 3,
+    "explanation": "アリアニコ・デル・タブルノ（Aglianico del Taburno） Rosso Riservaは、最低3年以上の総熟成期間が義務付けられており、そのうち木樽での熟成は12ヶ月以上、瓶内熟成は6ヶ月以上と定められています。"
+  },
+  {
+    "question": "アメリカのオーガニック認証において、「Made with Organic Grapes」と表示するための規定として、亜硫酸塩の添加上限値として正しいものを1つ選びなさい。",
+    "choices": [
+      "10ppm 未満",
+      "50ppm 未満",
+      "150ppm 未満",
+      "100ppm 未満"
+    ],
+    "correct_index": 3,
+    "explanation": "「Made with Organic Grapes」と表示するには、原料の70%以上がオーガニック認証を受けていることに加え、亜硫酸塩の添加が100ppm未満である必要があります。"
+  },
+  {
+    "question": "A.O.C.カシス (Cassis) の白ワインにおいて、使用が認められている補助品種に該当しないものを1つ選びなさい。",
+    "choices": [
+      "ブールブーラン (Bourboulenc)",
+      "パスカル (Pascal)",
+      "ソーヴィニョン・ブラン (Sauvignon Blanc)",
+      "ミュスカデル (Muscadelle)"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C.カシスの白ワインの補助品種として、ブールブーラン、パスカル、ソーヴィニョン・ブラン、ユニ・ブラン、テレ・ブランが認められています。ミュスカデルは認められていません。"
+  },
+  {
+    "question": "ブルゴーニュ地方のA.O.C.シャンボール・ミュジニー (Chambolle-Musigny) の代表的な1級畑（Premier Cru）に該当しないものを1つ選びなさい。",
+    "choices": [
+      "レザムルーズ (Les Amoureuses)",
+      "レ・シャルム (Les Charmes)",
+      "レ・プティ・ゼプノ (Les Petits Epenots)",
+      "レ・クラ (Les Cras)"
+    ],
+    "correct_index": 2,
+    "explanation": "レ・プティ・ゼプノは、ポマール (Pommard) の代表的な1級畑です。レザムルーズ、レ・シャルム、レ・クラはシャンボール・ミュジニーの著名な1級畑です。"
+  },
+  {
+    "question": "1965年に西オーストラリア州のグレート・サザン (Great Southern) で最初にワイン用ブドウが植えられ、リースリング (Riesling) の栽培適性が高いことで知られる地区を1つ選びなさい。",
+    "choices": [
+      "Mount Barker",
+      "Frankland River",
+      "Margaret River",
+      "Pemberton"
+    ],
+    "correct_index": 0,
+    "explanation": "マウント・バーカー (Mount Barker) は、1965年にグレート・サザンで最初にワイン用ブドウが植えられた地区であり、特にリースリング (Riesling) の銘醸地として知られています。"
+  },
+  {
+    "question": "ギリシャの品種別栽培面積で最大であり、レチーナ (Retsina) のベースとしても知られるブドウ品種を1つ選びなさい。",
+    "choices": [
+      "アシルティコ (Assyrtiko)",
+      "サヴァティアノ (Savatiano)",
+      "ロディティス (Roditis)",
+      "クシノマヴロ (Xinomavro)"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストに「レチーナのベースとなるブドウ品種サヴァティアノは、依然としてギリシャの品種別栽培面積で最大の約10,000haを有する。」と記載があるため正解です。"
+  },
+  {
+    "question": "ブルゴーニュ地方のグラン・クリュ、A.O.C.コルトン (Corton) の赤ワインにおいて、区画名を付記することが許可されていないものを1つ選びなさい。",
+    "choices": [
+      "クロ・デュ・ロワ (Clos du Roi)",
+      "レ・ブレッサンド (Les Bressandes)",
+      "プジェ (Pougets)",
+      "レ・ルナルド (Les Renardes)"
+    ],
+    "correct_index": 2,
+    "explanation": "A.O.C.コルトンの赤ワインは単一区画名を付記できますが、「Le Charlemagne」、「Pougets」、「Charlemagne」の3つの区画については、赤ワインへの区画名の付記が許可されていません。"
+  },
+  {
+    "question": "ブドウ樹に被害をもたらす病害のうち、ウイルスを原因としないものを1つ選びなさい。",
+    "choices": [
+      "Leaf roll（リーフ・ロール）",
+      "Fleck（フレック）",
+      "Corky Bark（コーキー・バーク）",
+      "Pierce's Disease（ピアス病）"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには「ピアス病はXylella fastidiosaという、細菌による病害である」と明記されています。Leaf roll、Fleck、Corky Barkはいずれも代表的なウイルス病として挙げられています。"
+  },
+  {
+    "question": "大阪府のワイン産業の歴史において、2012年に「大阪ワイン」のブランドを守っていくことなどを主旨として設立された組織の名称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "大阪ワイン振興会",
+      "南河内ワイン協会",
+      "大阪ワイナリー協会",
+      "関西ワイン生産者組合"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには「また2012年、100年以上続く、ブドウ栽培、ワイン造りの歴史を伝え、「大阪ワイン」のブランドを守っていくことを主旨として大阪ワイナリー協会が設立されている。」と明記されています。"
+  },
+  {
+    "question": "オーストラリア・ワイン産業の「機関室」と形容され、南オーストラリア州のブドウ生産量の約60%を産出する、灌漑を前提とした大規模な栽培地域を1つ選びなさい。",
+    "choices": [
+      "Barossa Valley",
+      "Coonawarra",
+      "Riverland",
+      "Clare Valley"
+    ],
+    "correct_index": 2,
+    "explanation": "南オーストラリア州のマレー川 (Murray River) 沿いに広がるリヴァーランド (Riverland) は、オーストラリア・ワイン産業の「機関室」と形容されるほど生産量が大きく、豪州全体のブドウ生産量の約30%を占めます。"
+  },
+  {
+    "question": "日本ソムリエ協会が主催する「J.S.A.ソムリエ・スカラシップ（J.S.A. Sommelier Scholarship）」の参加資格における年齢要件として、正しいものを1つ選びなさい。",
+    "choices": [
+      "20歳以上、25歳以下",
+      "20歳以上、30歳以下",
+      "20歳以上、27歳以下",
+      "25歳以上、35歳以下"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには、J.S.A.ソムリエ・スカラシップの参加資格として「年齢20歳以上、27歳以下の日本ソムリエ協会会員」と明記されています。"
+  },
+  {
+    "question": "カナダのオンタリオ (Ontario) 州で、輸入原料とオンタリオ州産ワインをブレンドした低価格帯のワインに用いられていた表示を1つ選びなさい。",
+    "choices": [
+      "Vintners Quality Alliance",
+      "Cellared in Canada",
+      "International Blend",
+      "Product of Canada"
+    ],
+    "correct_index": 1,
+    "explanation": "オンタリオ州では、政府がワイン原料を海外から輸入することを推奨した歴史的経緯から、輸入原料とオンタリオ州産ワインをブレンドしたワインが「Cellared in Canada」の表記で販売されていました。"
+  },
+  {
+    "question": "ナパ・ヴァレー (Napa Valley) の山地に位置するA.V.A.のうち、東側のヴァカ山脈 (Vaca Mountains) 側ではなく、西側のマヤカマス山脈 (Mayacamas Mountains) 側に位置するものを1つ選びなさい。",
+    "choices": [
+      "Atlas Peak A.V.A.",
+      "Howell Mountain A.V.A.",
+      "Mount Veeder A.V.A.",
+      "Stags Leap District A.V.A."
+    ],
+    "correct_index": 2,
+    "explanation": "Mount Veeder A.V.A.はナパ・ヴァレーの西側、マヤカマス山脈に位置します。一方、Atlas Peak A.V.A.とHowell Mountain A.V.A.は東側のヴァカ山脈に位置します。Stags Leap District A.V.A.はヴァレー・フロアに位置します。"
+  },
+  {
+    "question": "ローヌ渓谷地方のA.O.C.ミュスカ・ド・ボーム・ド・ヴニーズ (Muscat de Beaumes de Venise) で使用が認められているブドウ品種として適切なものを次の中から選びなさい。",
+    "choices": [
+      "ミュスカ・ダレクサンドリー (Muscat d'Alexandrie)",
+      "ミュスカ・オットネル (Muscat Ottonel)",
+      "ミュスカデ (Muscadelle)",
+      "ミュスカ・ア・プティ・グラン・ブラン (Muscat à Petits Grains Blancs)"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C.ミュスカ・ド・ボーム・ド・ヴニーズで認められている品種は、ミュスカ・ア・プティ・グラン・ブランとミュスカ・ア・プティ・グラン・ルージュの2品種のみです。"
+  },
+  {
+    "question": "ソムリエの実務におけるデカンタージュ（Decantage）の作業に関する記述として、最も不適切なものを1つ選びなさい。",
+    "choices": [
+      "作業を始める前に、ろうそくなどの光源を確認する。",
+      "澱が舞わないよう、途中で何度か休止しながらゆっくりと行う。",
+      "デカンターの内側に沿って、ワインを静かに移す。",
+      "作業後、ホストにテイスティングをしてもらい、確認を得る。"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「デカンタージュの作業は停止なしに一気に行う。その際、素早くかつ慎重に行う。」と記載されています。したがって、「途中で何度か休止しながら行う」という記述は不適切です。"
+  },
+  {
+    "question": "メドックの1855年の格付けにおいて、1973年に第2級から第1級に昇格したシャトーを1つ選びなさい。",
+    "choices": [
+      "シャトー・ムートン・ロートシルト (Château Mouton-Rothschild)",
+      "シャトー・ラフィット・ロートシルト (Château Lafite-Rothschild)",
+      "シャトー・コス・デストゥルネル (Château Cos d'Estournel)",
+      "シャトー・パルメ (Château Palmer)"
+    ],
+    "correct_index": 0,
+    "explanation": "シャトー・ムートン・ロートシルトは、1855年の格付けでは第2級でしたが、長年の努力が実り、1973年に唯一の例外として第1級に昇格しました。"
+  },
+  {
+    "question": "ローヌ渓谷地方 (Vallée du Rhône) を構成する県として適切なものを次の中から選びなさい。",
+    "choices": [
+      "ヴォクリューズ (Vaucluse)",
+      "ソーヌ・エ・ロワール (Saône-et-Loire)",
+      "ジロンド (Gironde)",
+      "メーヌ・エ・ロワール (Maine-et-Loire)"
+    ],
+    "correct_index": 0,
+    "explanation": "ローヌ渓谷地方は、ローヌ、ロワール、アルデッシュ、ガール、ドローム、ヴォクリューズの6県にまたがっています。ソーヌ・エ・ロワールはブルゴーニュ、ジロンドはボルドー、メーヌ・エ・ロワールはロワールの県です。"
+  },
+  {
+    "question": "シャンパーニュ地方において、非発泡性ロゼワインのA.O.C.ロゼ・デ・リセイが造られている地区として適切なものを次の中から選びなさい。",
+    "choices": [
+      "マルヌ県 (Marne)",
+      "エーヌ県 (Aisne)",
+      "オーブ県 (Aube)",
+      "オート・マルヌ県 (Haute-Marne)"
+    ],
+    "correct_index": 2,
+    "explanation": "A.O.C.ロゼ・デ・リセイ (Rosé des Riceys) は、シャンパーニュ地方南部のオーブ県にあるレ・リセイ村でのみ生産が認められている非発泡性のロゼワインです。"
+  },
+  {
+    "question": "A.O.C.ボルドーにおいて、温暖化対策として赤ワイン用に導入が認められた補助品種アリナルノア (Arinarnoa) の交配として適切なものを次の中から選びなさい。",
+    "choices": [
+      "カベルネ・ソーヴィニヨン (Cabernet Sauvignon) × グルナッシュ (Grenache)",
+      "タナ (Tannat) × カベルネ・ソーヴィニヨン (Cabernet Sauvignon)",
+      "カベルネ・フラン (Cabernet Franc) × メルロ (Merlot)",
+      "マルベック (Malbec) × タナ (Tannat)"
+    ],
+    "correct_index": 1,
+    "explanation": "アリナルノアは、タナとカベルネ・ソーヴィニヨンの交配によって生まれたブドウ品種です。ちなみに、カベルネ・ソーヴィニヨンとグルナッシュの交配品種はマルスラン (Marselan) です。"
+  },
+  {
+    "question": "アメリカのワイン史において、19世紀後半にフィロキセラが最初に発見され、多くのブドウ畑が壊滅した場所として記録されている地域を1つ選びなさい。",
+    "choices": [
+      "Napa",
+      "Sonoma",
+      "Virginia",
+      "New York"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストによると、19世紀後半にフィロキセラが最初に発見されたのはソノマ (Sonoma) であり、その後カリフォルニアの多くのブドウ畑に壊滅的な被害をもたらしました。"
+  },
+  {
+    "question": "日本洋酒酒造組合が制定した「ジャパニーズウイスキー（Japanese Whisky）」の自主基準における貯蔵の要件として、適切なものを次の中から選びなさい。",
+    "choices": [
+      "内容量700ℓ以下の木製樽に詰め、3年以上日本国内において貯蔵する。",
+      "内容量500ℓ以下の木製樽に詰め、2年以上日本国内において貯蔵する。",
+      "内容量700ℓ以下の木製樽に詰め、5年以上日本国内において貯蔵する。",
+      "内容量500ℓ以下の木製樽に詰め、3年以上日本国内において貯蔵する。"
+    ],
+    "correct_index": 0,
+    "explanation": "ジャパニーズウイスキー（Japanese Whisky）の自主基準では、貯蔵について「内容量700ℓ以下の木製樽に詰め、当該詰めた日の翌日から起算して3年以上日本国内において貯蔵すること」と定められています。"
+  },
+  {
+    "question": "ブルゴーニュ地方マコネ地区のA.O.C.マコン・ヴィラージュ (Mâcon-Villages) で認められているワインのタイプとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "赤ワインのみ",
+      "白ワインのみ",
+      "赤ワインと白ワイン",
+      "赤・ロゼ・白ワイン"
+    ],
+    "correct_index": 1,
+    "explanation": "A.O.C.マコン・ヴィラージュは、シャルドネ (Chardonnay) から造られる白ワインにのみ与えられる地方名A.O.C.です。赤・ロゼ・白ワインが認められているのは、より広域のA.O.C.マコン (Mâcon) です。"
+  },
+  {
+    "question": "ポルトガルで栽培される黒ブドウ品種Jaenと同一品種である、スペインのガリシア (Galicia) 地方の品種を1つ選びなさい。",
+    "choices": [
+      "Aragonez",
+      "Mencia",
+      "Baga",
+      "Castelão"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストに「Jaenはスペインのガリシア地方のMenciaと同じ品種で瑞々しい若飲みの赤ワインとなる。」と記載されているため正解です。AragonezはTempranilloのシノニムです。"
+  },
+  {
+    "question": "マルケ州のD.O.C.G.ワイン、コーネロ（Conero）の最低熟成期間として正しいものを1つ選びなさい。",
+    "choices": [
+      "12ヶ月",
+      "18ヶ月",
+      "24ヶ月",
+      "36ヶ月"
+    ],
+    "correct_index": 2,
+    "explanation": "コーネロ（Conero） D.O.C.G.は、D.O.C.ロッソ・コーネロ（Rosso Conero）のリゼルヴァ（Riserva）のみが独立して昇格したもので、最低24ヶ月の熟成が義務付けられています。18ヶ月はカステッリ・ディ・イエージ・ヴェルディッキオ・リゼルヴァ（Castelli di Jesi Verdicchio Riserva）の法定熟成期間です。"
+  },
+  {
+    "question": "ラインヘッセン (Rheinhessen) で2017年に結成された醸造所団体Maxime Herkunft Rheinhessenが採用している格付けの組み合わせとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "Gutswein, Ortswein, Lagenwein",
+      "Erste Lage, Große Lage, Großes Gewächs",
+      "Classic, Selection, Edition",
+      "Qualitätswein, Prädikatswein, Landwein"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストに「ラインヘッセンでは2017年に結成された醸造所団体Maxime Herkunft Rheinhessenが、Gutswein（醸造所名ワイン）、Ortswein（市町村名ワイン）、Lagenwein（畑名ワイン）という格付けを採用し」と記載があるため正解です。"
+  }
+]

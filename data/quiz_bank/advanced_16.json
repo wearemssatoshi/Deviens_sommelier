@@ -1,0 +1,552 @@
+[
+  {
+    "question": "オレゴン州 (Oregon) の主要ワイン産地の東側に位置し、レインシャドー効果をもたらすカスケード山脈 (Cascade Range) における州内の最高峰フッド山 (Mount Hood) の標高として、最も近いものを1つ選びなさい。",
+    "choices": [
+      "1,200m",
+      "2,873m",
+      "3,429m",
+      "4,050m"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストに「オレゴン州の中での最高峰フッド山は標高3,429m」と明記されている。1,200mは海岸山脈の標高、2,873mはヤラ・ヴァレーの栽培面積(ha)、4,050mはレイク・カウンティの栽培面積(ha)に関連する数値である。"
+  },
+  {
+    "question": "メリーランド州 (Maryland) の弁護士であったロバート・M・パーカー Jr. (Robert M. Parker Jr.) が、ニュースレター『ワイン・アドヴォケイト (The Wine Advocate)』の発行を開始した年を1つ選びなさい。",
+    "choices": [
+      "1978年",
+      "1961年",
+      "1985年",
+      "1990年"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストに「『ワイン・アドヴォケイト』は、ワイン愛好家だったメリーランド州の弁護士Robert M. Parker Jr.が、1978年から発行する独自のニュースレターで」と記載されている。"
+  },
+  {
+    "question": "2020年ヴィンテージから認定されたオーストリアの Ruster Ausbruch D.A.C. ルスター・アウスブルッフ D.A.C. の規定に関して、誤っているものを1つ選びなさい。",
+    "choices": [
+      "A. 最低アルコール度数に関する規定はないが、最低残糖は45g/lと定められている。",
+      "B. 最低糖度は30°KMWでなければならない。",
+      "C. 官能検査委員会への提出は、収穫翌年の5月1日以降に行わなければならない。",
+      "D. クヴァリテーツヴァインとして認可された白ブドウ品種を1つ以上使用し、手摘みで収穫しなければならない。"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストによると、ルスター・アウスブルッフD.A.C.の官能検査委員会への提出は「収穫翌年4月1日以降」と規定されています。したがって、「5月1日以降」とする選択肢Cが誤りです。"
+  },
+  {
+    "question": "A.O.C. Languedoc Saint-Christol の赤ワインの醸造規定において、主要品種であるグルナッシュ Grenache、ムールヴェードル Mourvedre、シラー Syrah の合計が占めるべき最低比率として適切なものを次の中から選びなさい。",
+    "choices": [
+      "30%",
+      "40%",
+      "50%",
+      "60%"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには、Languedoc Saint-Christolの規定として「また主要品種の合計が全体の50%を占める一方、1品種のみで65%を超えてはならない。」と記載されています。したがって、主要品種の合計が占めるべき最低比率は50%です。"
+  },
+  {
+    "question": "1850年代にニュー・イングランド・オーストラリア (New England Australia) 地区を開拓し、国際的に評価されるワインを生産した人物として適切なものを次の中から選びなさい。",
+    "choices": [
+      "James Halliday",
+      "George Wyndham",
+      "Max Schubert",
+      "Dr. Konstantin Frank"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストに「1850年代にWyndham Estateの創設者George Wyndhamが開拓し、国際的に評価されるワインが生産されていた歴史をもつ」と記載されている。James Hallidayはヤラ・ヴァレー、Max Schubertはペンフォールズ、Dr. Konstantin Frankはニューヨーク州の人物である。"
+  },
+  {
+    "question": "2024年3月に、酒類の地理的表示(G.I.)として「蒸留酒」の区分で約20年ぶりに新たに指定されたものを1つ選びなさい。",
+    "choices": [
+      "東京島酒 (Tokyo-Iland-Sake)",
+      "薩摩 (Satsuma)",
+      "球磨 (Kuma)",
+      "壱岐 (Iki)"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストの記述に基づき、2024年3月に新たに指定された地理的表示は「東京島酒」です。壱岐、球磨は1995年、薩摩は2005年に指定されています。"
+  },
+  {
+    "question": "A.O.C. Savoie Chautagne の白ワインに関する規定として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "主要品種はジャケール Jacquère で、作付けの70%以上を占めなければならない。",
+      "補助品種としてアリゴテ Aligoté、アルテス Altesse などが認められている。",
+      "醸造においてはジャケール Jacquère を単一で用いることができる。",
+      "醸造においてジャケール Jacquère を80%以上用い、補助品種をブレンドすることができる。"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには、Savoie Chautagneの白ワインについて「白は主要品種のジャケールが作付けの80%以上を占めなければならず」と記載されています。したがって、「70%以上」という記述は誤りです。"
+  },
+  {
+    "question": "オランダのg.U.チーズ「ノールト・ホランツェ・ハウダ (Noord-Hollandse Gouda)」のチーズタイプとして正しいものを1つ選びなさい。",
+    "choices": [
+      "ハード (加熱圧搾)",
+      "フロマージュ・ド・シェーヴル (Fromage de chèvre)",
+      "酵母タイプ",
+      "ハード (非加熱圧搾)"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストの表によると、Noord-Hollandse Goudaは「ハード (非加熱圧搾)」タイプの牛の乳から造られるチーズです。加熱圧搾チーズ (Fromage à pâte pressée cuite) ではありません。"
+  },
+  {
+    "question": "オーストラリア、南オーストラリア州 (South Australia) のクレア・ヴァレー (Clare Valley) における非公式な小地区として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Polish Hill River",
+      "Watervale",
+      "Sevenhill",
+      "Basket Range"
+    ],
+    "correct_index": 3,
+    "explanation": "Basket Rangeは、クレア・ヴァレーではなくアデレード・ヒルズ (Adelaide Hills) においてナチュラルワイン・ムーヴメントを牽引する地区である。Polish Hill River, Watervale, Sevenhillはいずれもクレア・ヴァレーの非公式小地区としてテキストに記載されている。"
+  },
+  {
+    "question": "酒米「五百万石 (Gohyakumangoku)」に関する記述として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "主産地は兵庫県であり、2022年産の醸造用玄米に占める割合は約35.4%である。",
+      "1938年に新潟県農事試験場で菊水 (Kikusui) と新200号の交配により生み出された。",
+      "寒冷地向けに開発された早生品種で、米質はやや硬く溶けにくい。",
+      "「淡麗」という表現は、五百万石の誕生によって生まれたともいわれる。"
+    ],
+    "correct_index": 0,
+    "explanation": "五百万石の主産地は新潟県です。兵庫県を主産地とし、2022年産醸造用玄米の約35.4%を占める酒米は「山田錦 (Yamadanishiki)」です。その他の選択肢は参照テキストの記述と一致します。"
+  },
+  {
+    "question": "長野県の千曲川ワインバレーにおけるブドウ産地と土壌に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "東御市の八重原台地は粘土質が多い。",
+      "東御市の千曲川右岸は火山灰由来の黒ボクが多い。",
+      "上田市の千曲川左岸は細粒褐色森林土と呼ばれる粘土質が多い。",
+      "高山村は千曲川の左岸に位置し、鮎川や松川などが形成した扇状地で構成される。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには「高山村は千曲川の右岸、長野盆地(別名善光寺平)東端の扇状地に位置する。」と記載されている。選択肢Dでは「左岸」とされているため、この記述が誤りである。"
+  },
+  {
+    "question": "A.O.C. Cassis の白ワインに関する規定として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "主要品種はクレレット Clairette とマルサンヌ Marsanne である。",
+      "主要品種であるクレレットとマルサンヌの合計で60%以上を占めなければならない。",
+      "補助品種のテレ・ブラン Terret Blanc は、全体の10%まで使用が認められている。",
+      "マルサンヌ Marsanne のみで全体の30〜80%を占めなければならない。"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには、A.O.C. Cassis の白ワインの規定について「補助品種として...テレ・ブランが認められているが、テレ・ブランの比率は全体の5%以下。」と記載されています。したがって、「10%まで使用が認められている」という記述は誤りです。"
+  },
+  {
+    "question": "ルーマニアの土着ブドウ品種の中から、グリブドウに分類されるものを次の中から選びなさい。",
+    "choices": [
+      "A. Feteasca Alba フェテアスカ・アルバ",
+      "B. Babeasca Neagra バベアスカ・ネアグラ",
+      "C. Busuioaca de Bohotin ブスイオアカ・デ・ボホティン",
+      "D. Tamaioasa Romaneasca タマヨアサ・ロマネアスカ"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストの品種リストにおいて、Busuioaca de Bohotin ブスイオアカ・デ・ボホティンは「グリブドウ」のカテゴリーに分類されています。Feteasca AlbaとTamaioasa Romaneascaは白ブドウ、Babeasca Neagraは黒ブドウです。"
+  },
+  {
+    "question": "Puglia州で生産される、Bombino Nero種を主体としたロゼワインのD.O.C.G.を1つ選びなさい。",
+    "choices": [
+      "Gioia del Colle",
+      "Castel del Monte Bombino Nero",
+      "Castel del Monte Nero di Troia Riserva",
+      "Brachetto d'Acqui"
+    ],
+    "correct_index": 1,
+    "explanation": "Castel del Monte Bombino NeroはPuglia州のD.O.C.G.で、Bombino Nero種から造られる珍しいロゼワインのD.O.C.G.です。Gioia del ColleはPrimitivo種で有名なD.O.C.、Castel del Monte Nero di Troia RiservaはUva di Troia種による赤のD.O.C.G.です。"
+  },
+  {
+    "question": "コルス Corsica 島の土壌に関する記述として、最も適切なものを1つ選びなさい。",
+    "choices": [
+      "島全体が石灰質土壌で覆われている。",
+      "島の西側3分の2はシスト質、東側は花崗岩質である。",
+      "島の西側3分の2は花崗岩質、東側はシスト質である。",
+      "島全体が火山性土壌で構成されている。"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには、コルス島の土壌について「大まかにいうと島の西側3分の2は花崗岩質。東側はシスト。」と記載されています。したがって、この記述が最も適切です。"
+  },
+  {
+    "question": "瓶内二次発酵による発泡性ワインの製法について言及した、意図的な二次発酵に関する最古の文書とされる論文を英国王立協会に提出した科学者と、その年号の組み合わせとして正しいものを1つ選びなさい。",
+    "choices": [
+      "A. Christopher Merret クリストファー・メレット - 1662年",
+      "B. Henry II ヘンリー2世 - 1154年",
+      "C. Carl the Great カール大帝 - 812年",
+      "D. Henry VIII ヘンリー8世 - 1534年"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには、「1662年に英国の科学者Christopher Merretが王立協会に提出した論文で、瓶内のワインに糖分の高い原料を加えて再発酵させ、発泡性をもたらす方法に言及している」と記載されており、これが意図的な二次発酵を記した最古の文書とされています。したがって、選択肢Aが正解です。"
+  },
+  {
+    "question": "マンズワインが長野県に進出し、塩田地区にカベルネ・ソーヴィニヨン (Cabernet Sauvignon)、小諸地区にシャルドネ (Chardonnay) とメルロ (Merlot) のブドウ団地を形成し、小諸にワイナリーを設立した年として適切なものを次の中から選びなさい。",
+    "choices": [
+      "1969年",
+      "1973年",
+      "1968年",
+      "1975年"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「69年には小諸にワイナリー、計35haの善光寺ブドウのブドウ団地が塩田と大里に形成された。後に塩田、小諸一帯は前者がカベルネ・ソーヴィニヨン、後者はシャルドネとメルロの重要な産地となった。」とあり、ワイナリー設立は1969年が正解。1968年は進出を開始した年、1973年はワイン元年、1975年はワイン消費量が甘味果実酒を抜いた年であり、いずれも不正解。"
+  },
+  {
+    "question": "ブルゴーニュ地方モレ・サン・ドニ Morey-Saint-Denis 村に存在する5つのグラン・クリュのうち、その大部分が隣接するシャンボール・ミュジニー Chambolle-Musigny 村に属しているものを1つ選びなさい。",
+    "choices": [
+      "クロ・ド・ラ・ロッシュ Clos de la Roche",
+      "ボンヌ・マール Bonnes-Mares",
+      "クロ・デ・ランブレイ Clos des Lambrays",
+      "クロ・ド・タール Clos de Tart"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには、モレ・サン・ドニの特級畑について「5つの特級畑があるが、最南部のボンヌ・マールは、その大部分がシャンボール・ミュジニーに属する。」と記載されています。したがって、正解はボンヌ・マール Bonnes-Mares です。"
+  },
+  {
+    "question": "コート・デュ・ローヌ・ヴィラージュ Cotes du Rhone Villages から独立し、2016年にA.O.C.に昇格したものを1つ選びなさい。",
+    "choices": [
+      "ヴァンソーブル Vinsobres",
+      "ラストー Rasteau",
+      "コスティエール・ド・ニーム Costieres de Nimes",
+      "ケランヌ Cairanne"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには「近年は2006年のヴァンソーブル、2010年のラストー、2016年のケランヌなど、コート・デュ・ローヌ・ヴィラージュから独立するA.O.C.が増えている。」と記載されています。したがって、2016年に昇格したA.O.C.はケランヌ Cairanne です。"
+  },
+  {
+    "question": "ロワール地方の中央高地地区で栽培される白ブドウ品種サシー Sacy のシノニムとして知られるものを1つ選びなさい。",
+    "choices": [
+      "ロモランタン Romorantin",
+      "トレサリエ Tressalier",
+      "ムニュ・ピノ Menu Pineau",
+      "シュナン・ブラン Chenin Blanc"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストの中央高地地区の白ブドウ品種のリストに「Sacy (Tressalier)」と記載されており、トレサリエ Tressalier がサシー Sacy のシノニムであることが示されています。"
+  },
+  {
+    "question": "2016年にコート・ド・ボルドー連合に加わり、A.O.C. Sainte-Foy-Cotes de Bordeaux を名乗るようになった旧A.O.C.を1つ選びなさい。",
+    "choices": [
+      "コート・ド・ブール Cotes de Bourg",
+      "サント・フォワ・ボルドー Sainte-Foy-Bordeaux",
+      "カスティヨン・コート・ド・ボルドー Castillon Cotes de Bordeaux",
+      "フラン・コート・ド・ボルドー Francs Cotes de Bordeaux"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「2016 年にサント・フォワ・ボルドーが連合に加わり、 A.O.C.サント・フォワ・コート・ド・ボルドーと名乗るようになった。」と記載されています。したがって、正解はサント・フォワ・ボルドー Sainte-Foy-Bordeaux です。"
+  },
+  {
+    "question": "2022年9月2日の政令により、特定の条件下でA.O.C. Arbois の Vin Jaune において、主要品種であるサヴァニャン Savagnin に加えて使用が認められた品種の組み合わせとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "アリゴテ Aligoté と シュナン・ブラン Chenin Blanc",
+      "シャルドネ Chardonnay と ピノ・ノワール Pinot Noir",
+      "マルサンヌ Marsanne と ルーサンヌ Roussanne",
+      "アンファリネ Enfariné と グランジェ Granget"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストのヴァン・ジョーヌの規定には「2022年9月2日の政令により...アルボワのヴァン・ジョーヌにはサヴァニャンのほかにアンファリネとグランジェが、作付けで5%、醸造で10%まで認められることとなった。」と記載されています。したがって、正しい組み合わせはアンファリネ Enfariné と グランジェ Granget です。"
+  },
+  {
+    "question": "ブルゴーニュ地方のA.O.C. Pernand-Vergelesses Premier Cru のうち、2000年に昇格し、白ワインのみが認められているクリマを1つ選びなさい。",
+    "choices": [
+      "スー・フレティル Sous Fretille",
+      "イル・デ・ヴェルジュレス Ile des Vergelesses",
+      "レ・フィショ Les Fichots",
+      "アン・カラドゥー En Caradeux"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには、ペルナン・ヴェルジュレスの1級畑について「2000年に昇格した3つの区画は、白のみ1級畑として認められている。」とあり、そのリストの中に「スー・フレティル Sous Fretille (白)」が含まれています。他の選択肢は赤白両方が認められています。"
+  },
+  {
+    "question": "オーストリアのD.A.C.である Rosalia D.A.C. ロザリア D.A.C. に関する記述として適切なものを次の中から選びなさい。",
+    "choices": [
+      "A. ブルゲンラント州で最も栽培面積の大きいD.A.C.である。",
+      "B. 2020年にD.A.C.に認定された、比較的新しい産地である。",
+      "C. ライタベルク山脈の東側に位置し、ハンガリーの影響を受けたパノニア料理で知られる。",
+      "D. オーストリアで最も小さい栽培面積のD.A.C.で、2018年に認定された。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには、「ロザリアD.A.C.はオーストリアで最も小さい栽培面積のD.A.C.」であり、「2018年にD.A.C.となった」と明確に記載されています。したがって、選択肢Dが正しい記述です。"
+  },
+  {
+    "question": "1998年に地方名のA.O.C.から村名A.O.C.に昇格し、アリゴテ Aligoté 種のみから白ワインが造られるコート・シャロネーズ地区のA.O.C.を1つ選びなさい。",
+    "choices": [
+      "ブーズロン Bouzeron",
+      "リュリー Rully",
+      "モンタニー Montagny",
+      "ジヴリ Givry"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「Bouzeron(白)」「地方名のBourgogne Aligoté de Bouzeronから1998年に昇格した。」「アリゴテから造られる白ワインにのみ認められている村名A.O.C.」と記載されています。したがって、正解はブーズロン Bouzeron です。"
+  },
+  {
+    "question": "ブルガリアで栽培されているブドウ品種に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "A. 2023年7月31日時点で、白ワイン用品種として最も栽培面積が広いのは Muscat Ottonel ミュスカ・オットネルである。",
+      "B. 白ブドウの土着品種として、Dimyat ディミャットが知られている。",
+      "C. 黒ブドウの土着品種として、Mavrud マヴルッドや Melnik メルニックが知られている。",
+      "D. 2023年7月31日時点で、白ワイン用品種として2番目に栽培面積が広いのは Sauvignon Blanc ソーヴィニヨン・ブランである。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストの栽培面積データによると、ブルガリアの白ワイン用品種で最も栽培面積が広いのはMuscat Ottonel ミュスカ・オットネル（5,020.1ha）で、2番目に広いのはRkatsiteli ルカツィテリ（4,654.2ha）です。したがって、2番目をSauvignon Blanc ソーヴィニヨン・ブランとする選択肢Dが誤りです。"
+  },
+  {
+    "question": "EUの品質分類呼称であるP.D.O. (Protected Designation of Origin)に相当するドイツ語の呼称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Denominação de Origem Protegida",
+      "Geschützte Ursprungsbezeichnung",
+      "Beschermde Oorsprongsbenaming",
+      "Denominazione di Origine Protetta"
+    ],
+    "correct_index": 1,
+    "explanation": "P.D.O.に相当するドイツ語の呼称はg.U.と略され、正式名称はGeschützte Ursprungsbezeichnungです。選択肢1はポルトガル語、3はオランダ語、4はイタリア語のD.O.P.です。"
+  },
+  {
+    "question": "Abruzzo州のD.O.C.G. Terre Tollesi / Tullumにおいて、Spumanteを生産する場合に60%以上使用しなければならないと規定されているブドウ品種として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Chardonnay",
+      "Pecorino",
+      "Passerina",
+      "Montepulciano"
+    ],
+    "correct_index": 0,
+    "explanation": "D.O.C.G. Terre Tollesi / Tullumのスプマンテは、Chardonnayを60%以上使用することが規定されています。PecorinoとPasserinaは同D.O.C.G.の白ワイン、Montepulcianoは赤ワインの主要品種です。"
+  },
+  {
+    "question": "カナダにおけるブレンドワインの表記と規制に関する記述として、適切なものを1つ選びなさい。",
+    "choices": [
+      "「Cellared in Canada」と表記されるワインは、カナダ産ブドウを100%使用しなければならない。",
+      "オンタリオ州 (Ontario) では輸入原料のみで造られたワインの販売は認められていないが、ブリティッシュ・コロンビア州 (British Columbia) では認められている。",
+      "ブリティッシュ・コロンビア州 (British Columbia) では、International BlendのワインをV.Q.A.ワインと同じ棚で販売することが義務付けられている。",
+      "輸入原料と国内原料をブレンドしたワインには「V.Q.A. International」という特別な表記が許可されている。"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「輸入原料のみの場合(ブリティッシュ・コロンビア州では可能、オンタリオ州では不可)」と記載されており、州によって規制が異なるためこの選択肢が正しい。Aは誤りで、輸入原料とのブレンドが主体。Cは誤りで、混同を防ぐためセクションを分けることが推奨されている。Dは本文にない架空の表記である。"
+  },
+  {
+    "question": "ポルトガルで栽培されている白ブドウ品種とそのシノニムの組み合わせとして、適切でないものを1つ選びなさい。",
+    "choices": [
+      "A. Arinto アリント - Pedernã ペデルナン",
+      "B. Síria シリア - Roupeiro ロウペイロ",
+      "C. Fernão Pires フェルナォン・ピレス - Maria Gomes マリア・ゴメス",
+      "D. Malvasia Fina マルヴァジア・フィナ - Azal アザル"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストによると、Malvasia Fina マルヴァジア・フィナのシノニムはBoal ボアルです。Azal アザルは別の独立した白ブドウ品種名であり、シノニムではありません。したがって、選択肢Dの組み合わせが不適切です。"
+  },
+  {
+    "question": "2022年の北海道におけるヴィンテージレポートに関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "後志地方（余市町）では、有効積算温度が過去最高の1,621℃に達した。",
+      "後志地方（余市町）では、高温続きで夜温が下がらず、糖度が上がらず酸が少ないブドウとなった。",
+      "十勝地方（池田町）では、有効積算温度が統計開始から過去1番に高い1,411℃となった。",
+      "十勝地方（池田町）では、年間降水量が平年を大幅に下回り、ブドウは乾燥に苦しんだ。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには、十勝地方（池田町）について「年間降水量は856mmと平年並みではあるが、収穫時期の降雨は灰色カビ病のまん延を助長した。」と記載されている。「平年を大幅に下回り、乾燥に苦しんだ」という記述は誤りである。"
+  },
+  {
+    "question": "1959年に公布されたアルゼンチンのワイン法14878において、Vinos EspecialesのカテゴリーBに分類されるワインの定義として適切なものを次の中から選びなさい。",
+    "choices": [
+      "アルコール分が12.5%以上で、潜在アルコール分が15°GL以上のもの。",
+      "ワインに濃縮果汁やミステラ (Mistela) などを加え、総アルコール分が15°GL以上の甘口ワイン。",
+      "熟した新鮮なブドウもしくは新鮮なブドウ果汁をアルコール発酵したスティルワイン。",
+      "醸造工程でブドウ由来のアルコールを加え、アルコール分が15%以上となったワイン。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストの第17条(b)において、Vinos EspecialesのカテゴリーBは「醸造工程で、ブドウで造ったアルコールを加えた結果、アルコール分が15%以上のワイン」と定義されている。選択肢AはカテゴリーA、BはカテゴリーC、CはVinos Genuinosの定義である。"
+  },
+  {
+    "question": "アメリカ、カリフォルニア州のレイク・カウンティ (Lake County) が、ナパ・カウンティ (Napa County) 北部とメンドシーノ・カウンティ (Mendocino County) 南部を併せて新設された年号を1つ選びなさい。",
+    "choices": [
+      "1850年",
+      "1861年",
+      "1873年",
+      "1920年"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストに「レイク・カウンティは、元々ナパ・カウンティ北部とメンドシーノ・カウンティ南部だった地区を併せて1861年に新設されたカウンティ」と記載されている。"
+  },
+  {
+    "question": "南西地方の郷土料理で、アドゥール Adour 谷地産の生ハムであり、1998年にI.G.P.を取得したものを次の中から選びなさい。",
+    "choices": [
+      "コンフィ・ド・カナール Confit de Canard",
+      "マグレ・ド・カナール Magret de Canard",
+      "ガルビュール Garbure",
+      "ジャンボン・ド・バイヨンヌ Jambon de Bayonne"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには「ジャンボン・ド・バイヨンヌ Jambon de Bayonne（アドゥール谷地産の生ハム。1998年にI.G.P.取得）」と記載されています。したがって、正解はジャンボン・ド・バイヨンヌです。"
+  },
+  {
+    "question": "Toscana州のD.O.C. Pomino Rossoのブレンドに使用が認められているブドウ品種として、適切でないものを次の中から1つ選びなさい。",
+    "choices": [
+      "Sangiovese",
+      "Pinot Nero",
+      "Merlot",
+      "Cabernet Sauvignon"
+    ],
+    "correct_index": 3,
+    "explanation": "D.O.C. Pomino Rossoは、Sangiovese、Pinot Nero、Merlotという国際品種をブレンドして造られることが特徴です。Cabernet Sauvignonは規定に含まれていません。"
+  },
+  {
+    "question": "ノンヴィンテージ・シャンパーニュ Champagne の法定最低熟成期間と、そのうち澱とともに熟成させるべき最低期間の組み合わせとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "12ヶ月以上（うち澱とともに9ヶ月以上）",
+      "15ヶ月以上（うち澱とともに12ヶ月以上）",
+      "24ヶ月以上（うち澱とともに15ヶ月以上）",
+      "36ヶ月以上（うち澱とともに24ヶ月以上）"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには、ノンヴィンテージ・シャンパーニュの熟成期間について「ノンヴィンテージで15ヵ月以上（そのうち澱とともに熟成させる期間は最低12ヵ月）、ヴィンテージで36ヵ月以上と定められている」と記載されています。したがって、正しい組み合わせは「15ヶ月以上（うち澱とともに12ヶ月以上）」です。"
+  },
+  {
+    "question": "ワインに含まれるアロマ化合物のひとつである「2-イソブチル-3-メトキシピラジン (2-isobutyl-3-methoxypyrazine)」がピーマンのような香りの特徴として顕著に感じられるブドウ品種を1つ選びなさい。",
+    "choices": [
+      "ピノ・ノワール (Pinot Noir)",
+      "リースリング (Riesling)",
+      "シャルドネ (Chardonnay)",
+      "カベルネ・フラン (Cabernet Franc)"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストでは、2-イソブチル-3-メトキシピラジン (IBMP) の香りを持つワインの例としてカベルネ・フランが挙げられています。この化合物はピーマンやハーブのような青い香りをもたらすことで知られています。"
+  },
+  {
+    "question": "A.O.C. Vosne-Romanée において、主要品種であるピノ・ノワール Pinot Noir に混植されている場合に限り混醸が認められているシャルドネ Chardonnay、ピノ・ブラン Pinot Blanc、ピノ・グリ Pinot Gris の最大比率として適切なものを次の中から選びなさい。",
+    "choices": [
+      "15%",
+      "10%",
+      "5%",
+      "混醸は一切認められていない"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには、A.O.C. Vosne-Romanéeについて「混植されている場合に限り、最大15%までシャルドネ、ピノ・ブラン、ピノ・グリの混醸が許されている。」と記載されています。したがって、最大比率は15%です。"
+  },
+  {
+    "question": "ロワール地方のA.O.C.で、ロワール・エ・シェール県の11ヵ村に認められ、この土地固有のブドウ品種ロモランタン Romorantin のみから白ワインが造られるものを1つ選びなさい。",
+    "choices": [
+      "シュヴェルニー Cheverny",
+      "ヴァランセ Valencay",
+      "オルレアン Orleans",
+      "クール・シュヴェルニー Cour-Cheverny"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには「Cour Cheverny (白)」「この土地でしか栽培されていないロモランタンと呼ばれる品種を用い、辛口白を中心に甘口白が造られている。」と記載されています。したがって、正解はクール・シュヴェルニー Cour-Cheverny です。"
+  },
+  {
+    "question": "ソムリエが使用するサービス用具「じょうご」のフランス語表記として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Panier",
+      "Plateau",
+      "Entonnoir",
+      "Sabre a champagne"
+    ],
+    "correct_index": 2,
+    "explanation": "「じょうご」のフランス語表記はEntonnoirまたはFiltreです。Panierはパニエ、Plateauはサービス用トレー、Sabre a champagneはシャンパーニュ・サーベルを指します。"
+  },
+  {
+    "question": "ポルトガルのD.O.P. Terras de Cister テラス・デ・システルにおいて、主要ブドウ品種として認められていないものを次の中から1つ選びなさい。",
+    "choices": [
+      "A. Malvasia Fina マルヴァジア・フィナ",
+      "B. Aragonez アラゴネス",
+      "C. Tinta Barroca ティンタ・バロッカ",
+      "D. Gouveio ゴウヴェイオ"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストに記載されているD.O.P. Terras de Cisterの主要ブドウ品種リストには、白ブドウとしてMalvasia Fina, Cercial, Gouveio, Bical, Fernão Pires、黒ブドウとしてTinta Barroca, Touriga Franca, Touriga Nacionalが含まれています。Aragonez アラゴネスはこのリストに含まれていません。"
+  },
+  {
+    "question": "Abruzzo州のD.O.C.G.「Colline Teramane Montepulciano d'Abruzzo」に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "Montepulciano d'Abruzzo D.O.C.の中から、Teramo県の特定の丘陵地帯が昇格したものである。",
+      "通常のタイプは最低2年間の熟成が義務付けられている。",
+      "Riservaは最低3年間の熟成が必要で、そのうち最低18ヶ月は木樽での熟成が義務付けられている。",
+      "通常のタイプ、Riservaともに、瓶内熟成が最低6ヶ月義務付けられている。"
+    ],
+    "correct_index": 2,
+    "explanation": "Colline Teramane Montepulciano d'Abruzzo Riservaの熟成期間は3年間ですが、そのうち木樽での熟成は最低1年（12ヶ月）と定められています。選択肢の「18ヶ月」はBaroloの規定であり誤りです。"
+  },
+  {
+    "question": "ヴァージニア州 (Virginia) のモンティチェッロ・ワイン・カンパニー (Monticello Wine Company) に関する記述として誤っているものを1つ選びなさい。",
+    "choices": [
+      "1873年のウィーン万国博覧会 (Vienna World's Fair) で金賞を獲得した。",
+      "1878年のパリ万国博覧会 (Exposition Universelle) で銀賞を獲得した。",
+      "高品質赤ワインを造るというトーマス・ジェファーソン (Thomas Jefferson) の夢は、彼の生前にノートン (Norton) 種によって実現された。",
+      "ワイナリーがあったシャーロッツヴィル (Charlottesville) 周辺には現在40のワイナリーが加盟するモンティチェッロ・ワイン・トレイル (Monticello Wine Trail) がある。"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには「高品質赤ワインを造るというジェファーソンの夢は、生前には実現しなかったが、1820年代以降、ノートン種の登場により可能となり」と記載されている。彼の夢は生前には実現していないため、この選択肢は誤りである。"
+  },
+  {
+    "question": "料理とワインの組み合わせについて、フランスでは「マリアージュ (Mariage)」という言葉は滅多に使われず、より一般的に用いられる「協調」を意味する言葉を1つ選びなさい。",
+    "choices": [
+      "Pairing",
+      "l'accord",
+      "Combination",
+      "Assemblage"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストによると、フランスでは料理とワインの組み合わせを「協調」を意味するラコール (l'accord) や、「調和」を意味するアルモニー (harmonie) と呼ぶことが一般的です。Pairingは近年世界的に使われる言葉、Assemblageはワインのブレンドを指す用語です。"
+  },
+  {
+    "question": "D.O.C.G. Barolo Riservaに定められている、収穫年の11月1日からの最低熟成期間として正しいものを1つ選びなさい。",
+    "choices": [
+      "収穫年の11月1日より38ヶ月（うち木樽熟成18ヶ月）",
+      "収穫年の11月1日より50ヶ月（うち木樽熟成18ヶ月）",
+      "収穫年の11月1日より62ヶ月（うち木樽熟成18ヶ月）",
+      "収穫年の11月1日より71ヶ月（うち木樽熟成24ヶ月）"
+    ],
+    "correct_index": 2,
+    "explanation": "Barolo D.O.C.G. Riservaの法定熟成期間は、収穫年の11月1日より62ヶ月（うち木樽熟成18ヶ月）と定められています。通常のBaroloは38ヶ月（うち木樽熟成18ヶ月）です。"
+  },
+  {
+    "question": "北海道のワイン造りの黎明期において、開拓使の顧問も務め、1881年にピノ・ノワール (Pinot Noir) やゲヴュルツトラミネール (Gewürztraminer) など17品種の欧・中東系ブドウを日本に持ち込んだ人物として適切なものを次の中から選びなさい。",
+    "choices": [
+      "桂二郎",
+      "ルイス・ベーマー (Louis Boehmer)",
+      "高野正誠",
+      "川上善兵衛"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストに「まだこの前年に開拓使の顧問もしていたルイス・ベーマーによってピノ・ノワール、ピノ・ブラン、ゲヴュルツトラミネールなど欧・中東系品種17品種が日本に持ち込まれていたことが記録に残る。」と記載されている。桂二郎は開拓使葡萄酒醸造所の払い下げを受けた人物である。"
+  },
+  {
+    "question": "1960年代以降のオーストラリアにおいて、ジェネリック名のテーブルワインの主流となった「Flagon」と呼ばれるガラス瓶の一般的な容量として適切なものを次の中から選びなさい。",
+    "choices": [
+      "750ml",
+      "1ℓ",
+      "1.5ℓ",
+      "2ℓ"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストに「量を支えるワインは『Flagon』と呼ばれる2ℓ入りガラス瓶のジェネリック名ワイン…が主流となっていった」と記載されている。"
+  },
+  {
+    "question": "ハンガリーのチョパク P.D.O. において、厳選された単一畑から造られる「Dűlős bor」に定められている最低熟成期間として適切なものを次の中から選びなさい。",
+    "choices": [
+      "A. 最低4ヶ月間の熟成と、最低1ヶ月間の瓶内熟成",
+      "B. 最低6ヶ月間の熟成と、最低3ヶ月間の瓶内熟成",
+      "C. 最低6ヶ月間の熟成と、最低6ヶ月間の瓶内熟成",
+      "D. 最低12ヶ月間の熟成と、最低3ヶ月間の瓶内熟成"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには、チョパク P.D.O. の「Dűlős bor」について、「最低6ヵ月間熟成させてから、少なくともさらに3ヵ月間瓶詰する必要がある」と記載されています。したがって、選択肢Bが正しい組み合わせです。選択肢Aは「Hegy bor」の規定です。"
+  },
+  {
+    "question": "チリのワイン産地D.O. (Denominación de Origen) のうち、D.O.アコンカグア (Aconcagua) に属するものを1つ選びなさい。",
+    "choices": [
+      "San Antonio Valley",
+      "Elqui Valley",
+      "Itata Valley",
+      "Maipo Valley"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストのリストによると、D.O.アコンカグアにはAconcagua Valley, Casablanca Valley, San Antonio Valleyが属する。Elqui ValleyはD.O.コキンボ、Itata ValleyはD.O.サウス、Maipo ValleyはD.O.セントラル・ヴァレーに属する。"
+  },
+  {
+    "question": "2021年の調査において、日本の自営農園および契約栽培における垣根栽培の割合として適切なものを次の中から選びなさい。",
+    "choices": [
+      "24.7%",
+      "41.2%",
+      "34.7%",
+      "50.1%"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストの「栽培方法の変化」の項に「2021年には自営農園および契約栽培の畑において垣根栽培は34.7%を占めるまでになった。」と明記されている。したがって、34.7%が正解である。"
+  }
+]

@@ -1,0 +1,552 @@
+[
+  {
+    "question": "2020年に復活したメドックのクリュ・ブルジョワ格付けにおいて、格付けの有効期間として適切なものを次の中から選びなさい。",
+    "choices": [
+      "3ヴィンテージ",
+      "5ヴィンテージ",
+      "7ヴィンテージ",
+      "10ヴィンテージ"
+    ],
+    "correct_index": 1,
+    "explanation": "2020年に復活したクリュ・ブルジョワ (Cru Bourgeois) の格付けは、Cru Bourgeois、Cru Bourgeois Supérieur、Cru Bourgeois Exceptionnelの3階級からなり、5ヴィンテージ有効と規定されています。"
+  },
+  {
+    "question": "ワインの保管方法に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "A. 異臭のあるものと一緒に保管することは避けるべきである。",
+      "B. スクリューキャップ（Screw cap）のボトルは立てて保管しても問題ない。",
+      "C. コルク栓のボトルは、コルクの乾燥を防ぐためラベルを上に向けて立てて保管する。",
+      "D. ワインに直接冷気が当たらないように配慮する必要がある。"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキスト「ch23_wine_management」には「コルクのものは、ラベルは上に向けて横に寝かせる」と記載されています。コルクの乾燥を防ぎ、密閉性を保つためには横に寝かせる必要があり、立てて保管するのは誤りであるため。"
+  },
+  {
+    "question": "地理的表示（GI）を使用する場合、酒類の容器または包装において、その名称に併せて使用することが認められていない表示を1つ選びなさい。",
+    "choices": [
+      "Geographical Indication",
+      "GI",
+      "地理的表示",
+      "Protected Geographical Indication"
+    ],
+    "correct_index": 3,
+    "explanation": "日本の地理的表示制度において、GIの名称と併せて使用が定められているのは「地理的表示」、「Geographical Indication」、「GI」の3つです。「Protected Geographical Indication」はEUの地理的表示（PGI）の英語表記であり、日本の制度では認められていません。"
+  },
+  {
+    "question": "アルゼンチンのワイン法に関する記述として、適切でないものを1つ選びなさい。",
+    "choices": [
+      "ワイン法14878は1959年に公布された。",
+      "国立ブドウ栽培醸造研究所の略称はI.N.V.である。",
+      "Vinos Genuinosは、熟した新鮮なブドウもしくは新鮮なブドウ果汁をアルコール発酵したスティルワインと定義されている。",
+      "Vinos EspecialesのカテゴリーBは、アルコール分が12.5%以上のワインである。"
+    ],
+    "correct_index": 3,
+    "explanation": "アルゼンチンのワイン法におけるVinos EspecialesのカテゴリーBは、「醸造工程で、ブドウで造ったアルコールを加えた結果、アルコール分が15%以上のワイン」と定義されています。12.5%以上ではありません。"
+  },
+  {
+    "question": "南アフリカ共和国で生産される、瓶内二次発酵方式で造られるスパークリングワインの呼称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Crémant クレマン",
+      "Sekt ゼクト",
+      "Cap Classique キャップ・クラシック",
+      "Franciacorta フランチャコルタ"
+    ],
+    "correct_index": 2,
+    "explanation": "南アフリカの瓶内二次発酵方式のスパークリングワインは「キャップ・クラシック (Cap Classique)」と呼ばれます。MCC (Méthode Cap Classique) とも表記されます。"
+  },
+  {
+    "question": "スイス最大のワインコミューンである Satigny が含まれるジュネーヴの生産地区を1つ選びなさい。",
+    "choices": [
+      "マンドゥマン Mandement",
+      "アントレ・アルヴ・エ・ローヌ Entre Arve et Rhone",
+      "アントレ・アルヴ・エ・ラック Entre Arve et Lac",
+      "フリーゾーン La zone frontaliere"
+    ],
+    "correct_index": 0,
+    "explanation": "スイス最大のワインコミューンであるSatignyは、レマン湖の西南の町Dardagnyから湖畔沿いの東部Celignyまでの地区であるマンドゥマン Mandementに含まれます。"
+  },
+  {
+    "question": "A.O.C.プイィ・フュメの土壌に関する記述として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "レスタンク (Restanques) と呼ばれる段々畑",
+      "カイヨット (Caillottes) と呼ばれる石灰岩の小石",
+      "シレックス (Silex) の混じる粘土",
+      "テール・ブランシュ (Terres Blanches) と呼ばれるキンメリジャンの粘土石灰質"
+    ],
+    "correct_index": 0,
+    "explanation": "レスタンク (Restanques) はプロヴァンス地方のバンドール (Bandol) やカシス (Cassis) に見られる石垣で造られた段々畑のことであり、ロワール地方のプイィ・フュメ (Pouilly-Fumé) の土壌ではありません。"
+  },
+  {
+    "question": "アメリカ、ワシントン州のワイン産業に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "カスケード山脈の東側はレインシャドー効果により温暖で乾燥した気候となる。",
+      "適切な灌漑を行うことで、毎年安定して高品質なブドウを生産することが可能である。",
+      "主要栽培品種はピノ・ノワール Pinot Noirであり、州の生産量の半分以上を占める。",
+      "リースリング Riesling、シャルドネ Chardonnay、カベルネ・ソーヴィニヨン Cabernet Sauvignon、メルロ Merlotがバランス良く栽培されている。"
+    ],
+    "correct_index": 2,
+    "explanation": "ワシントン州ではリースリング、シャルドネ、カベルネ・ソーヴィニヨン、メルロが主要栽培品種であり、一つの品種が突出することなくバランスの良い構成となっています。ピノ・ノワールはオレゴン州の主要品種です。"
+  },
+  {
+    "question": "ピエモンテ州北部で栽培される主要な白ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "Vespolina ヴェスポリーナ",
+      "Erbaluce エルバルーチェ",
+      "Bonarda Novarese ボナルダ・ノヴァレーゼ",
+      "Nebbiolo ネッビオーロ"
+    ],
+    "correct_index": 1,
+    "explanation": "ピエモンテ州北部の主要な白ブドウ品種はエルバルーチェ Erbaluce です。他の選択肢、ヴェスポリーナ Vespolina、ボナルダ・ノヴァレーゼ Bonarda Novarese、ネッビオーロ Nebbiolo は黒ブドウ品種です。"
+  },
+  {
+    "question": "一般社団法人日本ソムリエ協会が発行する教本において、「オーストリア（Austria）」の章の執筆を担当している団体として適切なものを次の中から選びなさい。",
+    "choices": [
+      "A. Advantage Austria Tokyo",
+      "B. Austrian Wine Growers' Association",
+      "C. Austrian Sommelier Association",
+      "D. Austrian Wine Marketing Board"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキスト「ch25_jsa_exam」の執筆者一覧に、「オーストリア オーストリアワインマーケティング協会（Austrian Wine Marketing Board）」と記載されているため。"
+  },
+  {
+    "question": "ラングドック・ルーション地方などで造られるV.D.N.において、「Hors d'age」と表記するために必要な最低熟成期間を1つ選びなさい。",
+    "choices": [
+      "2年",
+      "3年",
+      "5年",
+      "10年"
+    ],
+    "correct_index": 2,
+    "explanation": "アンブレ (Ambré) またはテュイレ (Tuilé) のV.D.N. (Vin Doux Naturel) を最低5年間熟成させたものには、「Hors d'age」と表記することができます。"
+  },
+  {
+    "question": "A.O.C.マコン・ヴィラージュに関する記述として適切なものを次の中から選びなさい。",
+    "choices": [
+      "赤、白、ロゼワインの生産が認められている。",
+      "主要ブドウ品種はアリゴテ (Aligoté) である。",
+      "A.O.C.マコンよりも最大収量の規定が緩い。",
+      "その年の新酒として \"Primeur\" や \"Nouveau\" の表記が可能である。"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C.マコン・ヴィラージュ (Mâcon-Villages) はシャルドネ (Chardonnay) から造られる白ワインのみが認められており、その年の新酒として \"Primeur\" や \"Nouveau\" と表記することが可能です。A.O.C.マコン (Mâcon) よりも規定は厳しくなっています。"
+  },
+  {
+    "question": "ロワール地方のアンジュー・ソミュール地区やトゥーレーヌ地区で主に栽培されるカベルネ・フランのシノニムを1つ選びなさい。",
+    "choices": [
+      "Côt",
+      "Breton",
+      "Pineau d'Aunis",
+      "Grolleau"
+    ],
+    "correct_index": 1,
+    "explanation": "ロワール地方において、カベルネ・フラン (Cabernet Franc) はブルトン (Breton) というシノニムで呼ばれます。コット (Côt) はマルベック (Malbec) のシノニムです。"
+  },
+  {
+    "question": "1716年にトスカーナ大公コジモ3世がワイン産地の境界を定めた4つの地域に含まれないものを1つ選びなさい。",
+    "choices": [
+      "Carmignano カルミニャーノ",
+      "Chianti キアンティ",
+      "Pomino ポミーノ",
+      "Brunello di Montalcino ブルネッロ・ディ・モンタルチーノ"
+    ],
+    "correct_index": 3,
+    "explanation": "1716年にトスカーナ大公コジモ3世が定めた4つのワイン産地は、カルミニャーノ Carmignano、キアンティ Chianti、ポミーノ Pomino、ヴァル・ダルノ・ディ・ソプラ Val d'Arno di Sopra です。ブルネッロ・ディ・モンタルチーノ Brunello di Montalcino は含まれません。"
+  },
+  {
+    "question": "ルーマニアの代表的な地方料理に関する説明として、適切でないものを1つ選びなさい。",
+    "choices": [
+      "Zacusca は、ナスやズッキーニをトマトで煮込みペースト状にしたものです。",
+      "Branza は、ハーブや香辛料で調味した羊肉や豚肉を塩漬け、または燻製にしたものです。",
+      "Pastrama は、ハーブや香辛料で調味した肉の塩漬けまたは燻製です。",
+      "Branza は、塩漬けされた羊のフレッシュチーズで、サラダなどと一緒に前菜として食されることが多いです。"
+    ],
+    "correct_index": 1,
+    "explanation": "選択肢Bの説明はPastramaのものです。Branzaは塩漬けされた羊のフレッシュチーズを指すため、この記述は適切ではありません。なお、選択肢DはBranzaの正しい説明です。"
+  },
+  {
+    "question": "明治初期の日本のワイン造りにおける人物に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "大藤松五郎は、ドイツのガイゼンハイム・ブドウ酒学校に留学し、帰国後、県立葡萄酒醸造所に招かれた。",
+      "桂二郎は、総理大臣桂太郎の弟であり、山梨県で勤務した後は内務省に引き抜かれた。",
+      "大藤松五郎は、アメリカでブドウとワイン造りに携わった経験を持ち、盛田葡萄酒園のワイナリー建設時に技術指導を行った。",
+      "山田宥教と詫間憲久のワイン造りを引き継ぐ形で、山梨県は1877年に県立葡萄酒醸造所をオープンした。"
+    ],
+    "correct_index": 0,
+    "explanation": "ドイツのガイゼンハイム・ブドウ酒学校に留学したのは桂二郎です。大藤松五郎はアメリカで8年間ブドウとワイン造りに携わった経験を持ちます。両名とも県立葡萄酒醸造所に招かれていますが、経歴が入れ替わっています。"
+  },
+  {
+    "question": "チリのD.O.において、ラペル・ヴァレー (Rapel Valley) を構成する2つのサブ・リージョンの正しい組み合わせを1つ選びなさい。",
+    "choices": [
+      "マイポ・ヴァレー Maipo Valley と マウレ・ヴァレー Maule Valley",
+      "カチャポアル・ヴァレー Cachapoal Valley と コルチャグア・ヴァレー Colchagua Valley",
+      "テノ・ヴァレー Teno Valley と ロントゥエ・ヴァレー Lontué Valley",
+      "クラロ・ヴァレー Claro Valley と ロンコミージャ・ヴァレー Loncomilla Valley"
+    ],
+    "correct_index": 1,
+    "explanation": "ラペル・ヴァレー (Rapel Valley) は、北部のカチャポアル・ヴァレー (Cachapoal Valley) と南部のコルチャグア・ヴァレー (Colchagua Valley) の2つのサブ・リージョンから構成されています。"
+  },
+  {
+    "question": "2021年のデータにおいて、チーズの年間生産量がアメリカ合衆国、ドイツに次いで世界第3位の国を1つ選びなさい。",
+    "choices": [
+      "A. イタリア（Italy）",
+      "B. フランス（France）",
+      "C. イギリス（United Kingdom）",
+      "D. インド（India）"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキスト「ch21_cheese」によると、2021年のチーズ年間生産量は、1位がアメリカ合衆国（646万t）、2位がドイツ（300万t）、3位がフランス（222万t）と記載されているため。"
+  },
+  {
+    "question": "シャブリのグラン・クリュの畑に見られる、ミネラル感をもたらす鍵と考えられている小さな牡蠣の化石の名称を1つ選びなさい。",
+    "choices": [
+      "Caillottes",
+      "Silex",
+      "Grèzes litées",
+      "Exogyra virgula"
+    ],
+    "correct_index": 3,
+    "explanation": "シャブリ (Chablis) のグラン・クリュの畑は主にキンメリジャン (Kimmeridgien) 土壌で、エグゾジラ・ヴィルギュラ (Exogyra virgula) と呼ばれる小さな牡蠣の化石が見られることが大きな特徴です。これがシャブリ特有のミネラル感をもたらすと考えられています。"
+  },
+  {
+    "question": "コニャック（Cognac）の熟成年数に関する表示のうち、コント6に該当しないものを1つ選びなさい。",
+    "choices": [
+      "A. Napoleon",
+      "B. Tres Vieille Reserve",
+      "C. Heritage",
+      "D. XO"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキスト「ch01_spirits_overview」によると、Napoleon、Tres Vieille Reserve、Heritageはコント6の表示例として挙げられていますが、XOはコント10の表示例であるため。"
+  },
+  {
+    "question": "自分の畑の中で好ましい性質の株を選抜し、それを挿し木で増やしていく方法の呼称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "A. Selection massale",
+      "B. Dijon clone",
+      "C. Selection clonale",
+      "D. Heritage selection"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキスト「ch00_wine_overview」において、畑の中で好ましい性質の株を残していく方法を「マサル・セレクション Massal selection（またはSelection massale）」と説明しているため。"
+  },
+  {
+    "question": "山形県において、新潟県の川上善兵衛からマスカット・ベーリーA (Muscat Bailey A) 等を譲り受け、その後のブドウ栽培の礎を築いた中心人物として適切なものを次の中から選びなさい。",
+    "choices": [
+      "須藤鷹次",
+      "高橋利義",
+      "神谷伝兵衛",
+      "宮崎光太郎"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「新潟県の川上善兵衛から、屋代村の高橋利義が、マスカット・ベーリーA、ブラック・クイーン、レッドミルレンニュームを譲り受け、既にワイナリーを立ち上げていた須藤鷹次とともに苗木を育成した」と記載されています。ブドウを譲り受けた中心人物は高橋利義です。"
+  },
+  {
+    "question": "オーストラリアのサウス・オーストラリア州に属さないG.I. Regionを1つ選びなさい。",
+    "choices": [
+      "Barossa Valley バロッサ・ヴァレー",
+      "Coonawarra クナワラ",
+      "Clare Valley クレア・ヴァレー",
+      "Yarra Valley ヤラ・ヴァレー"
+    ],
+    "correct_index": 3,
+    "explanation": "ヤラ・ヴァレー (Yarra Valley) はヴィクトリア州のG.I.です。バロッサ・ヴァレー、クナワラ、クレア・ヴァレーはすべてサウス・オーストラリア州に属します。（この問題は参照テキスト外の知識も補完して作成しています）"
+  },
+  {
+    "question": "日本のブドウ品種やワイン産業に関する記述として、適切なものを次の中から選びなさい。",
+    "choices": [
+      "甲州は、DNA解析の結果、純粋なヴィティス・ヴィニフェラ (Vitis Vinifera) 種であることが判明した。",
+      "欧・中東系品種群に属する赤ワイン用品種で、日本での栽培量が最も多いのはカベルネ・ソーヴィニヨン (Cabernet Sauvignon) である。",
+      "アメリカ系品種群は、日本の気候下では病害に弱く、栽培が難しいとされている。",
+      "大阪府では、耕作放棄地を引き継いでワインを造るワイナリーの動きが見られ、2012年には大阪ワイナリー協会が設立された。"
+    ],
+    "correct_index": 3,
+    "explanation": "選択肢Dが正しいです。テキストには「耕作放棄地を引き継ぐ動きは他のワイナリーにも広がった」「2012年、...大阪ワイナリー協会が設立されている」と記載があります。Aは「ヴィティス・ヴィニフェラと中国種の遺伝子を引き継ぐ」ため誤り。Bはメルロ (Merlot) が最も多いため誤り。Cは「寒さや病害虫に強く」とあるため誤りです。"
+  },
+  {
+    "question": "ディジョン市の南に隣接するシュノーヴ村の丘陵地に与えられた地理的名称付きA.O.C.ブルゴーニュを1つ選びなさい。",
+    "choices": [
+      "Bourgogne Hautes-Côtes de Nuits",
+      "Marsannay",
+      "Bourgogne Côte Saint-Jacques",
+      "Bourgogne Le Chapitre"
+    ],
+    "correct_index": 3,
+    "explanation": "ブルゴーニュ・ル・シャピートル (Bourgogne Le Chapitre) は、ディジョン (Dijon) 市の南に隣接するシュノーヴ (Chenôve) 村の丘陵地に与えられた地理的名称付きA.O.C.ブルゴーニュです。"
+  },
+  {
+    "question": "南アフリカ共和国のワイン産業に関する記述として、適切なものを次の中から選びなさい。",
+    "choices": [
+      "ダーリン地区 Darlingは、高品質なカベルネ・ソーヴィニヨン Cabernet Sauvignonの産地として知られる。",
+      "原産地呼称ワイン認証制度「ワイン・オブ・オリジン Wine of Origin」は1994年に制定された。",
+      "ワイン産業の歴史は浅く、約100年である。",
+      "多民族国家であることから「虹の国 rainbow nation」と呼ばれている。"
+    ],
+    "correct_index": 3,
+    "explanation": "南アフリカは多民族国家であることから「虹の国 (rainbow nation)」と呼ばれています。ダーリン地区はソーヴィニヨン・ブラン、W.O.制度は1957年制定、ワイン産業の歴史は360年以上であり、他の選択肢は誤りです。"
+  },
+  {
+    "question": "ワインの香りのうち、発酵工程で酵母や乳酸菌が生成する「第2アロマ」に分類される香気成分を1つ選びなさい。",
+    "choices": [
+      "A. Vanillin",
+      "B. Diacetyl",
+      "C. Oak lactone",
+      "D. 3-Mercaptohexan-1-ol"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキスト「ch00_wine_overview」によると、Diacetylは乳酸菌が生成する乳製品の香りを持ち、第2アロマに分類されます。VanillinとOak lactoneは樽由来の第3アロマ、3-Mercaptohexan-1-olはブドウ由来の第1アロマであるため。"
+  },
+  {
+    "question": "クロアチアの首都ザグレブ Zagreb を有する生産地プリコゴリエ・ビロゴラ Prigorje-Bilogora において、近年ザグレブ州が保護を始めた代表的な土着白ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "グラシェヴィーナ Graševina",
+      "フェテアスカ・アルバ Fetească Albă",
+      "フランクシャ Francusa",
+      "クラリェヴィーナ Kraljevina"
+    ],
+    "correct_index": 3,
+    "explanation": "プリコゴリエ・ビロゴラ Prigorje-Bilogora の代表的な土着品種はクラリェヴィーナ Kraljevina であり、過去10年ほど不当な扱いを受けてきましたが、ザグレブ州が同品種の保護を始めています。"
+  },
+  {
+    "question": "A.O.C.カシスの白ワインにおいて、主要品種であるクレレットとマルサンヌの合計で占めなければならない最低比率として適切なものを次の中から選びなさい。",
+    "choices": [
+      "50%以上",
+      "60%以上",
+      "70%以上",
+      "80%以上"
+    ],
+    "correct_index": 1,
+    "explanation": "A.O.C.カシス (Cassis) の白ワインは、主要品種であるクレレット (Clairette) とマルサンヌ (Marsanne) の2品種の合計で60%以上を占めなければならないと規定されています。"
+  },
+  {
+    "question": "ドイツ・フランケン地方の郷土料理である細くて白いソーセージ「Nürnberger Bratwurst」を、タマネギと香味野菜のスープで煮込んだ料理の名称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "カルプフェン・ブラウ Karpfen blau",
+      "ゲミシュター・サッツ Gemischter Satz",
+      "ブラウエ・ツィプフェル Blaue Zipfel",
+      "シュタイガーヴァルト Steigerwald"
+    ],
+    "correct_index": 2,
+    "explanation": "Nürnberger Bratwurstは通常炭火で焼いて供されますが、タマネギと香味野菜のスープで煮込むこともあり、これをBlaue Zipfelと称します。"
+  },
+  {
+    "question": "1773年にシチリア島で酒精強化ワインのマルサーラ Marsala を生み出したとされるイギリス人として正しい人物を1つ選びなさい。",
+    "choices": [
+      "Bettino Ricasoli ベッティーノ・リカゾーリ",
+      "Biondi Santi ビオンディ・サンティ",
+      "John Woodhouse ジョン・ウッドハウス",
+      "Cosimo III コジモ3世"
+    ],
+    "correct_index": 2,
+    "explanation": "マルサーラ Marsala は、1773年にイギリス人のジョン・ウッドハウス John Woodhouse がアルコール補強をして生み出した酒精強化ワインです。他の選択肢は、A:キアンティの公式を定めた人物、B:ブルネッロの創始者、D:トスカーナ大公です。"
+  },
+  {
+    "question": "オーストリアのD.A.C.であるアイゼンベルク Eisenberg において、主要品種ブラウフレンキッシュ Blaufränkisch に次いで栽培比率が高く、高密度でミネラリーな気品ある白ワインを生み出す品種を1つ選びなさい。",
+    "choices": [
+      "グリューナー・ヴェルトリーナー Grüner Veltliner",
+      "リースリング Riesling",
+      "シャルドネ Chardonnay",
+      "ヴェルシュリースリング Welschriesling"
+    ],
+    "correct_index": 3,
+    "explanation": "アイゼンベルクD.A.C.では、D.A.C.品種であるブラウフレンキッシュが栽培比率の30%を占めますが、白のヴェルシュリースリングも14%と多く、この地では驚くほど高密度でミネラリーな気品あるワインとなります。"
+  },
+  {
+    "question": "アメリカ、オレゴン州のA.V.A.であるレッド・ヒル・ダグラス・カウンティ (Red Hill Douglas County) A.V.A.に見られる、鉄分を多く含む特徴的な火山性土壌を1つ選びなさい。",
+    "choices": [
+      "Terra Rossa テラ・ロッサ",
+      "Kimmeridgian キンメリジャン",
+      "Loess レス",
+      "Jory Loam ジョリー・ローム"
+    ],
+    "correct_index": 3,
+    "explanation": "レッド・ヒル・ダグラス・カウンティ (Red Hill Douglas County) A.V.A.の土壌は、主に鉄を多く含む火山性のジョリー・ローム (Jory Loam) 土壌です。"
+  },
+  {
+    "question": "カナダのノヴァ・スコシア (Nova Scotia) 州で、その土地のテロワールを表現するアロマティックでフレッシュなスタイルの白ワインに与えられるアペラシオン名を1つ選びなさい。",
+    "choices": [
+      "VQA",
+      "Tidal Bay タイダル・ベイ",
+      "Niagara Peninsula ナイアガラ・ペニンシュラ",
+      "Okanagan Valley オカナガン・ヴァレー"
+    ],
+    "correct_index": 1,
+    "explanation": "タイダル・ベイ (Tidal Bay) は、カナダのノヴァ・スコシア州で造られる、特定の基準を満たしたアロマティックでフレッシュなスタイルの白ワインに与えられるアペラシオンです。"
+  },
+  {
+    "question": "ジュラ地方の特殊なワイン、ヴァン・ジョーヌの醸造に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "主にサヴァニャン (Savagnin) 種から造られる。",
+      "産膜酵母下で長期熟成させる。",
+      "熟成中にウイヤージュ (Ouillage) を行う。",
+      "特徴的な芳香成分としてソトロン (Sotolon) が挙げられる。"
+    ],
+    "correct_index": 2,
+    "explanation": "ヴァン・ジョーヌ (Vin Jaune) は、樽に詰めたワインの目減り分を補填するウイヤージュ (Ouillage) を行わず、液面に発生した産膜酵母の下で酸化的に熟成させることで、ソトロン (Sotolon) に由来する特有の風味を生み出します。"
+  },
+  {
+    "question": "1855年のソーテルヌ地区の格付けにおいて、唯一プルミエ・クリュ・シュペリュールに格付けされたシャトーを1つ選びなさい。",
+    "choices": [
+      "Château Climens",
+      "Château d'Yquem",
+      "Château Suduiraut",
+      "Château Rieussec"
+    ],
+    "correct_index": 1,
+    "explanation": "1855年のパリ万国博覧会で行われたソーテルヌ (Sauternes)、バルサック (Barsac) の格付けにおいて、シャトー・ディケム (Château d'Yquem) は別格扱いとされ、唯一プルミエ・クリュ・シュペリュール (Premier Cru Supérieur) に選ばれました。"
+  },
+  {
+    "question": "2022年産醸造用玄米の農産物検査結果において、生産量が最も多い山田錦（Yamadanishiki）、2番目に多い五百万石（Gohyakumangoku）に次いで、第3位の酒米を1つ選びなさい。",
+    "choices": [
+      "A. 雄町（Omachi）",
+      "B. 菊水（Kikusui）",
+      "C. 美山錦（Miyamanishiki）",
+      "D. 新200号（Shin-200-go）"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキスト「ch01_spirits_overview」によると、2022年産醸造用玄米の総検査数量のうち、山田錦（Yamadanishiki）が28,168t、五百万石（Gohyakumangoku）が14,970t、美山錦（Miyamanishiki）が3,742tと記載されており、第3位は美山錦（Miyamanishiki）であるため。"
+  },
+  {
+    "question": "かつてサルデーニャ王国の一部であったサヴォワがフランスに割譲された年として適切なものを次の中から選びなさい。",
+    "choices": [
+      "1789年",
+      "1855年",
+      "1860年",
+      "1973年"
+    ],
+    "correct_index": 2,
+    "explanation": "サヴォワ (Savoie) は、1860年にニース (Nice) 伯領と共に第二帝政期のフランスに割譲されました。1789年はフランス革命、1855年はボルドーワインの格付け、1973年はシャトー・ムートン・ロッチルドの1級昇格の年です。"
+  },
+  {
+    "question": "1855年に制定されたメドックの格付けにおいて、1973年に第2級から第1級へ唯一昇格が認められたシャトーを1つ選びなさい。",
+    "choices": [
+      "Château Mouton-Rothschild",
+      "Château Lafite-Rothschild",
+      "Château Margaux",
+      "Château Latour"
+    ],
+    "correct_index": 0,
+    "explanation": "1855年のメドック格付けは、1973年にシャトー・ムートン・ロッチルド (Château Mouton-Rothschild) が第2級から第1級へと昇格したのを唯一の例外として、現在まで改定が行われていません。"
+  },
+  {
+    "question": "シュッド・ウエスト地方のA.O.C.ペシャルマンの作付け比率に関する規定として適切なものを次の中から選びなさい。",
+    "choices": [
+      "メルロ (Merlot) を50%以上使用しなければならない。",
+      "カベルネ・ソーヴィニヨン (Cabernet Sauvignon) の比率は10%以下でなければならない。",
+      "いずれの品種も単独で65%を超えてはならない。",
+      "マルベック (Malbec) は補助品種としてのみ使用が認められる。"
+    ],
+    "correct_index": 2,
+    "explanation": "A.O.C.ペシャルマン (Pécharmant) で認められている品種はメルロ (Merlot)、カベルネ・フラン (Cabernet Franc)、カベルネ・ソーヴィニヨン (Cabernet Sauvignon)、マルベック (Malbec) であり、作付け比率においてはいずれの品種も単独で65%を超えてはならないと規定されています。"
+  },
+  {
+    "question": "シュッド・ウエスト地方のA.O.C.フロントンを代表する黒ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "Tannat",
+      "Fer Servadou",
+      "Négrette",
+      "Braucol"
+    ],
+    "correct_index": 2,
+    "explanation": "ネグレット (Négrette) は、シュッド・ウエスト (Sud-Ouest) 地方のフロントン (Fronton) で造られる赤ワインやロゼワインを代表する特徴的な黒ブドウ品種です。"
+  },
+  {
+    "question": "アメリカ、カリフォルニア州の歴史において、19世紀後半にフィロキセラが最初に発見された地域を1つ選びなさい。",
+    "choices": [
+      "Napa ナパ",
+      "Sonoma ソノマ",
+      "Lodi ローダイ",
+      "Paso Robles パソ・ロブレス"
+    ],
+    "correct_index": 1,
+    "explanation": "19世紀後半、アメリカのカリフォルニア州においてフィロキセラが最初に発見されたのはソノマ (Sonoma) で、その後多くのブドウ畑が壊滅的な被害を受けました。"
+  },
+  {
+    "question": "日本でワイン原料用として最も多く受け入れられている白ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "シャルドネ (Chardonnay)",
+      "ケルナー (Kerner)",
+      "デラウェア (Delaware)",
+      "ソーヴィニヨン・ブラン (Sauvignon Blanc)"
+    ],
+    "correct_index": 2,
+    "explanation": "国税庁の統計によると、白ワイン用品種の受入数量が最も多いのはデラウェア (Delaware)で1,131tです。次いでシャルドネ (Chardonnay)が978tとなっています。"
+  },
+  {
+    "question": "イギリスのP.G.I.スパークリングワイン「Welsh Regional Quality Sparkling Wine」に定められている、トラディショナル方式での最低瓶内熟成期間として適切なものを次の中から選びなさい。",
+    "choices": [
+      "6ヶ月",
+      "9ヶ月",
+      "12ヶ月",
+      "15ヶ月"
+    ],
+    "correct_index": 1,
+    "explanation": "イギリスのP.G.I.に分類されるスパークリングワイン「Welsh Regional Quality Sparkling Wine」は、トラディショナル方式で最低9ヶ月は滓とともに瓶内熟成させることが規定されています。"
+  },
+  {
+    "question": "A.O.C.アンジュー・ヴィラージュの最大収量として正しいものを1つ選びなさい。",
+    "choices": [
+      "55hl/ha",
+      "60hl/ha",
+      "68hl/ha",
+      "70hl/ha"
+    ],
+    "correct_index": 0,
+    "explanation": "A.O.C.アンジュー・ヴィラージュ (Anjou Villages) の最大収量は55hl/haと定められており、A.O.C.アンジュー (Anjou) の60hl/haよりも厳しい規定となっています。"
+  },
+  {
+    "question": "シチリア州のD.O.C.G.チェラスオーロ・ディ・ヴィットリア Cerasuolo di Vittoria に使用される主要黒ブドウ品種ネーロ・ダヴォラ Nero d'Avola のシノニムとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "Calabrese カラブレーゼ",
+      "Perricone ペッリコーネ",
+      "Vespolina ヴェスポリーナ",
+      "Croatina クロアティーナ"
+    ],
+    "correct_index": 0,
+    "explanation": "ネーロ・ダヴォラ Nero d'Avola のシノニム（別名）はカラブレーゼ Calabrese です。参照テキストにも「ネーロ・ダヴォラ(カラブレーゼ)主体」と記載されています。"
+  },
+  {
+    "question": "D.O.C.G.ブルネッロ・ディ・モンタルチーノ Brunello di Montalcino の最低熟成期間として、収穫年から販売可能になるまでの年数で正しいものを1つ選びなさい。",
+    "choices": [
+      "3年",
+      "4年",
+      "5年",
+      "6年"
+    ],
+    "correct_index": 2,
+    "explanation": "ブルネッロ・ディ・モンタルチーノ Brunello di Montalcino は、収穫年を含めて5年を経過した翌年の1月1日から販売が許可されます。このうち、2年間の木樽熟成が義務付けられています。"
+  },
+  {
+    "question": "ギリシャの土着ブドウ品種に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "マヴルディ Mavroudi は、黒に近い濃い色の果皮と屈強なタンニンをもち、長期熟成タイプのワインとなります。",
+      "ネゴスカ Negoska は、グメニサ Goumenissa の特産で、クシノマヴロ Xinomavro とブレンドされることが多いです。",
+      "ロメイコ Romeiko は、サントリーニ Santorini 島原産の品種で、絶滅の危機から復活し近年人気が上昇しています。",
+      "メッセニコラ・ブラック Messenikola Black は、テッサリアのプラスティラ湖周辺でしか栽培されていない希少な品種です。"
+    ],
+    "correct_index": 2,
+    "explanation": "ロメイコ Romeiko はクレタ島の品種です。サントリーニ島原産で絶滅の危機から復活した品種はマヴロトラガノ Mavrotragano であるため、この記述は誤りです。"
+  },
+  {
+    "question": "アメリカ、カリフォルニア州のソノマ・マウンテン (Sonoma Mountain) A.V.A.で主に栽培され、高い評価を得ている黒ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "ピノ・ノワール Pinot Noir",
+      "カベルネ・ソーヴィニヨン Cabernet Sauvignon",
+      "ジンファンデル Zinfandel",
+      "メルロ Merlot"
+    ],
+    "correct_index": 1,
+    "explanation": "ソノマ・マウンテン (Sonoma Mountain) A.V.A.は、ソノマ・マウンテンの北側と東側の斜面を占め、日照に恵まれているため、良質のカベルネ・ソーヴィニヨン (Cabernet Sauvignon) が主に栽培されています。"
+  },
+  {
+    "question": "ギリシャを代表する黒ブドウ品種クシノマヴロ Xinomavro の名前の由来について、「Xino」が意味するものを1つ選びなさい。",
+    "choices": [
+      "Acid (酸)",
+      "Black (黒)",
+      "Noble (高貴な)",
+      "Stone (石)"
+    ],
+    "correct_index": 0,
+    "explanation": "クシノマヴロ Xinomavro の名前は、「Xino」が「Acid (酸)」、「Mavro」が「Black (黒)」を意味することに由来します。その名の通り、酸が強くタンニンが多い特徴を持ちます。"
+  }
+]

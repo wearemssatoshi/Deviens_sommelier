@@ -1,0 +1,475 @@
+[
+  {
+    "question": "A.O.C. Bourgogne Passe-Tout-Grainsにおいて、ブレンドまたは混醸で最低30%以上使用しなければならないと規定されているブドウ品種を1つ選びなさい。",
+    "choices": [
+      "ガメイ Gamay",
+      "ピノ・ノワール Pinot Noir",
+      "アリゴテ Aligoté",
+      "シャルドネ Chardonnay"
+    ],
+    "correct_index": 1,
+    "explanation": "A.O.C.ブルゴーニュ・パス・トゥ・グランは、ピノ・ノワールを30%以上、ガメイを15%以上使用することが規定されています。"
+  },
+  {
+    "question": "Sonoma County Sustainableのロゴをワインボトルに表示する場合、認証を受けたブドウ畑で収穫されたブドウの使用比率として適切なものを次の中から選びなさい。",
+    "choices": [
+      "75%以上",
+      "100%",
+      "85%以上",
+      "95%以上"
+    ],
+    "correct_index": 2,
+    "explanation": "ソノマ・カウンティ・サステイナビリティ・プログラムの規定により、ワインのボトルにSonoma County Sustainableのロゴを表示する場合は、使用されているワインの85%以上が認証を受けたブドウ畑のものでなければならないと定められています。"
+  },
+  {
+    "question": "ドルドーニュ川とガロンヌ川に挟まれた広大な地域に位置し、2023年から赤ワインもA.O.C.として認められるようになった地区を1つ選びなさい。",
+    "choices": [
+      "ブライ・コート・ド・ボルドー Blaye Côtes de Bordeaux",
+      "グラーヴ Graves",
+      "アントル・ドゥー・メール Entre-Deux-Mers",
+      "コート・ド・ブール Côtes de Bourg"
+    ],
+    "correct_index": 2,
+    "explanation": "アントル・ドゥー・メールはドルドーニュ川とガロンヌ川に挟まれた地域で、従来は辛口白ワインのA.O.C.でしたが、2023年から赤ワインも認められるようになりました。"
+  },
+  {
+    "question": "北海道の主要ブドウ栽培地の4-10月の平均気温が、ほぼ同じであるとされているヨーロッパのワイン産地として適切なものを次の中から選びなさい。",
+    "choices": [
+      "ボルドー (Bordeaux)",
+      "ブルゴーニュ (Bourgogne)",
+      "ラインガウ (Rheingau)",
+      "リオハ (Rioja)"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストに「4-10月の平均気温…はその値はフランス北部のランス、ドイツのラインガウとほぼ同じ」と記載されているため、ラインガウが正解です。"
+  },
+  {
+    "question": "オーストラリアの銘醸地バロッサ・ヴァレー Barossa Valleyのサブリージョンに含まれないものを1つ選びなさい。",
+    "choices": [
+      "Rowland Flat",
+      "Greenock",
+      "Ebenezer",
+      "Lyndoch"
+    ],
+    "correct_index": 0,
+    "explanation": "Rowland Flatはバロッサ・ヴァレーに位置する著名な地区ですが、GI法に基づく公式なサブリージョン（Sub-region）ではありません。テキスト中で列挙されているGreenock, Ebenezer, Lyndochなどは公式なサブリージョンです。"
+  },
+  {
+    "question": "2004年以降、ラングドック地方からローヌ渓谷のA.O.C.に編入された産地を1つ選びなさい。",
+    "choices": [
+      "コルビエール Corbières",
+      "ミネルヴォワ Minervois",
+      "フィトゥー Fitou",
+      "コスティエール・ド・ニーム Costières de Nîmes"
+    ],
+    "correct_index": 3,
+    "explanation": "ガール県のコスティエール・ド・ニームは、当初ラングドック地方のA.O.C.でしたが、2004年以降、ローヌ渓谷のA.O.C.に編入されました。"
+  },
+  {
+    "question": "スペインのワイン法において、Vino de Calidad con Indicación Geográfica (V.C.) のカテゴリーで実績を積んだ生産地が、D.O.への昇格を申請するために最低限必要な年数として正しいものを1つ選びなさい。",
+    "choices": [
+      "3年以上",
+      "5年以上",
+      "7年以上",
+      "10年以上"
+    ],
+    "correct_index": 1,
+    "explanation": "スペインのワイン法では、Vino de Calidad con Indicación Geográfica (V.C.)のカテゴリーで5年以上実績を積んだ生産地は、D.O. (Denominación de Origen) への昇格を申請することができます。"
+  },
+  {
+    "question": "細菌学の父と称され、アルコール発酵の解明や低温殺菌法などワイン醸造学に大きな足跡を残した人物が研究のために使用したブドウ畑「クロ・デ・ロジェール」があることで知られるジュラ地方の町を1つ選びなさい。",
+    "choices": [
+      "ブザンソン Besançon",
+      "サラン・レ・バン Salins-les-Bains",
+      "シャトー・シャロン Château-Chalon",
+      "アルボワ Arbois"
+    ],
+    "correct_index": 3,
+    "explanation": "細菌学の父ルイ・パストゥールはジュラ地方のアルボワの町で過ごし、研究を行いました。彼が研究に使用したブドウ畑「クロ・デ・ロジェール」もアルボワに保存されています。"
+  },
+  {
+    "question": "カリフォルニア州ナパ・ヴァレー Napa Valleyの西側に位置するマヤカマス山脈 Mayacamas Mountainsの土台となった、海洋性堆積物や海底火山性物質が堆積した基盤層の名称を1つ選びなさい。",
+    "choices": [
+      "フランシスカン・メランジュ Franciscan Melange",
+      "グレート・ヴァレー・シークエンス Great Valley Sequence",
+      "ソノマ火山群 Sonoma Volcanics",
+      "サンアンドレアス断層 San Andreas Fault"
+    ],
+    "correct_index": 0,
+    "explanation": "ナパ・ヴァレーのマヤカマス山脈の土台は、海洋性堆積物などからなるフランシスカン・メランジュです。一方、東側のヴァカ山脈 Vaca Mountainsの土台はグレート・ヴァレー・シークエンスとされています。"
+  },
+  {
+    "question": "A.O.C. Rosé de Loireに認められている残糖の上限値として適切なものを次の中から選びなさい。",
+    "choices": [
+      "3g/ℓ 未満",
+      "4g/ℓ 未満",
+      "5g/ℓ 未満",
+      "10g/ℓ 未満"
+    ],
+    "correct_index": 0,
+    "explanation": "A.O.C.ロゼ・ド・ロワールは、残糖3g/ℓ 未満の辛口ロゼに認められたA.O.C.です。"
+  },
+  {
+    "question": "モリーゼ州だけで栽培され、一時は見捨てられていたものの品質の高さから再評価され、この州の代表的品種となった黒ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "Bombino Bianco",
+      "Tintilia",
+      "Pecorino",
+      "Passerina"
+    ],
+    "correct_index": 1,
+    "explanation": "Tintiliaはモリーゼ州の土着の黒ブドウ品種です。テキストに「モリーゼ州だけで栽培されている黒ブドウ。収穫量が少ないので一時期見捨てられていたが、品質は高く再評価されこの州の代表的品種となった」と記載されています。"
+  },
+  {
+    "question": "ブルゴーニュ地方のA.O.P.チーズに関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "エポワス Epoissesは山羊乳から造られるウォッシュタイプのチーズである。",
+      "シャロレ Charolaisは山羊乳から造られるA.O.P.チーズである。",
+      "マコネ Maconnaisは山羊乳から造られるA.O.P.チーズである。",
+      "シトー Citeauxはシトー修道会で造られる牛乳製のチーズである。"
+    ],
+    "correct_index": 0,
+    "explanation": "エポワス Epoissesは牛乳から造られるウォッシュタイプのA.O.P.チーズです。山羊乳から造られるという記述が誤りです。"
+  },
+  {
+    "question": "D.O.アコンカグア Aconcaguaのサブリージョンとして適切でないものを1つ選びなさい。",
+    "choices": [
+      "カサブランカ・ヴァレー Casablanca Valley",
+      "タバリ Tabali",
+      "サン・アントニオ・ヴァレー San Antonio Valley",
+      "マルガマルガ・ヴァレー Marga Marga Valley"
+    ],
+    "correct_index": 1,
+    "explanation": "タバリ Tabaliは、コキンボ・リージョン Coquimbo Regionに属するD.O.リマリ・ヴァレー Limarí Valleyのゾーンであり、アコンカグア・リージョン Aconcagua Regionのサブリージョンではありません。アコンカグアのサブリージョンは、アコンカグア・ヴァレー、カサブランカ・ヴァレー、サン・アントニオ・ヴァレー、マルガマルガ・ヴァレーの4つです。"
+  },
+  {
+    "question": "ルーマニアの代表的な地方料理に関する説明として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "Branza (ブランザ)は、塩漬けされた牛のフレッシュチーズである。",
+      "Zacusca (ザクスカ)は、ナスやズッキーニをトマトで煮込んだペースト状の料理である。",
+      "Pastramă (パストラマ)は、ハーブや香辛料で調味した肉料理である。",
+      "Mujdei (ムジデイ)は、Zacusca (ザクスカ)と一緒に食べられることが多いガーリックソースである。"
+    ],
+    "correct_index": 0,
+    "explanation": "Branza (ブランザ)は、ルーマニアの塩漬けされたフレッシュチーズですが、主に「羊」の乳から造られます。「牛」のフレッシュチーズであるという記述が誤りです。"
+  },
+  {
+    "question": "南アフリカのステレンボッシュ Stellenbosch地区のサブリージョンとして、適切なものを次の中から選びなさい。",
+    "choices": [
+      "エルギン Elgin",
+      "パール Paarl",
+      "ヨンカースフック・ヴァレー Jonkershoek Valley",
+      "フランシュック・ヴァレー Franschhoek Valley"
+    ],
+    "correct_index": 2,
+    "explanation": "ヨンカースフック・ヴァレー Jonkershoek Valleyはステレンボッシュ地区に属する公式なサブリージョン（Ward）の一つです。エルギン Elginは単独の地区（District）、パール Paarlはステレンボッシュに隣接する地区（District）、フランシュック・ヴァレー Franschhoek Valleyはパール地区内のワード（Ward）です。"
+  },
+  {
+    "question": "リグーリア州のD.O.C. Ormeasco di Pornassioで主要品種として使用されるOrmeascoのシノニムとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "Nebbiolo",
+      "Sangiovese",
+      "Rossese",
+      "Dolcetto"
+    ],
+    "correct_index": 3,
+    "explanation": "Ormeascoは、ピエモンテ州で有名な黒ブドウ品種Dolcettoのリグーリア州での呼び名（シノニム）です。テキストに「地元でオルメアスコと呼ばれるドルチェットで造られる赤ワイン」と記載されています。"
+  },
+  {
+    "question": "オーストリアのヴァーグラム D.A.C. (Wagram D.A.C.)において、特に注目すべきとされる独自の固有品種を1つ選びなさい。",
+    "choices": [
+      "Grüner Veltliner (グリューナー・ヴェルトリーナー)",
+      "Riesling (リースリング)",
+      "Welschriesling (ヴェルシュリースリング)",
+      "Roter Veltliner (ローター・ヴェルトリーナー)"
+    ],
+    "correct_index": 3,
+    "explanation": "ヴァーグラム D.A.C. (Wagram D.A.C.)ではGrüner Veltliner (グリューナー・ヴェルトリーナー)やRiesling (リースリング)も優れていますが、テキストでは特に「ソフトでほのかにスパイシーな特徴をもつヴァーグラム独自の固有品種、ローター・ヴェルトリーナー」が注目すべきとされています。"
+  },
+  {
+    "question": "ハンガリーのエゲル地方を代表する赤ワイン「Egri Bikavér (エグリ・ビカヴェール)」にまつわる伝説で、エゲル城を守る兵士たちと戦ったとされる国を1つ選びなさい。",
+    "choices": [
+      "モンゴル帝国",
+      "ハプスブルク帝国",
+      "オスマン帝国",
+      "神聖ローマ帝国"
+    ],
+    "correct_index": 2,
+    "explanation": "「Egri Bikavér (エグリ・ビカヴェール)」、別名「雄牛の血」にまつわる伝説として、16世紀にオスマン帝国軍に包囲されたエゲル城の兵士たちがこの赤ワインを飲んで士気を高め、城を守り抜いたというエピソードがよく知られています。"
+  },
+  {
+    "question": "中央高地地区で栽培され、Tressalierというシノニムを持つ白ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "シャルドネ Chardonnay",
+      "サシー Sacy",
+      "ソーヴィニヨン Sauvignon",
+      "ロモランタン Romorantin"
+    ],
+    "correct_index": 1,
+    "explanation": "中央高地地区で栽培される白ブドウ品種サシー Sacyは、トレサリエ Tressalierというシノニム（別名）を持っています。"
+  },
+  {
+    "question": "北ピエモンテを代表するD.O.C.G.ワイン「Gattinara」が造られる県と、その主要ブドウ品種の組み合わせとして正しいものを1つ選びなさい。",
+    "choices": [
+      "ヴェルチェッリ県 Vercelli - Nebbiolo",
+      "ノヴァーラ県 Novara - Vespolina",
+      "トリノ県 Torino - Erbaluce",
+      "ヴェルチェッリ県 Vercelli - Bonarda di Gattinara"
+    ],
+    "correct_index": 0,
+    "explanation": "Gattinara D.O.C.G.はヴェルチェッリ県 Vercelliで、主要ブドウ品種Nebbioloをベースに造られる長期熟成タイプの赤ワインです。テキストに「ヴェルチェッリ県でネッビオーロをベースに造られる北ピエモンテで最も有名な呼称」と記載されています。"
+  },
+  {
+    "question": "1936年、新潟県の川上善兵衛から山形県屋代村の高橋利義が譲り受けたとされるブドウ品種を1つ選びなさい。",
+    "choices": [
+      "マスカット・ベーリーA (Muscat Bailey A)",
+      "甲州 (Koshu)",
+      "ヤマ・ソービニオン (Yama Sauvignon)",
+      "キャンベル・アーリー (Campbell Early)"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストに「1936年、新潟県の川上善兵衛から、屋代村の高橋利義が、マスカット・ベーリーA、ブラック・クイーン、レッドミルレンニュームを譲り受け」たと記載されているため、マスカット・ベーリーAが正解です。"
+  },
+  {
+    "question": "A.O.C. Madiranの赤ワインにおいて、50%以上の使用が義務付けられている主要黒ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "カベルネ・フラン Cabernet Franc",
+      "メルロ Merlot",
+      "フェール・セルヴァドゥ Fer Servadou",
+      "タナ Tannat"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C.マディランの赤ワインは、タナ種を50%以上使用することが規定されています。補助品種としてカベルネ・フラン、カベルネ・ソーヴィニヨン、フェール・セルヴァドゥが認められています。"
+  },
+  {
+    "question": "ポルトガルのD.O.C.ワインにおいて「Reserva」を名乗るための条件として、アルコール度数がその地域の法定最低度数よりどれだけ高くなければならないか、適切なものを1つ選びなさい。",
+    "choices": [
+      "0.5%以上",
+      "1.0%以上",
+      "1.5%以上",
+      "特に規定はない"
+    ],
+    "correct_index": 0,
+    "explanation": "ポルトガルのD.O.C.ワインにおける「Reserva」の表記は、アルコール度数がその地域の法定最低度数より0.5%以上高いこと、ガラス瓶に詰められていること、官能検査を通過することなどが条件として定められています。"
+  },
+  {
+    "question": "ヴェネト州ヴェローナ県のSoave地区における主要な土壌と、D.O.C.G. Soave Superioreの主要ブドウ品種の組み合わせとして正しいものを1つ選びなさい。",
+    "choices": [
+      "火山性土壌に石灰質が混ざる土壌 - Garganega",
+      "氷堆石土壌 - Trebbiano di Soave",
+      "石灰質土壌 - Corvina",
+      "沖積土壌 - Rondinella"
+    ],
+    "correct_index": 0,
+    "explanation": "Soave地区の土壌は火山性土壌に石灰質土壌が混ざることが特徴です。また、D.O.C.G. Soave Superioreの主要ブドウ品種はGarganega（70%以上）です。テキストに「ソアーヴェ地区は火山性土壌に石灰質土壌が混ざる」「Soave Superiore ガルガネガ70%以上」と記載されています。"
+  },
+  {
+    "question": "スイスの代表的なロゼワインの名称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Vin des Glaciers (ヴァン・デ・グラシエ)",
+      "Federweisser (フェーダーヴァイサー)",
+      "Oeil de Perdrix (ウイユ・ドゥ・ペルドリ)",
+      "Schilcherwein (シルヒャーヴァイン)"
+    ],
+    "correct_index": 2,
+    "explanation": "Oeil de Perdrix (ウイユ・ドゥ・ペルドリ)は「ヤマウズラの目」を意味し、スイスを代表するロゼワインの名称です。主にPinot Noir (ピノ・ノワール)から造られます。"
+  },
+  {
+    "question": "シャンパーニュ製法におけるノンヴィンテージの最低瓶内熟成期間として規定されているものを次の中から選びなさい。",
+    "choices": [
+      "15ヶ月以上",
+      "9ヶ月以上",
+      "12ヶ月以上",
+      "36ヶ月以上"
+    ],
+    "correct_index": 0,
+    "explanation": "シャンパーニュのノンヴィンテージの最低瓶内熟成期間は15ヶ月以上と規定されています。そのうち、澱とともに熟成させる期間は最低12ヶ月以上です。"
+  },
+  {
+    "question": "山梨県北杜市における甲州種の栽培に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "中央葡萄酒が自社管理農園において、垣根仕立ての栽培に本格的に取り組んでいる。",
+      "この地のブドウから造られたワインが、海外における甲州の注目度を上げるきっかけの一つとなった。",
+      "この地のブドウから造られたワインが、日本ワインとして初めてI.W.S.C.で金賞を受賞した。",
+      "栽培方法として、大半の区画で高畝式が採用されている。"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストによると、北杜市の甲州を使ったワインが金賞および地域最高賞を受賞したのは「デカンタ・ワールド・ワイン・アワード2014 Decanter World Wine Awards(DWWA)」です。I.W.S.C. (International Wine & Spirit Competition) ではないため、この選択肢は誤りです。"
+  },
+  {
+    "question": "日本で栽培されている欧・中東系品種（Vitis Vinifera）の白ブドウにおいて、栽培量が多い順として適切なものを次の中から選びなさい。",
+    "choices": [
+      "ケルナー (Kerner) > シャルドネ (Chardonnay) > ソーヴィニヨン・ブラン (Sauvignon Blanc)",
+      "シャルドネ (Chardonnay) > ケルナー (Kerner) > ソーヴィニヨン・ブラン (Sauvignon Blanc)",
+      "ソーヴィニヨン・ブラン (Sauvignon Blanc) > シャルドネ (Chardonnay) > ケルナー (Kerner)",
+      "シャルドネ (Chardonnay) > ソーヴィニヨン・ブラン (Sauvignon Blanc) > ケルナー (Kerner)"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストの「欧・中東系品種群」の項目に、「白ワイン用品種では、シャルドネが最も多く、ケルナー、ソーヴィニヨン・ブランと続く」と記載されているため、この順序が正しいです。"
+  },
+  {
+    "question": "2020年に復活したメドックのクリュ・ブルジョワの格付けにおいて、存在しない階級を1つ選びなさい。",
+    "choices": [
+      "Cru Bourgeois",
+      "Cru Bourgeois Grand",
+      "Cru Bourgeois Supérieur",
+      "Cru Bourgeois Exceptionnel"
+    ],
+    "correct_index": 1,
+    "explanation": "2020年に復活したクリュ・ブルジョワの格付けは、Cru Bourgeois、Cru Bourgeois Supérieur、Cru Bourgeois Exceptionnelの3階級です。Cru Bourgeois Grandという階級は存在しません。"
+  },
+  {
+    "question": "ニュージーランドで栽培されているソーヴィニヨン・ブラン Sauvignon Blancの大部分を占め、「UCD Clone 1」が繁殖を繰り返し定着したマス・セレクションの名称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "DRCエイベル DRC Abel",
+      "ディジョン・クローン Dijon Clones",
+      "UCD5",
+      "サヴィー・エムエス Savvy MS"
+    ],
+    "correct_index": 3,
+    "explanation": "ニュージーランドのソーヴィニヨン・ブランは、「ソーヴィニヨン・ブランのマス・セレクション」を意味する「Savvy MS」が大部分を占めています。これは「UCD Clone 1」がニュージーランドで繁殖を繰り返し定着したものです。"
+  },
+  {
+    "question": "ボージョレ地区のA.O.C.に関する記述として、適切でないものを1つ選びなさい。",
+    "choices": [
+      "10あるクリュ・デュ・ボージョレでは、新酒を意味する \"Nouveau\" の表記が認められている。",
+      "ボージョレ地区は2018年にユネスコの世界ジオパークに登録された。",
+      "ムーラン・ナ・ヴァン Moulin-à-Ventはクリュ・デュ・ボージョレの1つである。",
+      "ボージョレ地区の土壌は北部が花崗岩質、南部は石灰岩や泥灰岩など多様である。"
+    ],
+    "correct_index": 0,
+    "explanation": "ボージョレ地区の10の村名A.O.C.（クリュ・デュ・ボージョレ）では、新酒を意味する \"Nouveau\" や \"Primeur\" の表記を付加することは認められていません。"
+  },
+  {
+    "question": "1819年にヴァージニア大学 University of Virginiaを創立し、自身の邸宅モンティチェッロ Monticelloと共に世界遺産に登録されている、アメリカ建国期の第3代大統領として適切なものを次の中から選びなさい。",
+    "choices": [
+      "George Washington",
+      "Abraham Lincoln",
+      "Franklin D. Roosevelt",
+      "Thomas Jefferson"
+    ],
+    "correct_index": 3,
+    "explanation": "アメリカ第3代大統領トーマス・ジェファーソンは、ヴァージニア大学の創立者であり、ワイン愛好家としても知られています。彼の邸宅モンティチェッロはヴァージニア大学と共に世界遺産に登録されています。"
+  },
+  {
+    "question": "メドックのオー・メドック地区で最も北に位置し、粘土石灰質の土壌から堅牢で骨太なワインが多く生まれる村名A.O.C.を1つ選びなさい。",
+    "choices": [
+      "ポイヤック Pauillac",
+      "サン・テステフ Saint-Estèphe",
+      "サン・ジュリアン Saint-Julien",
+      "マルゴー Margaux"
+    ],
+    "correct_index": 1,
+    "explanation": "オー・メドックの村名A.O.C.で最も北に位置するサン・テステフは、浅い砂礫の下に粘土石灰質の土壌を持ち、堅牢で骨太なワインが多いとされています。"
+  },
+  {
+    "question": "A.O.C. Cour-Chevernyで使用が義務付けられている白ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "シャルドネ Chardonnay",
+      "ソーヴィニヨン・ブラン Sauvignon Blanc",
+      "ロモランタン Romorantin",
+      "シュナン・ブラン Chenin Blanc"
+    ],
+    "correct_index": 2,
+    "explanation": "A.O.C.シュヴェルニーに内包されるA.O.C.クール・シュヴェルニーでは、この土地でしか栽培されていないロモランタン種の使用が義務付けられています。"
+  },
+  {
+    "question": "D.O.C.G. Romagna Albanaに関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "古代から造られてきた歴史を持つ白ワインである。",
+      "辛口のSeccoから陰干しブドウを用いたPassitoまで、多様なスタイルが認められている。",
+      "主要ブドウ品種はPignolettoである。",
+      "辛口であるSeccoタイプの最低アルコール度数は12%と規定されている。"
+    ],
+    "correct_index": 2,
+    "explanation": "Romagna Albana D.O.C.G.の主要ブドウ品種はAlbanaです。PignolettoはD.O.C.G. Colli Bolognesi Pignolettoの主要品種であり、誤りです。その他の選択肢はテキストの記述と一致します。"
+  },
+  {
+    "question": "ドイツのワイン生産地域プファルツ (Pfalz)で、ワイン祭りなどで伝統的に使用される、外面に凹凸のついた容量500mlの独特なコップの名称を1つ選びなさい。",
+    "choices": [
+      "Schoppen (ショッペン)",
+      "Römer (レーマー)",
+      "Stange (シュタンゲ)",
+      "Dubbeglas (ドゥベグラス)"
+    ],
+    "correct_index": 3,
+    "explanation": "プファルツ (Pfalz)のワイン祭りでは、Dubbeglas (ドゥベグラス)と呼ばれる、外面に凹凸がついた容量500mlの独特なコップでワインやワインの炭酸水割り(ショーレ)が供されるのが伝統的です。"
+  },
+  {
+    "question": "チリのワイン法における残糖量表示で、「Semi seco」に該当する残糖量の規定として正しいものを1つ選びなさい。",
+    "choices": [
+      "4g/ℓ未満",
+      "4g/ℓ以上12g/ℓ未満",
+      "18g/ℓ以上45g/ℓ未満",
+      "45g/ℓ以上"
+    ],
+    "correct_index": 1,
+    "explanation": "チリのワイン法では、Semi seco / Demi sec / Medium Dryは残糖量が4g/ℓ以上12g/ℓ未満と規定されています。ただし、総酸度が残糖分を2g/ℓ以上上回る場合は18g/ℓ未満まで許容されます。"
+  },
+  {
+    "question": "1950年代中頃より、ニューヨーク州フィンガー・レイクス Finger Lakes地方でヴィティス・ヴィニフェラ Vitis Vinifera種による高品質なワイン造りを始め、同地のワイン産業の発展に大きく貢献したウクライナ出身のブドウ栽培学の権威を1つ選びなさい。",
+    "choices": [
+      "Charles Fournier",
+      "Dr. Konstantin Frank",
+      "Samuel Marsden",
+      "Thomas Jefferson"
+    ],
+    "correct_index": 1,
+    "explanation": "ウクライナ出身のブドウ栽培学の権威であるDr. Konstantin Frankは、Charles Fournierと共にフィンガー・レイクス地方でヴィティス・ヴィニフェラ種の栽培を成功させ、1961年に最初の商業的ワインを製造しました。"
+  },
+  {
+    "question": "長野県における日本ワインの原料としての栽培量が多い上位4品種に該当しないものを1つ選びなさい。",
+    "choices": [
+      "コンコード (Concord)",
+      "メルロ (Merlot)",
+      "ナイアガラ (Niagara)",
+      "ピノ・ノワール (Pinot Noir)"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストによると、長野県で栽培量が多い品種は「コンコードで1,196t、メルロ、ナイアガラ、シャルドネと続く」と記載されています。ピノ・ノワールは上位4品種には含まれていません。"
+  },
+  {
+    "question": "コルシカ島のA.O.C.ワイン生産量において、最も生産比率が高いワインのタイプを1つ選びなさい。",
+    "choices": [
+      "赤ワイン",
+      "白ワイン",
+      "甘口ワイン",
+      "ロゼワイン"
+    ],
+    "correct_index": 3,
+    "explanation": "コルシカ島のA.O.C.ワイン生産量の内訳は、ロゼが56.5%と最も高く、次いで赤が25.5%、白が18%となっています。"
+  },
+  {
+    "question": "ポルトガルのD.O.P.ダン (Dão)に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "エストレーラ山脈に囲まれ、気候的に保護されている。",
+      "1940年代からのサラザール政権下で導入された協同組合システムにより、ワインの品質は著しく向上した。",
+      "ポルトガルのEU加盟以降、有望な生産者によりポルトガルで最も知られた地域の一つとなった。",
+      "土壌は主に花崗岩と片麻岩で構成されている。"
+    ],
+    "correct_index": 1,
+    "explanation": "1940年代からのサラザール政権下で導入された協同組合システムにより、ダンのワインは標準化されたものの、品質水準は下がってしまいました。品質が向上したのは、ポルトガルのEU加盟以降です。"
+  },
+  {
+    "question": "ニュージーランドのワイン用ブドウ栽培の適地調査において、Derek Milne博士がブルゴーニュに気候が似ているとして最初に推奨したものの、栽培面積の狭さから断念された産地を1つ選びなさい。",
+    "choices": [
+      "マーティンボロ Martinborough",
+      "マールボロ Marlborough",
+      "セントラル・オタゴ Central Otago",
+      "ホークス・ベイ Hawke's Bay"
+    ],
+    "correct_index": 0,
+    "explanation": "科学・産業調査局（DSIR）のDerek Milne博士は、最初に北島のマーティンボロをブルゴーニュに似た最適地として推奨しましたが、栽培面積が狭いため断念されました。その後、2番目に推奨した南島のマールボロでモンタナ社による大規模な栽培が始まりました。"
+  },
+  {
+    "question": "コート・ド・ボルドー連合に関する記述として、正しくないものを1つ選びなさい。",
+    "choices": [
+      "2016年にサント・フォワ・ボルドーが連合に加わった。",
+      "カスティヨン・コート・ド・ボルドーは赤ワインのみが認められている。",
+      "コート・ド・ブールは設立当初から連合に参加している。",
+      "ブライ・コート・ド・ボルドーは赤と辛口白が認められている。"
+    ],
+    "correct_index": 2,
+    "explanation": "コート・ド・ブールは、コート・ド・ボルドー連合を途中で離脱し、独自のA.O.C.を貫く道を選びました。したがって、設立当初から参加しているという記述は誤りです。"
+  }
+]

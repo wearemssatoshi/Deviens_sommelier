@@ -1,0 +1,6 @@
+Added WSET Logical Tasting cards to summary_index.json
+Rebuilt summary_index.json with 26 chapters.
+[main 053a6e6] feat: enrich ch07-ch25 with deep content
+ 19 files changed, 2268 insertions(+), 476 deletions(-)
+To https://github.com/wearemssatoshi/Deviens_sommelier.git
+   65c3815..053a6e6  main -> main

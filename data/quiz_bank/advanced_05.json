@@ -1,0 +1,552 @@
+[
+  {
+    "question": "ブルゴーニュ (Bourgogne) 地方において、明確に区分されたブドウ畑の小区画を指す「クリマ (Climat)」が、ユネスコの世界遺産に登録された年を1つ選びなさい。",
+    "choices": [
+      "2015年",
+      "1979年",
+      "1141年",
+      "910年"
+    ],
+    "correct_index": 0,
+    "explanation": "「ブルゴーニュのクリマ (les Climats du vignoble de Bourgogne)」がユネスコ世界遺産に登録されたのは2015年です。1979年はヴェズレーのサント＝マドレーヌ大聖堂 (Basilique Sainte-Marie-Madeleine de Vézelay) が登録された年です。"
+  },
+  {
+    "question": "スペインのワイン産業に関する記述として、**誤っているもの**を1つ選びなさい。",
+    "choices": [
+      "イベリア半島に蒸留技術を伝えたのはローマ人である。",
+      "ワイン用ブドウ栽培面積は約92.8万haで世界第1位である。",
+      "ワイン生産量は約2,836万hlで世界第3位である。",
+      "国内最大のワイン生産量を誇る自治州はカスティーリャ・ラ・マンチャ (Castilla-La Mancha) 州である。"
+    ],
+    "correct_index": 0,
+    "explanation": "イベリア半島に蒸留技術を伝えたのは、711年以降にイベリア半島を支配したイスラム教徒のムーア人です。ローマ人はワイン造りを盛んにしましたが、蒸留技術を伝えたわけではありません。"
+  },
+  {
+    "question": "ワインのコンテナ輸送における各国の車両総重量制限に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "フランス (France) の車両総重量制限は40tである。",
+      "スペイン (Spain) の車両総重量制限は42tである。",
+      "アメリカ (USA) の車両総重量制限は36.24tである。",
+      "オーストラリア (Australia) の車両総重量制限は40.5tである。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには「オーストラリアは42.5t」と記載されている。したがって、40.5tとする選択肢が誤りである。"
+  },
+  {
+    "question": "1960年代後半に長野県に進出したマンズワインによって形成されたブドウ団地のうち、塩田地区と小諸一帯で主に栽培された欧・中東系品種の組み合わせとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "A: 塩田：シャルドネ Chardonnay、小諸：カベルネ・ソーヴィニヨン Cabernet Sauvignon",
+      "B: 塩田：メルロ Merlot、小諸：ピノ・ノワール Pinot Noir",
+      "C: 塩田：カベルネ・ソーヴィニヨン Cabernet Sauvignon、小諸：シャルドネ Chardonnayとメルロ Merlot",
+      "D: 塩田：ソーヴィニヨン・ブラン Sauvignon Blanc、小諸：メルロ Merlotとカベルネ・フラン Cabernet Franc"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには「後に塩田、小諸一帯は前者がカベルネ・ソーヴィニヨン、後者はシャルドネとメルロの重要な産地となった。」と記載されており、塩田地区がカベルネ・ソーヴィニヨン、小諸一帯がシャルドネとメルロの産地となったことがわかる。"
+  },
+  {
+    "question": "日本酒の三段仕込みにおいて、初添と仲添の間に行われ、酵母の増殖を待つ期間の呼称を次の中から1つ選びなさい。",
+    "choices": [
+      "留 (Tome)",
+      "酛摺り (Motosuri)",
+      "踊り (Odori)",
+      "汲み掛け (Kumikake)"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには「1日目の添と3日目の仲の間、2日目は『踊り』といって仕込みは行わず、酵母の増殖を待つ。」と記載されている。これは三段仕込みにおける重要な工程である。"
+  },
+  {
+    "question": "カナダのノヴァ・スコシア (Nova Scotia) 州において、アロマティックでフレッシュなスタイルを持つ白ワインに与えられた独自の呼称を1つ選びなさい。",
+    "choices": [
+      "VQA (Vintners Quality Alliance)",
+      "Tidal Bay (タイダル・ベイ)",
+      "Benjamin Bridge (ベンジャミン・ブリッジ)",
+      "Pet-Nat (ペット・ナット)"
+    ],
+    "correct_index": 1,
+    "explanation": "ノヴァ・スコシア州では、州産のアロマティックでフレッシュなスタイルの白ワインの世界的な認知度向上のため、「Tidal Bay」という独自の呼称が設けられました。"
+  },
+  {
+    "question": "ウルグアイの首都モンテビデオ (Montevideo) で栽培されている主要ブドウ品種のうち、参照テキストに白ブドウ品種として記載されていないものを1つ選びなさい。",
+    "choices": [
+      "Ugni Blanc (ユニ・ブラン)",
+      "Sauvignon Blanc (ソーヴィニヨン・ブラン)",
+      "Chardonnay (シャルドネ)",
+      "Albariño (アルバリーニョ)"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストによると、モンテビデオで栽培されている主要な白ブドウ品種はユニ・ブラン、ソーヴィニヨン・ブラン、シャルドネです。アルバリーニョについての記載はありません。"
+  },
+  {
+    "question": "南アフリカのワイン産地であるステレンボッシュ (Stellenbosch) 地区のサブリージョンとして、認定されていないものを1つ選びなさい。",
+    "choices": [
+      "Simonsberg-Stellenbosch (シモンズバーグ・ステレンボッシュ)",
+      "Polkadraai Hills (ポルカドラーイ・ヒルズ)",
+      "Elgin (エルギン)",
+      "Banghoek (バンフック)"
+    ],
+    "correct_index": 2,
+    "explanation": "Elginはステレンボッシュ地区のサブリージョンではなく、独立した地区 (District) です。Simonsberg-Stellenbosch、Polkadraai Hills、Banghoekはいずれもステレンボッシュ地区に含まれるサブリージョンです。"
+  },
+  {
+    "question": "ブルゴーニュ地方コート・ド・ボーヌ (Côte de Beaune) 地区のA.O.C. Ladoixの赤ワインにおいて、混植されている場合に限り混醸が認められている白ブドウ品種の上限比率として適切なものを次の中から選びなさい。",
+    "choices": [
+      "15%",
+      "10%",
+      "20%",
+      "30%"
+    ],
+    "correct_index": 0,
+    "explanation": "A.O.C. Ladoixの赤ワインはピノ・ノワール (Pinot Noir) を主体としますが、シャルドネ (Chardonnay)、ピノ・ブラン (Pinot Blanc)、ピノ・グリ (Pinot Gris) が混植されている場合に限り、15%を上限として混醸することが認められています。"
+  },
+  {
+    "question": "英国のP.G.I. Welsh Regional Quality Sparkling Wineにおいて、トラディショナル方式で規定されている最低滓熟成期間として正しいものを1つ選びなさい。",
+    "choices": [
+      "6ヶ月",
+      "9ヶ月",
+      "12ヶ月",
+      "15ヶ月"
+    ],
+    "correct_index": 1,
+    "explanation": "英国のP.G.I.であるWelsh Regional Wineの規定において、スパークリングワイン（Quality Sparkling Wine）は、トラディショナル方式で最低9ヶ月の滓との瓶内熟成が義務付けられています。"
+  },
+  {
+    "question": "カナダのワイン産地であるケベック (Quebec) 州におけるブドウ生育期の積算温度として適切なものを次の中から選びなさい。",
+    "choices": [
+      "846-1,069度日",
+      "1,100-1,300度日",
+      "1,350-1,550度日",
+      "1,600-1,800度日"
+    ],
+    "correct_index": 0,
+    "explanation": "ケベック州のリージョンは、セント・ローレンス川の影響を受ける冷涼な気候であり、ブドウ生育期の積算温度は846-1,069度日とされています。"
+  },
+  {
+    "question": "クロアチアのワイン法において制定されている地理的表示のうち、小地区 (Vinogorje) の総数を1つ選びなさい。",
+    "choices": [
+      "12",
+      "72",
+      "4",
+      "65"
+    ],
+    "correct_index": 1,
+    "explanation": "クロアチアの地理的表示は、4つのワイン産地 (リージョン)、12のサブリージョン (Podregija)、そして72の小地区 (Vinogorje) が制定されています。"
+  },
+  {
+    "question": "プロヴァンス (Provence) 地方のA.O.C. Coteaux d'Aix-en-Provenceの白ワインにおける品種構成の規定として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Sémillon (セミヨン) の比率は30%以下でなければならない。",
+      "Grenache Blanc (グルナッシュ・ブラン) を最低10%使用しなければならない。",
+      "Vermentino (ヴェルメンティーノ) の比率は30%以上でなければならない。",
+      "Ugni Blanc (ユニ・ブラン) の比率は25%以下でなければならない。"
+    ],
+    "correct_index": 1,
+    "explanation": "A.O.C. Coteaux d'Aix-en-Provenceの白ワインの品種構成は、ヴェルメンティーノ (Vermentino) 30%以上、セミヨン (Sémillon) 30%以下、ユニ・ブラン (Ugni Blanc) 25%以下と定められています。グルナッシュ・ブラン (Grenache Blanc) に関する最低使用比率の規定はありません。"
+  },
+  {
+    "question": "アルゼンチンのワイン法において、Gran Reservaと表示される白ワインに義務付けられているオーク樽での最低熟成期間として適切なものを次の中から選びなさい。",
+    "choices": [
+      "6ヶ月",
+      "1年",
+      "18ヶ月",
+      "2年"
+    ],
+    "correct_index": 1,
+    "explanation": "アルゼンチンの熟成期間に関する表示では、Gran Reservaの白ワインはオーク樽で最低1年、赤ワインは最低2年の熟成が義務付けられています。Reservaの場合は白ワインが最低6ヶ月、赤ワインが最低1年です。"
+  },
+  {
+    "question": "1716年にトスカーナ大公コジモ3世 (Cosimo III de' Medici) が世界で初めてワイン産地の境界を定めたが、その際に指定されなかった産地を1つ選びなさい。",
+    "choices": [
+      "カルミニャーノ (Carmignano)",
+      "キアンティ (Chianti)",
+      "ポミーノ (Pomino)",
+      "モンテプルチャーノ (Montepulciano)"
+    ],
+    "correct_index": 3,
+    "explanation": "1716年にコジモ3世が定めた4つの産地は、カルミニャーノ (Carmignano)、キアンティ (Chianti)、ポミーノ (Pomino)、ヴァル・ダルノ・ディ・ソプラ (Val d'Arno di Sopra) です。モンテプルチャーノ (Montepulciano) はこの時には含まれていません。"
+  },
+  {
+    "question": "バジリカータ州のD.O.C.G.「Aglianico del Vulture Superiore Riserva」の最低熟成期間に関する規定として適切なものを次の中から選びなさい。",
+    "choices": [
+      "最低3年間の熟成が必要で、そのうち木樽熟成12ヵ月と瓶内熟成6ヵ月が含まれる。",
+      "最低4年間の熟成が必要で、そのうち木樽熟成24ヵ月と瓶内熟成12ヵ月が含まれる。",
+      "最低4年間の熟成が必要で、そのうち木樽熟成12ヵ月と瓶内熟成12ヵ月が含まれる。",
+      "最低2年間の熟成が必要で、そのうち木樽熟成12ヵ月と瓶内熟成12ヵ月が含まれる。"
+    ],
+    "correct_index": 1,
+    "explanation": "Aglianico del Vulture Superiore Riserva D.O.C.G.は、最低4年間の熟成が義務付けられており、その内訳は木樽熟成24ヵ月と瓶内熟成12ヵ月です。選択肢Aはカンパーニア州のAglianico del Taburno Riserva、選択肢DはAglianico del Vulture Superioreの規定です。"
+  },
+  {
+    "question": "ギリシャのテッサリア (Thessaly) 地方、プラスティラ湖 (Plastira Lake) 周辺でのみ栽培されている希少な黒ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "ネゴスカ (Negoska)",
+      "マヴルディ (Mavroudi)",
+      "マヴロトラガノ (Mavrotragano)",
+      "メッセニコラ・ブラック (Messenikola Black)"
+    ],
+    "correct_index": 3,
+    "explanation": "メッセニコラ・ブラック (Messenikola Black) は、ギリシャのテッサリア地方にあるプラスティラ湖周辺でのみ栽培されている非常に希少な品種です。色が薄く、ソフトなタンニンが特徴です。"
+  },
+  {
+    "question": "コルシカ (Corse) 島のブドウ畑が広がる土壌について、島の東側を主に構成する地質として適切なものを次の中から選びなさい。",
+    "choices": [
+      "花崗岩質 (Granitique)",
+      "石灰質 (Calcaire)",
+      "シスト (Schisteux)",
+      "粘土質 (Argileux)"
+    ],
+    "correct_index": 2,
+    "explanation": "コルシカ島の土壌は、大まかに西側3分の2が花崗岩質、東側がシスト（片岩）質となっています。パトリモニオ (Patrimonio) のように石灰質土壌が見られる地域もあります。"
+  },
+  {
+    "question": "カンパーニア州のD.O.C.G.「アリアニコ・デル・タブルノ (Aglianico del Taburno)」のRosso Riservaにおける最低熟成規定として適切なものを次の中から選びなさい。",
+    "choices": [
+      "2年以上の熟成、うち木樽熟成12ヵ月、瓶内熟成6ヵ月",
+      "3年以上の熟成、うち木樽熟成12ヵ月、瓶内熟成6ヵ月",
+      "3年以上の熟成、うち木樽熟成18ヵ月、瓶内熟成6ヵ月",
+      "4年以上の熟成、うち木樽熟成24ヵ月、瓶内熟成12ヵ月"
+    ],
+    "correct_index": 1,
+    "explanation": "アリアニコ・デル・タブルノ (Aglianico del Taburno) D.O.C.G.のRosso Riservaは、最低3年以上の熟成が義務付けられており、その内訳は木樽熟成12ヵ月、瓶内熟成6ヵ月です。選択肢Dはバジリカータ州のAglianico del Vulture Superiore Riservaの規定であり、混同しやすいポイントです。"
+  },
+  {
+    "question": "2022年の農林水産省の統計において、海外原料を使用したワインも含む国内製造ワイン総生産量（105,162kl）に対し、日本ワイン（15,073kl）が占める割合として最も近い数値を次の中から選びなさい。",
+    "choices": [
+      "A: 11.7%",
+      "B: 14.3%",
+      "C: 70.0%",
+      "D: 75.0%"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「この日本ワインの生産量は、海外原料を使ったワインも含めた国内製造ワイン、105.162klの14.3%に当たる。」と明記されている。選択肢の11.7%は国内ブドウ収穫量に占める醸造用ブドウの割合であり、混同を誘う引っかけである。"
+  },
+  {
+    "question": "EUのワイン法およびフランスのA.O.C.規定に関する年号の組み合わせとして正しいものを1つ選びなさい。",
+    "choices": [
+      "ワイン共通市場制度に関する新たなEU理事会規則が発効：2006年 / A.O.C. Bordeauxで温暖化対策品種が認可：2019年",
+      "ワイン共通市場制度に関する新たなEU理事会規則が発効：2008年 / A.O.C. Bordeauxで温暖化対策品種が認可：2021年",
+      "ワイン共通市場制度に関する新たなEU理事会規則が発効：2010年 / A.O.C. Bordeauxで温暖化対策品種が認可：2020年",
+      "ワイン共通市場制度に関する新たなEU理事会規則が発効：2008年 / A.O.C. Bordeauxで温暖化対策品種が認可：2019年"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「2008年8月1日からはワイン共通市場制度に関する新たなEU理事会規則が発効し」とあり、また「A.O.C. BordeauxとA.O.C. Bordeaux Superieurで、温暖化対策として、2021年から」新たな品種が認められたと記載されている。"
+  },
+  {
+    "question": "1662年に王立協会へ提出した論文で、瓶内二次発酵によってワインに発泡性をもたらす方法について言及した英国の科学者を1つ選びなさい。",
+    "choices": [
+      "Henry II",
+      "James Busby",
+      "Henry VIII",
+      "Christopher Merret"
+    ],
+    "correct_index": 3,
+    "explanation": "英国の科学者クリストファー・メレット (Christopher Merret) が1662年に王立協会に提出した論文で、ワインに糖分を加えて再発酵させ、発泡性をもたらす方法に言及しました。これは意図的に瓶内二次発酵を起こす方法を記した最古の文書とされています。"
+  },
+  {
+    "question": "ソーヴィニョン・ブラン (Sauvignon Blanc) の品種香の要因となるチオール化合物の一つである4MMPの正式名称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "3-Mercaptohexan-1-ol",
+      "3-Mercaptohexyl acetate",
+      "4-Mercapto-4-methyl-2-pentanone",
+      "4-Methyl-4-sulfanyl-2-pentanol"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには、ソーヴィニョン・ブランの香りに関わるチオール化合物として「4MMP (4-Mercapto-4-methyl-2-pentanone)」が挙げられている。他の選択肢は、同じくチオール化合物である3MH、3MHAや、誤った名称である。"
+  },
+  {
+    "question": "アルゼンチンで伝統的に用いられてきた棚仕立て「Parral (パラール)」における、1ヘクタールあたりの一般的な植樹密度として適切なものを次の中から選びなさい。",
+    "choices": [
+      "500本〜1,000本/ha",
+      "4,000本〜5,000本/ha",
+      "2,000本〜2,500本/ha",
+      "8,000本〜10,000本/ha"
+    ],
+    "correct_index": 2,
+    "explanation": "アルゼンチンの伝統的な棚仕立てであるParralは、量産を目的とした仕立て方であり、その植樹密度は1ヘクタールあたり2,000本〜2,500本とされています。"
+  },
+  {
+    "question": "イギリスで古くからボルドー (Bordeaux) ワインを指す「Claret」の語源となったラテン語とその意味の組み合わせとして正しいものを1つ選びなさい。",
+    "choices": [
+      "Clarus / 明るい、澄んだ",
+      "Ruber / 赤い",
+      "Vinum / ワイン",
+      "Burdigala / ボルドーの古名"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「イギリスで古くからボルドーワインを指すClaretは、Clarus(ラテン語:明るい、澄んだ)が語源。当時のボルドーワインが、明るい濃い目のロゼの色合いだったことが分かる。」と記載されている。"
+  },
+  {
+    "question": "近代カリフォルニアワインの発展に多大な影響を与えた醸造家 André Tchelistcheff (アンドレ・チェリチェフ) に関する記述として、適切でないものを1つ選びなさい。",
+    "choices": [
+      "ロシア出身の醸造家で、Beaulieu Vineyard (ボーリュー・ヴィンヤード) に雇われた。",
+      "1966年にOakville (オークヴィル) に自身のワイナリーを設立した。",
+      "低温発酵やマロラクティック発酵といった近代的な醸造技術を導入した。",
+      "Robert Mondavi (ロバート・モンダヴィ) や Mike Grgich (マイク・ガーギッチ) など多くの後進を指導した。"
+    ],
+    "correct_index": 1,
+    "explanation": "1966年にOakvilleにワイナリーを設立したのは、André Tchelistcheffではなく、「近代カリフォルニアワインの父」と呼ばれるRobert Mondaviです。TchelistcheffはBeaulieu Vineyardの醸造家としてカリフォルニアワインの品質向上に貢献しました。"
+  },
+  {
+    "question": "アルザス (Alsace) 地方のグラン・クリュ (Grand Cru) のうち、アンドロ (Andlau) 村に位置するものとして適切でないものを次の中から選びなさい。",
+    "choices": [
+      "Kastelberg (カステルベルグ)",
+      "Wiebelsberg (ヴィーベルスベルグ)",
+      "Zotzenberg (ゾッツェンベルグ)",
+      "Moenchberg (ムンシュベルグ)"
+    ],
+    "correct_index": 2,
+    "explanation": "Kastelberg、Wiebelsberg、Moenchbergはアンドロ (Andlau) 村に位置するグラン・クリュです。Zotzenbergはミッテルベルカイム (Mittelbergheim) 村に位置します。"
+  },
+  {
+    "question": "オーストラリアにおいて、2010年以降シェリー (Sherry) タイプの酒精強化ワインに使用されることになった国内名称を1つ選びなさい。",
+    "choices": [
+      "Topaque (トパーク)",
+      "Tawny (トーニー)",
+      "Muscat (マスカット)",
+      "Apera (アペラ)"
+    ],
+    "correct_index": 3,
+    "explanation": "2008年のEUとの合意に基づき、オーストラリアでは2010年からシェリーの名称が国内販売でも禁止され、国内名称として「Apera」が使用されることになりました。"
+  },
+  {
+    "question": "南西地方のA.O.C. Saint-Sardosの赤ワインにおけるブレンド規定として、適切なものを次の中から選びなさい。",
+    "choices": [
+      "主要品種はシラー (Syrah) とタナ (Tannat) で、どちらか一方を60%以上使用しなければならない。",
+      "シラー (Syrah) の比率は、ブレンドされる他のどの品種よりも高くなければならない。",
+      "補助品種としてカベルネ・フラン (Cabernet Franc) とメルロ (Merlot) が認められているが、その合計は20%以下でなければならない。",
+      "タナ (Tannat) の使用は任意であり、ブレンドに含めなくてもよい。"
+    ],
+    "correct_index": 1,
+    "explanation": "A.O.C. Saint-Sardosの赤は、シラー (Syrah) とタナ (Tannat) の両方を必ずブレンドに含み、その合計が60%以上である必要があります。さらに、シラーの比率が他のどの品種よりも高くなければならないと規定されています。"
+  },
+  {
+    "question": "1930年代にフィロキセラ禍からの復興を遂げる過程で、ある県がブドウ台木の生産地として発展し、現在では日本の台木生産の約7割を占めるに至った。この都道府県を1つ選びなさい。",
+    "choices": [
+      "A: 山梨県",
+      "B: 長野県",
+      "C: 山形県",
+      "D: 新潟県"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストの山形県の項に「当時、各種台木の栽培を手掛ける農家も現れ、現在台木生産の7割を山形県が占める土台となった。」と明確に記述されている。これは非常に専門的でマニアックな知識点である。"
+  },
+  {
+    "question": "ルーション (Roussillon) 地方のV.D.N.に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "Ambré (アンブレ) と Tuilé (テュイレ) は、最低3年間の酸化熟成が義務付けられている。",
+      "Muscat de Rivesaltesに「Muscat de Noël (ミュスカ・ド・ノエル)」と付記する場合、収穫年の12月第1木曜以降に販売される。",
+      "5年以上熟成させたAmbré (アンブレ) と Tuilé (テュイレ) には「Hors d'âge (オール・ダージュ)」と表記することができる。",
+      "Grenat (グルナ) は収穫翌年の5月1日まで熟成させ、そのうち最低3ヶ月は瓶内での熟成が必要である。"
+    ],
+    "correct_index": 1,
+    "explanation": "「Muscat de Noël (ミュスカ・ド・ノエル)」は、収穫年の11月第3木曜日以降に新酒として販売されるワインに付記できます。12月第1木曜ではありません。"
+  },
+  {
+    "question": "1980年代にカリフォルニア (California) で、フィロキセラ (Phylloxera) のバイオタイプBの出現によって甚大な被害を受け、多くの畑が改植を余儀なくされた台木を1つ選びなさい。",
+    "choices": [
+      "St. George",
+      "110R",
+      "AXR#1",
+      "3309C"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには「1980年代に、バイオタイプBと呼ばれるフィロキセラの出現によって、カリフォルニアではAXR#1を使ったかなりの広さの畑が改植を余儀なくされた。」と明確に記載されている。"
+  },
+  {
+    "question": "かつてサヴォワ公国領であったサヴォワ (Savoie) とニース伯領 (Comté de Nice) が、第二帝政期のフランスに割譲された年号として適切なものを次の中から選びなさい。",
+    "choices": [
+      "1720年",
+      "1860年",
+      "1973年",
+      "2014年"
+    ],
+    "correct_index": 1,
+    "explanation": "サヴォワ公は1720年にサルデーニャ (Sardegna) を手に入れサルデーニャ王国を称しましたが、フランスへの割譲は1860年です。1973年はヴァン・ド・サヴォワ (Vin de Savoie) がA.O.C.に昇格した年、2014年は同A.O.C.でクレマン (Crémant) の呼称が可能になった年です。"
+  },
+  {
+    "question": "VDPやラインガウ・ワイン栽培者連盟以外で、2005年ヴィンテージから独自のGroßes Gewächsをリリースしているモーゼル (Mosel) の醸造所団体を1つ選びなさい。",
+    "choices": [
+      "Bernkasteler Ring",
+      "Maxime Herkunft Rheinhessen",
+      "Deutscher Weinbauverband",
+      "Fränkischer Weinbauverband"
+    ],
+    "correct_index": 0,
+    "explanation": "モーゼルの醸造所団体であるベルンカステラー・リング (Bernkasteler Ring) は、VDPとは別に、2005年産から独自のGroßes Gewächsをリリースしています。"
+  },
+  {
+    "question": "2021年のドイツワイン法改正後、ドイツワイン農業連盟 (Deutscher Weinbauverband, DWV) を脱退した団体として**該当しないもの**を1つ選びなさい。",
+    "choices": [
+      "Der Deutsche Raiffeisenverband (DRV)",
+      "Fränkischer Weinbauverband",
+      "Bernkasteler Ring",
+      "醸造協同組合を統括する団体"
+    ],
+    "correct_index": 2,
+    "explanation": "2021年のドイツワイン法改正後、醸造協同組合を統括する団体 (Der Deutsche Raiffeisenverband, DRV) とフランケンワイン農業連盟 (Fränkischer Weinbauverband) がDWVを脱退しました。Bernkasteler RingはVDPとは別に独自の格付けを行う団体ですが、DWVを脱退したという記述はありません。"
+  },
+  {
+    "question": "ブルゴーニュ地方のA.O.C. Pernand-Vergelesses Premier Cruにおいて、白ワインのみが認められている区画を1つ選びなさい。",
+    "choices": [
+      "Ile des Vergelesses",
+      "Les Fichots",
+      "En Caradeux",
+      "Sous Fretille"
+    ],
+    "correct_index": 3,
+    "explanation": "Pernand-Vergelesses Premier Cruの中で、Sous Fretille、Clos Berthet、Villages de Pernandの3区画は白ワインのみが認められています。Ile des Vergelesses、Les Fichots、En Caradeuxは赤・白ともに認められています。"
+  },
+  {
+    "question": "ロワール地方において、A.O.C. Cour-Chevernyでのみ栽培が認められている固有の白ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "Sauvignon Blanc (ソーヴィニヨン・ブラン)",
+      "Chenin Blanc (シュナン・ブラン)",
+      "Menu Pineau (ムニュ・ピノ)",
+      "Romorantin (ロモランタン)"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C. Cour-Chevernyは、この土地固有の品種であるロモランタン (Romorantin) から単一で白ワインを造ることが規定されています。"
+  },
+  {
+    "question": "A.O.C. Alsaceにおいて、複数の白ブドウ品種をアッサンブラージュしたワインに付記される「Gentil (ジャンティ)」の規定に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "リースリング (Riesling)、ミュスカ (Muscat)、ピノ・グリ (Pinot Gris)、ゲヴュルツトラミネール (Gewurztraminer) の高貴品種を合計50%以上使用しなければならない。",
+      "各ブドウ品種は個別に醸造された後、アッサンブラージュされなければならない。",
+      "混醸は認められていない。",
+      "ベースとなるワインはシルヴァネール (Sylvaner) でなければならない。"
+    ],
+    "correct_index": 3,
+    "explanation": "「Gentil (ジャンティ)」は高貴4品種を50%以上使用し、各品種を個別に醸造後アッサンブラージュすることが規定されていますが、ベースワインに関する規定はありません。複数の品種を混醸したワインは「Edelzwicker (エーデルツヴィッカー)」と表記されます。"
+  },
+  {
+    "question": "国税庁が定める日本ワインの表示ルールにおいて、東京都以外で収穫されたブドウのみを使用し、東京都内で醸造した場合、ラベルに表示することが可能な地理的表示として適切なものを次の中から選びなさい。",
+    "choices": [
+      "A: 東京ワイン",
+      "B: 東京醸造ワイン",
+      "C: 東京産ブドウ使用",
+      "D: 日本ワイン"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストのラベル表示例によると、「東京醸造ワイン」は「東京都以外で収穫されたブドウを使用して、東京都で醸造したワイン」と定義されている。「東京ワイン」や「東京産ブドウ使用」は東京都産のブドウを85%以上使用する必要があるため不適切である。"
+  },
+  {
+    "question": "ハンガリーのP.G.I.ゼンプレーン (Zemplén) に関する記述として適切なものを次の中から選びなさい。",
+    "choices": [
+      "主にカダルカ (Kadarka) などの黒ブドウ品種が栽培されている。",
+      "ドナウ川 (Duna) とティサ川 (Tisza) に挟まれた地域に位置する。",
+      "世界三大貴腐ワインで知られるトカイ (Tokaj) 地方を指す。",
+      "ハンガリーで最も栽培面積の広いP.G.I.である。"
+    ],
+    "correct_index": 2,
+    "explanation": "ハンガリーのP.G.I.ゼンプレーン (Zemplén) は、世界三大貴腐ワインで知られるトカイ (Tokaj) 地方を指す地理的表示です。栽培されているのはフルミント (Furmint) やハールシュレヴェリュー (Hárslevelű) をはじめとした白ブドウ品種のみです。"
+  },
+  {
+    "question": "「日本ワイン用ブドウの父」と称される川上善兵衛が交配によって生み出した品種に該当しないものを1つ選びなさい。",
+    "choices": [
+      "A: マスカット・ベーリーA Muscat Bailey A",
+      "B: ブラック・クイーン Black Queen",
+      "C: レッド・ミルレンニューム Red Millenium",
+      "D: デラウェア Delaware"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストによると、川上善兵衛が交配したのはマスカット・ベーリーA、ブラック・クイーン、レッド・ミルレンニュームである。デラウェアはアメリカ原産の品種であり、山形県で栽培が広まった品種として記載されているが、川上善兵衛の交配品種ではない。"
+  },
+  {
+    "question": "ボルドー (Bordeaux) 地方のA.O.C. Pomerolの土壌に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "シャトー・ペトリュス (Château Pétrus) の畑は、純粋な粘土質土壌で知られる。",
+      "多くの畑の表土は、イル (Isle) 川によって運ばれた新生代第三紀の小石で覆われている。",
+      "底土は粘土質であり、熟成により官能的なフレーバーを生む要因となる酸化鉄を多く含んでいる。",
+      "土壌は全体的にジュラ紀のキンメリジャン (Kimmeridgian) 石灰岩を基盤としている。"
+    ],
+    "correct_index": 3,
+    "explanation": "ポムロール (Pomerol) の土壌は粘土質や新生代第三紀の小石が特徴であり、ジュラ紀のキンメリジャン (Kimmeridgian) 石灰岩はシャブリ (Chablis) 地区の土壌の特徴です。"
+  },
+  {
+    "question": "A.O.C. Vin de Savoieのクリュ (Cru) の一つであるChautagne (ショターニュ) で造られる白ワインにおいて、主要品種であるジャケール (Jacquère) が作付け面積に占めなければならない最低比率を1つ選びなさい。",
+    "choices": [
+      "80%",
+      "50%",
+      "70%",
+      "90%"
+    ],
+    "correct_index": 0,
+    "explanation": "Vin de Savoie Chautagneの白ワインは、主要品種のジャケール (Jacquère) が作付け面積の80%以上を占めなければならないと規定されています。"
+  },
+  {
+    "question": "フランスのチーズ分類における「Fromage à pâte pressée cuite」の英語表記として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Pressed Uncooked Cheese",
+      "Washed Rind Cheese",
+      "Natural Rind Cheese",
+      "Pressed Cooked Cheese"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには「加熱圧搾チーズ。英語でPressed Cooked Cheeseと表現する。」と明記されている。Fromage à pâte pressée cuiteは加熱圧搾タイプのチーズを指すため、この英語表記が正しい。Pressed Uncooked Cheeseは非加熱圧搾チーズの英語表記である。"
+  },
+  {
+    "question": "ワシントン州のA.V.A.であるYakima Valley (ヤキマ・ヴァレー) に含まれるSub-A.V.A.として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Wahluke Slope (ワルーク・スロープ)",
+      "Rattlesnake Hills (ラトルスネーク・ヒルズ)",
+      "Snipes Mountain (スナイプス・マウンテン)",
+      "Red Mountain (レッド・マウンテン)"
+    ],
+    "correct_index": 0,
+    "explanation": "Rattlesnake Hills、Snipes Mountain、Red MountainはいずれもYakima Valley A.V.A.内に位置するSub-A.V.A.です。一方、Wahluke SlopeはYakima Valleyの外に位置する独立したA.V.A.です。"
+  },
+  {
+    "question": "ロワール地方のA.O.C. Coteaux du Layonにおいて、ロシュフォール・シュール・ロワール (Rochefort-sur-Loire) 村の小字ショーム (Chaume) のワインが「Coteaux du Layon Premier Cru Chaume」を名乗るための最低果汁糖度として適切なものを次の中から選びなさい。",
+    "choices": [
+      "238g/l",
+      "255g/l",
+      "272g/l",
+      "323g/l"
+    ],
+    "correct_index": 2,
+    "explanation": "「Coteaux du Layon Premier Cru Chaume」の最低果汁糖度は272g/lです。238g/lは通常のCoteaux du Layon、255g/lは村名付きCoteaux du Layon、323g/lはSelection de Grains Noblesの規定値です。"
+  },
+  {
+    "question": "南アフリカのステレンボッシュ (Stellenbosch) 地区に見られる土壌のうち、保水能力に優れた赤土を指す固有の名称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Tukulu (トゥクル)",
+      "Oakleaf (オークリーフ)",
+      "Terra Rossa (テラ・ロッサ)",
+      "Galestro (ガレストロ)"
+    ],
+    "correct_index": 0,
+    "explanation": "ステレンボッシュ地区の土壌のうち、「Tukulu」は保水能力に優れた赤土を指す名称です。一方、「Oakleaf」は有機質を多く含む茶土を指します。"
+  },
+  {
+    "question": "シャブリ (Chablis) 地区において、A.O.C. Petit Chablisが位置する土壌の地質年代として適切なものを次の中から選びなさい。",
+    "choices": [
+      "チトニアン (Tithonian)",
+      "キンメリジャン (Kimmeridgian)",
+      "オックスフォーディアン (Oxfordian)",
+      "新生代第三紀 (Tertiary)"
+    ],
+    "correct_index": 0,
+    "explanation": "A.O.C. Petit Chablisの土壌は、A.O.C. Chablisのキンメリジャン (Kimmeridgian) 土壌よりも1世代新しいジュラ紀後期のチトニアン (Tithonian) です。オックスフォーディアン (Oxfordian) はポマール (Pommard) の斜面上部に見られる地質年代です。"
+  },
+  {
+    "question": "イタリアの島嶼部のD.O.P.と、その主要な土壌の組み合わせとして適切でないものを1つ選びなさい。",
+    "choices": [
+      "Malvasia di Bosa D.O.C. - 花崗岩土壌 (Suolo granitico)",
+      "Vermentino di Gallura D.O.C.G. - 花崗岩土壌 (Suolo granitico)",
+      "Etna D.O.C. - 火山性土壌 (Suolo vulcanico)",
+      "Cerasuolo di Vittoria D.O.C.G. - 赤い粘土、砂、石灰質が混ざる土壌"
+    ],
+    "correct_index": 0,
+    "explanation": "サルデーニャ州のMalvasia di Bosa D.O.C.が造られるのは、島の西側のプラナルジアの「石灰岩丘陵」です。花崗岩土壌で知られるのは同じサルデーニャ州のVermentino di Gallura D.O.C.G.です。"
+  },
+  {
+    "question": "マルケ州の郷土料理である「ヴィンチスグラッシ (Vincisgrassi)」の説明として適切なものを次の中から選びなさい。",
+    "choices": [
+      "大粒のグリーンオリーヴにミンチ肉を詰めてフライにしたもの",
+      "羊肉、サラミ、トマトなどをテラコッタの鍋に入れ、粘土で密封して煮込む伝統的料理",
+      "生ハム、パンチェッタ、鶏の内臓などのソースを層に重ねた厚いラザーニャ",
+      "トマトで煮た干し鱈の料理"
+    ],
+    "correct_index": 2,
+    "explanation": "ヴィンチスグラッシ (Vincisgrassi) は、マルケ州の代表的なパスタ料理で、生ハム、パンチェッタ、鶏の内臓などを使ったソースを層に重ねた厚いラザーニャです。選択肢Aはオリーヴェ・アスコラーネ (Olive Ascolane)、Bはバジリカータ州のピニャータ (Pignata)、Dはストッカフィッソ・アッランコネターナ (Stoccafisso all'Anconetana) の説明です。"
+  }
+]

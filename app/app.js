@@ -112,7 +112,7 @@ let activeCategory = 'ALL';
 // ---- INIT ----
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const res = await fetch(SUMMARY_INDEX);
+        const res = await fetch(`${SUMMARY_INDEX}?t=${Date.now()}`);
         const data = await res.json();
         chapters = data.chapters || [];
         renderCategories();
@@ -151,6 +151,10 @@ function setupBottomNav() {
                         quizOverlay.classList.remove('hidden');
                         document.dispatchEvent(new CustomEvent('quiz:open'));
                     }
+                    break;
+                case 'quest':
+                    item.classList.add('active');
+                    document.dispatchEvent(new CustomEvent('quest:open'));
                     break;
                 case 'ai':
                     item.classList.add('active');

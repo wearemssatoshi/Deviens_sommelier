@@ -1,0 +1,552 @@
+[
+  {
+    "question": "A.O.C. Bergeracの白ワインの品種規定について、誤っているものを1つ選びなさい。",
+    "choices": [
+      "主要品種はSémillon, Sauvignon Blanc, Sauvignon Gris, Muscadelleなどである。",
+      "補助品種としてColombardとUgni Blancが認められている。",
+      "ブレンドにおいて、主要品種は単一または合わせて50%以上でなければならない。",
+      "作付けにおいて、Colombardの比率は25%以下でなければならない。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには「作付けではコロンバールの比率は10%以下」と記載されており、「25%以下」という記述は誤りです。"
+  },
+  {
+    "question": "ローマ周辺の広い範囲を生産地区とし、白ワイン、赤ワイン、ロゼワインの生産が認められているラツィオ州のD.O.C. Castelli Romaniが誕生した年号を1つ選びなさい。",
+    "choices": [
+      "1996年",
+      "1987年",
+      "2003年",
+      "1966年"
+    ],
+    "correct_index": 0,
+    "explanation": "ラツィオ州のD.O.C. Castelli Romaniは1996年に誕生した呼称である。参照テキストに「ローマ周辺の広い範囲を生産地区とし1996年に誕生した呼称」と明記されている。"
+  },
+  {
+    "question": "2024年に新設され、深い砂質土壌によりフィロキセラが生息できず、自根の古木が多く残ることで知られるカリフォルニア州のA.V.A.を1つ選びなさい。",
+    "choices": [
+      "Royal Slope A.V.A.",
+      "Contra Costa A.V.A.",
+      "The Burn of Columbia Valley A.V.A.",
+      "Goose Gap A.V.A."
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキスト[ch10_usa] P.156に「Contra Costa A.V.A. P.156 同名のコントラ・コスタ・カウンティの中に2024年に新設されたA.V.A.で...深さが10m以上に及ぶ深い砂の表土のためにフィロキセラは生息できず...自根のジンファンデルやムールヴェードルの古木から凝縮度の高いワインが生まれる。」と記載があります。"
+  },
+  {
+    "question": "オーストリアのシュタイヤーマルク (Steiermark) 州の気候風土に関する記述として、適切なものを次の中から選びなさい。",
+    "choices": [
+      "「オーストリアのトスカーナ」と呼ばれるほど温暖で、標高は高くても300m程度である。",
+      "アドリア海からの湿潤な風の影響で降水量が多い。",
+      "ヴェストシュタイヤーマルク (Weststeiermark) のシュタインツ (Stainz) は、ズュートシュタイヤーマルク (Südsteiermark) のライプニッツ (Leibnitz) よりも年間平均気温が高い。",
+      "大陸性気候の影響が強く、年間降水量はオーストリアで最も少ない地域の一つである。"
+    ],
+    "correct_index": 1,
+    "explanation": "シュタイヤーマルク (Steiermark) 州は、ヴェネチアに近く、アドリア海からの湿潤な風の影響で降水量が多いのが特徴です。標高は760mにもなる冷涼な産地であり、シュタインツ (Stainz) の平均気温 (9.7℃) はライプニッツ (Leibnitz) (10.2℃) より低いです。"
+  },
+  {
+    "question": "ソムリエが使用する道具「じょうご」のフランス語表記として適切なものを1つ選びなさい。",
+    "choices": [
+      "Plateau",
+      "Panier",
+      "Sabre a champagne",
+      "Entonnoir"
+    ],
+    "correct_index": 3,
+    "explanation": "じょうごのフランス語表記はFiltreまたはEntonnoirです。Plateauはトレー、Panierはパニエ、Sabre a champagneはシャンパーニュ・サーベルを指します。"
+  },
+  {
+    "question": "イタリアのチーズ、ペコリーノ・ロマーノ (Pecorino Romano) に関する記述として誤っているものを1つ選びなさい。",
+    "choices": [
+      "タイプはハードタイプ（加熱圧搾）に分類される。",
+      "現在の主な生産地は、名称の由来となったラツィオ州 (Lazio) である。",
+      "主な原料乳は羊乳である。",
+      "合わせるワインとして、地元のチェザネーゼ・デル・ピーリオ (Cesanese del Piglio) が挙げられる。"
+    ],
+    "correct_index": 1,
+    "explanation": "ペコリーノ・ロマーノ (Pecorino Romano) はラツィオ州 (Lazio) が原産地ですが、現在では生産の中心地はサルデーニャ島 (Sardegna) に移っています。タイプ、乳種、合わせるワインに関する記述は正しいです。"
+  },
+  {
+    "question": "シュッド・ウエスト地方において、1970年にA.O.C.に認定された産地を1つ選びなさい。",
+    "choices": [
+      "Bergerac",
+      "Jurançon",
+      "Irouléguy",
+      "Cahors"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには「こうして1936年には既にA.O.C.を獲得していたベルジュラックやジュランソンに続き、1970年のイルレギー、1971年のカオールなどの産地が新たにA.O.C.を取得していった」と記載されています。"
+  },
+  {
+    "question": "オーストリアのヴァッハウ (Wachau) やテルメンレギオン (Thermenregion) で重要な白ブドウ品種ノイブルガー (Neuburger) の交配として正しいものを1つ選びなさい。",
+    "choices": [
+      "グリューナー・ヴェルトリーナー (Grüner Veltliner) × シルヴァーナー (Silvaner)",
+      "ツィアファンドラー (Zierfandler) × ロートギプフラー (Rotgipfler)",
+      "ローター・ヴェルトリーナー (Roter Veltliner) × シルヴァーナー (Silvaner)",
+      "ヴェルシュリースリング (Welschriesling) × ローター・ヴェルトリーナー (Roter Veltliner)"
+    ],
+    "correct_index": 2,
+    "explanation": "ノイブルガー (Neuburger) は、ローター・ヴェルトリーナー (Roter Veltliner) とシルヴァーナー (Silvaner) の自然交配によって生まれた品種です。ヴァッハウ (Wachau) とテルメンレギオン (Thermenregion) で主に栽培されています。"
+  },
+  {
+    "question": "コニャック (Cognac) の熟成年数表示において、コント10に該当しないものを次の中から1つ選びなさい。",
+    "choices": [
+      "Hors d'age",
+      "Ancestral",
+      "Supreme",
+      "Extra Old"
+    ],
+    "correct_index": 2,
+    "explanation": "Supremeはコント6（最低熟成年数6年）に該当する表示です。Hors d'age、Ancestral、Extra Oldはいずれもコント10（最低熟成年数10年）に該当します。"
+  },
+  {
+    "question": "バジリカータ州のD.O.C.G.「Aglianico del Vulture Superiore Riserva」に定められている最低熟成期間として正しいものを1つ選びなさい。",
+    "choices": [
+      "36ヶ月間の熟成（うち木樽熟成12ヶ月、瓶内熟成24ヶ月）",
+      "48ヶ月間の熟成（うち木樽熟成24ヶ月、瓶内熟成12ヶ月）",
+      "24ヶ月間の熟成（うち木樽熟成12ヶ月、瓶内熟成12ヶ月）",
+      "60ヶ月間の熟成（うち木樽熟成36ヶ月、瓶内熟成12ヶ月）"
+    ],
+    "correct_index": 1,
+    "explanation": "Aglianico del Vulture Superiore Riservaは最低4年(48ヶ月)の熟成が義務付けられており、その内訳は木樽熟成24ヶ月と瓶内熟成12ヶ月である。選択肢の「24ヶ月間の熟成（うち木樽熟成12ヶ月、瓶内熟成12ヶ月）」は、RiservaではないSuperioreの規定である。"
+  },
+  {
+    "question": "ワインのテイスティングにおいて、健全度合いを評価する際に確認されるオフフレーバーに該当しないものを次の中から1つ選びなさい。",
+    "choices": [
+      "揮発酸 (Volatile acidity)",
+      "還元 (Reduction)",
+      "ジェオスミン (Geosmin)",
+      "ヴァニリン (Vanillin)"
+    ],
+    "correct_index": 3,
+    "explanation": "ヴァニリン (Vanillin) は木樽熟成に由来するヴァニラの香りの主成分であり、第3アロマ（ブーケ）としてワインの複雑性に寄与するポジティブな要素です。揮発酸、還元、ジェオスミンは代表的なオフフレーバーです。"
+  },
+  {
+    "question": "2018年11月8日のA.O.C.改定で新たに加えられたコニャック (Cognac) の表示〈XXO〉および〈Extra Extra Old〉を使用するために要求される、オー・ド・ヴィー (eau-de-vie) の最低貯蔵年数として正しいものを1つ選びなさい。",
+    "choices": [
+      "6年",
+      "10年",
+      "14年",
+      "18年"
+    ],
+    "correct_index": 2,
+    "explanation": "〈XXO〉および〈Extra Extra Old〉は、最低貯蔵14年以上のオー・ド・ヴィー (eau-de-vie) を使用した製品にのみ使用できます。これはコント10 (XOなど) の最低10年よりもさらに長い熟成が求められる規定です。"
+  },
+  {
+    "question": "南アフリカ、ステレンボッシュ (Stellenbosch) 地区のサブリージョンとして、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Polkadraai Hills",
+      "Simonsberg-Stellenbosch",
+      "Papegaaiberg",
+      "Constantia Nek"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキスト[ch19_south_africa]には、Polkadraai Hills, Simonsberg-Stellenbosch, Papegaaibergがステレンボッシュ地区のサブリージョンとして記載されています。Constantia Nekはステレンボッシュではなく、ケープタウン近郊のコンスタンシア地区に関連する地名であり、サブリージョンではありません。"
+  },
+  {
+    "question": "2021年時点の日本の自営農園および契約栽培における垣根栽培の品種別数量データにおいて、上位5品種に該当しないものを1つ選びなさい。",
+    "choices": [
+      "メルロ (Merlot)",
+      "シャルドネ (Chardonnay)",
+      "ピノ・ノワール (Pinot Noir)",
+      "甲州 (Koshu)"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストによると、2021年時点での自営農園および契約栽培における垣根栽培の上位5品種は、メルロ、シャルドネ、ケルナー、ピノ・ノワール、ツヴァイゲルトである。甲州は主に棚仕立てで栽培されており、この上位5品種には含まれていない。"
+  },
+  {
+    "question": "ブドウの搾りかすを固形蒸留して造られるイタリア独自の蒸留酒Grappaの主原料のイタリア語表記として正しいものを1つ選びなさい。",
+    "choices": [
+      "Mosto (モスト)",
+      "Feccia (フェッチャ)",
+      "Vinaccia (ヴィナッチャ)",
+      "Acino (アチーノ)"
+    ],
+    "correct_index": 2,
+    "explanation": "Grappaはブドウの搾りかすを主原料とする蒸留酒であり、この搾りかすをイタリア語でVinacciaと呼ぶ。Mostoはブドウ果汁、Fecciaはワインの澱、Acinoはブドウの果粒を指す言葉である。"
+  },
+  {
+    "question": "A.O.C. Cassisの白ワインにおける主要品種の規定として、Marsanneの使用比率について正しいものを1つ選びなさい。",
+    "choices": [
+      "全体の20〜50%を占めること",
+      "全体の50%以上を占めること",
+      "全体の30〜80%を占めること",
+      "全体の60%以上を占めること"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには、A.O.C. Cassisの白ワインについて「マルサンヌのみで全体の30〜80%を占めねばならない。」と明確に規定されています。"
+  },
+  {
+    "question": "ボージョレのクリュの中で最も新しく1988年にA.O.C.に認定されたものを1つ選びなさい。",
+    "choices": [
+      "Morgon",
+      "Côte de Brouilly",
+      "Brouilly",
+      "Régnié"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストのRégniéの項目に「1988年に加わった最新のクリュ。」と記載されています。"
+  },
+  {
+    "question": "A.O.C. Muscat de Rivesaltesにおいて、新酒に「Muscat de Noël」と付記して販売することが可能になる解禁日として正しいものを1つ選びなさい。",
+    "choices": [
+      "収穫年の11月第1木曜日",
+      "収穫年の11月第3木曜日",
+      "収穫年の12月第1木曜日",
+      "収穫翌年の1月1日"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「収穫年の11月第3木曜以降、新酒として販売されるワインには「Muscat de Noel」と付記することができる。」と記載されています。"
+  },
+  {
+    "question": "サヴォワ地方のチーズの中から、I.G.P.に分類されるものを1つ選びなさい。",
+    "choices": [
+      "Tomme de Savoie",
+      "Beaufort",
+      "Abondance",
+      "Reblochon de Savoie"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「Tomme de Savoie(I.G.P.チーズ...)」と記載されています。他の選択肢、Beaufort, Abondance, Reblochon de SavoieはいずれもA.O.P.チーズです。"
+  },
+  {
+    "question": "ドイツのワイン産地ザクセン (Sachsen) において、ドレスデン (Dresden) から下流の斜面に分布する土壌の組み合わせとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "風化した花崗岩、花崗閃緑岩 (Granodiorite)",
+      "粘板岩、白亜紀の堆積岩",
+      "雑色砂岩、レス (Löss) 土",
+      "貝殻石灰岩 (Muschelkalk)、コイパー (Keuper)"
+    ],
+    "correct_index": 0,
+    "explanation": "ザクセン (Sachsen) のエルベ (Elbe) 渓谷では、ドレスデン (Dresden) から下流の斜面に風化した花崗岩や花崗閃緑岩 (Granodiorite) が分布しています。粘板岩は基岩、雑色砂岩はマイセン (Meissen) から下流に見られます。"
+  },
+  {
+    "question": "A.O.C. Châteauneuf-du-Papeで認められているブドウ品種、Brun Argenteのシノニムとして正しいものを1つ選びなさい。",
+    "choices": [
+      "Vaccarèse",
+      "Counoise",
+      "Muscardin",
+      "Terret Noir"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストに「ブラン・アルジャンテ（ヴァカレーズ） Brun Argente (=Vaccarese)」と記載されており、VaccarèseがBrun Argenteのシノニムであることが示されています。"
+  },
+  {
+    "question": "山梨県勝沼町の中小ワイナリーが協力してワインの品質向上とプロモーションに乗り出すために「勝沼ワイナリーズクラブ」を設立した年号として適切なものを次の中から選びなさい。",
+    "choices": [
+      "1987年",
+      "1990年",
+      "2000年",
+      "2002年"
+    ],
+    "correct_index": 0,
+    "explanation": "1987年、勝沼町の中小12ワイナリーが勝沼ワイナリーズクラブを設立した。これは日本のワイン市場が拡大する中で、品質向上を目指す重要な動きであった。"
+  },
+  {
+    "question": "カリフォルニア州ナパ・ヴァレー (Napa Valley) にあるAtlas Peak A.V.A.に関する記述として適切なものを次の中から選びなさい。",
+    "choices": [
+      "ヴァレーの平地よりも昼夜の気温差が大きく、霧の影響を強く受ける。",
+      "土壌は石灰質が主体で、特にキンメリジャン (Kimmeridgian) 土壌が広く分布している。",
+      "主に東向きの斜面に畑があり、午後の強い日差しを避けることができる。",
+      "標高が高いため夏の気温は平地より5-8℃ほど低く、土壌は火山性の玄武岩が多い。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキスト[ch10_usa] P.148に「標高が高いため、夏の間は、ナパ・ヴァレーの平地よりも5-8℃ほど気温が低く」「夜間は急速に気温が下がるが、昼夜の気温差は平地よりも小さい」「土壌は火山性で、赤色の玄武岩が多く」「ブドウ畑は主に西向きの斜面にある」と記載されています。したがって、Dが正しい記述です。"
+  },
+  {
+    "question": "スイスのザンクト・ガレン (St.Gallen) 州のワイン産地に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "主な産地はボーデン湖 (Bodensee) 付近から南に広がるトゥールガウ (Thurgau) と、さらに南のヴァーレン湖 (Walensee) 付近のザルガンサーラント (Sarganserland) の2つの地区である。",
+      "ブドウ畑は612年にザンクト・ガレンの僧侶たちの手によって切りひらかれた歴史を持つ。",
+      "ペファース (Pfäfers) のポルタ・ロマーナ (Porta Romana) にはスイス東地区で最も標高の高い720mのブドウ畑がある。",
+      "土壌は粘土層で、フェーン現象の影響を受け、良質のブラウブルグンダー (Blauburgunder) などが産出される。"
+    ],
+    "correct_index": 0,
+    "explanation": "ザンクト・ガレン (St.Gallen) 州の主な産地は、ボーデン湖 (Bodensee) 付近から南に広がるラインタール (Rheintal) と、南のヴァーレン湖 (Walensee) 付近のザルガンサーラント (Sarganserland) の2地区です。トゥールガウ (Thurgau) は別の州です。"
+  },
+  {
+    "question": "アルザス地方の歴史に関する記述として、普仏戦争の敗北によりフランスがドイツ帝国にアルザスを譲渡することになった講和条約と、その締結年として正しい組み合わせを1つ選びなさい。",
+    "choices": [
+      "フランクフルト講和条約 - 1871年",
+      "ウェストファリア条約 - 1648年",
+      "ベルサイユ条約 - 1919年",
+      "ヴェルダン条約 - 843年"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「1871年のフランクフルト講和条約でアルザスをドイツ帝国に譲渡した。」と記載されています。他の選択肢は、アルザスの領有権が移った他の歴史的出来事や、ブルゴーニュの歴史に関連する条約です。"
+  },
+  {
+    "question": "マデイラ (Madeira) ワインの人工的な加熱熟成方法であるエストゥファ (Estufa) において、規定されている最低加熱期間として正しいものを1つ選びなさい。",
+    "choices": [
+      "1ヵ月",
+      "6ヵ月",
+      "12ヵ月",
+      "3ヵ月"
+    ],
+    "correct_index": 3,
+    "explanation": "エストゥファ (Estufa) は、タンクを摂氏50度前後の湯で温める加熱熟成方法で、最低3ヵ月間加熱させることが規定されています。主にティンタ・ネグラ (Tinta Negra) 種を使用したスタンダードクラスのワインに用いられます。"
+  },
+  {
+    "question": "山梨県甲州市勝沼町におけるブドウ栽培地の特徴に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "勝沼地区は南から南西斜面で日照時間が長く、土壌は褐色低地土と火山灰土壌である。",
+      "「鳥居平」は、勝沼町内の小字名であり、高台に位置する。",
+      "祝地区は勝沼地区とは斜面の向きが正反対で、南から南西向きの斜面である。",
+      "勝沼町は、勝沼地区、東雲地区、菱山地区、祝地区の4つの地区に区分される。"
+    ],
+    "correct_index": 2,
+    "explanation": "山梨県甲州市勝沼町の祝地区は、勝沼地区とは斜面の向きが正反対で「北から北西斜面」である。選択肢の「南から南西向きの斜面」は勝沼地区の特徴であり、誤りである。"
+  },
+  {
+    "question": "19世紀後半のアメリカにおいて、フィロキセラ (Phylloxera) が最初に発見された場所として適切なものを次の中から選びなさい。",
+    "choices": [
+      "カリフォルニア州ソノマ (Sonoma)",
+      "カリフォルニア州ナパ (Napa)",
+      "ニューヨーク州フィンガー・レイクス (Finger Lakes)",
+      "ヴァージニア州ジェームズタウン (Jamestown)"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキスト[ch10_usa]に「19世紀後半にフィロキセラが最初にソノマで発見され、またたく間に多くのブドウ畑を壊滅させた。」と明確に記載されています。"
+  },
+  {
+    "question": "スペインのワイン法におけるカテゴリー「Vino de Calidad con Indicación Geográfica (V.C.)」に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "2003年の法改正により新設されたカテゴリーである。",
+      "ある特定の地域、地区、村落などで収穫されたブドウを原料とし、その地の地域性を表現したワインである。",
+      "このカテゴリーで3年以上実績を積んだ生産地は、D.O.ワインへの昇格を申請することができる。",
+      "将来的に多くのビノ・デ・ラ・ティエラ (Vino de la Tierra) がこのカテゴリーに昇格する予定である。"
+    ],
+    "correct_index": 2,
+    "explanation": "Vino de Calidad con Indicación Geográfica (V.C.) のカテゴリーで5年以上実績を積んだ生産地が、D.O.ワインへの昇格を申請することができます。「3年以上」という記述が誤りです。"
+  },
+  {
+    "question": "ジョージアのワイン法およびP.D.O.に関する記述として適切なものを次の中から選びなさい。",
+    "choices": [
+      "P.D.O.は全部で20登録されており、そのうち10がカヘティ (Kakheti) 地方にある。",
+      "アペラシオン・オブ・オリジンとG.I.を保護する法は2001年に制定された。",
+      "P.D.O.ワイン「ティバアニ (Tibaani)」は、伝統的にサペラヴィ (Saperavi) 種のみを用いて生産される。",
+      "2011年にEUとG.I.の相互承認の署名を行い、国際的に認められるようになった。"
+    ],
+    "correct_index": 3,
+    "explanation": "ジョージアは2011年にEUとG.I.（地理的表示）の相互承認に署名しました。P.D.O.は29あり、うち20がカヘティ (Kakheti) 地方です。法の制定は1999年で、ティバアニ (Tibaani) P.D.O.はルカツィテリ (Rkatsiteli) を用いて生産されます。"
+  },
+  {
+    "question": "ウルグアイ (Uruguay) のワイン産地のうち、Metropolitana（メトロポリターナ）首都圏部に分類される県を1つ選びなさい。",
+    "choices": [
+      "Salto",
+      "Canelones",
+      "Colonia",
+      "Maldonado"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキスト[ch12_south_america]の地図とリストによると、Metropolitana（首都圏部）にはCanelones, Montevideo, San Joseが含まれます。SaltoはLitoral Norte、ColoniaはLitoral Sur、MaldonadoはOceanicaに分類されます。"
+  },
+  {
+    "question": "クロアチアのワインカテゴリーにおいて、Suhi jagodni izborに分類されるために最低限必要なエクスレ (Oechsle) 度として正しいものを1つ選びなさい。",
+    "choices": [
+      "83度",
+      "154度",
+      "128度",
+      "105度"
+    ],
+    "correct_index": 1,
+    "explanation": "クロアチアのワインカテゴリーで、Suhi jagodni izborはドイツのトロッケンベーレンアウスレーゼ (Trockenbeerenauslese) に相当し、最低154エクスレ度が要求されます。Jagodni izborとLedeno vinoは128度、Arhivsko vinoは83度です。"
+  },
+  {
+    "question": "カリフォルニア州レイク・カウンティ (Lake County) にあり、樹齢100年を超えるジンファンデル (Zinfandel) が存在することで知られるHigh Valley A.V.A.のブドウ畑の標高範囲として適切なものを次の中から選びなさい。",
+    "choices": [
+      "490 - 900m",
+      "427 - 792m",
+      "232 - 792m",
+      "60 - 120m"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキスト[ch10_usa] P154頁に「ハイ・ヴァレーはクリア・レイクの東側にあり、標高が高く、490〜900mにわたる。」と記載されています。選択肢BはHowell Mountain A.V.A.、CはAtlas Peak A.V.A.の標高範囲に該当します。"
+  },
+  {
+    "question": "北海道のワイン用ブドウ栽培地のうち、海洋性気候に分類される市町村として適切なものを次の中から選びなさい。",
+    "choices": [
+      "岩見沢市",
+      "三笠市",
+      "富良野市",
+      "余市町"
+    ],
+    "correct_index": 3,
+    "explanation": "北海道のワイン産地のうち、後志地方の余市湾に面した余市町と、函館湾に面した北斗市が海洋性気候に分類される。池田町、富良野市、空知地方の岩見沢市、三笠市、浦臼町は内陸性気候である。"
+  },
+  {
+    "question": "カナダ、ブリティッシュ・コロンビア (British Columbia) 州の「Wines of Marked Quality Regulation」において、収穫年を表示する場合に最低限使用しなければならない、その年に収穫されたブドウの比率として適切なものを次の中から選びなさい。",
+    "choices": [
+      "95%以上",
+      "90%以上",
+      "85%以上",
+      "75%以上"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキスト[ch13_canada]に「収穫年表示:該当する年のブドウを85%以上使用(以前の95%以上から変更となった)。」と明記されています。"
+  },
+  {
+    "question": "クリュ・デュ・ボージョレのA.O.C. Côte de Brouillyの土壌を特徴づける「Pierre Bleue」と呼ばれる青い石の岩石名として適切なものを次の中から選びなさい。",
+    "choices": [
+      "閃緑岩 (Diorite)",
+      "花崗岩 (Granite)",
+      "石灰岩 (Limestone)",
+      "片岩 (Schist)"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストのCôte de Brouillyの項目に「“Pierre Bleue\"と呼ばれる青い石(閃緑岩) が多い。」と記載されています。"
+  },
+  {
+    "question": "A.O.C. Châteauneuf-du-Papeが認められているコミューンとして、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Courthézon",
+      "Orange",
+      "Gigondas",
+      "Bédarrides"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストによると、A.O.C. Châteauneuf-du-Papeが認められているのは「シャトーヌフ・デュ・パプ、 クールテゾン、オランジュ、ソルグ、ベダリード」の5市町村です。Gigondasは南ローヌの別のクリュ（A.O.C.）であり、含まれません。"
+  },
+  {
+    "question": "ニューヨーク・ワイン&グレープ財団 (New York Wine & Grape Foundation) によって設立された、ニューヨーク州のサステイナブル認証プログラムの正式名称を1つ選びなさい。",
+    "choices": [
+      "New York Certified Sustainable",
+      "New York Sustainable Winegrowing",
+      "Sustainable Winegrowing New York",
+      "Long Island Sustainable Winegrowing"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキスト[ch10_usa]に「サステイナブル認証制度 *New York Sustainable Winegrowing ニューヨーク・ワイン&グレープ財団(New York Wine & Grape Foundation)により設立されたサステイナブル認証プログラム」と記載されています。"
+  },
+  {
+    "question": "ピエモンテ州で栽培され、甘口スパークリングワインなどに用いられるアロマティックな白ブドウ品種Moscato Biancoのシノニムとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "Moscato di Terracina (モスカート・ディ・テッラチーナ)",
+      "Moscato Giallo (モスカート・ジャッロ)",
+      "Moscato di Scanzo (モスカート・ディ・スカンツォ)",
+      "Moscato di Canelli (モスカート・ディ・カネッリ)"
+    ],
+    "correct_index": 3,
+    "explanation": "Moscato Biancoはピエモンテ州においてMoscato di Canelliというシノニムで知られている。Moscato di Terracinaはラツィオ州、Moscato Gialloはトレンティーノ・アルト・アディジェ州、Moscato di Scanzoはロンバルディア州のDOCGで使われるモスカート系の別品種である。"
+  },
+  {
+    "question": "アメリカ合衆国ヴァージニア (Virginia) 州に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "州憲法で自らを「Commonwealth」と呼ぶ4つの州の1つである。",
+      "イギリスが新世界で最初の永続的植民地としたジェームズタウン (Jamestown) がある。",
+      "初代大統領ジョージ・ワシントン (George Washington) の出身州である。",
+      "第2代大統領ジョン・アダムズ (John Adams) の出身州である。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキスト[ch10_usa]には、ヴァージニア州が「Commonwealth」と自称すること、ジェームズタウンの歴史、初代ジョージ・ワシントン、第3代トーマス・ジェファーソン、第4代ジェームズ・マディソンが同州出身であることが記載されています。第2代大統領ジョン・アダムズはマサチューセッツ州出身であり、記述として誤っています。"
+  },
+  {
+    "question": "A.O.C. Banyulsにおいて、AmbréまたはTuiléのタイプに「Hors d'âge」と表記するために最低限必要な熟成期間として適切なものを次の中から選びなさい。",
+    "choices": [
+      "3年",
+      "4年",
+      "5年",
+      "6年"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには「最低5年熟成させたアンブレまたはテュイレには、「Hors d'age」と表記することができる。」と明記されています。"
+  },
+  {
+    "question": "A.O.C. Rivesaltesの熟成規定について、正しい記述を1つ選びなさい。",
+    "choices": [
+      "Grenatは最低3ヶ月の酸化熟成が義務付けられる。",
+      "AmbréとTuiléは最低3年間の酸化熟成が義務付けられる。",
+      "Hors d'âgeと表記するには最低10年の熟成が必要である。",
+      "Rancioと表記するには、収穫翌年の5月1日までの熟成が必要である。"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「アンブレとテュイレは最低3年間の酸化熟成」と明記されています。Grenatは基本的に熟成（うち最低3ヶ月の瓶熟成）であり酸化熟成ではありません。Hors d'âgeは5年以上です。Rancioはランシオ香が生じた場合に表記できます。"
+  },
+  {
+    "question": "単式蒸留焼酎が連続式蒸留焼酎よりも劣っているとの誤解を招く懸念から、関連業界により提唱された「本格焼酎」という呼称が認可された年として正しいものを1つ選びなさい。",
+    "choices": [
+      "2002年",
+      "1971年",
+      "2017年",
+      "2018年"
+    ],
+    "correct_index": 1,
+    "explanation": "「本格焼酎」の呼称が認可されたのは1971年です。2002年は「本格」を名乗る基準が厳格化された年、2017年は酒税法での表記が「焼酎」に改正された年です。"
+  },
+  {
+    "question": "ピノ・ノワール (Pinot Noir) のクローン・セレクション (Clonal Selection) において、ディジョン・クローン (Dijon Clone) として知られる一群に含まれるクローン番号として適切なものを次の中から選びなさい。",
+    "choices": [
+      "115",
+      "2A",
+      "FPS 04",
+      "UCD 1"
+    ],
+    "correct_index": 0,
+    "explanation": "ピノ・ノワール (Pinot Noir) のディジョン・クローン (Dijon Clone) としては、115や777などが世界的に知られています。他の選択肢は、他品種で知られるクローン番号です。"
+  },
+  {
+    "question": "A.O.C. Santenayの栽培地域において、大半がコート・ドール県サントネイ村に属する中、唯一ソーヌ・エ・ロワール県ルミニィ村に属している区画名を1つ選びなさい。",
+    "choices": [
+      "La Comme",
+      "Les Clos des Claudes",
+      "Beauregard",
+      "Côte du Py"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストのSantenayの項目に「北東端にある“Les Clos des Claudes”という区画のみ、ソーヌ・エ・ロワール県のルミニィ村に属している。」と記載されています。"
+  },
+  {
+    "question": "モリーゼ州で主に栽培されているブドウ品種として、適切でないものを1つ選びなさい。",
+    "choices": [
+      "Tintilia (ティンティリア)",
+      "Pecorino (ペコリーノ)",
+      "Aglianico (アリアニコ)",
+      "Passerina (パッセリーナ)"
+    ],
+    "correct_index": 2,
+    "explanation": "Tintiliaはモリーゼ州を代表する黒ブドウ品種であり、PecorinoとPasserinaも同州で栽培される白ブドウ品種である。Aglianicoは主に南部のバジリカータ州やカンパーニア州で栽培される品種であり、モリーゼ州の主要品種ではない。"
+  },
+  {
+    "question": "2009年に発足したボルドーのA.O.C.連合「コート・ド・ボルドー」に関する記述として、途中で連合を離脱し、独自のA.O.C.を維持することを選んだ産地を1つ選びなさい。",
+    "choices": [
+      "Castillon",
+      "Blaye",
+      "Cadillac",
+      "Côtes de Bourg"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには「コートの付く産地ながら、コート・ド・ブールは連合を途中 で離脱し、従来どおり独自のA.O.C.を貫く道を選んでいる。」と記載されています。"
+  },
+  {
+    "question": "オーストラリア、南オーストラリア (South Australia) 州のG.I. Zoneであるライムストーン・コースト (Limestone Coast) に含まれないG.I. Regionを1つ選びなさい。",
+    "choices": [
+      "Coonawarra",
+      "Wrattonbully",
+      "McLaren Vale",
+      "Padthaway"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキスト[ch04_australia_nz]の地図によると、Coonawarra, Wrattonbully, PadthawayはLimestone Coast Zoneに属するRegionです。一方、McLaren ValeはFleurieu Zoneに属するRegionであるため、正解はCとなります。"
+  },
+  {
+    "question": "19世紀に初めて文献に「カウシウブドウ」の名を記したとされる水谷豊文の著作として適切なものを次の中から選びなさい。",
+    "choices": [
+      "農業全書",
+      "本草綱目啓蒙",
+      "ザ・ファー・イースト",
+      "大日本農史"
+    ],
+    "correct_index": 1,
+    "explanation": "水谷豊文(1779-1833)の『本草綱目啓蒙』の「紫入六」の項目に「ムラサキブドウ、カウシウブドウ、クロブドウ」が並び、19世紀になって初めて「カウシウブドウ(甲州ブドウ)」の名前が登場したと記録されている。"
+  },
+  {
+    "question": "A.O.C. Anjou Villagesの規定に関する記述として、A.O.C. Anjouと比較して正しいものを1つ選びなさい。",
+    "choices": [
+      "最大収量はAnjouの60hl/haに対し65hl/haと高い。",
+      "最低アルコール度数はAnjouの10.5%に対し11%と高い。",
+      "認められるのは赤とロゼである。",
+      "主要品種はCabernet Francのみである。"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「最大収量はアンジューの60hl/haに対し55hl/ha、最低アルコール度数は10.5%に対し11%と定められている。」と記載されており、最低アルコール度数が高いという記述が正しいです。最大収量は低く、認められるのは赤のみです。"
+  }
+]

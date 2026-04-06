@@ -1,0 +1,442 @@
+[
+  {
+    "question": "カラブリア州のビアンコ村で造られる甘口ワイン「Greco di Bianco」の以前の呼称を1つ選びなさい。",
+    "choices": [
+      "Greco di Gerace (グレーコ・ディ・ジェラーチェ)",
+      "Greco di Tufo (グレーコ・ディ・トゥーフォ)",
+      "Greco di Cosenza (グレーコ・ディ・コゼンツァ)",
+      "Greco di Calabria (グレーコ・ディ・カラブリア)"
+    ],
+    "correct_index": 0,
+    "explanation": "Greco di Bianco (グレーコ・ディ・ビアンコ) は、以前はGreco di Gerace (グレーコ・ディ・ジェラーチェ) と呼ばれていました。Greco di Tufo (グレーコ・ディ・トゥーフォ) はカンパーニア州の著名なD.O.C.G.です。"
+  },
+  {
+    "question": "画家セザンヌの出身地であり、かつてプロヴァンス伯領の首都として栄えた都市を1つ選びなさい。",
+    "choices": [
+      "Aix-en-Provence",
+      "Marseille",
+      "Nice",
+      "Cannes"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストに「エクサン・プロヴァンスは、かつてプロヴァンス伯領の首都として栄えた街」「またサント・ヴィクトワール山を描き続けた画家セザンヌの出身地でもある」と記載されています。"
+  },
+  {
+    "question": "A.O.C. Crémant de Loireの瓶内熟成期間として規定されている、滓とともに最低何ヶ月以上か、次の中から選びなさい。",
+    "choices": [
+      "6ヶ月",
+      "12ヶ月",
+      "9ヶ月",
+      "15ヶ月"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストのCrémant de Loire（クレマン・ド・ロワール）の項目に「瓶内熟成期間は滓とともに9ヵ月以上」と記載されています。"
+  },
+  {
+    "question": "参照テキストに記載されているドイツワインに関する資料のうち、ドイツワインインスティテュート (Deutsches Weininstitut) 発行ではないものを1つ選びなさい。",
+    "choices": [
+      "『ドイツワイン セミナーハンドブック』",
+      "『エクスレ』",
+      "『ドイツワインの魅力』",
+      "『Deutscher Wein Statistik 2024/2025』"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキスト[ch25_jsa_exam]によると、『ドイツワインの魅力』は「日本ドイツワイン協会連合会編」であり、ドイツワインインスティテュートの発行ではありません。他の選択肢はすべてドイツワインインスティテュートが発行元として記載されています。"
+  },
+  {
+    "question": "ドイツの特定栽培地域ザーレ・ウンストルート（Saale-Unstrut）において、栽培面積が2番目に多い白ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "リースリング Riesling",
+      "ミュラー・トゥルガウ Müller-Thurgau",
+      "ジルヴァーナー Silvaner",
+      "ヴァイスブルグンダー Weißburgunder"
+    ],
+    "correct_index": 3,
+    "explanation": "ザーレ・ウンストルートの主要白ブドウ品種の栽培面積比率は、1位がミュラー・トゥルガウ（Müller-Thurgau）で14.3%、2位がヴァイスブルグンダー（Weißburgunder）で13.7%です。"
+  },
+  {
+    "question": "イギリスのワイン法において、2023年末で廃止された上位カテゴリーの名称を1つ選びなさい。",
+    "choices": [
+      "Varietal Wine",
+      "Still Wine",
+      "Sparkling Wine",
+      "Protected Geographical Indication"
+    ],
+    "correct_index": 0,
+    "explanation": "イギリスのワイン法では、従来あった上位カテゴリー「Varietal Wine」が2023年末で廃止されました。代わりに、基本的なカテゴリーのワインでもブドウ品種や収穫年の表示が可能になりました。"
+  },
+  {
+    "question": "2020年にD.O.C.G.に昇格したピエモンテ州のTerre Alfieriに関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "白ワインはArneis (アルネイス) を主体として造られる。",
+      "赤ワインはNebbiolo (ネッビオーロ) を主体として造られる。",
+      "主な土壌は花崗岩質である。",
+      "生産地区はアスティ県とクーネオ県にまたがる。"
+    ],
+    "correct_index": 2,
+    "explanation": "Terre Alfieri (テッレ・アルフィエーリ) の土壌は「タナロ川左岸の鮮新世の砂が多い土壌」とされています。花崗岩土壌は、サルデーニャ州のVermentino di Gallura (ヴェルメンティーノ・ディ・ガッルーラ) の特徴的な土壌です。"
+  },
+  {
+    "question": "シェリー（Sherry）のVino Generoso de Licorに分類されるタイプの中で、「Pale Cream」の残糖量の規定として正しいものを1つ選びなさい。",
+    "choices": [
+      "45g/l以下",
+      "5g/l以上115g/l未満",
+      "45-115g/l",
+      "115g/l以上"
+    ],
+    "correct_index": 2,
+    "explanation": "Pale Creamはフロールのもとで熟成したワインをベースとする甘口のシェリーで、残糖量は45-115g/lと規定されています。"
+  },
+  {
+    "question": "カラブリア州で最も有名なD.O.P.であるCiròの赤ワインおよびロゼワインの主要ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "Greco Bianco (グレーコ・ビアンコ)",
+      "Montepulciano (モンテプルチャーノ)",
+      "Gaglioppo (ガリオッポ)",
+      "Cannonau (カンノナウ)"
+    ],
+    "correct_index": 2,
+    "explanation": "Cirò (チロ) の赤とロゼはGaglioppo (ガリオッポ) 種がベースとなります。Greco Bianco (グレーコ・ビアンコ) はCiròの白ワインに使用されます。Cannonau (カンノナウ) はサルデーニャ州、Montepulciano (モンテプルチャーノ) はマルケ州やアブルッツォ州の主要品種です。"
+  },
+  {
+    "question": "スコッチ・ウイスキーの製造工程において、ポットスチル (Pot Still) を用いた1回目の蒸留（初留）で得られる初留液のアルコール度数として最も近いものを1つ選びなさい。",
+    "choices": [
+      "7～9%",
+      "25%前後",
+      "40%前後",
+      "63.5%前後"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキスト[ch01_spirits_overview]に「初留液のアルコール濃度は25%前後である」と記載されています。7～9%は発酵終了後のもろみのアルコール度数です。"
+  },
+  {
+    "question": "2020年に復活したメドックのクリュ・ブルジョワ格付けにおいて、その格付けが有効とされるヴィンテージ数を1つ選びなさい。",
+    "choices": [
+      "1ヴィンテージ",
+      "3ヴィンテージ",
+      "5ヴィンテージ",
+      "10ヴィンテージ"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストに「なお、この年から格付けは5ヴィンテージ有効となり」と記載されています。"
+  },
+  {
+    "question": "スペインのカナリア諸島において、ブドウ樹を強風や熱風から守るためにクレーター状の穴の周りに半円形に並べられた火山礫の低い壁の名称を1つ選びなさい。",
+    "choices": [
+      "Hoyos",
+      "Abrigo",
+      "Zanjas",
+      "Majorero"
+    ],
+    "correct_index": 1,
+    "explanation": "カナリア諸島では、ブドウを植えるために掘った穴（Hoyos）や溝（Zanjas）の周りに、火山礫を並べた低い壁「Abrigo」を半円形に作り、強風や熱風からブドウ樹を守ります。"
+  },
+  {
+    "question": "ラングドック地方のA.O.C. Malepèreで造られる赤ワインにおいて、40%以上含まなければならない主要品種を1つ選びなさい。",
+    "choices": [
+      "Cabernet Franc",
+      "Syrah",
+      "Grenache",
+      "Merlot"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストのA.O.C. Malepère（マルペール）の項目に「赤の主要品種はメルロ」「メルロを40%以上含むこと」と明記されています。"
+  },
+  {
+    "question": "スティル・ワインを大きなタンクに密閉し、その中で第二次発酵を起こさせるスパークリングワインの製法であるシャルマ方式 (Methode charmat) の別名として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Methode de transfert",
+      "Methode cuvee close",
+      "Methode rurale",
+      "Methode ancestrale"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキスト[ch00_wine_overview]に、シャルマ方式は「密閉タンク方式 (Methode cuvee close)ともいう」と記載されています。Methode de transfertはトランスファー方式のことです。"
+  },
+  {
+    "question": "1960年代後半に長野県に進出したマンズワインが、シャルドネ (Chardonnay) とメルロ (Merlot) の重要な産地としてブドウ団地を形成した地域を1つ選びなさい。",
+    "choices": [
+      "塩田 (Shioda)",
+      "小諸 (Komoro)",
+      "桔梗ヶ原 (Kikyogahara)",
+      "松本盆地 (Matsumoto Basin)"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「後に塩田、小諸一帯は前者がカベルネ・ソーヴィニヨン、後者はシャルドネとメルロの重要な産地となった。」と記載されています。したがって、シャルドネとメルロの産地は小諸です。"
+  },
+  {
+    "question": "地理的表示（G.I.）「琉球」の生産基準において、使用が定められている黒麹菌の学名として正しいものを次の中から選びなさい。",
+    "choices": [
+      "Aspergillus oryzae",
+      "Aspergillus sojae",
+      "Aspergillus luchuensis",
+      "Saccharomyces cerevisiae"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキスト[ch01_spirits_overview]の表に、G.I.琉球の製法として「Aspergillus luchuensis（リューチュー・アスペルギルス・リューチューエンシスはリュウキュウ麹菌のこと）に属する黒麹菌の生育した米麹のみを使用」と明記されています。Aspergillus oryzaeは黄麹菌、Saccharomyces cerevisiaeは酵母の学名です。"
+  },
+  {
+    "question": "オーストリアのテルメンレギオン D.A.C.（Thermenregion D.A.C.）に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "2023年ヴィンテージから導入されたD.A.C.である。",
+      "格付けはGebietswein、Ortswein、Riedenweinの3段階に分かれている。",
+      "Gebietsweinではロゼやブラン・ド・ノワール（Blanc de Noirs）の生産が認められている。",
+      "Gebietsweinではツヴァイゲルト（Zweigelt）やピノ・ノワール（Pinot Noir）などの単一品種、またはそれらのブレンドが認められている。"
+    ],
+    "correct_index": 2,
+    "explanation": "テルメンレギオン D.A.C.では、すべての格付けにおいてロゼやブラン・ド・ノワール（Blanc de Noirs）は認められていません。したがって、「認められている」という記述は誤りです。"
+  },
+  {
+    "question": "マルケ州のD.O.C.G.「Castelli di Jesi Verdicchio Riserva」に定められている最低熟成期間として適切なものを次の中から選びなさい。",
+    "choices": [
+      "12ヶ月",
+      "18ヶ月",
+      "24ヶ月",
+      "30ヶ月"
+    ],
+    "correct_index": 1,
+    "explanation": "Castelli di Jesi Verdicchio Riserva (カステッリ・ディ・イエージ・ヴェルディッキオ・リゼルヴァ) の法定最低熟成期間は18ヶ月（うち瓶内熟成6ヶ月）です。選択肢の24ヶ月は、同じマルケ州のD.O.C.G.であるConero (コーネロ) の最低熟成期間です。"
+  },
+  {
+    "question": "D.O.P. Friuli Colli Orientaliで卓越しているとされる赤ワインにおいて、使用が認められている固有品種に該当しないものを1つ選びなさい。",
+    "choices": [
+      "Schioppettino (スキオッペッティーノ)",
+      "Refosco (レフォスコ)",
+      "Pignolo (ピニョーロ)",
+      "Teroldego (テロルデゴ)"
+    ],
+    "correct_index": 3,
+    "explanation": "Teroldego (テロルデゴ) は、トレンティーノ＝アルト・アディジェ州のトレンティーノ地方を代表する黒ブドウ品種です。Schioppettino (スキオッペッティーノ)、Refosco (レフォスコ)、Pignolo (ピニョーロ) はFriuli Colli Orientali (フリウリ・コッリ・オリエンターリ) で使用される代表的な固有品種です。"
+  },
+  {
+    "question": "A.O.C. Bourgogne Passe-Tout-Grainsにおいて、Pinot Noirが最低何%以上含まれなければならないか、適切なものを1つ選びなさい。",
+    "choices": [
+      "15%",
+      "25%",
+      "50%",
+      "30%"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストのBourgogne Passe-Tout-Grains（ブルゴーニュ・パス・トゥ・グラン）の項目に「ピノ・ノワールが30%以上」と明記されています。"
+  },
+  {
+    "question": "ワインの香りに関する記述で、カベルネ・フラン (Cabernet Franc) などに含まれるピーマンのような香りの原因となるアロマ化合物を1つ選びなさい。",
+    "choices": [
+      "2-isobutyl-3-methoxypyrazine",
+      "Rotundone",
+      "Guaiacol",
+      "Sotolon"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキスト[ch20_tasting]に「ブドウの香りの1つである2-イソブチル-3-メトキシピラジン(IBMP)を学ぶ際に、この香りがあるカベルネ・フランの赤ワインを用いたとすれば、IBMPに敏感な人は、『ピーマンの香りを強く感じる』とコメントするだろう」と記載されています。"
+  },
+  {
+    "question": "スロヴェニアのワイン用語「Suhi jagodni izbor」に相当するドイツのプレディカーツヴァイン（Prädikatswein）の格付けを1つ選びなさい。",
+    "choices": [
+      "トロッケンベーレンアウスレーゼ Trockenbeerenauslese",
+      "ベーレンアウスレーゼ Beerenauslese",
+      "アイスヴァイン Eiswein",
+      "アウスレーゼ Auslese"
+    ],
+    "correct_index": 0,
+    "explanation": "スロヴェニアのワイン用語で、「Suhi jagodni izbor」は「乾いた粒選り」を意味し、ドイツのトロッケンベーレンアウスレーゼ（Trockenbeerenauslese）に相当します。最低エクスレ度は154度です。"
+  },
+  {
+    "question": "2014年の収穫から、A.O.C. Vin de Savoieにおいて瓶内二次発酵で造られた発泡性の白ワインに認められるようになった呼称を1つ選びなさい。",
+    "choices": [
+      "Mousseux",
+      "Pétillant",
+      "Crémant",
+      "Cerdon"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストに「2014年の収穫からA.O.C.ヴァン・ド・サヴォワにおいて瓶内二次発酵で造られた発泡性の白ワインを、『Cremant』と呼ぶことが可能になった。」と記載されています。"
+  },
+  {
+    "question": "山梨県で醸造される日本ワインの品種別醸造量について、上位5品種に含まれないものを1つ選びなさい。",
+    "choices": [
+      "甲州 (Koshu)",
+      "マスカット・ベーリーA (Muscat Bailey A)",
+      "シャルドネ (Chardonnay)",
+      "メルロ (Merlot)"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストによると、山梨県内での日本ワインの醸造量は、甲州、マスカット・ベーリーA、デラウェア、メルロ、巨峰の順で多くなっています。シャルドネはこの上位5品種には含まれていません。"
+  },
+  {
+    "question": "日本ワインのラベル表示基準において、ブドウの収穫年を表示する場合に求められる、その収穫年のブドウの最低使用比率として適切なものを次の中から選びなさい。",
+    "choices": [
+      "75%",
+      "95%",
+      "80%",
+      "85%"
+    ],
+    "correct_index": 3,
+    "explanation": "日本ワインの「製法品質表示基準」において、ブドウの収穫年を表示するためには、同一収穫年のブドウを85%以上使用する必要があります。"
+  },
+  {
+    "question": "瓶内二次発酵方式で造られるスパークリングワインのイタリアにおける表記として適切なものを1つ選びなさい。",
+    "choices": [
+      "Flaschengärung",
+      "Metodo Classico",
+      "Cava",
+      "Methode charmat"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキスト[ch00_wine_overview]より、瓶内二次発酵方式はイタリアでMetodo Classicoと表記されます。Flaschengärungはドイツ、Cavaはスペインでの表記であり、Methode charmatはタンク方式の名称です。"
+  },
+  {
+    "question": "2019年にA.O.C. Bordeauxの生産者組合が温暖化対策として導入を決めた補助品種のうち、赤ワイン用に認められていないものを1つ選びなさい。",
+    "choices": [
+      "Arinarnoa",
+      "Alvarinho",
+      "Marselan",
+      "Touriga Nacional"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストによると、赤ワイン用の補助品種は「アリナルノア、カステ、マルスラン、トゥリガ・ナシオナル、ヴィドック」です。Alvarinho（アルヴァリーニョ）は辛口白ワイン用に認められた品種です。"
+  },
+  {
+    "question": "オーストリアのヴァッハウ（Wachau）やテルメンレギオン（Thermenregion）で重要な白ブドウ品種ノイブルガー（Neuburger）の交配として適切なものを次の中から選びなさい。",
+    "choices": [
+      "ローター・ヴェルトリーナー Roter Veltliner × シルヴァーナー Silvaner",
+      "ブラウフレンキッシュ Blaufränkisch × ザンクト・ラウレント St. Laurent",
+      "グリューナー・ヴェルトリーナー Grüner Veltliner × トラミナー Traminer",
+      "リースリング Riesling × シルヴァーナー Silvaner"
+    ],
+    "correct_index": 0,
+    "explanation": "ノイブルガー（Neuburger）は、ローター・ヴェルトリーナー（Roter Veltliner）とシルヴァーナー（Silvaner）の自然交配によって生まれた品種です。"
+  },
+  {
+    "question": "1855年に制定されたメドックの格付けにおいて、唯一の例外としてChâteau Mouton Rothschildが2級から1級へ昇格したのは西暦何年か、次の中から選びなさい。",
+    "choices": [
+      "1959年",
+      "1973年",
+      "1985年",
+      "2001年"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストに「1973年にシャトー・ムートン・ロッチルドが2級から1級へと昇格したのを唯一の例外として、改定が行われていない。」と記載されています。"
+  },
+  {
+    "question": "ラングドック・ルーション地方を構成する県として、該当しないものを次の中から選びなさい。",
+    "choices": [
+      "Gard",
+      "Vaucluse",
+      "Hérault",
+      "Aude"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストによると、ラングドック・ルーション地方を構成する県は「ガール、エロー、オード、ピレネー・オリエンタル、それにロゼール」です。Vaucluse（ヴォクリューズ）はコート・デュ・ローヌ地方に属する県です。"
+  },
+  {
+    "question": "ブルゴーニュのコート・ド・ボーヌ地区において、世界的に高価格で取引される白ワインを生み出す村として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Pommard",
+      "Meursault",
+      "Puligny-Montrachet",
+      "Chassagne-Montrachet"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「ことにムルソー、ピュリニー・モンラッシェ、シャサーニュ・モンラッシェの3ヵ村では、世界的に高価格で取引される白ワインが生み出されている。」と記載されています。Pommard（ポマール）は主に高品質な赤ワインで知られています。"
+  },
+  {
+    "question": "日本のワイン産地における地理的表示（G.I.）の指定に関する記述として、適切なものを次の中から1つ選びなさい。",
+    "choices": [
+      "G.I. Yamanashiは2013年に指定された。",
+      "G.I. Hokkaidoは2021年に指定された。",
+      "G.I. Yamagataは2018年に指定された。",
+      "G.I. Osakaは2013年に指定された。"
+    ],
+    "correct_index": 0,
+    "explanation": "日本の地理的表示（G.I.）として、山梨（Yamanashi）は2013年7月に最初に指定されました。北海道（Hokkaido）は2018年6月、山形（Yamagata）と大阪（Osaka）は2021年に指定されています。"
+  },
+  {
+    "question": "スペインのD.O.P.チーズ「ケソ・マンチェゴ Queso Manchego」に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "主な生産地はラ・マンチャ La Mancha 地方である。",
+      "乳種は羊乳である。",
+      "タイプは非加熱圧搾のハードタイプである。",
+      "相性の良いワインとしてChacoli de Getariaが挙げられている。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキスト[ch21_cheese]より、ケソ・マンチェゴと相性の良いワインとして挙げられているのはLa ManchaのワインやSherry Finoなどです。Chacoli de Getariaは同じく羊乳製のIdiazabalと相性が良いとされるワインです。"
+  },
+  {
+    "question": "クリュ・デュ・ボージョレのA.O.C. Côte de Brouillyの土壌に多く見られる「Pierre Bleue」と呼ばれる青い石の岩石名を1つ選びなさい。",
+    "choices": [
+      "Diorite",
+      "Granite",
+      "Schiste",
+      "Calcaire"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストに「“Pierre Bleue\"と呼ばれる青い石(閃緑岩)が多い」と記載されています。閃緑岩はフランス語でDiorite（ディオライト）です。"
+  },
+  {
+    "question": "4世紀頃、モーゼル（Mosel）川流域のブドウ畑の様子を詩『モゼラ（Mosella）』に著した、ボルドー（Bordeaux）出身の詩人の名前を1つ選びなさい。",
+    "choices": [
+      "ウェナンティウス・フォルトゥナトゥス Venantius Fortunatus",
+      "キルデベルト2世 Childebert II",
+      "アウグスタ・トレヴェロールム Augusta Treverorum",
+      "アウソニウス Ausonius"
+    ],
+    "correct_index": 3,
+    "explanation": "ドイツワインの歴史において、ボルドー出身の詩人アウソニウス（Ausonius）が371年頃に著した詩『モゼラ（Mosella）』の中で、当時のモーゼル川流域のブドウ畑の様子が描写されています。"
+  },
+  {
+    "question": "A.O.C. Rosé de Loireにおいて、使用が認定されているブドウ品種として該当しないものを1つ選びなさい。",
+    "choices": [
+      "Gamay",
+      "Grolleau",
+      "Pinot d'Aunis",
+      "Côt"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストによると、A.O.C. Rosé de Loire（ロゼ・ド・ロワール）の認定品種は「カベルネ・フラン、カベルネ・ソーヴィニヨン、ガメイ、グロロー、グロロー・グリ、ピノ・ドニス、ピノ・ノワール」です。Côt（コット）は含まれていません。"
+  },
+  {
+    "question": "A.O.C. Mâcon-Villagesの規定に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "赤ワインも \"Primeur\" や \"Nouveau\" の表記が可能である。",
+      "認められているのはChardonnay種から造られる白ワインのみである。",
+      "A.O.C. Mâconの白よりも最大収量の規定が厳しい。",
+      "A.O.C. Mâconの白よりも収穫時の最低糖度の規定が厳しい。"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「シャルドネから造られる白にのみ与えられた地方名A.O.C.がマコン・ヴィラージュ」とあり、赤ワインは生産されません。したがって、赤ワインに関する記述は誤りです。"
+  },
+  {
+    "question": "ボルドー地方において、シャトー所有のブドウ畑で収穫されたブドウを用いて醸造され、瓶詰まで一貫生産されたワインにラベル表記が許されている文言を1つ選びなさい。",
+    "choices": [
+      "Mis en bouteille à la Propriété",
+      "Élevé et Mis en bouteille au Château",
+      "Mis en bouteille au Château",
+      "Grand Vin de Château"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストに「シャトー所有のブドウ畑で収穫されたブドウを用いて醸造され、瓶詰まで一貫生産されたワインには、『Mis en bouteille au Chateau』とラベルに表記することが許されている。」と明記されています。"
+  },
+  {
+    "question": "日本のワイン史に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "1987年に、勝沼町のワイナリーが協力して勝沼ワイナリーズクラブを設立した。",
+      "国税庁が定めた「製法品質表示基準」は2015年に定められ、同年に施行された。",
+      "1995年に田崎真也が世界最優秀ソムリエコンクールで優勝し、ワイン文化定着の立役者となった。",
+      "1994年には、輸入ワインの消費量が国産ワインの消費量を上回った。"
+    ],
+    "correct_index": 1,
+    "explanation": "国税庁が定めた「製法品質表示基準」は2015年に定められましたが、施行されたのは2018年です。したがって、「同年に施行された」という記述が誤りです。"
+  },
+  {
+    "question": "アルコール発酵の解明や低温殺菌法など、後のワイン醸造学に大きな足跡を残し、アルボワの町に研究用のブドウ畑「Clos des Rosières」を所有していた人物を1つ選びなさい。",
+    "choices": [
+      "Antoine Lavoisier",
+      "Louis Pasteur",
+      "Claude Bernard",
+      "Joseph-Louis Gay-Lussac"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストに「細菌学の父といわれるルイ・パストゥールだ。アルボワには彼が研究のために使用したブドウ畑『クロ・デ・ロジェール』も保存されている。」と記載されています。"
+  }
+]

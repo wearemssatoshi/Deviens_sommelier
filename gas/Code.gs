@@ -50,6 +50,8 @@ function doPost(e) {
         return handleRegisterUser(params);
       case 'saveResult':
         return handleSaveResult(params);
+      case 'saveQuestResult':
+        return handleSaveQuestResult(params);
       default:
         return errorResponse('Unknown action: ' + params.action);
     }
@@ -71,6 +73,8 @@ function doGet(e) {
         return handleGetUserStats(e.parameter);
       case 'getDetailedStats':
         return handleGetDetailedStats(e.parameter);
+      case 'getQuestProgress':
+        return handleGetQuestProgress(e.parameter);
       default:
         return errorResponse('Unknown GET action: ' + e.parameter.action);
     }
@@ -374,4 +378,83 @@ function handleGetDetailedStats(params) {
     session_count: sessionCount,
     distinct_days: dateSet.size
   });
+}
+
+// ========== QUEST HANDLERS ==========
+
+function getOrCreateQuestSheet(userName) {
+  const questSheetName = userName + '_Quest';
+  const ss = getSpreadsheet();
+  let sheet = ss.getSheetByName(questSheetName);
+  if (!sheet) {
+    sheet = ss.insertSheet(questSheetName);
+    sheet.appendRow(["TestID", "BestScore", "Total", "Passed", "LastAttempt", "AttemptCount"]);
+    sheet.getRange(1, 1, 1, 6).setFontWeight("bold").setBackground("#f3f3f3");
+    sheet.setFrozenRows(1);
+  }
+  return sheet;
+}
+
+function handleSaveQuestResult(params) {
+  const userName = (params.user_name || '').trim();
+  if (!userName) return errorResponse('user_name is missing');
+  
+  const testId = params.test_id;
+  const score = Number(params.score);
+  const total = Number(params.total);
+  const passed = score >= Math.ceil(total * 0.9);
+  const timestamp = getJSTTimestamp();
+
+  const sheet = getOrCreateQuestSheet(userName);
+  const data = sheet.getDataRange().getValues();
+  
+  let existingRow = -1;
+  for (let i = 1; i < data.length; i++) {
+    if (String(data[i][0]) === testId) {
+      existingRow = i + 1;
+      break;
+    }
+  }
+
+  if (existingRow > 0) {
+    // UPSERT: only update if new score is higher
+    const currentBest = Number(data[existingRow - 1][1]);
+    const currentAttempts = Number(data[existingRow - 1][5]) || 1;
+    const newBest = Math.max(currentBest, score);
+    const newPassed = newBest >= Math.ceil(total * 0.9);
+    sheet.getRange(existingRow, 1, 1, 6).setValues([[testId, newBest, total, newPassed, timestamp, currentAttempts + 1]]);
+  } else {
+    sheet.appendRow([testId, score, total, passed, timestamp, 1]);
+  }
+
+  return successResponse({ saved: true, test_id: testId, score, best: existingRow > 0 ? Math.max(Number(data[existingRow - 1][1]), score) : score });
+}
+
+function handleGetQuestProgress(params) {
+  const userName = (params.user_name || '').trim();
+  if (!userName) return errorResponse('user_name is missing');
+
+  const questSheetName = userName + '_Quest';
+  const ss = getSpreadsheet();
+  const sheet = ss.getSheetByName(questSheetName);
+
+  if (!sheet) {
+    return successResponse({ progress: {} });
+  }
+
+  const data = sheet.getDataRange().getValues();
+  const progress = {};
+
+  for (let i = 1; i < data.length; i++) {
+    const testId = String(data[i][0]);
+    progress[testId] = {
+      bestScore: Number(data[i][1]),
+      total: Number(data[i][2]),
+      passed: Boolean(data[i][3]),
+      lastAttempt: String(data[i][4]),
+      attemptCount: Number(data[i][5]) || 1
+    };
+  }
+
+  return successResponse({ progress: progress });
 }

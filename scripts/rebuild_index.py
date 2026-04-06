@@ -15,3 +15,10 @@ with open(os.path.join(dir_path, 'summary_index.json'), 'w', encoding='utf-8') a
     json.dump(index_data, out, ensure_ascii=False, indent=2)
 
 print("Rebuilt summary_index.json with", len(chapters), "chapters.")
+
+# Ensure WSET cards are injected back
+import subprocess
+try:
+    subprocess.run(['python3', os.path.join(os.path.dirname(__file__), 'add_wset_cards.py')], check=True)
+except Exception as e:
+    print("Warning: could not add WSET cards automatically:", e)

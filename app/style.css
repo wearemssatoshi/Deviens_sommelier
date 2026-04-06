@@ -2498,3 +2498,481 @@ body {
         font-size: 8px;
     }
 }
+
+/* ==========================================
+   QUEST PROGRESSION SYSTEM
+   Grape → Vine → Cellar → Candidate → Resident Sommelier
+   ========================================== */
+
+.quest-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    background: var(--bg);
+    overflow-y: auto;
+    transition: opacity 0.3s ease;
+}
+.quest-overlay.hidden {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+.quest-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 20px 100px;
+    position: relative;
+}
+.quest-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: var(--transition);
+    color: var(--text-secondary);
+}
+.quest-close:hover {
+    background: var(--bg-sub);
+}
+
+/* -- Loading / Empty -- */
+.quest-loading, .quest-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+.quest-empty-icon { margin-bottom: 16px; }
+.quest-empty h3 { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+
+/* -- Rank Card (Current) -- */
+.quest-rank-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    margin: 40px 0 24px;
+    border: 2px solid var(--rank-color, var(--border));
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0,0,0,0.02), rgba(0,0,0,0));
+}
+.quest-rank-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-sub);
+    color: var(--rank-color);
+}
+.quest-rank-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text-tertiary);
+    margin-bottom: 2px;
+}
+.quest-rank-title {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--rank-color);
+    letter-spacing: 0.02em;
+}
+.quest-rank-subtitle {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* -- Rank Journey Track -- */
+.quest-journey {
+    margin-bottom: 32px;
+    padding: 20px;
+    background: var(--bg-sub);
+    border-radius: 8px;
+}
+.quest-journey-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+}
+.quest-journey-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 4px;
+}
+.quest-journey-line {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    right: 24px;
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+.quest-journey-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #9B59B6, #27AE60, #E67E22, #2980B9, #C9A94E);
+    border-radius: 2px;
+    transition: width 0.6s ease;
+}
+.quest-journey-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    z-index: 1;
+}
+.quest-journey-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--border);
+    border: 2px solid var(--white);
+    transition: all 0.3s ease;
+}
+.quest-journey-node.achieved .quest-journey-dot {
+    background: var(--node-color);
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+.quest-journey-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+}
+.quest-journey-node.achieved .quest-journey-label {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* -- Lock Notice -- */
+.quest-lock-notice {
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    margin-top: 16px;
+}
+.quest-lock-icon { color: var(--text-tertiary); margin-bottom: 16px; }
+.quest-lock-notice h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.quest-lock-notice p { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.quest-lock-conditions { text-align: left; max-width: 320px; margin: 0 auto; }
+.quest-lock-cond {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-light);
+}
+.quest-lock-cond.met { color: #00B36B; }
+.quest-cond-check { font-weight: 700; font-size: 16px; }
+
+/* -- Tiers Title -- */
+.quest-tiers-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text-tertiary);
+    margin-bottom: 12px;
+}
+
+/* -- Tier Card -- */
+.quest-tier-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+.quest-tier-card.locked {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.quest-tier-card.cleared {
+    border-color: var(--tier-color);
+}
+.quest-tier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.quest-tier-header:hover { background: var(--bg-sub); }
+.quest-tier-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.quest-tier-lock-icon { color: var(--text-tertiary); }
+.quest-tier-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--tier-color);
+}
+.quest-tier-subtitle {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+.quest-tier-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.quest-tier-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    background: var(--tier-color);
+    color: white;
+    border-radius: 4px;
+}
+.quest-tier-progress {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--tier-color);
+}
+.quest-tier-chevron {
+    font-size: 10px;
+    color: var(--text-tertiary);
+    transition: transform 0.2s;
+}
+.quest-tier-card.expanded .quest-tier-chevron {
+    transform: rotate(180deg);
+}
+
+/* -- Tier Body (Expandable) -- */
+.quest-tier-body {
+    display: none;
+    padding: 0 20px 20px;
+}
+.quest-tier-card.expanded .quest-tier-body {
+    display: block;
+}
+.quest-tier-progress-bar {
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+.quest-tier-progress-fill {
+    height: 100%;
+    background: var(--tier-color);
+    border-radius: 2px;
+    transition: width 0.6s ease;
+}
+.quest-tier-condition {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+/* -- Test List -- */
+.quest-test-list { display: flex; flex-direction: column; gap: 4px; }
+.quest-test-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background: var(--bg-sub);
+    font-size: 13px;
+}
+.quest-test-row.locked { opacity: 0.4; }
+.quest-test-row.passed { background: rgba(0, 179, 107, 0.06); }
+.quest-test-num { font-weight: 700; color: var(--text-primary); min-width: 56px; }
+.quest-test-score { color: var(--text-secondary); min-width: 52px; }
+.quest-test-pct { font-weight: 600; color: var(--text-secondary); min-width: 36px; }
+.quest-test-pct.pass { color: #00B36B; }
+.quest-test-check { color: #00B36B; font-weight: 700; font-size: 16px; }
+.quest-test-btn {
+    margin-left: auto;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--text-primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.quest-test-btn:hover { opacity: 0.8; }
+
+/* -- Quest Exam View -- */
+.quest-exam { padding: 40px 0; }
+.quest-exam-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.quest-exam-tier {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-tertiary);
+}
+.quest-exam-progress {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+.quest-exam-progressbar {
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+.quest-exam-progressfill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+.quest-exam-question {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+.quest-exam-choices { display: flex; flex-direction: column; gap: 8px; }
+.quest-choice-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    transition: all 0.15s;
+    font-family: var(--font-sans);
+}
+.quest-choice-btn:hover { border-color: var(--text-secondary); }
+.quest-choice-btn.correct { border-color: #00B36B; background: rgba(0,179,107,0.06); }
+.quest-choice-btn.wrong { border-color: #D4002A; background: rgba(212,0,42,0.04); }
+.quest-choice-letter {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-sub);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+.quest-idk-btn {
+    border-style: dashed;
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
+/* -- Quest Results -- */
+.quest-results { padding: 40px 0; text-align: center; }
+.quest-results-badge { margin-bottom: 16px; }
+.quest-results-badge.passed svg { animation: quest-glow 2s ease infinite; }
+@keyframes quest-glow {
+    0%, 100% { filter: drop-shadow(0 0 4px rgba(201,169,78,0.3)); }
+    50% { filter: drop-shadow(0 0 16px rgba(201,169,78,0.6)); }
+}
+.quest-results-title {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+.quest-results-score {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+.quest-results-pct {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+.quest-results-threshold {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+.quest-results-details {
+    text-align: left;
+    max-height: 320px;
+    overflow-y: auto;
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+.quest-result-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 13px;
+    align-items: center;
+}
+.quest-result-item:last-child { border-bottom: none; }
+.quest-result-num { font-weight: 700; color: var(--text-secondary); min-width: 32px; }
+.quest-result-status { font-weight: 700; }
+.quest-result-item.correct .quest-result-status { color: #00B36B; }
+.quest-result-item.wrong .quest-result-status { color: #D4002A; }
+.quest-result-detail {
+    width: 100%;
+    padding: 8px 0 0 40px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.quest-result-correct { color: #00B36B; font-weight: 600; margin: 4px 0; }
+.quest-result-exp { color: var(--text-tertiary); font-style: italic; }
+.quest-results-actions { margin-top: 16px; }
+.quest-back-btn {
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: 700;
+    background: var(--text-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-family: var(--font-sans);
+}
+.quest-back-btn:hover { opacity: 0.85; }

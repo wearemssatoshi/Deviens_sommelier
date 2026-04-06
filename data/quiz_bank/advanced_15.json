@@ -1,0 +1,497 @@
+[
+  {
+    "question": "2022年9月2日の政令により、A.O.C. ArboisのVin Jauneにおいて、Savagnin種に加えて作付けで5%、醸造で10%まで使用が認められることになった2つのブドウ品種の正しい組み合わせを1つ選びなさい。",
+    "choices": [
+      "EnfarinéとPloussard",
+      "EnfarinéとGranget",
+      "TrousseauとGranget",
+      "ChardonnayとPloussard"
+    ],
+    "correct_index": 1,
+    "explanation": "2022年9月2日の政令により、A.O.C. ArboisのVin Jauneには、Savagninに加えてEnfarinéとGrangetが、作付けで5%、醸造で10%まで認められることになりました。また、EnfarinéはCôtes du JuraのVin Jauneにおいても認められています。"
+  },
+  {
+    "question": "A.O.C. Cassisの白ワインにおいて、主要品種であるMarsanne種が単体で占めなければならない比率として正しいものを1つ選びなさい。",
+    "choices": [
+      "全体の10〜30%",
+      "全体の20〜50%",
+      "全体の30〜80%",
+      "全体の50%以上"
+    ],
+    "correct_index": 2,
+    "explanation": "A.O.C. Cassisの白ワインの規定では、主要品種であるClairetteとMarsanneの合計で60%以上を占め、かつ「マルサンヌのみで全体の30〜80%を占めねばならない」と定められています。"
+  },
+  {
+    "question": "ポルトガルのV.R. Península de Setúbal（ペニンスラ・デ・セトゥーバル）が2009年まで使用していた旧名称を1つ選びなさい。",
+    "choices": [
+      "Terras do Sado (テラス・ド・サド)",
+      "Ribatejano (リバテジャーノ)",
+      "Estremadura (エストレマドゥーラ)",
+      "Beiras (ベイラス)"
+    ],
+    "correct_index": 0,
+    "explanation": "V.R. Península de Setúbalは、2009年までTerras do Sadoと呼ばれていました。この名称変更は、産地の地理的特徴をより明確に消費者に伝えることを目的としています。"
+  },
+  {
+    "question": "1852年に高品質なヨーロッパ産ブドウの栽培を開始し、カリフォルニアで最古のワイナリーとされるOld Almaden Wineryを建設したフランス出身の人物を1つ選びなさい。",
+    "choices": [
+      "A: Charles LeFranc",
+      "B: Paul Masson",
+      "C: Robert Mondavi",
+      "D: Agoston Haraszthy"
+    ],
+    "correct_index": 0,
+    "explanation": "カリフォルニアのセントラル・コーストにおいて、フランス出身のCharles LeFrancが1852年に高品質ヨーロッパ産ブドウの栽培を開始し、カリフォルニア最古のワイナリーとされるOld Almaden Wineryを建設しました。"
+  },
+  {
+    "question": "長野県千曲川ワインバレーの産地と土壌に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "東御市の右岸は火山灰由来の黒ボクが多い。",
+      "上田市の塩田周辺は、火山灰由来の黒ボク土壌が主体である。",
+      "上田市の左岸は細粒褐色森林土と呼ばれる粘土質が多い。",
+      "東御市の左岸にある八重原台地は粘土質が多い。"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストによると、上田市の塩田周辺は「一部海底が隆起した区画もある」とされており、火山灰由来の黒ボク土壌が主体であるという記述はありません。他の選択肢はすべてテキストの記述と一致します。"
+  },
+  {
+    "question": "Val de Loire（ロワール渓谷地方）のワイン産地が含まれる県として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Maine-et-Loire",
+      "Indre-et-Loire",
+      "Loir-et-Cher",
+      "Lot-et-Garonne"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストの県名リストによると、Maine-et-Loire, Indre-et-Loire, Loir-et-Cherはロワール渓谷地方に含まれます。一方、Lot-et-GaronneはSud-Ouest地方に含まれる県です。"
+  },
+  {
+    "question": "左右に2列、H字の形に枝を配置する短梢剪定で、1990年代以降、特に九州地方で雨よけと組み合わせて採用されることが多い仕立て法を1つ選びなさい。",
+    "choices": [
+      "スマート・ギュイヨ仕立て (Smart Guyot)",
+      "改良スマート仕立て",
+      "H字型短梢剪定",
+      "棚仕立て"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには「H字型短梢剪定...九州で1990年代以降ひらかれたブドウ園ではこの仕立て法が採用されており...雨よけをしているケースが多い」と記載されています。改良スマート仕立ては長野県塩尻市で導入が進んでいます。"
+  },
+  {
+    "question": "Côte de BeauneのHameau de Blagnyにあるプルミエ・クリュ「La Garenne」で白ワインを生産した場合、ラベルに表記することが認められているA.O.C.を1つ選びなさい。",
+    "choices": [
+      "Meursault Premier Cru",
+      "Chassagne-Montrachet Premier Cru",
+      "Blagny Premier Cru",
+      "Puligny-Montrachet Premier Cru"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストの「ブラニィの1級畑」の表において、1級畑「La GarenneまたはSur la Garenne」で白ワインを造った場合に名乗れるA.O.C.は「Puligny-Montrachet」と記載されています。"
+  },
+  {
+    "question": "日本のワイン産地における地理的表示(G.I.)に関して、2021年に国税庁長官から指定を受けなかったものを1つ選びなさい。",
+    "choices": [
+      "北海道 (Hokkaido)",
+      "長野 (Nagano)",
+      "大阪 (Osaka)",
+      "山形 (Yamagata)"
+    ],
+    "correct_index": 0,
+    "explanation": "2021年に地理的表示(G.I.)の指定を受けたのは、山形県、長野県、大阪府です。北海道は2018年に指定されているため、該当しません。"
+  },
+  {
+    "question": "ドイツのVDP.プレディカーツヴァイン醸造所連盟が、高品質なゼクト (Sekt) のための独自の格付け規約を発表した年を1つ選びなさい。",
+    "choices": [
+      "2019年",
+      "2020年",
+      "2022年",
+      "2024年"
+    ],
+    "correct_index": 1,
+    "explanation": "VDPは2020年12月に高品質なゼクトの格付け規約を発表しました。これにより、VDPメンバーが生産するスパークリングワインに対して、新たな品質基準が設けられました。"
+  },
+  {
+    "question": "1662年に王立協会へ提出した論文で、瓶内二次発酵について言及した最古の文書を残したとされる英国の科学者を1つ選びなさい。",
+    "choices": [
+      "Henry II (ヘンリー2世)",
+      "Henry VIII (ヘンリー8世)",
+      "Christopher Merret (クリストファー・メレット)",
+      "Charlemagne (カール大帝)"
+    ],
+    "correct_index": 2,
+    "explanation": "1662年に英国の科学者Christopher Merretが王立協会に提出した論文で、瓶内のワインに糖分を加えて再発酵させ、発泡性をもたらす方法に言及しており、これが意図的な瓶内二次発酵に関する最古の文書とされています。"
+  },
+  {
+    "question": "チリワイン協会 (Wines of Chile) が定めたサステイナビリティ・コードにおいて、ワインの製造プロセスに関する項目が分類されるエリアの名称を1つ選びなさい。",
+    "choices": [
+      "A: レッドエリア (Red Area)",
+      "B: グリーンエリア (Green Area)",
+      "C: オレンジエリア (Orange Area)",
+      "D: ブルーエリア (Blue Area)"
+    ],
+    "correct_index": 0,
+    "explanation": "チリのサステイナビリティ・コードは、ブドウ栽培（グリーンエリア）、ワイン製造プロセス（レッドエリア）、経済・社会実現への貢献（オレンジエリア）の3つの柱で構成されています。したがって、ワインの製造プロセスはレッドエリアに分類されます。"
+  },
+  {
+    "question": "スイスのジュネーヴ州 (Genève) にあるワイン産地 Mandement (マンドゥマン) に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "レマン湖 (Lac Léman) の西南、Dardagny (ダルダニー) から Céligny (セリニー) までの地区である。",
+      "スイス最大のワインコミューンである Satigny (サティニー) を含んでいる。",
+      "土壌は粘土質で石灰分を多く含み、すっきりとした辛口の白ワインが産出される。",
+      "2つの河川によって堆積した、石灰岩や砂利を多く含むモレーン (Moraine) の土壌が特徴である。"
+    ],
+    "correct_index": 3,
+    "explanation": "Mandement地区の土壌は粘土質で石灰分を多く含むとされています。石灰岩や砂利を多く含むモレーンの土壌は、アルヴ川 (Arve) とローヌ川 (Rhône) に挟まれた Entre Arve et Rhône (アントレ・アルヴ・エ・ローヌ) 地区の特徴です。"
+  },
+  {
+    "question": "EUのワイン法改革において、ワイン共通市場制度に関する新たなEU理事会規則が発効した年月日として適切なものを次の中から選びなさい。",
+    "choices": [
+      "2008年1月1日",
+      "2008年8月1日",
+      "2009年1月1日",
+      "2009年8月1日"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストに「特に2008年8月1日からはワイン共通市場制度に関する新たなEU理事会規則が発効し、EUワイン改革が段階的に推進されている。」と明記されている。この改革により、従来のA.O.C.やD.O.C.といった各国独自の品質分類から、A.O.P.やI.G.P.といったEU共通の地理的表示制度への移行が進められた。"
+  },
+  {
+    "question": "A.O.C. Pomerolの土壌に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "純粋な粘土質土壌は、小高い丘の頂点に位置するChâteau Pétrusの畑に限られる。",
+      "多くの畑は、Dordogne川の支流であるIsle川によって運ばれた新生代第三紀の小石で覆われている。",
+      "粘土に含まれる酸化鉄が、熟成による官能的なフレーバーに影響を与えている。",
+      "底土は主に砂質であり、水はけの良さがMerlot種の栽培に適している。"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには、「とはいっても底土は粘土であり、ブドウ品種はメルロが80%を占める。」と記載されています。したがって、「底土は主に砂質」という記述は誤りです。"
+  },
+  {
+    "question": "元々は同名の村のみに認められていたA.O.C. Crozes-Hermitageが、現在のDrôme県11ヵ村に栽培範囲を拡大された年号として正しいものを1つ選びなさい。",
+    "choices": [
+      "1936年",
+      "1952年",
+      "1973年",
+      "1988年"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには、A.O.C. Crozes-Hermitageについて「A.O.C.は元々エルミタージュの北西に位置する同名の村のみに認められていたが、1952年に改められ、ドローム県の11ヵ村に広がった。」と記載されています。"
+  },
+  {
+    "question": "19世紀の文献で、初めて「カウシウブドウ」という名称が登場したとされる、水谷豊文による著作として適切なものを次の中から選びなさい。",
+    "choices": [
+      "本朝食鑑",
+      "毛吹草",
+      "ザ・ファー・イースト (The Far East)",
+      "本草綱目啓蒙"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストには「水谷豊文(1779 1833)の『本草綱目啓蒙』では...19世紀になって初めて「カウシウブドウ(甲州ブドウ)」の名前が登場している」と記載されています。その他の選択肢は、別の時代や内容の文献です。"
+  },
+  {
+    "question": "普仏戦争に敗れたフランスが、Alsace地方をドイツ帝国に譲渡することになった1871年の講和条約名を1つ選びなさい。",
+    "choices": [
+      "ウェストファリア条約 (Treaty of Westphalia)",
+      "ベルサイユ条約 (Treaty of Versailles)",
+      "フランクフルト講和条約 (Treaty of Frankfurt)",
+      "ウィーン条約 (Treaty of Vienna)"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストには、「1871年のフランクフルト講和条約でアルザスをドイツ帝国に譲渡した」と記載されています。ウェストファリア条約は1648年、ベルサイユ条約は第一次世界大戦後の1919年の条約です。"
+  },
+  {
+    "question": "2023年の中国国内における酒類販売金額の構成比について、白酒 (Baijiu) が占める割合として適切なものを次の中から選びなさい。",
+    "choices": [
+      "約24%",
+      "約52%",
+      "約71%",
+      "約90%"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストに「2023年の統計によると中国内での酒類販売数量は前年比横ばい、金額は微増になっている。全金額のうち71%がナショナルスピリッツ、いわゆる白酒である。」と記載されている。選択肢Aの約24%はビールの割合である。"
+  },
+  {
+    "question": "西オーストラリア州Great SouthernのサブリージョンであるFrankland Riverを代表し、「強烈なスパイシーさと、ミントの香味」を伴う「気品」と「強靭」な構成が特徴とされる黒ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "A: シラーズ (Shiraz)",
+      "B: カベルネ・ソーヴィニヨン (Cabernet Sauvignon)",
+      "C: ピノ・ノワール (Pinot Noir)",
+      "D: メルロ (Merlot)"
+    ],
+    "correct_index": 0,
+    "explanation": "Frankland Riverはシラーズ (Shiraz) の有力産地として知られており、そのワインは強烈なスパイシーさとミントの香味を伴う気品と強靭な構成が特徴とされています。"
+  },
+  {
+    "question": "A.O.C. Côte de Brouillyの火山性土壌を特徴づける「Pierre Bleue」と呼ばれる青い石の岩石名として適切なものを次の中から選びなさい。",
+    "choices": [
+      "花崗岩 (Granite)",
+      "閃緑岩 (Diorite)",
+      "泥灰岩 (Marl)",
+      "石灰岩 (Limestone)"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには、A.O.C. Côte de Brouillyの土壌について、「“Pierre Bleue\"と呼ばれる青い石(閃緑岩) が多い」と明記されています。"
+  },
+  {
+    "question": "フランスのリンゴを原料とするオー・ド・ヴィー (Eaux-de-Vie) のうち、参照テキストにおいてA.O.C.として記載されていないものを1つ選びなさい。",
+    "choices": [
+      "Eaux-de-Vie de Cidre de Bretagne",
+      "Eaux-de-Vie de Cidre du Maine",
+      "Eaux-de-Vie de Cidre de Normandie",
+      "Calvados"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストでは「Eaux-de-Vie de Cidre de Bretagne」と「Eaux-de-Vie de Cidre du Maine」には(A.O.C.)の記載があるが、「Eaux-de-Vie de Cidre de Normandie」にはその記載がない。Calvadosはノルマンディー地方などで造られるリンゴのブランデーで、A.O.C.に認定されている。"
+  },
+  {
+    "question": "カナダのInniskillin Winesが世界的な評価を得るきっかけとなったアイスワインを初めて製造した年と、その際に使用されたブドウ品種の正しい組み合わせを次の中から選びなさい。",
+    "choices": [
+      "A: 1983年、リースリング (Riesling)",
+      "B: 1975年、ヴィダル (Vidal)",
+      "C: 1983年、ヴィダル (Vidal)",
+      "D: 1975年、リースリング (Riesling)"
+    ],
+    "correct_index": 2,
+    "explanation": "Inniskillin Winesは1975年にオンタリオ州で初めてワイン製造ライセンスを獲得しましたが、世界的な評価を得るきっかけとなったのは、1983年に樹上で凍ったヴィダル (Vidal) 種のブドウから造った最初のアイスワインです。"
+  },
+  {
+    "question": "A.O.C. Chambolle-Musignyの畑が位置する土壌の地質年代として適切なものを次の中から選びなさい。",
+    "choices": [
+      "ジュラ紀中期 バジョシアン (Bajocian)",
+      "ジュラ紀後期 キンメリジャン (Kimmeridgian)",
+      "白亜紀前期 バレミアン (Barremian)",
+      "新生代第三紀 鮮新世 (Pliocene)"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには、A.O.C. Chambolle-Musignyの土壌について、「土壌はジュラ紀中期バジョシアン」と明確に記載されています。"
+  },
+  {
+    "question": "2021年の調査において、日本の自営農園および契約栽培における垣根栽培で栽培数量が多かった上位5品種に含まれないものを1つ選びなさい。",
+    "choices": [
+      "シャルドネ (Chardonnay)",
+      "ピノ・ノワール (Pinot Noir)",
+      "カベルネ・ソーヴィニヨン (Cabernet Sauvignon)",
+      "ケルナー (Kerner)"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストによると、2021年時点での垣根栽培の上位5品種はメルロ (Merlot)、シャルドネ (Chardonnay)、ケルナー (Kerner)、ピノ・ノワール (Pinot Noir)、ツヴァイゲルト (Zweigelt)です。カベルネ・ソーヴィニヨン (Cabernet Sauvignon) はこの5品種には含まれていません。"
+  },
+  {
+    "question": "A.O.C. Cour-Chevernyにおいて、この土地でしか栽培されていないとされる固有の白ブドウ品種を1つ選びなさい。",
+    "choices": [
+      "Menu Pineau",
+      "Romorantin",
+      "Tressallier",
+      "Grolleau Gris"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには、A.O.C. Cour-Chevernyについて「この土地でしか栽培されていないロモランタンと呼ばれる品種を用い、辛口白を中心に甘口白が造られている。」と明記されています。"
+  },
+  {
+    "question": "スペインのD.O. Rías Baixas (リアス・バイシャス) のサブゾーンに該当しないものを1つ選びなさい。",
+    "choices": [
+      "Amandi (アマンディ)",
+      "Val do Salnés (バル・ド・サルネス)",
+      "Condado do Tea (コンダード・ド・テア)",
+      "O Rosal (オ・ロサル)"
+    ],
+    "correct_index": 0,
+    "explanation": "AmandiはD.O. Ribeira Sacra (リベイラ・サクラ) のサブゾーンです。Val do Salnés, Condado do Tea, O Rosalは、Ribeira do Ulla, Soutomaiorと共にD.O. Rías Baixasの5つのサブゾーンに含まれます。"
+  },
+  {
+    "question": "2022年に承認されたオレゴン州のA.V.A.で、約6500万年前に海底火山として形成されたものが隆起して陸上に出たという地質学的特徴を持つものを1つ選びなさい。",
+    "choices": [
+      "A: Tualatin Hills A.V.A.",
+      "B: Van Duzer Corridor A.V.A.",
+      "C: Chehalem Mountains A.V.A.",
+      "D: Mt. Pisgah, Polk County, Oregon A.V.A."
+    ],
+    "correct_index": 3,
+    "explanation": "Mt. Pisgah, Polk County, Oregon A.V.A.は2022年に承認されたA.V.A.で、その地質は6500万年前に海底火山として形成されたものが隆起したピスガー山に由来します。"
+  },
+  {
+    "question": "Sud-Ouest地方の郷土料理や食材に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "Jambon de Bayonneはアドゥール谷地産の生ハムで、1998年にI.G.P.を取得した。",
+      "Garbureはキャベツや白インゲン豆などが入ったガスコーニュ地方のスープである。",
+      "NégretteはFrontonのロゼや赤を代表する品種である。",
+      "Périgordの名産であるFoie Grasは、肥育した鴨の肝臓のみを指す。"
+    ],
+    "correct_index": 3,
+    "explanation": "Foie Grasはガチョウ(Oie)または鴨(Canard)の肥育した肝臓を指します。「鴨の肝臓のみ」という限定は誤りです。他の選択肢は参照テキストの記述と一致しています。"
+  },
+  {
+    "question": "近年、岩手県が開発した酒造好適米、麹菌、または酵母の名称として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "夢の香 (Yume no Kaori)",
+      "吟ぎんが (Ginginga)",
+      "黎明平泉 (Reimeihiraizumi)",
+      "ジョバンニの調べ (Giovanni no Shirabe)"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストによると、岩手県が開発した酒造好適米は「吟ぎんが」、麹菌は「黎明平泉」、酵母は「ジョバンニの調べ」などが挙げられている。「夢の香」は福島県が開発した酒造好適米である。"
+  },
+  {
+    "question": "オーストラリア、ヴィクトリア州のワイナリーTahbilkに現存し、単一畑として最大の栽培面積を誇るマルサンヌ (Marsanne) の古木が植樹された年として適切なものを次の中から選びなさい。",
+    "choices": [
+      "A: 1860年",
+      "B: 1927年",
+      "C: 1868年",
+      "D: 1965年"
+    ],
+    "correct_index": 1,
+    "explanation": "Tahbilkは1860年に設立された歴史あるワイナリーですが、現存するマルサンヌ (Marsanne) の古木は1927年に植樹されたものです。"
+  },
+  {
+    "question": "南アフリカの原産地呼称ワイン認証制度「Wine of Origin (W.O.)」の前身となった法律が制定された年として適切なものを次の中から選びなさい。",
+    "choices": [
+      "A: 1992年",
+      "B: 1957年",
+      "C: 1973年",
+      "D: 1924年"
+    ],
+    "correct_index": 1,
+    "explanation": "南アフリカの原産地呼称ワイン認証制度「Wine of Origin (W.O.)」は1973年に施行されましたが、その前身となる法律は1957年に制定されています。"
+  },
+  {
+    "question": "2020年に承認されたオレゴン州のTualatin Hills A.V.A.において、主体となっている崩壊した玄武岩の上に風化したレス質が堆積した土壌の名称を1つ選びなさい。",
+    "choices": [
+      "A: ジョリー土壌 (Jory Soil)",
+      "B: ウィラケンジー土壌 (Willakenzie Soil)",
+      "C: ローレルウッド土壌 (Laurelwood Soil)",
+      "D: ネキア土壌 (Nekia Soil)"
+    ],
+    "correct_index": 2,
+    "explanation": "Tualatin Hills A.V.A.の土壌は、崩壊した玄武岩の上に風化したレス質が堆積しているローレルウッド土壌 (Laurelwood Soil) が主体です。ジョリー、ウィラケンジー、ネキアはオレゴン州の他のAVAでみられる代表的な土壌です。"
+  },
+  {
+    "question": "ウルグアイのワイン生産に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "A: ワイン生産量は南米大陸でアルゼンチン、チリ、ブラジルに次ぐ第4位である。",
+      "B: 生産されるワインの中で最も比率が高いのは赤ワインである。",
+      "C: スペインからの独立前は、Banda Orientalという名前で知られていた。",
+      "D: 白ワインの生産比率は、ロゼワインの生産比率よりも高い。"
+    ],
+    "correct_index": 3,
+    "explanation": "2022年のデータによると、ウルグアイのワイン生産比率は赤ワイン54%、ロゼワイン35%、白ワイン11%です。したがって、「白ワインの生産比率は、ロゼワインの生産比率よりも高い」という記述は誤りです。"
+  },
+  {
+    "question": "ドイツのAnbaugebiet、Hessische Bergstraße (ヘッシッシェ・ベルクシュトラーセ) の郷土チーズで、1997年にEUのg.U. (保護原産地呼称) に認定されたものを1つ選びなさい。",
+    "choices": [
+      "Allgäuer Emmentaler (アルゴイアー・エメンターラー)",
+      "Odenwälder Frühstückskäse (オーデンヴェルダー・フリューシュトゥックケーゼ)",
+      "Altenburger Ziegenkäse (アルテンブルガー・ツィーゲンケーゼ)",
+      "Holsteiner Tilsiter (ホルシュタイナー・ティルジター)"
+    ],
+    "correct_index": 1,
+    "explanation": "Odenwälder Frühstückskäseは、生の生乳を使ったソフトチーズで、アルザスのマンステール (Munster) と同じ製法で作られます。このチーズは1997年にEUのg.U. (geschützte Ursprungsbezeichnung) に認定されました。"
+  },
+  {
+    "question": "2020年に日本でワインへの使用が新たに認可された指定添加物「二炭酸ジメチル (Dimethyl dicarbonate)」に関する記述として適切なものを次の中から選びなさい。",
+    "choices": [
+      "分類は酸化防止剤で、使用限度量は0.20g/kgである。",
+      "分類は殺菌料で、使用限度量は0.20g/kgである。",
+      "分類は安定剤で、使用限度量は定められていない。",
+      "分類は保存料で、使用限度量は0.35g/kg未満である。"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには「2020年に指定添加物として使用できる二炭酸ジメチル(商品名Velcorin®) が新たに認可された。分類は殺菌料、使用限度量は0.20g/kg。」と明記されている。選択肢Dの0.35g/kg未満は亜硫酸塩の使用限度量である。"
+  },
+  {
+    "question": "クロアチアのワイン産地のうち、地域 Središnja Bregovita Hrvatska (スレディシュニャ・ブレゴヴィタ・フルヴァツカ) に属する地区を1つ選びなさい。",
+    "choices": [
+      "Hrvatsko Podunavlje (フルヴァツコ・ポドゥナヴィエ)",
+      "Slavonija (スラヴォニア)",
+      "Hrvatska Istra (フルヴァツカ・イストラ)",
+      "Plešivica (プレシヴィツァ)"
+    ],
+    "correct_index": 3,
+    "explanation": "Plešivicaは、Moslavina, Prigorje-Bilogora, Zagorje-Međimurje, Pokupljeと共に地域 Središnja Bregovita Hrvatska (クロアチア高地) に属します。Hrvatsko PodunavljeとSlavonijaはSlavonija i Hrvatsko Podunavljeに、Hrvatska IstraはHrvatska Istra i Kvarnerに属します。"
+  },
+  {
+    "question": "テキーラ (Tequila) の生産が法律で認められているメキシコの州として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "グァナフアト (Guanajuato) 州",
+      "ナヤリット (Nayarit) 州",
+      "タマウリパス (Tamaulipas) 州",
+      "オアハカ (Oaxaca) 州"
+    ],
+    "correct_index": 3,
+    "explanation": "テキーラの生産地は、ハリスコ (Jalisco) 州全域と、ミチョアカン (Michoacán)、ナヤリット (Nayarit)、グァナフアト (Guanajuato)、タマウリパス (Tamaulipas) 各州の一部に限定されている。オアハカ (Oaxaca) 州は、同じくアガベを原料とする蒸留酒であるメスカル (Mezcal) の主要な生産地である。"
+  },
+  {
+    "question": "次のA.O.C.の中から、Côtes du Rhône Villagesから独立昇格した年が最も新しいものを1つ選びなさい。",
+    "choices": [
+      "Vinsobres",
+      "Rasteau",
+      "Cairanne",
+      "Beaumes de Venise"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストに記載されている昇格年は、Vinsobresが2006年、Rasteauが2010年、Cairanneが2016年です。したがって、Cairanneが最も新しく昇格したA.O.C.となります。"
+  },
+  {
+    "question": "次のSud-Ouest地方のA.O.C.の中で、A.O.C.を取得した年が最も遅いものを1つ選びなさい。",
+    "choices": [
+      "Bergerac",
+      "Jurançon",
+      "Irouléguy",
+      "Cahors"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストによると、BergeracとJurançonは1936年より前に取得、Irouléguyは1970年、Cahorsは1971年にA.O.C.を取得しており、この中ではCahorsが最も遅くなります。"
+  },
+  {
+    "question": "オーストリアの品質分類において、Sekt Austria Grosse Reserveに規定されている最低瓶内熟成期間として適切なものを次の中から選びなさい。",
+    "choices": [
+      "12ヶ月",
+      "18ヶ月",
+      "36ヶ月",
+      "48ヶ月"
+    ],
+    "correct_index": 2,
+    "explanation": "Sekt Austria Grosse Reserveの最低瓶内熟成期間は36ヶ月と規定されています。なお、Sekt Austria Reserveの最低瓶内熟成期間は18ヶ月です。"
+  },
+  {
+    "question": "日本においてマイクロブルワリーが増加するきっかけとなった、ビール製造免許にかかわる最低製造数量基準が年間2,000klから引き下げられた年号と数量の組み合わせとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "1992年・100kl",
+      "1994年・60kl",
+      "1996年・100kl",
+      "1998年・60kl"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストに「規制緩和の1つとして1994年4月にビール製造免許にかかわる最低製造数量基準が年間2,000klから60klに引き下げられた。」と記載されている。これにより、小規模な醸造所の設立が相次いだ。"
+  },
+  {
+    "question": "チリのD.O. Aconcaguaのサブリージョンとして、該当しないものを1つ選びなさい。",
+    "choices": [
+      "A: D.O. Casablanca Valley",
+      "B: D.O. Limarí Valley",
+      "C: D.O. San Antonio Valley",
+      "D: D.O. Marga Marga Valley"
+    ],
+    "correct_index": 1,
+    "explanation": "D.O. Aconcaguaのサブリージョンは、D.O. Aconcagua Valley、D.O. Casablanca Valley、D.O. San Antonio Valley、D.O. Marga Marga Valleyの4つです。D.O. Limarí ValleyはD.O. Coquimboに属するサブリージョンであり、D.O. Aconcaguaには含まれません。"
+  },
+  {
+    "question": "Alsace A.O.C.において「Gentil」を名乗るための規定に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "高貴品種を50%以上使用しなければならない。",
+      "使用できる高貴品種はRiesling, Muscat, Pinot Gris, Gewurztraminerである。",
+      "複数のブドウ品種を一緒に醸造する混醸が認められている。",
+      "各品種ごとに醸造した上でアッサンブラージュしなければならない。"
+    ],
+    "correct_index": 2,
+    "explanation": "「Gentil」を名乗るためには、高貴4品種を50%以上使用し、各品種を個別に醸造した後にアッサンブラージュする必要があります。複数のブドウ品種を一緒に醸造する「混醸」は認められていません。"
+  },
+  {
+    "question": "A.O.C. Seyssel Mousseuxにおける、澱の上での最低瓶内熟成期間として規定されているものを1つ選びなさい。",
+    "choices": [
+      "6ヵ月以上",
+      "9ヵ月以上",
+      "12ヵ月以上",
+      "15ヵ月以上"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストには、「セイセル・ムスーにおける澱の上での瓶内熟成期間は9ヵ月以上である。」と明確に記載されています。"
+  }
+]
