@@ -9,7 +9,7 @@
  * IMPORTANT: Increment CACHE_VERSION to bust cache on deploy
  */
 
-const CACHE_VERSION = 'dsm-v5.5';
+const CACHE_VERSION = 'dsm-v5.6';
 const CACHE_NAME = `dsm-cache-${CACHE_VERSION}`;
 
 // Core app shell files to precache

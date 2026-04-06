@@ -90,6 +90,9 @@
                 <div class="quiz-spinner"></div>
                 <h2>クイズを生成中...</h2>
                 <p>Gemini AIがナレッジベースから10問を一括生成しています</p>
+                <div style="margin-top: 15px; font-size: 0.75rem; color: #888; border: 1px solid #444; border-radius: 4px; padding: 4px 8px; display: inline-block;">
+                    ⚙️ ENGINE: gemini-3.1-flash-lite-preview
+                </div>
             </div>
 
             <!-- Question State -->
@@ -126,15 +129,18 @@
     <div class="ai-concierge" id="aiConcierge">
         <div class="ai-panel" id="aiPanel">
             <div class="ai-panel-header">
-                <div class="ai-panel-title">
-                    <span class="ai-panel-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                            <path
-                                d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
-                        </svg>
-                    </span>
-                    <span>Sommelier AI</span>
+                <div class="ai-panel-title" style="display: flex; flex-direction: column;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span class="ai-panel-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path
+                                    d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+                            </svg>
+                        </span>
+                        <span>Sommelier AI</span>
+                    </div>
+                    <span style="font-size: 0.65rem; color: #999; margin-top: 2px; font-weight: normal; letter-spacing: 0.5px;">⚙️ ENGINE: gemini-3.1-pro-preview</span>
                 </div>
                 <button class="ai-panel-close" id="aiClose">✕</button>
             </div>
