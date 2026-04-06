@@ -250,12 +250,6 @@
 
     // ========== QUIZ FLOW ==========
     function openQuiz() {
-        const apiKey = getApiKey();
-        if (!apiKey) {
-            const key = prompt("SommelierPRO AIを利用するためのGemini APIキーを入力してください:");
-            if (key) localStorage.setItem('sommelier_api_key', key.trim());
-            else return;
-        }
         elements.overlay.classList.remove('hidden');
 
         if (!quizState.currentUser) {
@@ -279,17 +273,19 @@
         loginDiv.innerHTML = `
             <div class="quiz-setup-inner">
                 <h2 class="quiz-setup-title">Deviens sommelier</h2>
-                <p class="quiz-setup-subtitle">受講者を選択、または新規登録してください</p>
+                <p class="quiz-setup-subtitle">割り当てられたユーザー名と提供されたAPIキーを入力してください</p>
 
-                <div class="quiz-user-list" id="quizUserList">
-                    <div class="quiz-loading-text">受講者リストを読み込み中...</div>
-                </div>
-
-                <div class="quiz-login-divider">または</div>
-
-                <div class="quiz-register-row">
-                    <input type="text" id="quizNewUserName" placeholder="新規受講者の名前を入力" class="quiz-input">
-                    <button id="quizRegisterBtn" class="quiz-btn-secondary">登録</button>
+                <div class="quiz-register-row" style="flex-direction: column; gap: 12px; margin-top: 24px;">
+                    <div style="width: 100%;">
+                        <label for="quizLoginName" style="font-size: 13px; color: #666; font-weight: 500; margin-bottom: 4px; display: block;">ユーザー名 (ローマ字)</label>
+                        <input type="text" id="quizLoginName" placeholder="例: Iga" class="quiz-input" style="width: 100%; box-sizing: border-box;">
+                    </div>
+                    <div style="width: 100%;">
+                        <label for="quizLoginKey" style="font-size: 13px; color: #666; font-weight: 500; margin-bottom: 4px; display: block;">Gemini API Key</label>
+                        <input type="password" id="quizLoginKey" placeholder="AIzaSy..." class="quiz-input" style="width: 100%; box-sizing: border-box;">
+                    </div>
+                    <button id="quizLoginBtn" class="quiz-btn-primary" style="margin-top: 8px;">ログインして開始する</button>
+                    <p id="quizLoginError" style="color: #D4002A; font-size: 13px; text-align: center; display: none;">ユーザー名とAPI Keyを入力してください。</p>
                 </div>
             </div>
         `;
@@ -297,64 +293,37 @@
         elements.closeBtn.insertAdjacentElement('afterend', loginDiv);
         showStateByElement(loginDiv);
 
-        // Load users from GAS
-        loadUserList();
+        const handleLogin = () => {
+            const name = document.getElementById('quizLoginName').value.trim();
+            const apiKey = document.getElementById('quizLoginKey').value.trim();
+            const errorEl = document.getElementById('quizLoginError');
 
-        // Register button
-        document.getElementById('quizRegisterBtn').addEventListener('click', async () => {
-            const nameInput = document.getElementById('quizNewUserName');
-            const name = nameInput.value.trim();
-            if (!name) return;
-            await registerUser(name);
-        });
+            if (!name || !apiKey || !apiKey.startsWith('AIza')) {
+                errorEl.style.display = 'block';
+                errorEl.textContent = !apiKey.startsWith('AIza') && apiKey ? "無効な API Key です。" : "ユーザー名とAPI Keyを入力してください。";
+                return;
+            }
+            
+            errorEl.style.display = 'none';
+            
+            // Save user and API key
+            const uid = 'usr_' + Date.now().toString(36);
+            const userObj = { user_id: uid, name: name };
+            quizState.currentUser = userObj;
+            localStorage.setItem('sommelier_quiz_user', JSON.stringify(userObj));
+            localStorage.setItem('sommelier_api_key', apiKey);
+            
+            createSetupScreen();
+            loadTodayProgress().then(() => renderTodayProgress());
+            showState('setup');
+        };
 
+        // Login button
+        document.getElementById('quizLoginBtn').addEventListener('click', handleLogin);
         // Enter key
-        document.getElementById('quizNewUserName').addEventListener('keydown', async (e) => {
-            if (e.key === 'Enter') {
-                const name = e.target.value.trim();
-                if (name) await registerUser(name);
-            }
+        document.getElementById('quizLoginKey').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') handleLogin();
         });
-    }
-
-    async function loadUserList() {
-        const container = document.getElementById('quizUserList');
-        if (!GAS_URL) {
-            container.innerHTML = '<div class="quiz-loading-text">バックエンド未設定</div>';
-            return;
-        }
-        try {
-            const res = await fetch(`${GAS_URL}?action=getUsers`);
-            const data = await res.json();
-            if (data.status === 'success' && data.data.users.length > 0) {
-                const safeUsers = data.data.users.filter(u => !u.name.startsWith('AIza'));
-                container.innerHTML = safeUsers.map(u => {
-                    const meta = typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[u.name] ? SOMMELIER_USERS[u.name] : null;
-                    return `
-                    <button class="quiz-user-card" data-uid="${u.user_id}" data-name="${u.name}">
-                        ${meta && meta.photo 
-                            ? `<img src="${meta.photo}" alt="${u.name}" class="user-avatar-img">` 
-                            : `<span class="user-avatar">${u.name.charAt(0)}</span>`
-                        }
-                        <div class="user-card-info">
-                            <span class="user-name">${u.name}</span>
-                            ${meta && meta.status ? `<span class="user-status-badge">${meta.status}</span>` : ''}
-                        </div>
-                    </button>
-                    `;
-                }).join('');
-
-                container.querySelectorAll('.quiz-user-card').forEach(card => {
-                    card.addEventListener('click', () => {
-                        selectUser(card.dataset.uid, card.dataset.name);
-                    });
-                });
-            } else {
-                container.innerHTML = '<div class="quiz-loading-text">まだ受講者がいません。下から登録してください。</div>';
-            }
-        } catch (e) {
-            container.innerHTML = '<div class="quiz-loading-text">読み込みに失敗しました</div>';
-        }
     }
 
     async function registerUser(name) {
