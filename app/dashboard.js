@@ -114,7 +114,10 @@
                     <div style="display:flex; flex-wrap:wrap; gap:8px;">
                         ${d.pair_sessions.map(p => `
                             <div style="display:flex; align-items:center; gap:6px; background:#f8f4eb; border:1px solid #e8d5a3; border-radius:8px; padding:6px 12px;">
-                                <span style="width:28px; height:28px; border-radius:50%; background:linear-gradient(135deg,#C9A94E,#D4B861); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px;">${p.name.charAt(0)}</span>
+                                ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[p.name]?.photo 
+                                    ? `<img src="${SOMMELIER_USERS[p.name].photo}" alt="${p.name}" style="width:28px; height:28px; border-radius:50%; object-fit:cover; border:1px solid #D4B861;">` 
+                                    : `<span style="width:28px; height:28px; border-radius:50%; background:linear-gradient(135deg,#C9A94E,#D4B861); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px;">${p.name.charAt(0)}</span>`
+                                }
                                 <div>
                                     <div style="font-weight:600; font-size:13px;">${p.name}</div>
                                     <div style="font-size:11px; color:#8B6914;">${p.count}回ペア学習</div>
@@ -129,7 +132,11 @@
         body.innerHTML = `
             <!-- Header -->
             <div class="dash-user-header">
-                <span class="dash-user-avatar">${(d.user_name || '?').charAt(0)}</span>
+                <span class="dash-user-avatar" style="overflow:hidden">
+                    ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[d.user_name]?.photo 
+                        ? `<img src="${SOMMELIER_USERS[d.user_name].photo}" alt="${d.user_name}" style="width:100%;height:100%;object-fit:cover;">` 
+                        : (d.user_name || '?').charAt(0)}
+                </span>
                 <div class="dash-user-info">
                     <div class="dash-user-name">${d.user_name}</div>
                     <div class="dash-user-sub">Learning Analytics</div>

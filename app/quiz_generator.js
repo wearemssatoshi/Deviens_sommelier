@@ -673,7 +673,10 @@ ${contextText}
             <div class="pair-reflection">
                 <div class="pair-reflection-label">出題してくれた人</div>
                 <div class="pair-reflection-partner">
-                    <span class="pair-partner-avatar">${(quizState.pairPartner || '?').charAt(0)}</span>
+                    ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[quizState.pairPartner]?.photo 
+                        ? `<img src="${SOMMELIER_USERS[quizState.pairPartner].photo}" class="pair-partner-avatar" style="border:none; object-fit:cover;">`
+                        : `<span class="pair-partner-avatar">${(quizState.pairPartner || '?').charAt(0)}</span>`
+                    }
                     <span class="pair-partner-name">${quizState.pairPartner}</span>
                 </div>
                 <div class="pair-reflection-thanks">一緒に学んでくれてありがとう！この記憶が、あなたの力になる。</div>
