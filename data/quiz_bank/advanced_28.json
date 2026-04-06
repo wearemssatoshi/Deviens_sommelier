@@ -1,0 +1,442 @@
+[
+  {
+    "question": "長野県の千曲川ワインバレーにおける各地区の土壌や地理的特徴に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "上田市の左岸は細粒褐色森林土と呼ばれる粘土質が多く、塩田のあたりには一部海底が隆起した区画もある。",
+      "東御市の左岸は火山灰由来の黒ボクが多く、右岸は粘土質が多い。",
+      "高山村は千曲川の右岸、長野盆地（別名善光寺平）東端の扇状地に位置する。",
+      "坂城町は標高900mのワイン特区に認定され、2018年にワイナリーが初めて設立されている。"
+    ],
+    "correct_index": 1,
+    "explanation": "参照テキストによると、東御市は「左岸の八重原台地は粘土質が多いが、右岸は火山灰由来の黒ボクが多く」と記載されており、選択肢Bの記述は左右岸が逆になっているため誤りです。"
+  },
+  {
+    "question": "2022年9月2日の政令により、A.O.C. Arboisのヴァン・ジョーヌ(Vin Jaune)において、主要品種Savagninに加えて少量（作付け5%、醸造10%まで）の使用が認められるようになった品種として、該当しないものを1つ選びなさい。",
+    "choices": [
+      "Enfariné アンファリネ",
+      "Trousseau トゥルソー",
+      "Granget グランジェ",
+      "Savagnin サヴァニャン"
+    ],
+    "correct_index": 1,
+    "explanation": "2022年の法改正により、A.O.C. Arboisのヴァン・ジョーヌ(Vin Jaune)には、サヴァニャン(Savagnin)に加え、アンファリネ(Enfariné)とグランジェ(Granget)が少量認められることになりました。トゥルソー(Trousseau)はジュラ地方の主要な黒ブドウ品種であり、この規定には含まれません。"
+  },
+  {
+    "question": "南ローヌ地方において、それまでA.O.C. Côtes du Rhône Villagesの地理的名称の一つであったが、独立したクリュとしてA.O.C.に昇格したCairanneの昇格年を1つ選びなさい。",
+    "choices": [
+      "2006年",
+      "2007年",
+      "2016年",
+      "2018年"
+    ],
+    "correct_index": 2,
+    "explanation": "A.O.C.ケランヌ(Cairanne)は、2016年にコート・デュ・ローヌ・ヴィラージュ(Côtes du Rhône Villages)から独立し、単独のA.O.C.（クリュ）に昇格しました。赤と白ワインが認められています。"
+  },
+  {
+    "question": "山梨県甲州市勝沼町に位置し、勝沼地区とは斜面の向きが正反対となる祝地区の主な斜面の向きとして適切なものを1つ選びなさい。",
+    "choices": [
+      "北から北西斜面",
+      "南から南西斜面",
+      "東向き斜面",
+      "西向き斜面"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「祝地区は勝沼地区とは斜面の向きが正反対で北から北西斜面」と記載されています。なお、勝沼地区は南から南西斜面です。"
+  },
+  {
+    "question": "ロンバルディア州のD.O.C.G. フランチャコルタ（Franciacorta）における、各タイプの最低瓶内熟成期間の組み合わせとして適切なものを次の中から選びなさい。",
+    "choices": [
+      "ロゼ（Rosé） - 24ヵ月、ミッレジマート（Millesimato） - 30ヵ月、リゼルヴァ（Riserva） - 60ヵ月",
+      "サテン（Satèn） - 18ヵ月、ミッレジマート（Millesimato） - 24ヵ月、リゼルヴァ（Riserva） - 48ヵ月",
+      "ロゼ（Rosé） - 30ヵ月、ミッレジマート（Millesimato） - 36ヵ月、リゼルヴァ（Riserva） - 60ヵ月",
+      "サテン（Satèn） - 24ヵ月、ミッレジマート（Millesimato） - 30ヵ月、リゼルヴァ（Riserva） - 50ヵ月"
+    ],
+    "correct_index": 0,
+    "explanation": "フランチャコルタ（Franciacorta）の最低瓶内熟成期間は、ノン・ヴィンテージが18ヵ月、ロゼ（Rosé）とサテン（Satèn）が24ヵ月、ミッレジマート（Millesimato）が30ヵ月、リゼルヴァ（Riserva）が60ヵ月と規定されているため、選択肢Aが正しい組み合わせです。"
+  },
+  {
+    "question": "中国の白酒 (Baijiu) における香型と代表的な銘柄の組み合わせとして、適切なものを次の中から選びなさい。",
+    "choices": [
+      "A. 濃香型 (Nongxiang) - 五糧液 (Wuliangye)",
+      "B. 米香型 (Mixiang) - 瀘州老窖 (Luzhou Laojiao)",
+      "C. 清香型 (Qingxiang) - 茅台酒 (Maotaijiu)",
+      "D. 茅台型 (Maotai) - 汾酒 (Fenjiu)"
+    ],
+    "correct_index": 0,
+    "explanation": "中国の白酒は香りのタイプによって分類されます。濃香型 (Nongxiang) の代表的な銘柄として四川省の五糧液 (Wuliangye) や瀘州老窖 (Luzhou Laojiao) が挙げられます。茅台酒は茅台型、汾酒は清香型、桂林三花酒は米香型に分類されます。"
+  },
+  {
+    "question": "ブルゴーニュ地方において、ヨンヌ県のトネールなど6つの町村に認められ、白ワインのみが生産されるA.O.C. Bourgogne Tonnerreが制定された年号として適切なものを次の中から選びなさい。",
+    "choices": [
+      "1998年",
+      "2000年",
+      "2006年",
+      "2016年"
+    ],
+    "correct_index": 2,
+    "explanation": "A.O.C. Bourgogne Tonnerreは2006年に制定された、シャルドネ(Chardonnay)種から造られる白ワインのみの地理的名称付きA.O.C.ブルゴーニュです。参照テキストには「2006年に白のみ認められている」と記載があります。ちなみに1998年はBouzeronの昇格年、2016年はCairanneの昇格年です。"
+  },
+  {
+    "question": "ボージョレ(Beaujolais)地区の多様な地質遺産が評価され、ユネスコの世界ジオパークに登録された年として適切なものを次の中から選びなさい。",
+    "choices": [
+      "2007年",
+      "2016年",
+      "2018年",
+      "2021年"
+    ],
+    "correct_index": 2,
+    "explanation": "ボージョレ地区は、北部の花崗岩土壌だけでなく、南部の石灰岩や泥灰岩、火山性土壌など多様な地質遺産が認められ、2018年にユネスコの世界ジオパークに登録されました。"
+  },
+  {
+    "question": "日本の酒税法が改正され、果実酒のカテゴリーでオークチップ (Oak chip) を浸漬して香味を浸出させることが認められた年を1つ選びなさい。",
+    "choices": [
+      "A. 2006年",
+      "B. 2018年",
+      "C. 2011年",
+      "D. 2023年"
+    ],
+    "correct_index": 1,
+    "explanation": "従来、日本ではオークチップを浸漬したワインは甘味果実酒に分類されていましたが、2018年4月1日の酒税法改正により、果実酒のカテゴリーでオークチップの使用が認められるようになりました。なお、EUでオークチップの使用が認可されたのは2006年です。"
+  },
+  {
+    "question": "フリウリ＝ヴェネツィア・ジュリア州において、イタリア語とフリウリ方言以外に州の公用語として認められている言語の組み合わせとして正しいものを1つ選びなさい。",
+    "choices": [
+      "フランス語、ドイツ語",
+      "スロヴェニア語、ドイツ語",
+      "ドイツ語、クロアチア語",
+      "スロヴェニア語、オーストリア語"
+    ],
+    "correct_index": 1,
+    "explanation": "フリウリ＝ヴェネツィア・ジュリア州は歴史的経緯から多様な文化が共存しており、イタリア語、フリウリ方言に加え、隣接するスロヴェニアの公用語であるスロヴェニア語と、歴史的に関係の深いドイツ語が州の公用語として認められています。"
+  },
+  {
+    "question": "マコネ地区のA.O.C. MâconとA.O.C. Mâcon-Villagesの規定に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "Mâcon-Villagesはシャルドネ(Chardonnay)から造られる白ワインにのみ与えられる。",
+      "Mâconの白とロゼ、Mâcon-Villagesは \"Primeur\" や \"Nouveau\" の表記が可能である。",
+      "Mâcon-Villagesの最大収量は68hl/haであり、Mâconの70hl/haよりも厳しい。",
+      "Mâcon-Villagesは単一の村名を意味し、その村で収穫されたブドウのみで造られる。"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C. Mâcon-Villagesは、A.O.C.マコンが認められている89市町村から7つの村を除いたエリアで生産される白ワインに与えられるA.O.C.であり、単一の村名を意味するものではありません。地理的表示付きA.O.C.マコンとして27の村名が認められていますが、それはMâcon-Villagesとは別の規定です。"
+  },
+  {
+    "question": "2019年に温暖化対策としてA.O.C.ボルドー(Bordeaux)およびボルドー・シュペリウール(Bordeaux Supérieur)で導入が決定された補助品種のうち、赤ワイン用に認められたものを1つ選びなさい。",
+    "choices": [
+      "Alvarinho アルヴァリーニョ",
+      "Souvignier Gris スーヴィニエ・グリ",
+      "Marselan マルスラン",
+      "Liliolila リリオリラ"
+    ],
+    "correct_index": 2,
+    "explanation": "温暖化対策としてボルドーで導入が検討・承認された新たな補助品種のうち、赤ワイン用に認められたのはアリナルノア(Arinarnoa)、カステ(Castets)、マルスラン(Marselan)、トゥリガ・ナシオナル(Touriga Nacional)、ヴィドック(Vidoc)です。マルスランはカベルネ・ソーヴィニヨンとグルナッシュの交配品種です。他の選択肢は白ワイン用に認められた品種です。"
+  },
+  {
+    "question": "ジョージアのカヘティ (Kakheti) 地方に位置するP.D.O. Tibaaniのワインが生産され始めた年号として正しいものを次の中から選びなさい。",
+    "choices": [
+      "1948年",
+      "1926年",
+      "1962年",
+      "1977年"
+    ],
+    "correct_index": 0,
+    "explanation": "ジョージアのP.D.O.であるティバアニ (Tibaani) は、アラザニ (Alazani) 川右岸に位置し、そのワインは1948年から生産されています。伝統的製法で造られる琥珀色のワインが特徴です。"
+  },
+  {
+    "question": "グラスに注がれたスパークリングワインの泡を抜くために使用される「バブル・カッター」のフランス語表記として適切なものを次の中から選びなさい。",
+    "choices": [
+      "A. Tastevin",
+      "B. Alcometre",
+      "C. Petit fouet a champagne",
+      "D. Sechoir a decanteur"
+    ],
+    "correct_index": 2,
+    "explanation": "「バブル・カッター」のフランス語表記は Petit fouet a champagne です。Tastevin は利き酒用銀杯、Alcometre はアルコール度数計、Sechoir a decanteur はデカンター・ドライヤーを指します。"
+  },
+  {
+    "question": "北部ローヌ地方のA.O.C. Côte-Rôtieにおいて、主要品種Syrahに混醸が認められているViognierの最大比率として正しいものを1つ選びなさい。",
+    "choices": [
+      "10%",
+      "20%",
+      "15%",
+      "5%"
+    ],
+    "correct_index": 1,
+    "explanation": "A.O.C. コート・ロティ(Côte-Rôtie)では、主要品種であるシラー(Syrah)に対し、白ブドウのヴィオニエ(Viognier)を最大20%まで混植混醸することが認められています。これにより、ワインに華やかな香りと滑らかさが加わるとされています。"
+  },
+  {
+    "question": "オーク樽 (Oak barrel) の内面をトーストすることで生成され、クローブ (Clove) やナツメグ (Nutmeg) の香りの要因となる化合物を次の中から選びなさい。",
+    "choices": [
+      "A. Eugenol",
+      "B. Vanillin",
+      "C. Guaiacol",
+      "D. Isobutyl Methoxypyrazine"
+    ],
+    "correct_index": 0,
+    "explanation": "Eugenolは、オーク樽をトーストする過程で生成される化合物で、クローブやナツメグといったスパイス香をワインに与えます。Vanillinはバニラ香、Guaiacolはスモーキーな香り、Isobutyl Methoxypyrazineはブドウ由来のピーマン香の成分です。"
+  },
+  {
+    "question": "ラングドック・ルーション地方の一部であるルーション地方が、ピレネー条約によってカタルーニャ君主国からフランス王国に割譲された年号として正しいものを1つ選びなさい。",
+    "choices": [
+      "1659年",
+      "1475年",
+      "1789年",
+      "1855年"
+    ],
+    "correct_index": 0,
+    "explanation": "ルーション地方は、1659年に締結されたピレネー条約により、スペイン（カタルーニャ君主国）からフランス王国へと割譲されました。これにより、現在のフランスの国境線がほぼ確定しました。"
+  },
+  {
+    "question": "コート・ド・ボーヌ地区のA.O.C. Santenay Rougeにおいて、混植の場合に限りPinot Noir種に15%まで混醸が認められているブドウ品種として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "Aligoté アリゴテ",
+      "Chardonnay シャルドネ",
+      "Pinot Blanc ピノ・ブラン",
+      "Pinot Gris ピノ・グリ"
+    ],
+    "correct_index": 0,
+    "explanation": "A.O.C. Santenayの赤は、ピノ・ノワール(Pinot Noir)を主体としますが、規定上、混植に限り15%までシャルドネ(Chardonnay)、ピノ・ブラン(Pinot Blanc)、ピノ・グリ(Pinot Gris)の混醸が認められています。アリゴテ(Aligoté)はこの規定に含まれていません。"
+  },
+  {
+    "question": "バジリカータ州のD.O.C.G.、アリアニコ・デル・ヴルトゥレ・スペリオーレ（Aglianico del Vulture Superiore）のリゼルヴァ（Riserva）に定められている最低熟成期間として正しいものを1つ選びなさい。",
+    "choices": [
+      "総熟成期間3年、うち木樽熟成12ヵ月と瓶内熟成12ヵ月",
+      "総熟成期間4年、うち木樽熟成12ヵ月と瓶内熟成12ヵ月",
+      "総熟成期間4年、うち木樽熟成24ヵ月と瓶内熟成6ヵ月",
+      "総熟成期間4年、うち木樽熟成24ヵ月と瓶内熟成12ヵ月"
+    ],
+    "correct_index": 3,
+    "explanation": "アリアニコ・デル・ヴルトゥレ・スペリオーレ・リゼルヴァ（Aglianico del Vulture Superiore Riserva）は、4年間の熟成が必要で、その内訳は木樽熟成24ヵ月と瓶内熟成12ヵ月です。ノーマルは2年間の熟成（木樽12ヵ月、瓶内12ヵ月）が規定されています。"
+  },
+  {
+    "question": "ラングドック地方のA.O.C. Malepère Rougeに関する規定として、正しいものを1つ選びなさい。",
+    "choices": [
+      "主要品種はCabernet Franc カベルネ・フランで、40%以上使用する。",
+      "主要品種はSyrah シラーで、50%以上使用する。",
+      "主要品種はGrenache グルナッシュで、40%以上使用する。",
+      "主要品種はMerlot メルロで、40%以上使用する。"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C. Malepèreの赤ワインは、主要品種がメルロ(Merlot)と規定されており、ブレンド全体の40%以上を占めなければなりません。ちなみに、ロゼの主要品種はカベルネ・フラン(Cabernet Franc)で、こちらも40%以上の使用が規定されています。"
+  },
+  {
+    "question": "ドイツのWürttemberg地方において、赤ワイン用品種の中で最も栽培面積の大きいブドウ品種を1つ選びなさい。",
+    "choices": [
+      "Lemberger",
+      "Spätburgunder",
+      "Schwarzriesling",
+      "Trollinger"
+    ],
+    "correct_index": 3,
+    "explanation": "ドイツのWürttemberg地方は赤ワイン用品種の栽培比率が高いことで知られています。その中で最も栽培面積が大きいのはTrollinger (16.3%) であり、次いでLemberger (15.4%)、Spätburgunder (11.4%)、Schwarzriesling (10.3%) と続きます。"
+  },
+  {
+    "question": "オーストリアのWagram地方で重要な品種とされるNeuburgerの交配として正しいものを次の中から選びなさい。",
+    "choices": [
+      "Grüner Veltliner × Silvaner",
+      "St. Laurent × Blaufränkisch",
+      "Roter Veltliner × Traminer",
+      "Roter Veltliner × Silvaner"
+    ],
+    "correct_index": 3,
+    "explanation": "オーストリアの品種Neuburgerは、Roter VeltlinerとSilvanerの自然交配によって生まれたとされています。特にWachauとThermenregionで重要な品種とされています。"
+  },
+  {
+    "question": "EUのリキュール規定において、Creme de Cassis と表示するために要求される最低糖分量として適切なものを次の中から選びなさい。",
+    "choices": [
+      "A. 1Lあたり100g以上",
+      "B. 1Lあたり150g以上",
+      "C. 1Lあたり250g以上",
+      "D. 1Lあたり400g以上"
+    ],
+    "correct_index": 3,
+    "explanation": "EUの規定では、リキュールは1Lあたり100g以上の糖分を含むものとされています。Creme de の呼称を使用するには通常1Lあたり250g以上の糖分が必要ですが、Creme de Cassis に限り、例外的に1Lあたり400g以上の糖分を含有することが義務付けられています。"
+  },
+  {
+    "question": "サヴォワ地方のA.O.C. Seyssel Mousseuxにおいて、澱の上での瓶内熟成期間として規定されている最低月数を1つ選びなさい。",
+    "choices": [
+      "9ヵ月",
+      "12ヵ月",
+      "15ヵ月",
+      "24ヵ月"
+    ],
+    "correct_index": 0,
+    "explanation": "A.O.C. セイセル・ムスー(Seyssel Mousseux)における瓶内熟成期間は、澱の上で最低9ヵ月以上と規定されています。これはシャンパーニュのノン・ヴィンテージの最低熟成期間(15ヵ月、うち澱との接触12ヵ月)よりも短い規定です。"
+  },
+  {
+    "question": "ピエモンテ州のD.O.C.G. バローロ（Barolo）に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "生産地域はクーネオ（Cuneo）県に属する11のコムーネ（Comune）に限定されている。",
+      "リゼルヴァ（Riserva）の法定熟成期間は62ヵ月以上で、そのうち木樽熟成は最低24ヵ月と定められている。",
+      "法定熟成期間は収穫年の11月1日より起算して38ヵ月以上で、そのうち18ヵ月は木樽での熟成が義務付けられている。",
+      "キナで風味付けしたアロマタイズド・ワインであるバローロ・キナート（Barolo Chinato）の生産も認められている。"
+    ],
+    "correct_index": 1,
+    "explanation": "バローロ・リゼルヴァ（Barolo Riserva）の法定熟成期間は62ヵ月以上と定められていますが、そのうちの木樽熟成期間について参照テキストに具体的な記述はありません（ノーマルは18ヵ月）。「木樽熟成は最低24ヵ月」という記述は誤りです。"
+  },
+  {
+    "question": "九州地方のワインおよびブドウ栽培の歴史に関する記述として、適切なものを次の中から選びなさい。",
+    "choices": [
+      "1950年、永友百二が山形県よりキャンベル・アーリー (Campbell Early) の苗を入手し、宮崎県でのブドウ栽培が始まった。",
+      "九州初のワイナリーは1972年に熊本県で設立された。",
+      "大分県安心院町に国営総合開発パイロット事業の一環でブドウ園が開園したのは1975年である。",
+      "鹿児島県では1881年にブドウの植栽とワインの醸造計画が成功裏に実行された。"
+    ],
+    "correct_index": 0,
+    "explanation": "参照テキストには「宮崎県では、50年に永友百二が、山形県よりキャンベル・アーリーの苗を入手し、栽培を始めたのがブドウ栽培の始まりになる」とあり、この記述は正しいです。選択肢Bは福岡県、Cは1965年、Dは計画が頓挫したため、それぞれ誤りです。"
+  },
+  {
+    "question": "新潟県で生産されるワイン用ブドウの生産量上位3品種の正しい組み合わせを次の中から選びなさい。",
+    "choices": [
+      "マスカット・ベーリーA (Muscat Bailey A), メルロ (Merlot), シャルドネ (Chardonnay)",
+      "メルロ (Merlot), マスカット・ベーリーA (Muscat Bailey A), ケルナー (Kerner)",
+      "メルロ (Merlot), マスカット・ベーリーA (Muscat Bailey A), シャルドネ (Chardonnay)",
+      "メルロ (Merlot), シャルドネ (Chardonnay), カベルネ・ソーヴィニヨン (Cabernet Sauvignon)"
+    ],
+    "correct_index": 2,
+    "explanation": "参照テキストによると、新潟県のワイン用ブドウ生産量の上位は、1位がメルロ (Merlot) 33t、2位がマスカット・ベーリーA (Muscat Bailey A) 29t、3位がシャルドネ (Chardonnay) 10tの順であるため、Cが正しい組み合わせです。"
+  },
+  {
+    "question": "ワイン醸造に関する用語とそのフランス語表記の組み合わせとして、誤っているものを1つ選びなさい。",
+    "choices": [
+      "A. 除梗 - Égrappage",
+      "B. 破砕 - Forage",
+      "C. 果醪 - Moût",
+      "D. 主発酵 - Fermentation alcoolique"
+    ],
+    "correct_index": 1,
+    "explanation": "「破砕」を意味するフランス語は Foulage です。選択肢Bの Forage は綴りが誤っています。「除梗」は Égrappage、「果醪」は Moût、「主発酵」は Fermentation alcoolique と表記します。"
+  },
+  {
+    "question": "フランスの白ブドウ品種Ugni Blancのシノニム（別名）として、シャラント地方などで用いられるものを1つ選びなさい。",
+    "choices": [
+      "Beaunois ボーノワ",
+      "Melon d'Arbois ムロン・ダルボワ",
+      "Blanc Fumé ブラン・フュメ",
+      "Saint-Émilion (des Charentes) サンテミリオン (デ・シャラント)"
+    ],
+    "correct_index": 3,
+    "explanation": "ユニ・ブラン(Ugni Blanc)は、特にコニャックの産地であるシャラント地方において、サンテミリオン(Saint-Émilion)またはサンテミリオン・デ・シャラント(Saint-Émilion des Charentes)というシノニムで呼ばれます。Beaunoisはシャルドネ、Blanc Fuméはソーヴィニヨン・ブランのシノニムです。"
+  },
+  {
+    "question": "中世モルドバ公Ștefan cel Mare (1433–1504年)の時代に、ブドウ畑や醸造、ワインセラーなどの管理をさせた役職の名称を1つ選びなさい。",
+    "choices": [
+      "Vinificator",
+      "Paharnic",
+      "Pivnicer",
+      "Viticultor"
+    ],
+    "correct_index": 1,
+    "explanation": "モルドバのワイン造りが最も盛んだったとされる中世のモルドバ公Ștefan cel Mareの時代、彼は「Paharnic」（「杯を持つ人」の意）という役職を定め、ブドウ畑、醸造、ワインセラーなどの管理をさせていました。"
+  },
+  {
+    "question": "チーズ D.O.P. Pecorino Romano に関する記述として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "A. 名前の由来となったのはラツィオ州 (Lazio) である。",
+      "B. 現在の生産の中心地はサルデーニャ島 (Sardegna) である。",
+      "C. タイプはハードタイプの非加熱圧搾である。",
+      "D. 主な原料乳は羊乳である。"
+    ],
+    "correct_index": 2,
+    "explanation": "Pecorino Romanoは羊乳を原料とするハードタイプのチーズですが、その製法は「加熱圧搾」です。「非加熱圧搾」ではないため、この選択肢は誤りです。名前はラツィオ州に由来しますが、現在では生産の大部分がサルデーニャ島で行われています。"
+  },
+  {
+    "question": "シャンパーニュ(Champagne)の甘辛度表示において、「Demi-Sec」に該当する残糖量の範囲として正しいものを1つ選びなさい。",
+    "choices": [
+      "12g/ℓ ～ 17g/ℓ",
+      "32g/ℓ ～ 50g/ℓ",
+      "17g/ℓ ～ 32g/ℓ",
+      "50g/ℓ以上"
+    ],
+    "correct_index": 1,
+    "explanation": "シャンパーニュの甘辛度表示でドゥミ・セック(Demi-Sec)は、残糖量が1リットルあたり32gから50gの範囲と規定されています。50g/ℓ以上はドゥー(Doux)に該当します。"
+  },
+  {
+    "question": "2022年にスペインのD.O.P.で初めてオレンジワインのカテゴリーを承認したTerra Alta D.O.において、そのカテゴリーの名称として適切なものを次の中から選びなさい。",
+    "choices": [
+      "Vi Taronja",
+      "Vins Brisats",
+      "Vi de Raïm Sencer",
+      "Vi de Pell"
+    ],
+    "correct_index": 1,
+    "explanation": "スペインのTerra Alta D.O.は2022年1月、スペインのD.O.P.として初めてオレンジワインのカテゴリーを承認しました。その名称は「Vins Brisats」です。カタルーニャ語で「Brisats」は果皮、種、果梗を意味し、これらを果汁に漬け込んで発酵させる製法に由来します。"
+  },
+  {
+    "question": "南西地方のA.O.C. Béarnの白ワインにおいて、50%以上の使用が義務付けられている主要品種を1つ選びなさい。",
+    "choices": [
+      "Gros Manseng グロ・マンサン",
+      "Petit Manseng プティ・マンサン",
+      "Courbu クルビュ",
+      "Raffiat de Moncade ラフィア・ド・モンカード"
+    ],
+    "correct_index": 3,
+    "explanation": "A.O.C. Béarnの白ワインは、ラフィア・ド・モンカード(Raffiat de Moncade)を50%以上使用することが規定されています。グロ・マンサン、プティ・マンサン、クルビュも使用が認められていますが、主要品種としての比率規定はラフィア・ド・モンカードにのみ設けられています。"
+  },
+  {
+    "question": "ドイツワインの品質等級Prädikatsweinに関する規定として、誤っているものを1つ選びなさい。",
+    "choices": [
+      "Kabinettの最低果汁糖度は生産地域とブドウ品種により70–85°Oechsle以上である。",
+      "SpätleseはKabinettよりも香り高く、味わいに深みのあるスタイルであることが期待される。",
+      "Beerenauslese, Trockenbeerenauslese, Eisweinの最低アルコール度数は7.0% vol.以上である。",
+      "Ausleseは完熟しているか、貴腐のついたブドウを用いなければならない。"
+    ],
+    "correct_index": 2,
+    "explanation": "ドイツのPrädikatsweinの規定において、Beerenauslese、Trockenbeerenauslese、Eisweinの最低アルコール度数は5.5% vol.以上と定められています。7.0% vol.以上は、その他のPrädikatswein（Kabinett, Spätlese, Ausleseなど）に適用される規定です。"
+  },
+  {
+    "question": "北海道で初めてワインが醸造された年と、その醸造所の名称の正しい組み合わせを1つ選びなさい。",
+    "choices": [
+      "1875年 - 札幌ブドウ園",
+      "1888年 - 花陵葡萄酒醸造場",
+      "1877年 - 開拓使葡萄酒醸造所",
+      "1876年 - 開拓使葡萄酒醸造所"
+    ],
+    "correct_index": 3,
+    "explanation": "参照テキストによると、北海道で初めてワインが造られたのは1876年であり、その場所は札幌に設立された「開拓使麦酒醸造所」の一画にあった「開拓使葡萄酒醸造所」です。1888年の「花陵葡萄酒醸造場」は、同醸造所が桂二郎に払い下げられた後の名称です。"
+  },
+  {
+    "question": "カラブリア州のビアンコ村で造られる甘口ワイン、グレーコ・ディ・ビアンコ（Greco di Bianco） D.O.P.の旧名として適切なものを次の中から選びなさい。",
+    "choices": [
+      "ファヴォリータ（Favorita）",
+      "プルチヌム（Pulcinum）",
+      "グレーコ・ディ・ジェラーチェ（Greco di Gerace）",
+      "プロセッコ（Prosecco）"
+    ],
+    "correct_index": 2,
+    "explanation": "グレーコ・ディ・ビアンコ（Greco di Bianco）は、以前はグレーコ・ディ・ジェラーチェ（Greco di Gerace）と呼ばれていた歴史あるワインです。ファヴォリータ（Favorita）はヴェルメンティーノ（Vermentino）のシノニム、プルチヌム（Pulcinum）はグレラ（Glera）の祖先とされる品種、プロセッコ（Prosecco）はグレラ（Glera）の旧名です。"
+  },
+  {
+    "question": "プロヴァンス地方のA.O.C. Cassisの白ワインにおいて、補助品種として認められているTerret Blancの比率の上限として正しいものを1つ選びなさい。",
+    "choices": [
+      "5%以下",
+      "10%以下",
+      "15%以下",
+      "20%以下"
+    ],
+    "correct_index": 0,
+    "explanation": "A.O.C. Cassisの白ワインの規定では、補助品種として認められているテレ・ブラン(Terret Blanc)の比率は全体の5%以下と定められています。主要品種はクレレット(Clairette)とマルサンヌ(Marsanne)で、この2品種の合計で60%以上を占める必要があります。"
+  },
+  {
+    "question": "オーストリアのWagram D.A.C.において、ドナウ (Donau) 川北側の畑にほぼすべてを占める土壌として適切なものを次の中から選びなさい。",
+    "choices": [
+      "原成岩 (Urgestein)",
+      "石灰質泥灰岩 (Kalkmergel)",
+      "レス (Loess)",
+      "火山性土壌 (Vulkanische Böden)"
+    ],
+    "correct_index": 2,
+    "explanation": "Wagram D.A.C.はドナウ川を挟んで南北に分かれています。北側の畑はほぼすべてがレス (Loess) 土壌で構成されており、ワインにメリハリを与えています。一方、南側は石灰質泥灰岩 (Kalkmergel) が主体となります。"
+  },
+  {
+    "question": "ギリシャのワイン産地における気候上の分類で、「大陸部」に該当しないものを1つ選びなさい。",
+    "choices": [
+      "ナウサ (Naoussa)",
+      "ネメア (Nemea)",
+      "ケファロニア (Kefalonia)",
+      "アミンデオ (Amyndeo)"
+    ],
+    "correct_index": 2,
+    "explanation": "ギリシャの気候上の分類では、アミンデオ (Amyndeo)、ナウサ (Naoussa)、ドラマ (Drama)、ネメア (Nemea)が「大陸部」に分類されます。一方、ケファロニア (Kefalonia)は、パロス (Paros)、サントリーニ (Santorini)、ロドス (Rhodes)島と共に「島部」に分類されます。"
+  }
+]
