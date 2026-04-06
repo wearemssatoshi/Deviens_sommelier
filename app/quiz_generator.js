@@ -4,18 +4,18 @@
  * Gemini 3.1 Pro Preview で問題生成、GASバックエンドで成績永続化
  */
 
-(function() {
+(function () {
     // ========== CONFIG ==========
     const QUIZ_COUNT = 10;
     const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent";
     const GAS_URL = "https://script.google.com/macros/s/AKfycbz7SNH0irHiarYDDzpJF1Jgr8UM8qX6Z4v-r_aGlQPIXTnx2cZaqkYrfixay4g37K1i_A/exec";
 
     const SESSIONS = [
-        { id: 'morning', label: '朝テスト',   icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>', desc: '出勤前・午前中のスキマ時間に' },
-        { id: 'break',   label: '休憩テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>', desc: '昼休み・休憩時間のリフレッシュに' },
+        { id: 'morning', label: '朝テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>', desc: '出勤前・午前中のスキマ時間に' },
+        { id: 'break', label: '休憩テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>', desc: '昼休み・休憩時間のリフレッシュに' },
         { id: 'evening', label: '帰り道テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>', desc: '帰宅途中・夜のまとめに' },
-        { id: 'extra',   label: '補習（無制限）', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>', desc: '1日に何度でも反復練習' },
-        { id: 'pair',    label: 'ペアモード', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>', desc: '仲間と一緒に学んでボーナスTOKEN獲得！' }
+        { id: 'extra', label: '補習（無制限）', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>', desc: '1日に何度でも反復練習' },
+        { id: 'pair', label: 'ペアモード', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>', desc: '仲間と一緒に学んでボーナスTOKEN獲得！' }
     ];
 
     // ========== DOM ELEMENTS ==========
@@ -98,9 +98,9 @@
 
     // ========== HALLUCINATION CHECK ==========
     function handleHallucinationCheck() {
-        const qText = quizState.questions.map((q, i) => `【第${i+1}問】\n問題: ${q.question}\n正解: ${q.choices[q.correct_index]}\n解説: ${q.explanation}`).join('\n\n');
+        const qText = quizState.questions.map((q, i) => `【第${i + 1}問】\n問題: ${q.question}\n正解: ${q.choices[q.correct_index]}\n解説: ${q.explanation}`).join('\n\n');
         const payload = `先ほど解いたクイズ（${quizState.selectedChapter?.title}）について、問題内容や解説に「事実の捏造（ハルシネーション）」や不適切な表現がないか精度検証をお願いします。\n\n${qText}`;
-        
+
         closeQuiz();
         document.dispatchEvent(new CustomEvent('open-ai-concierge', { detail: { initialPrompt: payload } }));
     }
@@ -120,15 +120,15 @@
             <div class="quiz-setup-inner">
                 <div class="quiz-user-bar">
                     <span class="quiz-user-greeting">
-                        ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[quizState.currentUser?.name]?.photo 
-                            ? `<img src="${SOMMELIER_USERS[quizState.currentUser?.name].photo}" alt="${quizState.currentUser?.name}" class="user-avatar-img">`
-                            : `<span class="user-avatar-sm">${(quizState.currentUser?.name || '?').charAt(0)}</span>`
-                        }
+                        ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[quizState.currentUser?.name]?.photo
+                ? `<img src="${SOMMELIER_USERS[quizState.currentUser?.name].photo}" alt="${quizState.currentUser?.name}" class="user-avatar-img">`
+                : `<span class="user-avatar-sm">${(quizState.currentUser?.name || '?').charAt(0)}</span>`
+            }
                         <div class="user-card-info" style="gap:1px; line-height: 1.1;">
                             <span style="font-weight:600; font-size:14px;">${quizState.currentUser?.name || 'ゲスト'}</span>
-                            ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[quizState.currentUser?.name]?.status 
-                                ? `<span class="user-status-badge" style="font-size:9px; padding: 1px 4px;">${SOMMELIER_USERS[quizState.currentUser?.name].status}</span>`
-                                : ''}
+                            ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[quizState.currentUser?.name]?.status
+                ? `<span class="user-status-badge" style="font-size:9px; padding: 1px 4px;">${SOMMELIER_USERS[quizState.currentUser?.name].status}</span>`
+                : ''}
                         </div>
                     </span>
                     <button class="quiz-switch-user" id="quizSwitchUser">変更</button>
@@ -330,16 +330,16 @@
                 errorEl.textContent = !apiKey.startsWith('AIza') && apiKey ? "無効な API Key です。" : "ユーザー名とAPI Keyを入力してください。";
                 return;
             }
-            
+
             errorEl.style.display = 'none';
-            
+
             // Save user and API key
             const uid = 'usr_' + Date.now().toString(36);
             const userObj = { user_id: uid, name: name };
             quizState.currentUser = userObj;
             localStorage.setItem('sommelier_quiz_user', JSON.stringify(userObj));
             localStorage.setItem('sommelier_api_key', apiKey);
-            
+
             createSetupScreen();
             loadTodayProgress().then(() => renderTodayProgress());
             showState('setup');
@@ -450,7 +450,7 @@
         }
     }
 
-    async function generateFromGemini(contextText) {
+    async function generateFromGemini(contextText, isFallback = false) {
         const apiKey = getApiKey();
 
         const promptText = `
@@ -481,42 +481,85 @@ ${contextText}
         const requestBody = {
             contents: [{ parts: [{ text: promptText }] }],
             generationConfig: {
-                temperature: 0.3
+                temperature: 0.3,
+                maxOutputTokens: 8192
             }
         };
 
-        const response = await fetch(`${API_URL}?key=${apiKey}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(requestBody)
-        });
+        const currentApiUrl = isFallback 
+            ? "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
+            : API_URL;
 
-        if (!response.ok) {
-            const err = await response.json();
-            throw new Error(err.error?.message || "API request failed");
-        }
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 90000); // 90秒でタイムアウト（10問一括生成は重いため十分な余裕を確保）
 
-        const data = await response.json();
-        const responseText = data.candidates[0].content.parts[0].text;
-
-        let parsedQuestions = [];
         try {
-            parsedQuestions = JSON.parse(responseText.trim());
-        } catch (e) {
-            const cleaned = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
-            parsedQuestions = JSON.parse(cleaned);
+            const response = await fetch(`${currentApiUrl}?key=${apiKey}`, {
+                method: 'POST',
+                signal: controller.signal,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(requestBody)
+            });
+            clearTimeout(timeoutId);
+
+            if (!response.ok) {
+                // HTTPエラー（503などJSON以外が返ってくるケース含む）
+                let errMsg = `API Error: ${response.status}`;
+                try {
+                    const err = await response.json();
+                    errMsg = err.error?.message || errMsg;
+                } catch (e) {
+                    errMsg += ' (Response is not JSON)';
+                }
+                throw new Error(errMsg);
+            }
+
+            const data = await response.json();
+            if (!data.candidates || !data.candidates[0]) {
+                throw new Error("Empty candidate in response");
+            }
+            const responseText = data.candidates[0].content.parts[0].text;
+
+            let parsedQuestions = [];
+            try {
+                // まず正規表現でJSON配列部分だけを抽出する（Markdown記法や挨拶等が混入しても堅牢にパースする）
+                const match = responseText.match(/\[\s*\{[\s\S]*\}\s*\]/);
+                if (match) {
+                    parsedQuestions = JSON.parse(match[0]);
+                } else {
+                    const cleaned = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
+                    parsedQuestions = JSON.parse(cleaned);
+                }
+            } catch (e) {
+                console.error("JSON parse error:", responseText);
+                throw new Error("Invalid format received from AI (JSON parse failed)");
+            }
+
+            if (!Array.isArray(parsedQuestions) || parsedQuestions.length === 0) {
+                throw new Error("Parsed zero questions.");
+            }
+
+            quizState.questions = parsedQuestions;
+            quizState.currentQuestionIndex = 0;
+            quizState.userAnswers = [];
+
+            showState('question');
+            renderQuestion(0);
+
+        } catch (error) {
+            clearTimeout(timeoutId);
+            console.error("Generation error:", error.message);
+            
+            // タイムアウトやサーバーエラーが発生し、かつまだフォールバックしていなければ安定版で再試行する
+            if (!isFallback) {
+                console.warn("[Fallback] Retrying with gemini-2.5-pro due to error/timeout...");
+                return generateFromGemini(contextText, true);
+            }
+
+            // フォールバックも失敗した場合はエラー画面へ
+            alert(`クイズ生成中にエラーが発生しました:\n${error.message}\n\nAPIが混み合っているか、タイムアウトしました。時間を置いて再度お試しください。`);
+            showState('setup');
         }
-
-        if (!Array.isArray(parsedQuestions) || parsedQuestions.length === 0) {
-            throw new Error("Invalid format received from AI");
-        }
-
-        quizState.questions = parsedQuestions;
-        quizState.currentQuestionIndex = 0;
-        quizState.userAnswers = [];
-
-        showState('question');
-        renderQuestion(0);
     }
 
     // ========== QUIZ UI ==========
@@ -673,10 +716,10 @@ ${contextText}
             <div class="pair-reflection">
                 <div class="pair-reflection-label">出題してくれた人</div>
                 <div class="pair-reflection-partner">
-                    ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[quizState.pairPartner]?.photo 
-                        ? `<img src="${SOMMELIER_USERS[quizState.pairPartner].photo}" class="pair-partner-avatar" style="border:none; object-fit:cover;">`
-                        : `<span class="pair-partner-avatar">${(quizState.pairPartner || '?').charAt(0)}</span>`
-                    }
+                    ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[quizState.pairPartner]?.photo
+                    ? `<img src="${SOMMELIER_USERS[quizState.pairPartner].photo}" class="pair-partner-avatar" style="border:none; object-fit:cover;">`
+                    : `<span class="pair-partner-avatar">${(quizState.pairPartner || '?').charAt(0)}</span>`
+                }
                     <span class="pair-partner-name">${quizState.pairPartner}</span>
                 </div>
                 <div class="pair-reflection-thanks">一緒に学んでくれてありがとう！この記憶が、あなたの力になる。</div>

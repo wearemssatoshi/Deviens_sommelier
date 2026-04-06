@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const concierge = document.getElementById('aiConcierge');
         isAiOpen = true;
         concierge.classList.add('open');
-        
+
         // Update nav item state
         document.querySelectorAll('.bottom-nav-item').forEach(i => i.classList.remove('active'));
         document.getElementById('navAi')?.classList.add('active');
@@ -213,37 +213,65 @@ async function embedQuery(text) {
 
 
 // ---- Gemini Direct Call ----
-async function callGeminiDirect(systemPrompt, userQuery) {
+async function callGeminiDirect(systemPrompt, userQuery, isFallback = false) {
     const apiKey = getApiKey();
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent?key=${apiKey}`;
+    const currentModel = isFallback ? "gemini-2.5-pro" : "gemini-3.1-pro-preview";
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${currentModel}:generateContent?key=${apiKey}`;
 
     // これまでの会話履歴に今回のユーザー発言を追加
     const contentsObj = [...conversationHistory];
     contentsObj.push({ role: 'user', parts: [{ text: userQuery }] });
 
-    const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            systemInstruction: { parts: [{ text: systemPrompt }] },
-            contents: contentsObj,
-            generationConfig: { temperature: 0.2, maxOutputTokens: 4096 },
-        }),
-    });
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 60000); // 60秒タイムアウト（会話履歴付き応答生成のため余裕を確保）
 
-    const data = await res.json();
-    if (data.error) throw new Error(data.error.message);
-    
-    const answer = data.candidates[0].content.parts[0].text;
-    
-    // 履歴に保存（直近10ターン分＝20メッセージを残す）
-    conversationHistory.push({ role: 'user', parts: [{ text: userQuery }] });
-    conversationHistory.push({ role: 'model', parts: [{ text: answer }] });
-    if (conversationHistory.length > 20) {
-        conversationHistory = conversationHistory.slice(conversationHistory.length - 20);
+    try {
+        const res = await fetch(url, {
+            method: 'POST',
+            signal: controller.signal,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+                contents: contentsObj,
+                generationConfig: { temperature: 0.2, maxOutputTokens: 4096 },
+            }),
+        });
+        clearTimeout(timeoutId);
+
+        if (!res.ok) {
+            let errMsg = `API Error: ${res.status}`;
+            try {
+                const errJson = await res.json();
+                errMsg = errJson.error?.message || errMsg;
+            } catch (e) {
+                errMsg += ' (Response is not JSON)';
+            }
+            throw new Error(errMsg);
+        }
+
+        const data = await res.json();
+        if (data.error) throw new Error(data.error.message);
+        if (!data.candidates || !data.candidates[0]) throw new Error("Empty candidate in response");
+        
+        const answer = data.candidates[0].content.parts[0].text;
+        
+        // 履歴に保存（直近10ターン分＝20メッセージを残す）
+        conversationHistory.push({ role: 'user', parts: [{ text: userQuery }] });
+        conversationHistory.push({ role: 'model', parts: [{ text: answer }] });
+        if (conversationHistory.length > 20) {
+            conversationHistory = conversationHistory.slice(conversationHistory.length - 20);
+        }
+        
+        return answer;
+
+    } catch (error) {
+        clearTimeout(timeoutId);
+        if (!isFallback) {
+            console.warn("[Fallback] Retrying AI Concierge with gemini-2.5-pro due to timeout or error...");
+            return callGeminiDirect(systemPrompt, userQuery, true);
+        }
+        throw new Error(`AIとの通信に失敗しました。時間をおいて再試行してください（詳細: ${error.message}）`);
     }
-    
-    return answer;
 }
 
 
@@ -313,7 +341,7 @@ function appendAnswer(text, sources) {
     // Sources (Remove confusing page numbers, show unique chapters)
     // Deduplicate chapters
     const uniqueChapters = [...new Set(sources.map(s => s.chapter_title))];
-    
+
     const sourcesHtml = uniqueChapters.length > 0
         ? `<div class="ai-sources">
             <div class="ai-sources-title"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:3px"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>参照元: ナレッジベース</div>
