@@ -539,7 +539,7 @@ function showDetail(ch) {
     let examTipsHtml = '';
     if (ch.deep_content && ch.deep_content.exam_tips && ch.deep_content.exam_tips.length > 0) {
         examTipsHtml = `
-            <h3 class="detail-section-title">📝 試験対策ポイント</h3>
+            <h3 class="detail-section-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path d="M15.5 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5L15.5 3Z"/><path d="M14 3v4a2 2 0 0 0 2 2h4"/><path d="M12 18v-6"/><path d="m9 15 3-3 3 3"/></svg>試験対策ポイント</h3>
             <ul class="detail-exam-tips">
                 ${ch.deep_content.exam_tips.map(tip => `<li>${tip}</li>`).join('')}
             </ul>`;
@@ -562,7 +562,7 @@ function showDetail(ch) {
                     </div>`;
             }).join('');
             classTablesHtml = `
-                <h3 class="detail-section-title">🏅 格付け・分類一覧</h3>
+                <h3 class="detail-section-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg>格付け・分類一覧</h3>
                 ${tablesInner}`;
         }
     }
@@ -571,7 +571,7 @@ function showDetail(ch) {
     let timelineHtml = '';
     if (ch.deep_content && ch.deep_content.timeline && ch.deep_content.timeline.length > 0) {
         timelineHtml = `
-            <h3 class="detail-section-title">📜 歴史年表</h3>
+            <h3 class="detail-section-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6"/></svg>歴史年表</h3>
             <div class="detail-timeline">
                 ${ch.deep_content.timeline.map(item => `
                     <div class="timeline-item">

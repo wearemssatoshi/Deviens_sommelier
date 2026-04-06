@@ -15,7 +15,7 @@
         { id: 'break',   label: '休憩テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>', desc: '昼休み・休憩時間のリフレッシュに' },
         { id: 'evening', label: '帰り道テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>', desc: '帰宅途中・夜のまとめに' },
         { id: 'extra',   label: '補習（無制限）', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>', desc: '1日に何度でも反復練習' },
-        { id: 'pair',    label: 'ペアモード 🤝', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>', desc: '仲間と一緒に学んでボーナスTOKEN獲得！' }
+        { id: 'pair',    label: 'ペアモード', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>', desc: '仲間と一緒に学んでボーナスTOKEN獲得！' }
     ];
 
     // ========== DOM ELEMENTS ==========
@@ -596,7 +596,7 @@ ${contextText}
         pairDiv.className = 'pair-setup-row';
         pairDiv.innerHTML = `
             <div class="pair-setup-header">
-                <span class="pair-setup-icon">🤝</span>
+                <span class="pair-setup-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
                 <span class="pair-setup-title">ペアモード設定</span>
             </div>
             <div class="pair-setup-field">
@@ -647,7 +647,7 @@ ${contextText}
         tokenSummaryEl.className = 'token-summary';
         tokenSummaryEl.innerHTML = `
             <div class="token-summary-header">
-                <span class="token-summary-icon">🪙</span>
+                <span class="token-summary-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#C9A94E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></span>
                 <span class="token-summary-title">獲得トークン</span>
             </div>
             <div class="token-breakdown">
@@ -661,7 +661,7 @@ ${contextText}
                 </div>
                 ${isPair ? `
                 <div class="token-row token-row-bonus">
-                    <span class="token-label">🤝 ペアボーナス</span>
+                    <span class="token-label"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:3px"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>ペアボーナス</span>
                     <span class="token-value token-pair">+${tokens.pairBonus}T</span>
                 </div>` : ''}
                 <div class="token-row token-row-total">
@@ -679,7 +679,7 @@ ${contextText}
                 <div class="pair-reflection-thanks">一緒に学んでくれてありがとう！この記憶が、あなたの力になる。</div>
             </div>` : `
             <div class="solo-tip">
-                <span class="solo-tip-icon">💡</span>
+                <span class="solo-tip-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span>
                 <span>ペアモードなら <strong>+${TOKEN_PAIR_BONUS}T ボーナス</strong> を獲得できます！</span>
             </div>`}
         `;

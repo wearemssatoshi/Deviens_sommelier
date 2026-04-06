@@ -316,9 +316,9 @@ function appendAnswer(text, sources) {
     
     const sourcesHtml = uniqueChapters.length > 0
         ? `<div class="ai-sources">
-            <div class="ai-sources-title">📚 参照元: ナレッジベース</div>
+            <div class="ai-sources-title"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:3px"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>参照元: ナレッジベース</div>
             <div class="ai-sources-list">
-            ${uniqueChapters.map(ch => `<span class="ai-source-tag">📖 ${ch}</span>`).join('')}
+            ${uniqueChapters.map(ch => `<span class="ai-source-tag"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:2px"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>${ch}</span>`).join('')}
             </div>
            </div>`
         : '';

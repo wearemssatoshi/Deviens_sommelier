@@ -77,7 +77,7 @@
         const body = document.getElementById('dashBody');
         body.innerHTML = `
             <div class="dash-empty">
-                <div class="dash-empty-icon">📊</div>
+                <div class="dash-empty-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg></div>
                 <h3>まだログインしていません</h3>
                 <p>クイズを受験してから、ダッシュボードをご確認ください</p>
             </div>
@@ -88,7 +88,7 @@
         const body = document.getElementById('dashBody');
         body.innerHTML = `
             <div class="dash-empty">
-                <div class="dash-empty-icon">⚠️</div>
+                <div class="dash-empty-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg></div>
                 <h3>エラー</h3>
                 <p>${msg}</p>
             </div>
@@ -140,7 +140,7 @@
             <div style="background:linear-gradient(135deg,#1a1a2e,#16213e); border-radius:14px; padding:16px; margin-bottom:16px; text-align:center; color:white;">
                 <div style="font-size:11px; text-transform:uppercase; letter-spacing:1.5px; color:rgba(255,255,255,0.5); margin-bottom:6px;">TOTAL TOKENS</div>
                 <div style="font-size:36px; font-weight:900; background:linear-gradient(135deg,#FFD700,#FFA500); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">${totalTokens}T</div>
-                <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-top:4px;">🪙 努力の証 — 将来のディプロマへ</div>
+                <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-top:4px;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:3px"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>努力の証 — 将来のディプロマへ</div>
             </div>
 
             <!-- KPI Cards -->
@@ -178,13 +178,13 @@
             <!-- Streak -->
             <div class="dash-streak-bar">
                 <div class="dash-streak-item">
-                    <span class="dash-streak-icon">🔥</span>
+                    <span class="dash-streak-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14 0-5.5 3-7.5 1 1.5 1.5 3.5 1 5.5-.5 1.93.5 3 1.5 3 2 0 3 1.5 3 3.5a5 5 0 0 1-10 1.5"/></svg></span>
                     <span class="dash-streak-num">${d.streak}</span>
                     <span class="dash-streak-label">日連続</span>
                 </div>
                 <div class="dash-streak-divider"></div>
                 <div class="dash-streak-item">
-                    <span class="dash-streak-icon">🏆</span>
+                    <span class="dash-streak-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#C9A94E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span>
                     <span class="dash-streak-num">${d.best_streak}</span>
                     <span class="dash-streak-label">最高記録</span>
                 </div>
@@ -313,7 +313,7 @@
                 <div class="dash-section">
                     <div class="dash-section-title">IMPROVEMENT AREAS</div>
                     <div class="dash-congrats">
-                        <span class="dash-congrats-icon">🎉</span>
+                        <span class="dash-congrats-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="#C9A94E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></span>
                         <p>全チャプターで80%以上を達成しています！</p>
                     </div>
                 </div>
