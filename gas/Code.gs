@@ -28,8 +28,8 @@ function successResponse(data) {
     .setMimeType(ContentService.MimeType.JSON);
 }
 
-function errorResponse(msg) {
-  return ContentService.createTextOutput(JSON.stringify({ status: 'error', message: msg }))
+function errorResponse(msg, code) {
+  return ContentService.createTextOutput(JSON.stringify({ status: 'error', message: msg, error_code: code || 'GENERIC_ERROR' }))
     .setMimeType(ContentService.MimeType.JSON);
 }
 
@@ -41,45 +41,51 @@ function getJSTTimestamp() {
   return Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyy-MM-dd HH:mm:ss');
 }
 
+// ========== Action Registry (MINDFUL Blueprint) ==========
+const POST_ACTIONS = {
+  'registerUser':    handleRegisterUser,
+  'saveResult':      handleSaveResult,
+  'saveQuestResult': handleSaveQuestResult
+};
+
+const GET_ACTIONS = {
+  'getUsers':          handleGetUsers,
+  'getHistory':        handleGetHistory,
+  'getToday':          handleGetToday,
+  'getUserStats':      handleGetUserStats,
+  'getDetailedStats':  handleGetDetailedStats,
+  'getQuestProgress':  handleGetQuestProgress
+};
+
 // ========== Entry Points ==========
 function doPost(e) {
+  const ts = getJSTTimestamp();
   try {
     const params = JSON.parse(e.postData.contents);
-    switch (params.action) {
-      case 'registerUser':
-        return handleRegisterUser(params);
-      case 'saveResult':
-        return handleSaveResult(params);
-      case 'saveQuestResult':
-        return handleSaveQuestResult(params);
-      default:
-        return errorResponse('Unknown action: ' + params.action);
-    }
+    const action = params.action;
+    console.log(`[DSM] POST ${action} @ ${ts}`);
+
+    const handler = POST_ACTIONS[action];
+    if (!handler) return errorResponse(`Unknown POST action: ${action}`, 'UNKNOWN_ACTION');
+    return handler(params);
   } catch (err) {
-    return errorResponse('Server error: ' + err.message);
+    console.error(`[DSM] POST error @ ${ts}: ${err.message}`);
+    return errorResponse('Server error: ' + err.message, 'SERVER_ERROR');
   }
 }
 
 function doGet(e) {
+  const ts = getJSTTimestamp();
   try {
-    switch (e.parameter.action || 'getHistory') {
-      case 'getUsers':
-        return handleGetUsers();
-      case 'getHistory':
-        return handleGetHistory(e.parameter);
-      case 'getToday':
-        return handleGetToday(e.parameter);
-      case 'getUserStats':
-        return handleGetUserStats(e.parameter);
-      case 'getDetailedStats':
-        return handleGetDetailedStats(e.parameter);
-      case 'getQuestProgress':
-        return handleGetQuestProgress(e.parameter);
-      default:
-        return errorResponse('Unknown GET action: ' + e.parameter.action);
-    }
+    const action = e.parameter.action || 'getHistory';
+    console.log(`[DSM] GET ${action} @ ${ts}`);
+
+    const handler = GET_ACTIONS[action];
+    if (!handler) return errorResponse(`Unknown GET action: ${action}`, 'UNKNOWN_ACTION');
+    return handler(e.parameter);
   } catch (err) {
-    return errorResponse('Server error: ' + err.message);
+    console.error(`[DSM] GET error @ ${ts}: ${err.message}`);
+    return errorResponse('Server error: ' + err.message, 'SERVER_ERROR');
   }
 }
 
