@@ -130,11 +130,23 @@ function handleSaveResult(params) {
   const chapterTitle = params.chapter_title || '';
   const detailsJson = JSON.stringify(params.details || []);
   const timestamp = getJSTTimestamp();
+  const isPair = params.is_pair || false;
+  const pairPartner = params.pair_partner || '';
+  const tokens = params.tokens || 0;
 
-  // UPSERT (Extraセッションは上書きせずAPPENDして成長履歴を残す)
+  // Ensure extended headers exist (backward compatible)
+  const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+  if (headers.length < 11 || headers[8] !== 'IsPair') {
+    const extHeaders = ['IsPair', 'PairPartner', 'Tokens'];
+    const startCol = headers.length + 1;
+    sheet.getRange(1, startCol, 1, extHeaders.length).setValues([extHeaders]);
+    sheet.getRange(1, startCol, 1, extHeaders.length).setFontWeight("bold").setBackground("#f3f3f3");
+  }
+
+  // UPSERT (Extra and Pair sessions always APPEND to preserve history)
   const data = sheet.getDataRange().getValues();
   let existingRow = -1;
-  if (session !== 'extra') {
+  if (session !== 'extra' && session !== 'pair') {
     for (let i = 1; i < data.length; i++) {
       const rowDateStr = data[i][0] instanceof Date ? Utilities.formatDate(data[i][0], 'Asia/Tokyo', 'yyyy-MM-dd') : String(data[i][0]);
       if (rowDateStr === date && String(data[i][1]) === session) {
@@ -144,7 +156,7 @@ function handleSaveResult(params) {
     }
   }
 
-  const rowData = [date, session, score, total, chapterId, chapterTitle, detailsJson, timestamp];
+  const rowData = [date, session, score, total, chapterId, chapterTitle, detailsJson, timestamp, isPair, pairPartner, tokens];
 
   if (existingRow > 0) {
     sheet.getRange(existingRow, 1, 1, rowData.length).setValues([rowData]);
@@ -152,7 +164,7 @@ function handleSaveResult(params) {
     sheet.appendRow(rowData);
   }
 
-  return successResponse({ saved: true, user_name: userName, date, session, score, total });
+  return successResponse({ saved: true, user_name: userName, date, session, score, total, tokens });
 }
 
 function handleGetHistory(params) {
@@ -366,6 +378,21 @@ function handleGetDetailedStats(params) {
     bestStreak = Math.max(bestStreak, currentStreak);
   }
 
+  // Token & pair aggregation (columns 9=IsPair, 10=PairPartner, 11=Tokens — 0-indexed: 8,9,10)
+  let totalTokens = 0;
+  const pairPartnerMap = {};
+  for (let i = 1; i < data.length; i++) {
+    const rowTokens = Number(data[i][10]) || 0;
+    totalTokens += rowTokens;
+    if (data[i][8] === true || data[i][8] === 'true' || data[i][8] === 'TRUE') {
+      const partner = String(data[i][9] || '').trim();
+      if (partner) {
+        pairPartnerMap[partner] = (pairPartnerMap[partner] || 0) + 1;
+      }
+    }
+  }
+  const pairSessions = Object.entries(pairPartnerMap).map(([name, count]) => ({ name, count }));
+
   return successResponse({
     user_name: userName,
     chapter_stats: chapterStats,
@@ -376,7 +403,9 @@ function handleGetDetailedStats(params) {
     total_questions: totalQuestions,
     accuracy: totalQuestions > 0 ? Math.round((totalScore / totalQuestions) * 100) : 0,
     session_count: sessionCount,
-    distinct_days: dateSet.size
+    distinct_days: dateSet.size,
+    total_tokens: totalTokens,
+    pair_sessions: pairSessions
   });
 }
 

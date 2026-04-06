@@ -111,6 +111,28 @@
         const accuracy = d.accuracy || 0;
         const accuracyColor = accuracy >= 80 ? '#00B36B' : accuracy >= 50 ? '#F5A623' : '#D4002A';
         const ringPercent = accuracy;
+        const totalTokens = d.total_tokens || parseInt(localStorage.getItem('sommelier_total_tokens') || '0', 10);
+
+        // Pair sessions HTML
+        let pairHtml = '';
+        if (d.pair_sessions && d.pair_sessions.length > 0) {
+            pairHtml = `
+                <div class="dash-section">
+                    <div class="dash-section-title">PAIR LEARNING</div>
+                    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                        ${d.pair_sessions.map(p => `
+                            <div style="display:flex; align-items:center; gap:6px; background:#f8f4eb; border:1px solid #e8d5a3; border-radius:8px; padding:6px 12px;">
+                                <span style="width:28px; height:28px; border-radius:50%; background:linear-gradient(135deg,#C9A94E,#D4B861); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px;">${p.name.charAt(0)}</span>
+                                <div>
+                                    <div style="font-weight:600; font-size:13px;">${p.name}</div>
+                                    <div style="font-size:11px; color:#8B6914;">${p.count}回ペア学習</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
 
         body.innerHTML = `
             <!-- Header -->
@@ -120,6 +142,13 @@
                     <div class="dash-user-name">${d.user_name}</div>
                     <div class="dash-user-sub">Learning Analytics</div>
                 </div>
+            </div>
+
+            <!-- TOKEN HERO -->
+            <div style="background:linear-gradient(135deg,#1a1a2e,#16213e); border-radius:14px; padding:16px; margin-bottom:16px; text-align:center; color:white;">
+                <div style="font-size:11px; text-transform:uppercase; letter-spacing:1.5px; color:rgba(255,255,255,0.5); margin-bottom:6px;">TOTAL TOKENS</div>
+                <div style="font-size:36px; font-weight:900; background:linear-gradient(135deg,#FFD700,#FFA500); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">${totalTokens}T</div>
+                <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-top:4px;">🪙 努力の証 — 将来のディプロマへ</div>
             </div>
 
             <!-- KPI Cards -->
@@ -168,6 +197,9 @@
                     <span class="dash-streak-label">最高記録</span>
                 </div>
             </div>
+
+            <!-- Pair Sessions -->
+            ${pairHtml}
 
             <!-- Daily Trend -->
             ${renderDailyTrend(d.daily_trend)}

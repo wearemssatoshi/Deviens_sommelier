@@ -14,7 +14,8 @@
         { id: 'morning', label: '朝テスト',   icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>', desc: '出勤前・午前中のスキマ時間に' },
         { id: 'break',   label: '休憩テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>', desc: '昼休み・休憩時間のリフレッシュに' },
         { id: 'evening', label: '帰り道テスト', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>', desc: '帰宅途中・夜のまとめに' },
-        { id: 'extra',   label: '補習（無制限）', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>', desc: '1日に何度でも反復練習' }
+        { id: 'extra',   label: '補習（無制限）', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>', desc: '1日に何度でも反復練習' },
+        { id: 'pair',    label: 'ペアモード 🤝', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>', desc: '仲間と一緒に学んでボーナスTOKEN獲得！' }
     ];
 
     // ========== DOM ELEMENTS ==========
@@ -34,6 +35,11 @@
         hallucinationBtn: document.getElementById('quizHallucinationBtn')
     };
 
+    // ========== TOKEN CONFIG ==========
+    const TOKEN_CORRECT = 3;
+    const TOKEN_WRONG = 1;
+    const TOKEN_PAIR_BONUS = 20;
+
     // ========== STATE ==========
     let quizState = {
         currentUser: null, // { user_id, name }
@@ -43,8 +49,17 @@
         questions: [],
         currentQuestionIndex: 0,
         userAnswers: [],
-        todayProgress: {}
+        todayProgress: {},
+        pairPartner: null  // name of the person quizzing you (pair mode only)
     };
+
+    // ========== TOKEN CALCULATOR ==========
+    function calculateTokens(correctCount, totalCount, isPairMode) {
+        const correctTokens = correctCount * TOKEN_CORRECT;
+        const wrongTokens = (totalCount - correctCount) * TOKEN_WRONG;
+        const pairBonus = isPairMode ? TOKEN_PAIR_BONUS : 0;
+        return { correctTokens, wrongTokens, pairBonus, total: correctTokens + wrongTokens + pairBonus };
+    }
 
     function getApiKey() {
         return localStorage.getItem('sommelier_api_key');
@@ -160,10 +175,20 @@
                 setupDiv.querySelectorAll('.quiz-session-card').forEach(c => c.classList.remove('active'));
                 card.classList.add('active');
                 quizState.selectedSession = card.dataset.session;
+                quizState.pairPartner = null; // reset
                 const btn = document.getElementById('quizStartBtn');
-                btn.disabled = false;
                 const session = SESSIONS.find(s => s.id === card.dataset.session);
-                btn.textContent = `${session.label}を開始（${QUIZ_COUNT}問）`;
+
+                if (card.dataset.session === 'pair') {
+                    // Show pair setup inline
+                    showPairSetup(btn);
+                } else {
+                    // Remove pair setup if exists
+                    const pairSetup = document.getElementById('pairSetupRow');
+                    if (pairSetup) pairSetup.remove();
+                    btn.disabled = false;
+                    btn.textContent = `${session.label}を開始（${QUIZ_COUNT}問）`;
+                }
             });
         });
 
@@ -558,18 +583,109 @@ ${contextText}
         }, 400);
     }
 
+    // ========== PAIR SETUP ==========
+    function showPairSetup(startBtn) {
+        // Remove existing pair setup
+        const existing = document.getElementById('pairSetupRow');
+        if (existing) existing.remove();
+
+        const pairDiv = document.createElement('div');
+        pairDiv.id = 'pairSetupRow';
+        pairDiv.className = 'pair-setup-row';
+        pairDiv.innerHTML = `
+            <div class="pair-setup-header">
+                <span class="pair-setup-icon">🤝</span>
+                <span class="pair-setup-title">ペアモード設定</span>
+            </div>
+            <div class="pair-setup-field">
+                <label for="pairPartnerName">出題してくれる人の名前（ローマ字）</label>
+                <input type="text" id="pairPartnerName" placeholder="例: Mohri" class="quiz-input" style="width:100%; box-sizing:border-box;">
+            </div>
+            <div class="pair-setup-bonus">
+                <span class="pair-token-badge">+${TOKEN_PAIR_BONUS}T BONUS</span>
+                <span class="pair-bonus-desc">仲間と一緒に学ぶとボーナストークン獲得！</span>
+            </div>
+        `;
+
+        // Insert before start button
+        startBtn.parentElement.insertBefore(pairDiv, startBtn);
+        startBtn.disabled = true;
+        startBtn.textContent = '出題者の名前を入力してください';
+
+        const partnerInput = document.getElementById('pairPartnerName');
+        partnerInput.addEventListener('input', () => {
+            const val = partnerInput.value.trim();
+            if (val.length > 0) {
+                quizState.pairPartner = val;
+                startBtn.disabled = false;
+                startBtn.textContent = `${val} さんと一緒にスタート（${QUIZ_COUNT}問）`;
+            } else {
+                quizState.pairPartner = null;
+                startBtn.disabled = true;
+                startBtn.textContent = '出題者の名前を入力してください';
+            }
+        });
+        partnerInput.focus();
+    }
+
     // ========== RESULTS ==========
     async function finishQuiz() {
         showState('results');
 
         const correctCount = quizState.userAnswers.filter(a => a.isCorrect).length;
         const total = quizState.questions.length;
+        const isPair = quizState.selectedSession === 'pair';
+        const tokens = calculateTokens(correctCount, total, isPair);
 
         elements.scoreNumber.innerText = `${correctCount} / ${total}`;
         elements.scoreNumber.style.color = (correctCount >= total * 0.8) ? '#00B36B' : (correctCount >= total * 0.5) ? '#F5A623' : 'var(--accent)';
 
-        elements.resultsList.innerHTML = '';
+        // ---------- TOKEN SUMMARY (inserted before results list) ----------
+        const tokenSummaryEl = document.createElement('div');
+        tokenSummaryEl.className = 'token-summary';
+        tokenSummaryEl.innerHTML = `
+            <div class="token-summary-header">
+                <span class="token-summary-icon">🪙</span>
+                <span class="token-summary-title">獲得トークン</span>
+            </div>
+            <div class="token-breakdown">
+                <div class="token-row">
+                    <span class="token-label">正解 ${correctCount}問 × ${TOKEN_CORRECT}T</span>
+                    <span class="token-value token-correct">+${tokens.correctTokens}T</span>
+                </div>
+                <div class="token-row">
+                    <span class="token-label">不正解 ${total - correctCount}問 × ${TOKEN_WRONG}T</span>
+                    <span class="token-value token-wrong">+${tokens.wrongTokens}T</span>
+                </div>
+                ${isPair ? `
+                <div class="token-row token-row-bonus">
+                    <span class="token-label">🤝 ペアボーナス</span>
+                    <span class="token-value token-pair">+${tokens.pairBonus}T</span>
+                </div>` : ''}
+                <div class="token-row token-row-total">
+                    <span class="token-label">合計</span>
+                    <span class="token-value token-total">${tokens.total}T</span>
+                </div>
+            </div>
+            ${isPair ? `
+            <div class="pair-reflection">
+                <div class="pair-reflection-label">出題してくれた人</div>
+                <div class="pair-reflection-partner">
+                    <span class="pair-partner-avatar">${(quizState.pairPartner || '?').charAt(0)}</span>
+                    <span class="pair-partner-name">${quizState.pairPartner}</span>
+                </div>
+                <div class="pair-reflection-thanks">一緒に学んでくれてありがとう！この記憶が、あなたの力になる。</div>
+            </div>` : `
+            <div class="solo-tip">
+                <span class="solo-tip-icon">💡</span>
+                <span>ペアモードなら <strong>+${TOKEN_PAIR_BONUS}T ボーナス</strong> を獲得できます！</span>
+            </div>`}
+        `;
 
+        elements.resultsList.innerHTML = '';
+        elements.resultsList.parentElement.insertBefore(tokenSummaryEl, elements.resultsList);
+
+        // ---------- QUESTION RESULTS ----------
         quizState.userAnswers.forEach((ans, i) => {
             const q = ans.questionData;
             const card = document.createElement('div');
@@ -600,13 +716,14 @@ ${contextText}
         });
 
         // Save result
-        await saveResult(correctCount, total);
+        await saveResult(correctCount, total, tokens);
     }
 
     // ========== PERSISTENCE ==========
-    async function saveResult(score, total) {
+    async function saveResult(score, total, tokens) {
         const date = getJSTDateString();
         const session = quizState.selectedSession;
+        const isPair = session === 'pair';
         const details = quizState.userAnswers.map(a => ({
             q: a.questionData.question.substring(0, 60),
             correct: a.isCorrect,
@@ -620,6 +737,10 @@ ${contextText}
         stored[session] = { score, total };
         localStorage.setItem(todayKey, JSON.stringify(stored));
         quizState.todayProgress = stored;
+
+        // Accumulate tokens in localStorage
+        const currentTokens = parseInt(localStorage.getItem('sommelier_total_tokens') || '0', 10);
+        localStorage.setItem('sommelier_total_tokens', String(currentTokens + (tokens?.total || 0)));
 
         // Save to GAS if configured
         if (GAS_URL) {
@@ -636,7 +757,10 @@ ${contextText}
                         total,
                         chapter_id: quizState.selectedChapter?.id || '',
                         chapter_title: quizState.selectedChapter?.title || '',
-                        details
+                        details,
+                        is_pair: isPair,
+                        pair_partner: isPair ? quizState.pairPartner : '',
+                        tokens: tokens?.total || 0
                     })
                 });
                 console.log('[Quiz] Result saved to GAS');
