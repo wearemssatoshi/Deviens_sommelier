@@ -26,22 +26,14 @@
         const overlay = document.getElementById('dashOverlay');
         if (!overlay) return;
 
-        // Get current user from quiz state
-        const savedUser = localStorage.getItem('sommelier_quiz_user');
-        let user = null;
-        try { user = JSON.parse(savedUser); } catch(e) {}
-
-        if (!user) {
-            overlay.classList.remove('hidden');
-            dashboardOpen = true;
-            renderNoUser();
-            return;
-        }
-
         overlay.classList.remove('hidden');
         dashboardOpen = true;
-        renderLoading();
-        fetchDetailedStats(user.name);
+
+        // Stage-Gate: require auth
+        DSMAuth.requireAuth((user) => {
+            renderLoading();
+            fetchDetailedStats(user.name);
+        });
     }
 
     function closeDashboard() {

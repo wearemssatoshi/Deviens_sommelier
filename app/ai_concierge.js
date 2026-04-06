@@ -275,26 +275,9 @@ function cosineSimilarity(a, b) {
 }
 
 
-// ---- API Key Management ----
+// ---- API Key Management (Delegated to DSMAuth) ----
 function getApiKey() {
-    // 1. Check memory
-    if (window._SOMMELIER_API_KEY) return window._SOMMELIER_API_KEY;
-
-    // 2. Check localStorage
-    const stored = localStorage.getItem('sommelier_api_key');
-    if (stored) return stored;
-
-    // 3. Prompt user
-    const key = prompt(
-        'Sommelier AI を利用するには Gemini API Key が必要です。\n' +
-        'Google AI Studio (aistudio.google.com) で無料キーを取得できます。\n\n' +
-        'API Key を入力してください:'
-    );
-    if (key && key.trim()) {
-        localStorage.setItem('sommelier_api_key', key.trim());
-        return key.trim();
-    }
-    return '';
+    return DSMAuth.getApiKey() || '';
 }
 
 

@@ -62,7 +62,7 @@
     }
 
     function getApiKey() {
-        return localStorage.getItem('sommelier_api_key');
+        return DSMAuth.getApiKey();
     }
 
     // ========== JST DATE ==========
@@ -84,11 +84,8 @@
             elements.hallucinationBtn.addEventListener('click', handleHallucinationCheck);
         }
 
-        // Restore user from localStorage
-        const savedUser = localStorage.getItem('sommelier_quiz_user');
-        if (savedUser) {
-            try { quizState.currentUser = JSON.parse(savedUser); } catch(e) {}
-        }
+        // Restore user from DSMAuth
+        quizState.currentUser = DSMAuth.getUser();
 
         try {
             const res = await fetch('../data/summaries/summary_index.json');
@@ -277,13 +274,13 @@
     function openQuiz() {
         elements.overlay.classList.remove('hidden');
 
-        if (!quizState.currentUser) {
-            showLoginScreen();
-        } else {
+        // Stage-Gate: require auth before proceeding
+        DSMAuth.requireAuth((user) => {
+            quizState.currentUser = user;
             createSetupScreen();
             loadTodayProgress().then(() => renderTodayProgress());
             showState('setup');
-        }
+        });
     }
 
     // ========== LOGIN SCREEN ==========

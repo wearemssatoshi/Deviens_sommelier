@@ -132,42 +132,36 @@
         if (!overlay) return;
         overlay.classList.remove('hidden');
 
-        // Get current user
-        const savedUser = localStorage.getItem('sommelier_quiz_user');
-        if (savedUser) {
-            try { questState.currentUser = JSON.parse(savedUser); } catch(e) {}
-        }
+        // Stage-Gate: require auth
+        DSMAuth.requireAuth(async (user) => {
+            questState.currentUser = user;
 
-        if (!questState.currentUser) {
-            renderQuestNoUser(overlay);
-            return;
-        }
+            renderQuestLoading(overlay);
 
-        renderQuestLoading(overlay);
+            // Fetch user stats and quest progress
+            try {
+                const [statsRes, questRes] = await Promise.all([
+                    fetch(`${GAS_URL}?action=getDetailedStats&user_name=${encodeURIComponent(questState.currentUser.name)}`),
+                    fetch(`${GAS_URL}?action=getQuestProgress&user_name=${encodeURIComponent(questState.currentUser.name)}`)
+                ]);
+                
+                const statsData = await statsRes.json();
+                if (statsData.status === 'success') {
+                    questState.userStats = statsData.data;
+                }
 
-        // Fetch user stats and quest progress
-        try {
-            const [statsRes, questRes] = await Promise.all([
-                fetch(`${GAS_URL}?action=getDetailedStats&user_name=${encodeURIComponent(questState.currentUser.name)}`),
-                fetch(`${GAS_URL}?action=getQuestProgress&user_name=${encodeURIComponent(questState.currentUser.name)}`)
-            ]);
-            
-            const statsData = await statsRes.json();
-            if (statsData.status === 'success') {
-                questState.userStats = statsData.data;
+                const questData = await questRes.json();
+                if (questData.status === 'success') {
+                    questState.questProgress = questData.data.progress || {};
+                }
+            } catch (e) {
+                console.warn('[Quest] Failed to load data:', e);
+                questState.userStats = questState.userStats || { distinct_days: 0, accuracy: 0 };
+                questState.questProgress = questState.questProgress || {};
             }
 
-            const questData = await questRes.json();
-            if (questData.status === 'success') {
-                questState.questProgress = questData.data.progress || {};
-            }
-        } catch (e) {
-            console.warn('[Quest] Failed to load data:', e);
-            questState.userStats = questState.userStats || { distinct_days: 0, accuracy: 0 };
-            questState.questProgress = questState.questProgress || {};
-        }
-
-        renderQuestMain(overlay);
+            renderQuestMain(overlay);
+        });
     }
 
     // ========== DETERMINE CURRENT RANK ==========
