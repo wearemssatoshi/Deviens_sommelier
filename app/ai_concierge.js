@@ -215,8 +215,7 @@ async function embedQuery(text) {
 // ---- Gemini Direct Call ----
 async function callGeminiDirect(systemPrompt, userQuery, isFallback = false) {
     const apiKey = getApiKey();
-    const currentModel = isFallback ? "gemini-2.5-pro" : "gemini-3.1-pro-preview";
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${currentModel}:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent?key=${apiKey}`;
 
     // これまでの会話履歴に今回のユーザー発言を追加
     const contentsObj = [...conversationHistory];
