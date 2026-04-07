@@ -144,10 +144,11 @@
             </div>
 
             <!-- TOKEN HERO -->
-            <div style="background:linear-gradient(135deg,#1a1a2e,#16213e); border-radius:14px; padding:16px; margin-bottom:16px; text-align:center; color:white;">
-                <div style="font-size:11px; text-transform:uppercase; letter-spacing:1.5px; color:rgba(255,255,255,0.5); margin-bottom:6px;">TOTAL TOKENS</div>
-                <div style="font-size:36px; font-weight:900; background:linear-gradient(135deg,#FFD700,#FFA500); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">${totalTokens}T</div>
-                <div style="font-size:11px; color:rgba(255,255,255,0.4); margin-top:4px;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:3px"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>努力の証 — 将来のディプロマへ</div>
+            <div class="token-hero" id="tokenHeroCard">
+                <div class="token-particles" id="tokenParticles"></div>
+                <div class="token-hero-label">TOTAL TOKENS</div>
+                <div class="token-hero-value"><span class="token-odometer" id="tokenOdometer" data-target="${totalTokens}">0</span><span class="token-hero-unit">T</span></div>
+                <div class="token-hero-sub"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="vertical-align:middle"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>努力の証 — 将来のディプロマへ</div>
             </div>
 
             <!-- KPI Cards -->
@@ -226,6 +227,49 @@
                 DSMToast.info('ログアウトしました');
                 setTimeout(() => window.location.reload(), 800);
             });
+        }
+
+        // ========== PREMIUM TOKEN: Odometer Count-Up + Particles ==========
+        const odo = document.getElementById('tokenOdometer');
+        if (odo) {
+            const target = parseInt(odo.dataset.target, 10) || 0;
+            if (target > 0) {
+                const duration = 1200;
+                const start = performance.now();
+                const step = (now) => {
+                    const elapsed = now - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+                    odo.textContent = Math.round(target * eased).toLocaleString();
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        odo.textContent = target.toLocaleString();
+                        odo.classList.add('counting');
+                        spawnTokenParticles();
+                    }
+                };
+                requestAnimationFrame(step);
+            } else {
+                odo.textContent = '0';
+            }
+        }
+
+        function spawnTokenParticles() {
+            const container = document.getElementById('tokenParticles');
+            if (!container) return;
+            const fragments = ['+T', '✦', '◆', '★', '+T'];
+            for (let i = 0; i < 8; i++) {
+                const p = document.createElement('span');
+                p.className = 'token-particle';
+                p.textContent = fragments[i % fragments.length];
+                p.style.left = (15 + Math.random() * 70) + '%';
+                p.style.top = (40 + Math.random() * 30) + '%';
+                p.style.fontSize = (12 + Math.random() * 8) + 'px';
+                p.style.animationDelay = (i * 0.12) + 's';
+                container.appendChild(p);
+            }
+            setTimeout(() => { container.innerHTML = ''; }, 2500);
         }
     }
 

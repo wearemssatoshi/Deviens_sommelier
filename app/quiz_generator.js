@@ -725,7 +725,7 @@ ${contextText}
                 </div>` : ''}
                 <div class="token-row token-row-total">
                     <span class="token-label">合計</span>
-                    <span class="token-value token-total">${tokens.total}T</span>
+                    <span class="token-value token-total"><span class="token-odometer" data-target="${tokens.total}">0</span>T</span>
                 </div>
             </div>
             ${isPair ? `
@@ -748,6 +748,24 @@ ${contextText}
 
         elements.resultsList.innerHTML = '';
         elements.resultsList.parentElement.insertBefore(tokenSummaryEl, elements.resultsList);
+
+        // Premium Token: Count-up animation for total
+        const quizOdo = tokenSummaryEl.querySelector('.token-odometer');
+        if (quizOdo) {
+            const tgt = parseInt(quizOdo.dataset.target, 10) || 0;
+            if (tgt > 0) {
+                const dur = 800;
+                const t0 = performance.now();
+                const tick = (now) => {
+                    const p = Math.min((now - t0) / dur, 1);
+                    const e = 1 - Math.pow(1 - p, 3);
+                    quizOdo.textContent = Math.round(tgt * e);
+                    if (p < 1) requestAnimationFrame(tick);
+                    else { quizOdo.textContent = tgt; quizOdo.classList.add('counting'); }
+                };
+                requestAnimationFrame(tick);
+            }
+        }
 
         // ---------- QUESTION RESULTS ----------
         quizState.userAnswers.forEach((ans, i) => {

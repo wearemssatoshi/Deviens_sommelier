@@ -21,6 +21,7 @@
     --kicker-text: #FFFFFF;
     --font-sans: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-jp: 'Noto Sans JP', sans-serif;
+    --font-serif: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
     --radius: 2px;
     --shadow-card: 0 1px 3px rgba(0,0,0,0.06);
     --shadow-hover: 0 4px 12px rgba(0,0,0,0.1);
@@ -3096,8 +3097,9 @@ body {
 }
 .token-value {
     font-weight: 700;
-    font-size: 15px;
-    font-family: 'Inter', var(--font-sans);
+    font-size: 17px;
+    font-family: var(--font-serif);
+    letter-spacing: 0.02em;
 }
 .token-correct { color: #00B36B; }
 .token-wrong { color: #F5A623; }
@@ -3114,12 +3116,15 @@ body {
     margin-top: 4px;
 }
 .token-total {
-    font-size: 22px;
-    font-weight: 900;
-    background: linear-gradient(135deg, #FFD700, #FFA500);
+    font-size: 28px;
+    font-weight: 700;
+    font-family: var(--font-serif);
+    background: linear-gradient(90deg, #C9A94E, #FFD700, #E8C547, #FFA500, #C9A94E);
+    background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: goldShimmer 3s ease infinite;
 }
 
 /* Pair Reflection */
@@ -3794,5 +3799,165 @@ body {
     .td-roster-stat { min-width: 30px; }
     .td-lb-row { gap: 8px; }
     .td-search { width: 120px; }
+}
+
+/* ==========================================================
+   PREMIUM TOKEN SYSTEM
+   Holographic Gold + Serif Odometer + Triumph Particles
+   ========================================================== */
+
+/* -- Gold Shimmer Animation -- */
+@keyframes goldShimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* -- Token Hero Card (Individual Dashboard) -- */
+.token-hero {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 14px;
+    padding: 20px 16px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.token-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(201,169,78,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(255,165,0,0.05) 0%, transparent 60%);
+    pointer-events: none;
+}
+.token-hero-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 8px;
+}
+.token-hero-value {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    background: linear-gradient(90deg, #C9A94E, #FFD700, #E8C547, #FFA500, #C9A94E);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: goldShimmer 3s ease infinite;
+    position: relative;
+}
+.token-hero-unit {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+.token-hero-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* -- Particle Container -- */
+.token-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+.token-particle {
+    position: absolute;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: #FFD700;
+    opacity: 0;
+    animation: particleFloat 1.8s ease-out forwards;
+    pointer-events: none;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+@keyframes particleFloat {
+    0%   { opacity: 0; transform: translateY(0) scale(0.5); }
+    15%  { opacity: 1; transform: translateY(-8px) scale(1); }
+    100% { opacity: 0; transform: translateY(-60px) scale(0.7); }
+}
+
+/* -- Odometer (Count-Up) Effect -- */
+.token-odometer {
+    display: inline-block;
+    transition: transform 0.15s ease;
+}
+.token-odometer.counting {
+    animation: odometerBounce 0.3s ease;
+}
+@keyframes odometerBounce {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.12); }
+    100% { transform: scale(1); }
+}
+
+/* -- Team Dashboard: Serif Tokens -- */
+.td-kpi-num {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+}
+.td-kpi-accent .td-kpi-num {
+    background: linear-gradient(90deg, #C9A94E, #FFD700, #E8C547, #FFA500, #C9A94E);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: goldShimmer 3s ease infinite;
+}
+.td-lb-value {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 600;
+    text-align: right;
+    letter-spacing: 0.02em;
+}
+.td-roster-stat-num {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.01em;
+}
+
+/* -- Dashboard KPI Values: Serif -- */
+.dash-kpi-value {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: var(--font-serif);
+    color: var(--text-primary);
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+.dash-ring-label {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* -- Mobile Responsive -- */
+@media (max-width: 600px) {
+    .token-hero-value { font-size: 40px; }
+    .token-hero-unit { font-size: 20px; }
+    .td-kpi-num { font-size: 28px; }
+    .td-roster-stat-num { font-size: 14px; }
 }
 
