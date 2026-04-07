@@ -609,14 +609,30 @@ ${contextText}
         });
 
         const buttons = elements.choicesBox.querySelectorAll('.quiz-choice-btn');
+
+        // Disable all buttons immediately to prevent double-tap
+        buttons.forEach(b => b.style.pointerEvents = 'none');
+
+        // Mark the user's selection
         if (selectedChoiceIndex >= 0) {
             buttons[selectedChoiceIndex].classList.add('selected');
         } else {
             buttons[buttons.length - 1].classList.add('selected'); // IDK Btn
         }
 
-        // Disable all buttons to prevent double-click
-        buttons.forEach(b => b.style.pointerEvents = 'none');
+        // Always highlight the correct answer in green
+        // (choices are index 0..3, IDK is the last button at index 4)
+        if (q.correct_index < buttons.length) {
+            buttons[q.correct_index].classList.add('correct-choice');
+        }
+
+        // If wrong or IDK, mark the selected one as wrong
+        if (!isCorrect && selectedChoiceIndex >= 0) {
+            buttons[selectedChoiceIndex].classList.add('wrong-choice');
+        }
+
+        // Longer delay for wrong/IDK so users can see the correct answer
+        const delay = isCorrect ? 500 : 1800;
 
         setTimeout(() => {
             if (qIndex + 1 < quizState.questions.length) {
@@ -625,7 +641,7 @@ ${contextText}
             } else {
                 finishQuiz();
             }
-        }, 400);
+        }, delay);
     }
 
     // ========== PAIR SETUP ==========

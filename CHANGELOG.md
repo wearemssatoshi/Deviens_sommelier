@@ -11,7 +11,7 @@
 * **AIキーワードドリルダウン**: チャプター詳細画面のタグ（Keyword）をタップするとAIコンシェルジュが即座に起動し、深く掘り下げた解説を提供するイベントバスを構築。
 
 ### Improved
-* **Gemini 3.1 Pro Previewの完全統合**: クイズ生成エンジン及びAIコンシェルジュの双方で最新の推論モデル `gemini-3.1-pro-preview` を採用。生成クラッシュの原因となっていた未対応オプション (`responseMimeType: application/json`) を撤去し、ロバストなJSONパース（フォールバック）で安定稼働を実現。
+* **Gemini 3.1 Flash Lite Previewの完全統合**: クイズ生成エンジン及びAIコンシェルジュの双方で低コスト・高安定モデル `gemini-3.1-flash-lite-preview` を採用（フォールバック: `gemini-2.5-pro`）。生成クラッシュの原因となっていた未対応オプション (`responseMimeType: application/json`) を撤去し、ロバストなJSONパース（フォールバック）で安定稼働を実現。
 * **UI/UXの洗練**: 探偵の絵文字を廃止し、NewsPicksライクな洗練されたSVGアイコンを採用。モバイル（PWA）体験の向上。
 
 ---

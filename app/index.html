@@ -248,6 +248,25 @@
         </div>
     </div>
 
+    <!-- TEAM ANALYTICS DASHBOARD (Manager Hidden Access) -->
+    <div class="td-overlay hidden" id="teamDashOverlay">
+        <div class="td-container">
+            <button class="td-close" id="teamDashClose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </button>
+            <div class="td-body" id="teamDashBody">
+                <div class="td-loading">
+                    <div class="quiz-spinner"></div>
+                    <p>チームデータを集計中...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="auth.js?v=1.0"></script>
     <script src="users_meta.js?v=1.0"></script>
     <script src="app.js?v=2.0"></script>
@@ -255,6 +274,7 @@
     <script src="quiz_generator.js?v=5.0"></script>
     <script src="quest.js?v=2.0"></script>
     <script src="dashboard.js?v=4.0"></script>
+    <script src="team_dashboard.js?v=1.0"></script>
 
     <!-- Service Worker Registration -->
     <script>

@@ -9,7 +9,7 @@
  * IMPORTANT: Increment CACHE_VERSION to bust cache on deploy
  */
 
-const CACHE_VERSION = 'dsm-v5.7';
+const CACHE_VERSION = 'dsm-v5.9';
 const CACHE_NAME = `dsm-cache-${CACHE_VERSION}`;
 
 // Core app shell files to precache
@@ -22,6 +22,7 @@ const PRECACHE_URLS = [
     './quiz_generator.js',
     './ai_concierge.js',
     './dashboard.js',
+    './team_dashboard.js',
     './quest.js',
     './users_meta.js',
     './manifest.json',

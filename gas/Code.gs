@@ -54,8 +54,107 @@ const GET_ACTIONS = {
   'getToday':          handleGetToday,
   'getUserStats':      handleGetUserStats,
   'getDetailedStats':  handleGetDetailedStats,
-  'getQuestProgress':  handleGetQuestProgress
+  'getQuestProgress':  handleGetQuestProgress,
+  'getTeamAnalytics':  handleGetTeamAnalytics
 };
+
+// ========== TEAM ANALYTICS (Manager Dashboard) ==========
+
+function handleGetTeamAnalytics() {
+  const ss = getSpreadsheet();
+  const sheets = ss.getSheets();
+  const SKIP = new Set(['users', 'quiz_results']);
+  const today = getJSTDateOnly();
+  const members = [];
+
+  sheets.forEach(sheet => {
+    const sName = sheet.getName();
+    // Skip system sheets and Quest sub-sheets
+    if (SKIP.has(sName) || sName.endsWith('_Quest')) return;
+
+    const data = sheet.getDataRange().getValues();
+    if (data.length <= 1) {
+      // Sheet exists but no quiz data yet
+      members.push({
+        name: sName,
+        total_score: 0,
+        total_questions: 0,
+        accuracy: 0,
+        session_count: 0,
+        distinct_days: 0,
+        total_tokens: 0,
+        last_active: null,
+        streak: 0
+      });
+      return;
+    }
+
+    let totalScore = 0, totalQuestions = 0, sessionCount = 0, totalTokens = 0;
+    const dateSet = new Set();
+    let latestDate = '';
+
+    for (let i = 1; i < data.length; i++) {
+      const rowDateStr = data[i][0] instanceof Date
+        ? Utilities.formatDate(data[i][0], 'Asia/Tokyo', 'yyyy-MM-dd')
+        : String(data[i][0]);
+      totalScore += Number(data[i][2]) || 0;
+      totalQuestions += Number(data[i][3]) || 0;
+      sessionCount++;
+      dateSet.add(rowDateStr);
+      if (rowDateStr > latestDate) latestDate = rowDateStr;
+      totalTokens += Number(data[i][10]) || 0;
+    }
+
+    // Quick streak (from latest backwards)
+    const sortedDates = Array.from(dateSet).sort().reverse();
+    let streak = 0;
+    let checkDate = new Date(today + 'T00:00:00+09:00');
+    for (let i = 0; i < sortedDates.length; i++) {
+      const expected = Utilities.formatDate(checkDate, 'Asia/Tokyo', 'yyyy-MM-dd');
+      if (sortedDates[i] === expected) {
+        streak++;
+        checkDate.setDate(checkDate.getDate() - 1);
+      } else if (i === 0 && sortedDates[i] !== today) {
+        checkDate.setDate(checkDate.getDate() - 1);
+        const yStr = Utilities.formatDate(checkDate, 'Asia/Tokyo', 'yyyy-MM-dd');
+        if (sortedDates[i] === yStr) {
+          streak++;
+          checkDate.setDate(checkDate.getDate() - 1);
+        } else { break; }
+      } else { break; }
+    }
+
+    members.push({
+      name: sName,
+      total_score: totalScore,
+      total_questions: totalQuestions,
+      accuracy: totalQuestions > 0 ? Math.round((totalScore / totalQuestions) * 100) : 0,
+      session_count: sessionCount,
+      distinct_days: dateSet.size,
+      total_tokens: totalTokens,
+      last_active: latestDate || null,
+      streak: streak
+    });
+  });
+
+  // Team-wide aggregates
+  const teamTokens = members.reduce((s, m) => s + m.total_tokens, 0);
+  const teamQuestions = members.reduce((s, m) => s + m.total_questions, 0);
+  const teamScore = members.reduce((s, m) => s + m.total_score, 0);
+  const activeCount = members.filter(m => m.session_count > 0).length;
+
+  return successResponse({
+    generated_at: getJSTTimestamp(),
+    team_summary: {
+      total_members: members.length,
+      active_members: activeCount,
+      team_tokens: teamTokens,
+      team_questions: teamQuestions,
+      team_accuracy: teamQuestions > 0 ? Math.round((teamScore / teamQuestions) * 100) : 0
+    },
+    members: members
+  });
+}
 
 // ========== Entry Points ==========
 function doPost(e) {
