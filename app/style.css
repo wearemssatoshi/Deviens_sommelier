@@ -138,6 +138,41 @@ body {
     background: var(--white);
 }
 
+/* -- Desktop Header Nav (PC only) -- */
+.header-desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+@media (min-width: 769px) {
+    .header-desktop-nav { display: flex; }
+}
+.hd-nav-btn {
+    padding: 8px 14px;
+    background: none;
+    border: none;
+    font-family: var(--font-jp);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.02em;
+}
+.hd-nav-btn:hover {
+    background: var(--bg-sub);
+    color: var(--text-primary);
+}
+.hd-nav-btn.active {
+    color: var(--text-primary);
+    font-weight: 700;
+    background: var(--bg-sub);
+}
+
 /* ---- HERO ---- */
 .hero {
     border-bottom: 1px solid var(--border);

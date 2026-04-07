@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         setupSearch();
         setupDetail();
         setupBottomNav();
+        setupDesktopNav();
         setupHamburger();
     } catch (err) {
         console.error('Failed to load data:', err);
@@ -173,6 +174,63 @@ function setupBottomNav() {
                     document.dispatchEvent(new CustomEvent('dashboard:open'));
                     break;
             }
+        });
+    });
+}
+
+// ---- DESKTOP HEADER NAVIGATION ----
+function setupDesktopNav() {
+    const deskBtns = document.querySelectorAll('.hd-nav-btn');
+    const bottomItems = document.querySelectorAll('.bottom-nav-item');
+    if (deskBtns.length === 0) return;
+
+    deskBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const nav = btn.dataset.nav;
+            // Sync active state on both navs
+            deskBtns.forEach(b => b.classList.remove('active'));
+            bottomItems.forEach(i => i.classList.remove('active'));
+            btn.classList.add('active');
+            // Also activate matching bottom nav item
+            const matchBottom = document.querySelector(`.bottom-nav-item[data-nav="${nav}"]`);
+            if (matchBottom) matchBottom.classList.add('active');
+
+            switch(nav) {
+                case 'home':
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    break;
+                case 'quiz':
+                    const quizOverlay = document.getElementById('quizOverlay');
+                    if (quizOverlay) {
+                        quizOverlay.classList.remove('hidden');
+                        document.dispatchEvent(new CustomEvent('quiz:open'));
+                    }
+                    break;
+                case 'quest':
+                    document.dispatchEvent(new CustomEvent('quest:open'));
+                    break;
+                case 'ai':
+                    const aiConcierge = document.getElementById('aiConcierge');
+                    if (aiConcierge) {
+                        aiConcierge.classList.add('open');
+                        const aiFab = document.getElementById('aiFab');
+                        if (aiFab) aiFab.classList.add('hidden');
+                        document.getElementById('aiInput')?.focus();
+                    }
+                    break;
+                case 'dash':
+                    document.dispatchEvent(new CustomEvent('dashboard:open'));
+                    break;
+            }
+        });
+    });
+
+    // Keep desktop nav in sync when bottom nav is clicked
+    bottomItems.forEach(item => {
+        item.addEventListener('click', () => {
+            deskBtns.forEach(b => b.classList.remove('active'));
+            const match = document.querySelector(`.hd-nav-btn[data-nav="${item.dataset.nav}"]`);
+            if (match) match.classList.add('active');
         });
     });
 }
