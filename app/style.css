@@ -60,6 +60,10 @@ body {
 
 .header-brand {
     flex-shrink: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    cursor: pointer;
 }
 
 .brand-text {
