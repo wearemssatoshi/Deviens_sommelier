@@ -74,6 +74,10 @@ const THUMB_IMAGES = {
     'ch37_2025_sa':                'url(img/thumb_latest_update.png)',
     'ch38_2025_argentina':         'url(img/thumb_south_america.png)',
     'ch29_2025_greece':            'url(img/thumb_central_eastern_europe.png)',
+    'wset_appearance':             'url(assets/img/thumbnails/wset_appearance.png)',
+    'wset_nose':                   'url(assets/img/thumbnails/wset_nose.png)',
+    'wset_palate':                 'url(assets/img/thumbnails/wset_palate.png)',
+    'wset_conclusion':             'url(assets/img/thumbnails/wset_conclusion.png)',
     'wset_sat':                    'url(assets/img/thumbnails/wset_conclusion.png)',
 };
 
