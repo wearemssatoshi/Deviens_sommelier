@@ -890,7 +890,7 @@ body {
 }
 
 .update-accordion.open .update-accordion-body {
-    max-height: 600px;
+    max-height: 2000px;
 }
 
 .update-card {

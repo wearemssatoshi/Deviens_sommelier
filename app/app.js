@@ -331,6 +331,24 @@ function renderCategories() {
 }
 
 
+// ---- CATEGORY ORDER for accordion rendering ----
+const CATEGORY_ORDER = [
+    'FOUNDATION', 'ASIA_OCEANIA', 'EUROPE_MAJOR', 'AMERICAS',
+    'EUROPE_MINOR', 'AFRICA', 'PROFESSIONAL', 'UPDATE_2025', 'WSET'
+];
+
+const CATEGORY_TITLES = {
+    'FOUNDATION':    { title: 'Foundation',              sub: '基礎概論' },
+    'ASIA_OCEANIA':  { title: 'Asia & Oceania',          sub: 'アジア・オセアニア' },
+    'EUROPE_MAJOR':  { title: 'Europe',                  sub: 'ヨーロッパ' },
+    'AMERICAS':      { title: 'Americas',                sub: 'アメリカ大陸' },
+    'EUROPE_MINOR':  { title: 'Central & Eastern Europe', sub: '中東欧・その他' },
+    'AFRICA':        { title: 'Africa',                  sub: 'アフリカ' },
+    'PROFESSIONAL':  { title: 'Professional',            sub: 'プロフェッショナル' },
+    'UPDATE_2025':   { title: '2025 Latest Update',      sub: '最新版' },
+    'WSET':          { title: 'WSET',                    sub: 'WSET' },
+};
+
 // ---- RENDER CHAPTERS ----
 function renderChapters(data) {
     const featuredEl = document.getElementById('featuredCard');
@@ -344,75 +362,93 @@ function renderChapters(data) {
         return;
     }
 
-    // Separate update chapters from regular chapters
-    const regularData = data.filter(ch => ch.category !== 'UPDATE_2025');
-    const updateData = data.filter(ch => ch.category === 'UPDATE_2025');
-
-    // First regular item = featured
-    const displayData = regularData.length > 0 ? regularData : data;
-    const first = displayData[0];
+    // Featured card (first item)
+    const first = data[0];
     featuredEl.innerHTML = buildFeaturedCard(first);
     featuredEl.querySelector('.featured-card')?.addEventListener('click', () => showDetail(first));
 
-    // Rest of regular = grid
-    displayData.slice(1).forEach(ch => {
-        if (ch.category === 'UPDATE_2025') return;
-        const card = document.createElement('div');
-        card.innerHTML = buildCard(ch);
-        const el = card.firstElementChild;
-        el.addEventListener('click', () => showDetail(ch));
-        gridEl.appendChild(el);
-    });
-
-    // Update chapters = accordion (if any)
-    if (updateData.length > 0) {
-        const accordion = document.createElement('div');
-        accordion.className = 'update-accordion';
-        accordion.style.gridColumn = '1 / -1';
-
-        const header = document.createElement('button');
-        header.className = 'update-accordion-header';
-        header.innerHTML = `
-            <div class="update-accordion-label">
-                <span class="update-accordion-title">2025 Latest Update</span>
-                <span class="update-accordion-sub">${updateData.length} modules</span>
-            </div>
-            <svg class="update-accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
-        `;
-
-        const body = document.createElement('div');
-        body.className = 'update-accordion-body';
-
-        updateData.forEach(ch => {
+    // If filtering a single category, show flat grid (no accordions)
+    const categories = new Set(data.map(ch => ch.category));
+    if (categories.size === 1) {
+        data.slice(1).forEach(ch => {
             const card = document.createElement('div');
-            card.innerHTML = buildUpdateCard(ch);
+            card.innerHTML = buildCard(ch);
             const el = card.firstElementChild;
             el.addEventListener('click', () => showDetail(ch));
-            body.appendChild(el);
+            gridEl.appendChild(el);
         });
-
-        header.addEventListener('click', () => {
-            accordion.classList.toggle('open');
-        });
-
-        accordion.appendChild(header);
-        accordion.appendChild(body);
-        gridEl.appendChild(accordion);
+        return;
     }
+
+    // Group remaining by category into accordions
+    const remaining = data.slice(1);
+    const grouped = {};
+    remaining.forEach(ch => {
+        if (!grouped[ch.category]) grouped[ch.category] = [];
+        grouped[ch.category].push(ch);
+    });
+
+    // Also include first item's category siblings (minus the first itself)
+    // to avoid orphaning them
+
+    CATEGORY_ORDER.forEach(catId => {
+        const items = grouped[catId];
+        if (!items || items.length === 0) return;
+
+        const catInfo = CATEGORY_TITLES[catId] || { title: catId, sub: '' };
+        const accordion = buildAccordion(catInfo.title, catInfo.sub, items);
+        gridEl.appendChild(accordion);
+    });
+}
+
+function buildAccordion(title, sub, items) {
+    const accordion = document.createElement('div');
+    accordion.className = 'update-accordion';
+    accordion.style.gridColumn = '1 / -1';
+
+    const header = document.createElement('button');
+    header.className = 'update-accordion-header';
+    header.innerHTML = `
+        <div class="update-accordion-label">
+            <span class="update-accordion-title">${title}</span>
+            <span class="update-accordion-sub">${sub} · ${items.length}</span>
+        </div>
+        <svg class="update-accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+    `;
+
+    const body = document.createElement('div');
+    body.className = 'update-accordion-body';
+
+    items.forEach(ch => {
+        const card = document.createElement('div');
+        card.innerHTML = buildUpdateCard(ch);
+        const el = card.firstElementChild;
+        el.addEventListener('click', () => showDetail(ch));
+        body.appendChild(el);
+    });
+
+    header.addEventListener('click', () => {
+        accordion.classList.toggle('open');
+    });
+
+    accordion.appendChild(header);
+    accordion.appendChild(body);
+    return accordion;
 }
 
 function buildUpdateCard(ch) {
     const gradient = THUMB_IMAGES[ch.id] || DEFAULT_GRADIENT;
+    const flag = FLAG_MAP[ch.id] || '';
     const titleEn = getAccentTitle(ch);
-    const pageCount = ch.page_count || 0;
+    const kwCount = ch.keywords?.length || 0;
 
     return `
         <div class="update-card">
             <div class="update-card-thumb" style="background-image:${gradient}; background-size:cover; background-position:center;"></div>
             <div class="update-card-body">
-                <div class="update-card-title">${ch.title}</div>
+                <div class="update-card-title">${flag ? `<span class="flag-inline">${flag}</span> ` : ''}${ch.title}</div>
                 <div class="update-card-title-en">${titleEn}</div>
-                <div class="update-card-meta">${pageCount} pages</div>
+                <div class="update-card-meta">${kwCount} keywords</div>
             </div>
         </div>
     `;
