@@ -43,7 +43,7 @@
     },
     {
       "id": "UPDATE_2025",
-      "title": "2025年 最新アップデート",
+      "title": "最新アップデート",
       "icon": "✨"
     }
   ],
@@ -367,7 +367,7 @@
       "title_en": "France 2025",
       "category": "UPDATE_2025",
       "icon": "🇫🇷",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 43,
       "char_count": 119111,
       "file": "chapters/ch26_2025_france.json"
@@ -379,7 +379,7 @@
       "title_en": "Switzerland 2025",
       "category": "UPDATE_2025",
       "icon": "🇨🇭",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 4,
       "char_count": 12447,
       "file": "chapters/ch27_2025_switzerland.json"
@@ -391,7 +391,7 @@
       "title_en": "Tasting 2025",
       "category": "UPDATE_2025",
       "icon": "👃",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 5,
       "char_count": 8808,
       "file": "chapters/ch28_2025_tasting.json"
@@ -403,7 +403,7 @@
       "title_en": "Greece 2025",
       "category": "UPDATE_2025",
       "icon": "🇬🇷",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 1,
       "char_count": 1450,
       "file": "chapters/ch29_2025_greece.json"
@@ -415,7 +415,7 @@
       "title_en": "Germany 2025",
       "category": "UPDATE_2025",
       "icon": "🇩🇪",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 4,
       "char_count": 15442,
       "file": "chapters/ch30_2025_germany.json"
@@ -427,7 +427,7 @@
       "title_en": "Management 2025",
       "category": "UPDATE_2025",
       "icon": "📦",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 2,
       "char_count": 3592,
       "file": "chapters/ch31_2025_management.json"
@@ -439,7 +439,7 @@
       "title_en": "USA 2025",
       "category": "UPDATE_2025",
       "icon": "🇺🇸",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 6,
       "char_count": 11773,
       "file": "chapters/ch32_2025_usa.json"
@@ -451,7 +451,7 @@
       "title_en": "Italy 2025",
       "category": "UPDATE_2025",
       "icon": "🇮🇹",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 15,
       "char_count": 77536,
       "file": "chapters/ch33_2025_italy.json"
@@ -463,7 +463,7 @@
       "title_en": "Japan 2025",
       "category": "UPDATE_2025",
       "icon": "🇯🇵",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 4,
       "char_count": 7284,
       "file": "chapters/ch34_2025_japan.json"
@@ -475,7 +475,7 @@
       "title_en": "Chile 2025",
       "category": "UPDATE_2025",
       "icon": "🇨🇱",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 2,
       "char_count": 3768,
       "file": "chapters/ch35_2025_chile.json"
@@ -487,7 +487,7 @@
       "title_en": "Spain 2025",
       "category": "UPDATE_2025",
       "icon": "🇪🇸",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 6,
       "char_count": 26927,
       "file": "chapters/ch36_2025_spain.json"
@@ -499,7 +499,7 @@
       "title_en": "South Africa 2025",
       "category": "UPDATE_2025",
       "icon": "🇿🇦",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 3,
       "char_count": 4748,
       "file": "chapters/ch37_2025_sa.json"
@@ -511,7 +511,7 @@
       "title_en": "Argentina 2025",
       "category": "UPDATE_2025",
       "icon": "🇦🇷",
-      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "description": "J.S.A. 教本アップデート情報",
       "page_count": 2,
       "char_count": 2252,
       "file": "chapters/ch38_2025_argentina.json"
