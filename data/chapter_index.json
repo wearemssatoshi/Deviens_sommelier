@@ -2,7 +2,7 @@
   "project": "ソムリエPRO",
   "version": "1.0",
   "created_at": "2026-04-02T14:40:40.248292",
-  "total_chapters": 29,
+  "total_chapters": 27,
   "total_pages": 885,
   "total_chars": 1932992,
   "categories": [
@@ -361,40 +361,16 @@
       "file": "chapters/ch25_jsa_exam.json"
     },
     {
-      "id": "update_europe_2025",
-      "number": 100,
-      "title": "ヨーロッパ最新版",
-      "title_en": "Europe 2025 Update",
+      "id": "ch26_latest_update",
+      "number": 26,
+      "title": "最新アップデート",
+      "title_en": "Latest Updates",
       "category": "UPDATE_2025",
-      "icon": "🏰",
-      "description": "フランス・イタリア・スペイン・ドイツ・スイス・ギリシャの2025年度最新版",
-      "page_count": 73,
-      "char_count": 252913,
-      "file": "chapters/update_europe_2025.json"
-    },
-    {
-      "id": "update_newworld_2025",
-      "number": 101,
-      "title": "新世界 & アジア最新版",
-      "title_en": "New World & Asia 2025 Update",
-      "category": "UPDATE_2025",
-      "icon": "🌏",
-      "description": "アメリカ・チリ・アルゼンチン・南アフリカ・日本の2025年度最新版",
-      "page_count": 17,
-      "char_count": 29825,
-      "file": "chapters/update_newworld_2025.json"
-    },
-    {
-      "id": "update_professional_2025",
-      "number": 102,
-      "title": "テイスティング & マネジメント最新版",
-      "title_en": "Tasting & Management 2025 Update",
-      "category": "UPDATE_2025",
-      "icon": "🎓",
-      "description": "テイスティング用語・酒税制度の2025年最新改正",
-      "page_count": 7,
-      "char_count": 12400,
-      "file": "chapters/update_professional_2025.json"
+      "icon": "✨",
+      "description": "ナレッジアップデート",
+      "page_count": 97,
+      "char_count": 295735,
+      "file": "chapters/ch26_latest_update.json"
     }
   ]
 }

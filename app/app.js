@@ -61,10 +61,19 @@ const THUMB_IMAGES = {
     'ch23_wine_management':        'url(img/thumb_management.png)',
     'ch24_sommelier':              'url(img/thumb_sommelier.png)',
     'ch25_jsa_exam':               'url(img/thumb_jsa_exam.png)',
-    'ch26_latest_update':          'url(img/thumb_latest_update.png)',
-    'update_europe_2025':          'url(img/thumb_central_eastern_europe.png)',
-    'update_newworld_2025':        'url(img/thumb_south_america.png)',
-    'update_professional_2025':    'url(img/thumb_wine_management.png)',
+    'ch26_2025_france':            'url(img/thumb_latest_update.png)',
+    'ch27_2025_switzerland':       'url(img/thumb_switzerland_uk.png)',
+    'ch28_2025_tasting':           'url(img/thumb_latest_update.png)',
+    'ch30_2025_germany':           'url(img/thumb_latest_update.png)',
+    'ch31_2025_management':        'url(img/thumb_wine_management.png)',
+    'ch32_2025_usa':               'url(img/thumb_latest_update.png)',
+    'ch33_2025_italy':             'url(img/thumb_latest_update.png)',
+    'ch34_2025_japan':             'url(img/thumb_latest_update.png)',
+    'ch35_2025_chile':             'url(img/thumb_south_america.png)',
+    'ch36_2025_spain':             'url(img/thumb_latest_update.png)',
+    'ch37_2025_sa':                'url(img/thumb_latest_update.png)',
+    'ch38_2025_argentina':         'url(img/thumb_south_america.png)',
+    'ch29_2025_greece':            'url(img/thumb_central_eastern_europe.png)',
     'wset_sat':                    'url(assets/img/thumbnails/wset_conclusion.png)',
 };
 
@@ -109,9 +118,6 @@ const ACCENT_TITLES = {
     'ch16_hungary':   { ja: 'ハンガリー', en: 'Magyarország' },
     'ch18_greece_georgia': { ja: 'ギリシャ & ジョージア', en: 'Ελλάδα & საქართველო' },
     'ch19_switzerland_uk': { ja: 'スイス & 英国', en: 'Schweiz & United Kingdom' },
-    'update_europe_2025': { ja: 'ヨーロッパ最新版', en: 'Europe 2025 Update' },
-    'update_newworld_2025': { ja: '新世界 & アジア最新版', en: 'New World & Asia 2025 Update' },
-    'update_professional_2025': { ja: 'テイスティング & マネジメント最新版', en: 'Tasting & Management 2025 Update' },
 };
 
 // ---- STATE ----
