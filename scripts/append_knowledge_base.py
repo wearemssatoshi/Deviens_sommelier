@@ -133,7 +133,7 @@ def main():
     new_chunks = []
     
     for filename in chapter_files:
-        if not ("_2025_" in filename and filename.startswith("ch")):
+        if not (True and filename.startswith("ch")):
             continue
             
         filepath = os.path.join(CHAPTERS_DIR, filename)
