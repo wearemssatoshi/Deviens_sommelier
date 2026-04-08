@@ -17,6 +17,9 @@
     --text-tertiary: #999999;
     --accent: #D4002A;          /* Wine red accent */
     --accent-hover: #B00020;
+    --gold-primary: #C9A94E;
+    --gold-dark: #8C7335;
+    --gold-muted: #DBCB9E;
     --kicker-bg: #191919;
     --kicker-text: #FFFFFF;
     --font-sans: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -4173,7 +4176,7 @@ body {
 
 .dash-medoc-next-text, .quest-medoc-next {
     font-size: 12px;
-    color: var(--text-main);
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 

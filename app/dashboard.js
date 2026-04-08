@@ -159,11 +159,11 @@
             <div class="dash-wallet-bar">
                 <div class="dash-wallet-box wallet">
                     <div class="dash-wallet-title">WALLET BALANCE</div>
-                    <div class="dash-wallet-val">${walletBalance.toLocaleString()} <span class="dash-wallet-unit">G</span></div>
+                    <div class="dash-wallet-val">${walletBalance.toLocaleString()} <span class="dash-wallet-unit">トークン</span></div>
                 </div>
                 <div class="dash-wallet-box earn">
                     <div class="dash-wallet-title">TOTAL EARNED</div>
-                    <div class="dash-wallet-val">${totalTokens.toLocaleString()} <span class="dash-wallet-unit">G</span></div>
+                    <div class="dash-wallet-val">${totalTokens.toLocaleString()} <span class="dash-wallet-unit">トークン</span></div>
                 </div>
             </div>
 
@@ -188,7 +188,7 @@
                 <div class="dash-diploma-bar">
                     <div class="dash-diploma-fill" style="width: ${Math.min(100, (totalTokens / diplomaThreshold) * 100)}%"></div>
                 </div>
-                <div class="dash-diploma-status">${totalTokens.toLocaleString()} / ${diplomaThreshold.toLocaleString()} G</div>
+                <div class="dash-diploma-status">${totalTokens.toLocaleString()} / ${diplomaThreshold.toLocaleString()} トークン</div>
             </div>
 
             <!-- KPI Cards -->

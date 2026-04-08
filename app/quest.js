@@ -250,7 +250,7 @@
                 <div class="quest-diploma-track">
                     <div class="quest-diploma-fill" style="width: ${Math.min(100, (totalTokens / DIPLOMA_THRESHOLD) * 100)}%"></div>
                 </div>
-                <div class="quest-diploma-text">${totalTokens.toLocaleString()} / ${DIPLOMA_THRESHOLD.toLocaleString()} G</div>
+                <div class="quest-diploma-text">${totalTokens.toLocaleString()} / ${DIPLOMA_THRESHOLD.toLocaleString()} トークン</div>
             </div>
 
             <!-- Current Rank Card -->
@@ -324,7 +324,7 @@
             if (wallet < cost) {
                 showQuestModal(
                     'トークン不足',
-                    `受験には${cost.toLocaleString()} Gが必要です。\n現在のウォレット残高: ${wallet.toLocaleString()} G`,
+                    `受験には${cost.toLocaleString()} トークンが必要です。\n現在のウォレット残高: ${wallet.toLocaleString()} トークン`,
                     [{ text: '戻る', action: 'close' }]
                 );
                 return;
@@ -333,13 +333,13 @@
             // Confirmation modal
             showQuestModal(
                 `${tierConfig.titleJa}試験 — 受験確認`,
-                `受験料として <strong style="color:#D4002A;font-size:1.2em">${cost.toLocaleString()} G</strong> を支払います。\n\n` +
-                `🏆 合格すると <strong style="color:#C9A94E">${tierConfig.clearReward.toLocaleString()} G</strong> を獲得！\n` +
+                `受験料として <strong style="color:#D4002A;font-size:1.2em">${cost.toLocaleString()} トークン</strong> を支払います。\n\n` +
+                `🏆 合格すると <strong style="color:#C9A94E">${tierConfig.clearReward.toLocaleString()} トークン</strong> を獲得！\n` +
                 `💡 不合格でも正答率に応じてキャッシュバックあり\n\n` +
-                `<span style="color:#999;font-size:0.85em">残高: ${wallet.toLocaleString()} G → ${(wallet - cost).toLocaleString()} G</span>`,
+                `<span style="color:#999;font-size:0.85em">残高: ${wallet.toLocaleString()} トークン → ${(wallet - cost).toLocaleString()} トークン</span>`,
                 [
                     { text: 'キャンセル', action: 'close', style: 'secondary' },
-                    { text: `${cost.toLocaleString()} G 支払って挑戦`, action: 'pay', style: 'danger' }
+                    { text: `${cost.toLocaleString()} トークン支払って挑戦`, action: 'pay', style: 'danger' }
                 ],
                 async (action) => {
                     if (action === 'pay') {
@@ -432,7 +432,7 @@
                 statusClass = 'locked';
                 if (tier.id === 'intermediate') {
                     const requiredTokens = i * tier.tokenGateStep;
-                    actionHtml = `<span class="quest-test-gate">🔒 累計 ${requiredTokens.toLocaleString()} G</span>`;
+                    actionHtml = `<span class="quest-test-gate">🔒 累計 ${requiredTokens.toLocaleString()} トークン</span>`;
                 }
             } else if (passed && !tier.clearRewardRepeatable) {
                 statusClass = 'passed';
@@ -447,7 +447,7 @@
             } else {
                 statusClass = bestScore !== null ? 'attempted' : 'available';
                 if (tier.unlockType === 'wallet') {
-                    actionHtml = `<button class="quest-test-btn quest-test-pay" data-tier="${tier.id}" data-test="${i}">💰 ${tier.unlockCost.toLocaleString()} G</button>`;
+                    actionHtml = `<button class="quest-test-btn quest-test-pay" data-tier="${tier.id}" data-test="${i}">💰 ${tier.unlockCost.toLocaleString()} トークン</button>`;
                 } else {
                     actionHtml = `<button class="quest-test-btn" data-tier="${tier.id}" data-test="${i}">${bestScore !== null ? '再挑戦' : '挑戦'}</button>`;
                 }
@@ -471,8 +471,8 @@
         if (tier.unlockType === 'wallet') {
             tierInfoHtml = `
                 <div class="quest-tier-economy">
-                    <span class="quest-tier-eco-item cost">受験料: ${tier.unlockCost.toLocaleString()} G</span>
-                    <span class="quest-tier-eco-item reward">報酬: +${tier.clearReward.toLocaleString()} G</span>
+                    <span class="quest-tier-eco-item cost">受験料: ${tier.unlockCost.toLocaleString()} トークン</span>
+                    <span class="quest-tier-eco-item reward">報酬: +${tier.clearReward.toLocaleString()} トークン</span>
                     ${tier.cashbackOnFail ? '<span class="quest-tier-eco-item cashback">不合格時は正答率に応じてキャッシュバック</span>' : ''}
                 </div>
             `;
@@ -480,7 +480,7 @@
             tierInfoHtml = `
                 <div class="quest-tier-economy">
                     <span class="quest-tier-eco-item free">受験料: 無料</span>
-                    <span class="quest-tier-eco-item reward">初回クリア報酬: +${tier.clearReward.toLocaleString()} G</span>
+                    <span class="quest-tier-eco-item reward">初回クリア報酬: +${tier.clearReward.toLocaleString()} トークン</span>
                 </div>
             `;
         }
@@ -488,12 +488,12 @@
         let lockReason = '';
         if (!unlocked) {
             if (tier.id === 'intermediate') {
-                lockReason = `累計 ${tier.tokenGateStart.toLocaleString()} トークンでアンロック（現在: ${totalTokens.toLocaleString()} G）`;
+                lockReason = `累計 ${tier.tokenGateStart.toLocaleString()} トークンでアンロック（現在: ${totalTokens.toLocaleString()} トークン）`;
             } else if (tier.prerequisite) {
                 const prereqTier = TIERS.find(t => t.id === tier.prerequisite);
                 lockReason = `${prereqTier?.titleJa || '前提ティア'}を全クリアで解放`;
                 if (tier.cumulativeGate) {
-                    lockReason += ` + 累計 ${tier.cumulativeGate.toLocaleString()} G 必要`;
+                    lockReason += ` + 累計 ${tier.cumulativeGate.toLocaleString()} トークン 必要`;
                 }
             }
         }
@@ -673,17 +673,17 @@
         if (feeAmount > 0 || rewardAmount > 0 || cashbackAmount > 0) {
             tokenResultHtml = `<div class="quest-results-token-section">`;
             if (feeAmount > 0) {
-                tokenResultHtml += `<div class="quest-token-line fee">受験料: <span>-${feeAmount.toLocaleString()} G</span></div>`;
+                tokenResultHtml += `<div class="quest-token-line fee">受験料: <span>-${feeAmount.toLocaleString()} トークン</span></div>`;
             }
             if (passed && rewardAmount > 0) {
-                tokenResultHtml += `<div class="quest-token-line reward">🏆 クリア報酬: <span>+${rewardAmount.toLocaleString()} G</span></div>`;
+                tokenResultHtml += `<div class="quest-token-line reward">🏆 クリア報酬: <span>+${rewardAmount.toLocaleString()} トークン</span></div>`;
             }
             if (!passed && cashbackAmount > 0) {
-                tokenResultHtml += `<div class="quest-token-line cashback">💡 キャッシュバック (${pct}%): <span>+${cashbackAmount.toLocaleString()} G</span></div>`;
+                tokenResultHtml += `<div class="quest-token-line cashback">💡 キャッシュバック (${pct}%): <span>+${cashbackAmount.toLocaleString()} トークン</span></div>`;
             }
             const netResult = -feeAmount + (passed ? rewardAmount : cashbackAmount);
             const netColor = netResult >= 0 ? '#C9A94E' : '#D4002A';
-            tokenResultHtml += `<div class="quest-token-line net" style="color:${netColor}">純増減: <span>${netResult >= 0 ? '+' : ''}${netResult.toLocaleString()} G</span></div>`;
+            tokenResultHtml += `<div class="quest-token-line net" style="color:${netColor}">純増減: <span>${netResult >= 0 ? '+' : ''}${netResult.toLocaleString()} トークン</span></div>`;
             tokenResultHtml += `</div>`;
         }
 
