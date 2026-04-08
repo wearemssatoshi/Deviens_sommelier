@@ -4067,7 +4067,7 @@ body {
 /* -- Wallet & Tracker (Dashboard & Quest shared logic basically) -- */
 .dash-wallet-bar, .quest-wallet-bar {
     display: flex;
-    background: linear-gradient(to right, #000, #1a1a1a);
+    background: linear-gradient(135deg, #4A0210 0%, #150004 100%);
     border: 1px solid var(--gold-dark);
     border-radius: 12px;
     margin-bottom: 24px;
