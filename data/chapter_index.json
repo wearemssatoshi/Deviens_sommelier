@@ -370,7 +370,7 @@
       "description": "フランス・イタリア・スペイン・ドイツ・スイス・ギリシャの2025年度最新版",
       "page_count": 73,
       "char_count": 252913,
-      "file": "chapters/ch26_latest_update.json"
+      "file": "chapters/update_europe_2025.json"
     },
     {
       "id": "update_newworld_2025",
@@ -382,7 +382,7 @@
       "description": "アメリカ・チリ・アルゼンチン・南アフリカ・日本の2025年度最新版",
       "page_count": 17,
       "char_count": 29825,
-      "file": "chapters/ch26_latest_update.json"
+      "file": "chapters/update_newworld_2025.json"
     },
     {
       "id": "update_professional_2025",
@@ -394,7 +394,7 @@
       "description": "テイスティング用語・酒税制度の2025年最新改正",
       "page_count": 7,
       "char_count": 12400,
-      "file": "chapters/ch26_latest_update.json"
+      "file": "chapters/update_professional_2025.json"
     }
   ]
 }
