@@ -16,6 +16,7 @@ const CATEGORIES = [
     { id: 'EUROPE_MINOR', label: '中東欧・その他' },
     { id: 'AFRICA', label: 'アフリカ' },
     { id: 'PROFESSIONAL', label: 'プロフェッショナル' },
+    { id: 'UPDATE_2025', label: '2025最新版' },
     { id: 'WSET', label: 'WSET' },
 ];
 
@@ -28,6 +29,7 @@ const CATEGORY_LABELS = {
     'EUROPE_MINOR': '中東欧・その他',
     'AFRICA': 'アフリカ',
     'PROFESSIONAL': 'プロフェッショナル',
+    'UPDATE_2025': '2025最新版',
     'WSET': 'WSET',
 };
 
@@ -59,6 +61,10 @@ const THUMB_IMAGES = {
     'ch23_wine_management':        'url(img/thumb_management.png)',
     'ch24_sommelier':              'url(img/thumb_sommelier.png)',
     'ch25_jsa_exam':               'url(img/thumb_jsa_exam.png)',
+    'ch26_latest_update':          'url(img/thumb_latest_update.png)',
+    'update_europe_2025':          'url(img/thumb_central_eastern_europe.png)',
+    'update_newworld_2025':        'url(img/thumb_south_america.png)',
+    'update_professional_2025':    'url(img/thumb_wine_management.png)',
     'wset_sat':                    'url(assets/img/thumbnails/wset_conclusion.png)',
 };
 
@@ -103,6 +109,9 @@ const ACCENT_TITLES = {
     'ch16_hungary':   { ja: 'ハンガリー', en: 'Magyarország' },
     'ch18_greece_georgia': { ja: 'ギリシャ & ジョージア', en: 'Ελλάδα & საქართველო' },
     'ch19_switzerland_uk': { ja: 'スイス & 英国', en: 'Schweiz & United Kingdom' },
+    'update_europe_2025': { ja: 'ヨーロッパ最新版', en: 'Europe 2025 Update' },
+    'update_newworld_2025': { ja: '新世界 & アジア最新版', en: 'New World & Asia 2025 Update' },
+    'update_professional_2025': { ja: 'テイスティング & マネジメント最新版', en: 'Tasting & Management 2025 Update' },
 };
 
 // ---- STATE ----
