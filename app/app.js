@@ -335,28 +335,87 @@ function renderCategories() {
 function renderChapters(data) {
     const featuredEl = document.getElementById('featuredCard');
     const gridEl = document.getElementById('chapterGrid');
-    
+
     featuredEl.innerHTML = '';
     gridEl.innerHTML = '';
-    
+
     if (data.length === 0) {
         gridEl.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--text-tertiary);padding:60px 0;">該当するチャプターがありません</p>';
         return;
     }
-    
-    // First item = featured
-    const first = data[0];
+
+    // Separate update chapters from regular chapters
+    const regularData = data.filter(ch => ch.category !== 'UPDATE_2025');
+    const updateData = data.filter(ch => ch.category === 'UPDATE_2025');
+
+    // First regular item = featured
+    const displayData = regularData.length > 0 ? regularData : data;
+    const first = displayData[0];
     featuredEl.innerHTML = buildFeaturedCard(first);
     featuredEl.querySelector('.featured-card')?.addEventListener('click', () => showDetail(first));
-    
-    // Rest = grid
-    data.slice(1).forEach(ch => {
+
+    // Rest of regular = grid
+    displayData.slice(1).forEach(ch => {
+        if (ch.category === 'UPDATE_2025') return;
         const card = document.createElement('div');
         card.innerHTML = buildCard(ch);
         const el = card.firstElementChild;
         el.addEventListener('click', () => showDetail(ch));
         gridEl.appendChild(el);
     });
+
+    // Update chapters = accordion (if any)
+    if (updateData.length > 0) {
+        const accordion = document.createElement('div');
+        accordion.className = 'update-accordion';
+        accordion.style.gridColumn = '1 / -1';
+
+        const header = document.createElement('button');
+        header.className = 'update-accordion-header';
+        header.innerHTML = `
+            <div class="update-accordion-label">
+                <span class="update-accordion-title">2025 Latest Update</span>
+                <span class="update-accordion-sub">${updateData.length} modules</span>
+            </div>
+            <svg class="update-accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+        `;
+
+        const body = document.createElement('div');
+        body.className = 'update-accordion-body';
+
+        updateData.forEach(ch => {
+            const card = document.createElement('div');
+            card.innerHTML = buildUpdateCard(ch);
+            const el = card.firstElementChild;
+            el.addEventListener('click', () => showDetail(ch));
+            body.appendChild(el);
+        });
+
+        header.addEventListener('click', () => {
+            accordion.classList.toggle('open');
+        });
+
+        accordion.appendChild(header);
+        accordion.appendChild(body);
+        gridEl.appendChild(accordion);
+    }
+}
+
+function buildUpdateCard(ch) {
+    const gradient = THUMB_IMAGES[ch.id] || DEFAULT_GRADIENT;
+    const titleEn = getAccentTitle(ch);
+    const pageCount = ch.page_count || 0;
+
+    return `
+        <div class="update-card">
+            <div class="update-card-thumb" style="background-image:${gradient}; background-size:cover; background-position:center;"></div>
+            <div class="update-card-body">
+                <div class="update-card-title">${ch.title}</div>
+                <div class="update-card-title-en">${titleEn}</div>
+                <div class="update-card-meta">${pageCount} pages</div>
+            </div>
+        </div>
+    `;
 }
 
 
