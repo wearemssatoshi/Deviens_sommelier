@@ -1,0 +1,19 @@
+{
+  "id": "ch35_2025_chile",
+  "number": 35,
+  "title": "チリ (2025)",
+  "title_en": "Chile 2025",
+  "category": "UPDATE_2025",
+  "icon": "🇨🇱",
+  "description": "2025年度 J.S.A. 教本アップデート情報",
+  "page_count": 2,
+  "char_count": 3768,
+  "tier": "standard",
+  "key_points": [
+    "2025年度 最新アップデート情報",
+    "詳細はPDF資料をご確認ください"
+  ],
+  "keywords": [],
+  "summary": "### 2025年アップデート\n本チャプターは補足データや表が中心のアップデート資料です。出題内容の小さな変更点や、AIが要約を行えない図表データが含まれます。詳細な知識学習には、実際のPDF資料も併せてご確認ください。",
+  "summary_chars": 110
+}

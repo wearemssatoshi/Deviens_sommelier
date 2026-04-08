@@ -2,9 +2,9 @@
   "project": "ソムリエPRO",
   "version": "1.0",
   "created_at": "2026-04-02T14:40:40.248292",
-  "total_chapters": 26,
-  "total_pages": 788,
-  "total_chars": 1637257,
+  "total_chapters": 39,
+  "total_pages": 885,
+  "total_chars": 1932395,
   "categories": [
     {
       "id": "FOUNDATION",
@@ -40,6 +40,11 @@
       "id": "PROFESSIONAL",
       "title": "プロフェッショナル",
       "icon": "🎓"
+    },
+    {
+      "id": "UPDATE_2025",
+      "title": "2025年 最新アップデート",
+      "icon": "✨"
     }
   ],
   "chapters": [
@@ -354,6 +359,162 @@
       "page_count": 7,
       "char_count": 18378,
       "file": "chapters/ch25_jsa_exam.json"
+    },
+    {
+      "id": "ch26_2025_france",
+      "number": 26,
+      "title": "フランス (2025)",
+      "title_en": "France 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇫🇷",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 43,
+      "char_count": 119111,
+      "file": "chapters/ch26_2025_france.json"
+    },
+    {
+      "id": "ch27_2025_switzerland",
+      "number": 27,
+      "title": "スイス (2025)",
+      "title_en": "Switzerland 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇨🇭",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 4,
+      "char_count": 12447,
+      "file": "chapters/ch27_2025_switzerland.json"
+    },
+    {
+      "id": "ch28_2025_tasting",
+      "number": 28,
+      "title": "テイスティング (2025)",
+      "title_en": "Tasting 2025",
+      "category": "UPDATE_2025",
+      "icon": "👃",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 5,
+      "char_count": 8808,
+      "file": "chapters/ch28_2025_tasting.json"
+    },
+    {
+      "id": "ch29_2025_greece",
+      "number": 29,
+      "title": "ギリシャ (2025)",
+      "title_en": "Greece 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇬🇷",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 1,
+      "char_count": 1450,
+      "file": "chapters/ch29_2025_greece.json"
+    },
+    {
+      "id": "ch30_2025_germany",
+      "number": 30,
+      "title": "ドイツ (2025)",
+      "title_en": "Germany 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇩🇪",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 4,
+      "char_count": 15442,
+      "file": "chapters/ch30_2025_germany.json"
+    },
+    {
+      "id": "ch31_2025_management",
+      "number": 31,
+      "title": "マネジメント (2025)",
+      "title_en": "Management 2025",
+      "category": "UPDATE_2025",
+      "icon": "📦",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 2,
+      "char_count": 3592,
+      "file": "chapters/ch31_2025_management.json"
+    },
+    {
+      "id": "ch32_2025_usa",
+      "number": 32,
+      "title": "アメリカ (2025)",
+      "title_en": "USA 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇺🇸",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 6,
+      "char_count": 11773,
+      "file": "chapters/ch32_2025_usa.json"
+    },
+    {
+      "id": "ch33_2025_italy",
+      "number": 33,
+      "title": "イタリア (2025)",
+      "title_en": "Italy 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇮🇹",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 15,
+      "char_count": 77536,
+      "file": "chapters/ch33_2025_italy.json"
+    },
+    {
+      "id": "ch34_2025_japan",
+      "number": 34,
+      "title": "日本 (2025)",
+      "title_en": "Japan 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇯🇵",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 4,
+      "char_count": 7284,
+      "file": "chapters/ch34_2025_japan.json"
+    },
+    {
+      "id": "ch35_2025_chile",
+      "number": 35,
+      "title": "チリ (2025)",
+      "title_en": "Chile 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇨🇱",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 2,
+      "char_count": 3768,
+      "file": "chapters/ch35_2025_chile.json"
+    },
+    {
+      "id": "ch36_2025_spain",
+      "number": 36,
+      "title": "スペイン (2025)",
+      "title_en": "Spain 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇪🇸",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 6,
+      "char_count": 26927,
+      "file": "chapters/ch36_2025_spain.json"
+    },
+    {
+      "id": "ch37_2025_sa",
+      "number": 37,
+      "title": "南アフリカ (2025)",
+      "title_en": "South Africa 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇿🇦",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 3,
+      "char_count": 4748,
+      "file": "chapters/ch37_2025_sa.json"
+    },
+    {
+      "id": "ch38_2025_argentina",
+      "number": 38,
+      "title": "アルゼンチン (2025)",
+      "title_en": "Argentina 2025",
+      "category": "UPDATE_2025",
+      "icon": "🇦🇷",
+      "description": "2025年度 J.S.A. 教本アップデート情報",
+      "page_count": 2,
+      "char_count": 2252,
+      "file": "chapters/ch38_2025_argentina.json"
     }
   ]
 }
