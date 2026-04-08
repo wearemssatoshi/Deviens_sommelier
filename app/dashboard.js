@@ -1,5 +1,5 @@
 /**
- * SOMMELIER PRO — Learning Dashboard v1.0
+ * SOMMELIER PRO — Learning Dashboard v1.1.0
  * 学習進捗ダッシュボード（個人の弱点分析・日別推移・ストリーク）
  */
 

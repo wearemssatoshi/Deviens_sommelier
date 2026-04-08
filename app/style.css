@@ -828,6 +828,14 @@ body {
     color: var(--text-tertiary);
 }
 
+.footer-version {
+    font-size: 10px;
+    color: var(--text-tertiary);
+    opacity: 0.5;
+    font-family: 'Inter', monospace;
+    letter-spacing: 0.5px;
+}
+
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
     .hero-title { font-size: 24px; }
