@@ -445,7 +445,7 @@
 
         } catch (error) {
             console.error("Quiz generation error:", error);
-            alert("クイズ生成中にエラーが発生しました: " + error.message);
+            DSMToast.error('クイズ生成に失敗しました。再度お試しください。');
             showState('setup');
         }
     }
@@ -455,34 +455,42 @@
 
         const promptText = `
 あなたはJ.S.A.ソムリエ試験問題の専門作成AIです。
-以下の【参照テキスト】に含まれる事実のみを用いて、高度で正確な4択問題を【${QUIZ_COUNT}問】作成してください。
+以下の【参照テキスト】に **含まれる事実だけ** を用いて、正確な4択問題を【${QUIZ_COUNT}問】作成してください。
 
-# 制約事項
-- 問題は必ず以下に指定する厳密なJSON配列形式で返すこと。
-- 余計な挨拶やMarkdownコードブロック (\`\`\`json) は絶対に含まないこと。JSON自体のみ出力せよ。
-- 問題はプロフェッショナル向け（重箱の隅をつつくような具体的なものや、主要な概念を問うもの）にする。
-- 選択肢は必ず4つ。
-- 外国語の単語（ワイン名、産地、ブドウ品種、専門用語など）が登場する場合は、可能な限り直後にカッコ書きでカタカナのふりがなを付けてください（例: Pinot Noir（ピノ・ノワール）、Bourgogne（ブルゴーニュ））。
+# 絶対厳守ルール（ハルシネーション防止）
+1. 【参照テキスト】に明記されていない事実・数値・固有名詞・年号・品種・産地は **絶対に使用禁止**。外部知識の持ち込みは一切禁止する。
+2. 正解の選択肢は必ず【参照テキスト】内の記述から直接引用・要約できるものであること。
+3. 不正解の選択肢（ディストラクター）も、もっともらしい嘘を捏造するのではなく、テキスト内の別の事実や、同カテゴリの一般的選択肢を使うこと。
+4. 解説文（explanation）では「テキストによれば〜」「本文中に〜と記載」のように、出典を明示する形で根拠を示すこと。
+5. テキスト内の事実だけでは${QUIZ_COUNT}問を作成できない場合は、同じ事実を異なる角度（定義→具体例→比較→因果関係）から問う問題を作り、問題数を補うこと。捏造して水増しすることは絶対に禁止。
+6. 外国語の単語が登場する場合は直後にカッコ書きでカタカナのふりがなを付けること（例: Pinot Noir（ピノ・ノワール））。
+
+# 出題レベル
+- J.S.A.ソムリエ試験のプロフェッショナル水準。重箱の隅をつつくような具体的事実や、主要な概念の正確な理解を問う。
 
 # 参照テキスト
 ${contextText}
-
-# 出力JSONフォーマット
-[
-  {
-    "question": "問題文",
-    "choices": ["A", "B", "C", "D"],
-    "correct_index": 0,
-    "explanation": "解説文"
-  }
-]
         `;
 
         const requestBody = {
             contents: [{ parts: [{ text: promptText }] }],
             generationConfig: {
-                temperature: 0.3,
-                maxOutputTokens: 8192
+                temperature: 0.0,
+                maxOutputTokens: 8192,
+                responseMimeType: "application/json",
+                responseSchema: {
+                    type: "ARRAY",
+                    items: {
+                        type: "OBJECT",
+                        properties: {
+                            question:      { type: "STRING" },
+                            choices:       { type: "ARRAY", items: { type: "STRING" } },
+                            correct_index: { type: "INTEGER" },
+                            explanation:   { type: "STRING" }
+                        },
+                        required: ["question", "choices", "correct_index", "explanation"]
+                    }
+                }
             }
         };
 
@@ -522,24 +530,34 @@ ${contextText}
 
             let parsedQuestions = [];
             try {
-                // まず正規表現でJSON配列部分だけを抽出する（Markdown記法や挨拶等が混入しても堅牢にパースする）
-                const match = responseText.match(/\[\s*\{[\s\S]*\}\s*\]/);
-                if (match) {
-                    parsedQuestions = JSON.parse(match[0]);
-                } else {
-                    const cleaned = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
-                    parsedQuestions = JSON.parse(cleaned);
+                // Native JSON mode (responseMimeType) guarantees clean JSON output.
+                // Direct parse first, regex fallback for safety.
+                parsedQuestions = JSON.parse(responseText);
+            } catch (e1) {
+                try {
+                    const match = responseText.match(/\[\s*\{[\s\S]*\}\s*\]/);
+                    if (match) {
+                        parsedQuestions = JSON.parse(match[0]);
+                    } else {
+                        const cleaned = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
+                        parsedQuestions = JSON.parse(cleaned);
+                    }
+                } catch (e2) {
+                    console.error("JSON parse error:", responseText);
+                    throw new Error("Invalid format received from AI (JSON parse failed)");
                 }
-            } catch (e) {
-                console.error("JSON parse error:", responseText);
-                throw new Error("Invalid format received from AI (JSON parse failed)");
             }
 
             if (!Array.isArray(parsedQuestions) || parsedQuestions.length === 0) {
                 throw new Error("Parsed zero questions.");
             }
 
-            quizState.questions = parsedQuestions;
+            // Validate each question — strip invalid ones
+            const validated = validateQuizResponse(parsedQuestions);
+            if (validated.length === 0) {
+                throw new Error("All generated questions failed validation.");
+            }
+            quizState.questions = validated;
             quizState.currentQuestionIndex = 0;
             quizState.userAnswers = [];
 
@@ -557,9 +575,41 @@ ${contextText}
             }
 
             // フォールバックも失敗した場合はエラー画面へ
-            alert(`クイズ生成中にエラーが発生しました:\n${error.message}\n\nAPIが混み合っているか、タイムアウトしました。時間を置いて再度お試しください。`);
+            DSMToast.error('クイズ生成に失敗しました。時間を置いて再度お試しください。');
             showState('setup');
         }
+    }
+
+    // ========== VALIDATION ==========
+    function validateQuizResponse(questions) {
+        return questions.filter((q, i) => {
+            if (!q || typeof q !== 'object') {
+                console.warn(`[Validate] Q${i + 1}: not an object`);
+                return false;
+            }
+            if (typeof q.question !== 'string' || q.question.trim().length < 5) {
+                console.warn(`[Validate] Q${i + 1}: missing/short question text`);
+                return false;
+            }
+            if (!Array.isArray(q.choices) || q.choices.length !== 4) {
+                console.warn(`[Validate] Q${i + 1}: choices must be array of 4`);
+                return false;
+            }
+            if (q.choices.some(c => typeof c !== 'string' || c.trim().length === 0)) {
+                console.warn(`[Validate] Q${i + 1}: empty choice detected`);
+                return false;
+            }
+            const ci = Number(q.correct_index);
+            if (isNaN(ci) || ci < 0 || ci > 3 || !Number.isInteger(ci)) {
+                console.warn(`[Validate] Q${i + 1}: invalid correct_index=${q.correct_index}`);
+                return false;
+            }
+            q.correct_index = ci; // ensure integer
+            if (typeof q.explanation !== 'string') {
+                q.explanation = ''; // allow missing explanation
+            }
+            return true;
+        });
     }
 
     // ========== QUIZ UI ==========

@@ -30,8 +30,12 @@
         dashboardOpen = true;
 
         // Stage-Gate: require auth
-        DSMAuth.requireAuth((user) => {
+        DSMAuth.requireAuth(async (user) => {
             renderLoading();
+            // Wait for dynamic photo metadata to be ready
+            if (typeof userMetaReady !== 'undefined') {
+                await userMetaReady;
+            }
             fetchDetailedStats(user.name);
         });
     }

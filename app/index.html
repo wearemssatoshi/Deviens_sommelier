@@ -59,7 +59,7 @@
         <div class="hero-inner">
             <p class="hero-kicker">JE SERAI SOMMELIER — 私はソムリエになる</p>
             <h1 class="hero-title">Deviens sommelier</h1>
-            <p class="hero-desc">全26チャプターで、各国のワイン産地・品種・歴史・醸造法を体系的に学ぶ。<br>クエストをクリアして Resident Sommelier を目指そう。</p>
+            <p class="hero-desc">全26チャプターで、各国のワイン産地・品種・歴史・醸造法を体系的に学ぶ。<br>クイズとクエストをクリアして Resident Sommelier を目指そう。</p>
             <div class="hero-meta">
                 <span class="hero-meta-item"><strong>26</strong> Chapters</span>
                 <span class="hero-meta-sep">|</span>
@@ -67,6 +67,39 @@
             </div>
         </div>
     </section>
+
+    <!-- LEARNING GUIDELINE -->
+    <div class="guideline">
+        <div class="guideline-inner">
+            <div class="guideline-step">
+                <div class="guideline-step-header">
+                    <span class="guideline-step-num">1</span>
+                    <span class="guideline-step-title">知識のインストール</span>
+                </div>
+                <div class="guideline-step-desc">
+                    全26チャプターの要点とキーワードを読み込み、ソムリエ試験に必須の基礎知識を体系的にインプットします。
+                </div>
+            </div>
+            <div class="guideline-step">
+                <div class="guideline-step-header">
+                    <span class="guideline-step-num">2</span>
+                    <span class="guideline-step-title">スキマ時間の反復演習</span>
+                </div>
+                <div class="guideline-step-desc">
+                    朝礼前、休憩中、帰り道。1回10問のAI生成クイズに毎日挑戦し、記憶を定着させてトークンを獲得します。
+                </div>
+            </div>
+            <div class="guideline-step">
+                <div class="guideline-step-header">
+                    <span class="guideline-step-num">3</span>
+                    <span class="guideline-step-title">自身の弱点克服</span>
+                </div>
+                <div class="guideline-step-desc">
+                    ダッシュボードで学習推移とチャプター別の正答率を分析。弱点を可視化し、効率的に試験突破を目指します。
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- CHAPTERS -->
     <main class="chapters" id="chapters">
@@ -255,33 +288,24 @@
         </div>
     </div>
 
-    <!-- TEAM ANALYTICS DASHBOARD (Manager Hidden Access) -->
-    <div class="td-overlay hidden" id="teamDashOverlay">
-        <div class="td-container">
-            <button class="td-close" id="teamDashClose">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                </svg>
-            </button>
-            <div class="td-body" id="teamDashBody">
-                <div class="td-loading">
-                    <div class="quiz-spinner"></div>
-                    <p>チームデータを集計中...</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <script src="auth.js?v=1.0"></script>
-    <script src="users_meta.js?v=1.0"></script>
+    <script src="users_meta.js?v=2.0"></script>
     <script src="app.js?v=2.0"></script>
     <script src="ai_concierge.js?v=3.0"></script>
     <script src="quiz_generator.js?v=5.0"></script>
     <script src="quest.js?v=2.0"></script>
     <script src="dashboard.js?v=4.0"></script>
-    <script src="team_dashboard.js?v=1.0"></script>
+
+    <!-- Dynamic Photo Boot -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof loadDynamicUserMeta === 'function') {
+                loadDynamicUserMeta();
+            }
+        });
+    </script>
 
     <!-- Service Worker Registration -->
     <script>

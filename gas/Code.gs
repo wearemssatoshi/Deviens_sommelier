@@ -45,7 +45,8 @@ function getJSTTimestamp() {
 const POST_ACTIONS = {
   'registerUser':    handleRegisterUser,
   'saveResult':      handleSaveResult,
-  'saveQuestResult': handleSaveQuestResult
+  'saveQuestResult': handleSaveQuestResult,
+  'updateUserMeta':  handleUpdateUserMeta
 };
 
 const GET_ACTIONS = {
@@ -55,17 +56,95 @@ const GET_ACTIONS = {
   'getUserStats':      handleGetUserStats,
   'getDetailedStats':  handleGetDetailedStats,
   'getQuestProgress':  handleGetQuestProgress,
-  'getTeamAnalytics':  handleGetTeamAnalytics
+  'getTeamAnalytics':  handleGetTeamAnalytics,
+  'getUserMeta':       handleGetUserMeta
 };
+
+// ========== USERS META (Photo & Profile Storage) ==========
+
+function getOrCreateMetaSheet() {
+  const ss = getSpreadsheet();
+  let sheet = ss.getSheetByName('Users_Meta');
+  if (!sheet) {
+    sheet = ss.insertSheet('Users_Meta');
+    sheet.appendRow(['UserName', 'Photo', 'Status', 'UpdatedAt']);
+    sheet.getRange(1, 1, 1, 4).setFontWeight('bold').setBackground('#f3f3f3');
+    sheet.setFrozenRows(1);
+  }
+  return sheet;
+}
+
+function getUserMetaMap() {
+  const sheet = getOrCreateMetaSheet();
+  const data = sheet.getDataRange().getValues();
+  const map = {};
+  for (let i = 1; i < data.length; i++) {
+    const userName = String(data[i][0]).trim();
+    if (userName) {
+      map[userName] = {
+        photo: String(data[i][1] || ''),
+        status: String(data[i][2] || ''),
+        updatedAt: String(data[i][3] || '')
+      };
+    }
+  }
+  return map;
+}
+
+function handleUpdateUserMeta(params) {
+  const userName = (params.user_name || '').trim();
+  if (!userName) return errorResponse('user_name is missing');
+
+  const photo = params.photo || '';
+  const status = params.status || '';
+  const timestamp = getJSTTimestamp();
+
+  const sheet = getOrCreateMetaSheet();
+  const data = sheet.getDataRange().getValues();
+
+  // UPSERT: find existing row or append
+  let existingRow = -1;
+  for (let i = 1; i < data.length; i++) {
+    if (String(data[i][0]).trim() === userName) {
+      existingRow = i + 1;
+      break;
+    }
+  }
+
+  if (existingRow > 0) {
+    // Update only non-empty fields (partial update)
+    if (photo) sheet.getRange(existingRow, 2).setValue(photo);
+    if (status) sheet.getRange(existingRow, 3).setValue(status);
+    sheet.getRange(existingRow, 4).setValue(timestamp);
+  } else {
+    sheet.appendRow([userName, photo, status, timestamp]);
+  }
+
+  return successResponse({ updated: true, user_name: userName });
+}
+
+function handleGetUserMeta(params) {
+  const userName = (params.user_name || '').trim();
+  const metaMap = getUserMetaMap();
+
+  if (userName) {
+    // Single user
+    return successResponse({ meta: metaMap[userName] || { photo: '', status: '' } });
+  }
+
+  // All users
+  return successResponse({ meta: metaMap });
+}
 
 // ========== TEAM ANALYTICS (Manager Dashboard) ==========
 
 function handleGetTeamAnalytics() {
   const ss = getSpreadsheet();
   const sheets = ss.getSheets();
-  const SKIP = new Set(['users', 'quiz_results']);
+  const SKIP = new Set(['users', 'quiz_results', 'Users_Meta']);
   const today = getJSTDateOnly();
   const members = [];
+  const metaMap = getUserMetaMap();  // Load photo data
 
   sheets.forEach(sheet => {
     const sName = sheet.getName();
@@ -124,6 +203,7 @@ function handleGetTeamAnalytics() {
       } else { break; }
     }
 
+    const meta = metaMap[sName] || {};
     members.push({
       name: sName,
       total_score: totalScore,
@@ -133,7 +213,9 @@ function handleGetTeamAnalytics() {
       distinct_days: dateSet.size,
       total_tokens: totalTokens,
       last_active: latestDate || null,
-      streak: streak
+      streak: streak,
+      photo: meta.photo || '',
+      status: meta.status || ''
     });
   });
 
