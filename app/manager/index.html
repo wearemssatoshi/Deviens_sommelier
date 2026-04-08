@@ -801,7 +801,7 @@
                     <tr>
                         <th>Member</th>
                         <th>Accuracy</th>
-                        <th>Tokens</th>
+                        <th>Wallet / Total</th>
                         <th>Sessions</th>
                         <th>Days</th>
                         <th>Streak</th>
@@ -821,6 +821,7 @@
         <span style="color: var(--gold);">v1.0</span>
     </footer>
 
+    <script src="../medoc_ranks.js"></script>
     <script>
         // ========== CONFIG ==========
         const GAS_URL = "https://script.google.com/macros/s/AKfycbz7SNH0irHiarYDDzpJF1Jgr8UM8qX6Z4v-r_aGlQPIXTnx2cZaqkYrfixay4g37K1i_A/exec";
@@ -1004,6 +1005,9 @@
                 const m = sorted[i];
                 const initial = (m.name || '?').charAt(0).toUpperCase();
                 const acc = m.accuracy || 0;
+                const rank = typeof getMedocRank !== 'undefined' ? getMedocRank(m.session_count) : null;
+                const rankName = rank ? rank.nameJa : `Lev.${m.session_count}`;
+
                 const avatarContent = m.photo
                     ? `<img src="${m.photo}" alt="${m.name}">`
                     : initial;
@@ -1015,8 +1019,9 @@
                             <div class="podium-avatar">${avatarContent}</div>
                         </div>
                         <div class="podium-name">${m.name}</div>
-                        <div class="podium-tokens">${m.total_tokens.toLocaleString()}</div>
-                        <div class="podium-token-label">tokens</div>
+                        <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-bottom:4px;">${rankName}</div>
+                        <div class="podium-tokens">${(m.total_tokens || 0).toLocaleString()}</div>
+                        <div class="podium-token-label">トークン</div>
                         <div class="podium-accuracy">${acc}% accuracy</div>
                         <div class="podium-pedestal">
                             <div class="podium-rank-num">${i + 1}</div>
@@ -1051,6 +1056,9 @@
 
                 const editIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>';
 
+                const rank = typeof getMedocRank !== 'undefined' ? getMedocRank(m.session_count) : null;
+                const statusText = rank ? `<span style="color:var(--gold)">${rank.gradeJa}</span> ${rank.nameJa}` : (m.session_count > 0 ? 'Active' : 'Registered');
+
                 return `<tr>
                     <td>
                         <div class="user-cell">
@@ -1060,12 +1068,14 @@
                             </div>
                             <div>
                                 <div class="user-name">${m.name}</div>
-                                <div class="user-status">${m.session_count > 0 ? 'Active' : 'Registered'}</div>
+                                <div class="user-status">${statusText}</div>
                             </div>
                         </div>
                     </td>
                     <td><span class="badge ${accColor}">${m.accuracy}%</span></td>
-                    <td style="font-weight:600; color:var(--gold)">${m.total_tokens.toLocaleString()}</td>
+                    <td style="font-weight:600; color:var(--gold)">
+                        ${(m.wallet_balance || 0).toLocaleString()} <span style="font-size:0.8em;color:#aaa">/ ${(m.total_tokens || 0).toLocaleString()}</span>
+                    </td>
                     <td>${m.session_count}</td>
                     <td>${m.distinct_days}</td>
                     <td>${streakHtml}</td>
