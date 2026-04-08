@@ -108,6 +108,14 @@
         const accuracyColor = accuracy >= 80 ? '#00B36B' : accuracy >= 50 ? '#F5A623' : '#D4002A';
         const ringPercent = accuracy;
         const totalTokens = d.total_tokens || parseInt(localStorage.getItem('sommelier_total_tokens') || '0', 10);
+        const walletBalance = d.wallet_balance || totalTokens;
+        const sessionCount = d.session_count || 0;
+
+        // Médoc rank calculation (uses global from medoc_ranks.js)
+        const medocRank = (typeof getMedocRank === 'function') ? getMedocRank(sessionCount) : null;
+        const nextMedoc = (typeof getNextMedocRank === 'function') ? getNextMedocRank(sessionCount) : null;
+        const sessionsLeft = (typeof sessionsToNextRank === 'function') ? sessionsToNextRank(sessionCount) : 0;
+        const diplomaThreshold = (typeof TOKEN_ECONOMY !== 'undefined') ? TOKEN_ECONOMY.diplomaThreshold : 100000;
 
         // Pair sessions HTML
         let pairHtml = '';
@@ -147,12 +155,40 @@
                 </div>
             </div>
 
-            <!-- TOKEN HERO -->
-            <div class="token-hero" id="tokenHeroCard">
-                <div class="token-particles" id="tokenParticles"></div>
-                <div class="token-hero-label">TOTAL TOKENS</div>
-                <div class="token-hero-value"><span class="token-odometer" id="tokenOdometer" data-target="${totalTokens}">0</span><span class="token-hero-unit">T</span></div>
-                <div class="token-hero-sub"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="vertical-align:middle"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>努力の証 — 将来のディプロマへ</div>
+            <!-- Wallet & Tracker -->
+            <div class="dash-wallet-bar">
+                <div class="dash-wallet-box wallet">
+                    <div class="dash-wallet-title">WALLET BALANCE</div>
+                    <div class="dash-wallet-val">${walletBalance.toLocaleString()} <span class="dash-wallet-unit">G</span></div>
+                </div>
+                <div class="dash-wallet-box earn">
+                    <div class="dash-wallet-title">TOTAL EARNED</div>
+                    <div class="dash-wallet-val">${totalTokens.toLocaleString()} <span class="dash-wallet-unit">G</span></div>
+                </div>
+            </div>
+
+            <!-- Médoc Status -->
+            <div class="dash-medoc-hero">
+                <div class="dash-medoc-grade">${medocRank ? medocRank.gradeJa : ''} <span class="dash-medoc-level">Lev. ${medocRank ? medocRank.level : 0} / 65</span></div>
+                <div class="dash-medoc-name">${medocRank ? medocRank.name : ''}</div>
+                <div class="dash-medoc-ja">${medocRank ? medocRank.nameJa : ''}</div>
+                
+                ${nextMedoc ? `
+                    <div class="dash-medoc-next">
+                        <div class="dash-medoc-next-text">次まであと <strong>${sessionsLeft}</strong> セッション（${nextMedoc.name}）</div>
+                        <div class="dash-medoc-progress">
+                            <div class="dash-medoc-fill" style="width: ${Math.round(((3 - sessionsLeft) / 3) * 100)}%"></div>
+                        </div>
+                    </div>
+                ` : `<div class="dash-medoc-next"><div class="dash-medoc-next-text" style="color:var(--gold-primary)">🏆 最高位に到達しました！</div></div>`}
+            </div>
+
+            <div class="dash-diploma-track">
+                <div class="dash-diploma-title">Resident Sommelier Diploma</div>
+                <div class="dash-diploma-bar">
+                    <div class="dash-diploma-fill" style="width: ${Math.min(100, (totalTokens / diplomaThreshold) * 100)}%"></div>
+                </div>
+                <div class="dash-diploma-status">${totalTokens.toLocaleString()} / ${diplomaThreshold.toLocaleString()} G</div>
             </div>
 
             <!-- KPI Cards -->

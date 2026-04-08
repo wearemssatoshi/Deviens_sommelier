@@ -46,7 +46,8 @@ const POST_ACTIONS = {
   'registerUser':    handleRegisterUser,
   'saveResult':      handleSaveResult,
   'saveQuestResult': handleSaveQuestResult,
-  'updateUserMeta':  handleUpdateUserMeta
+  'updateUserMeta':  handleUpdateUserMeta,
+  'updateWallet':    handleUpdateWallet
 };
 
 const GET_ACTIONS = {
@@ -580,6 +581,19 @@ function handleGetDetailedStats(params) {
   }
   const pairSessions = Object.entries(pairPartnerMap).map(([name, count]) => ({ name, count }));
 
+  // Wallet: calculate spent_tokens from Quest sheet
+  let spentTokens = 0;
+  const questSheetName = userName + '_Quest';
+  const questSheet = ss.getSheetByName(questSheetName);
+  if (questSheet) {
+    const qData = questSheet.getDataRange().getValues();
+    for (let i = 1; i < qData.length; i++) {
+      const delta = Number(qData[i][6]) || 0; // TokenDelta column (index 6)
+      if (delta < 0) spentTokens += Math.abs(delta);
+      if (delta > 0) totalTokens += delta; // Quest rewards also count toward total
+    }
+  }
+
   return successResponse({
     user_name: userName,
     chapter_stats: chapterStats,
@@ -592,6 +606,8 @@ function handleGetDetailedStats(params) {
     session_count: sessionCount,
     distinct_days: dateSet.size,
     total_tokens: totalTokens,
+    spent_tokens: spentTokens,
+    wallet_balance: totalTokens - spentTokens,
     pair_sessions: pairSessions
   });
 }
@@ -604,46 +620,112 @@ function getOrCreateQuestSheet(userName) {
   let sheet = ss.getSheetByName(questSheetName);
   if (!sheet) {
     sheet = ss.insertSheet(questSheetName);
-    sheet.appendRow(["TestID", "BestScore", "Total", "Passed", "LastAttempt", "AttemptCount"]);
-    sheet.getRange(1, 1, 1, 6).setFontWeight("bold").setBackground("#f3f3f3");
+    sheet.appendRow(["TestID", "BestScore", "Total", "Passed", "LastAttempt", "AttemptCount", "TokenDelta"]);
+    sheet.getRange(1, 1, 1, 7).setFontWeight("bold").setBackground("#f3f3f3");
     sheet.setFrozenRows(1);
+  }
+  // Migrate: ensure TokenDelta column exists for older sheets
+  const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+  if (headers.length < 7 || headers[6] !== 'TokenDelta') {
+    sheet.getRange(1, 7).setValue('TokenDelta').setFontWeight('bold').setBackground('#f3f3f3');
   }
   return sheet;
 }
 
 function handleSaveQuestResult(params) {
-  const userName = (params.user_name || '').trim();
-  if (!userName) return errorResponse('user_name is missing');
-  
-  const testId = params.test_id;
-  const score = Number(params.score);
-  const total = Number(params.total);
-  const passed = score >= Math.ceil(total * 0.9);
-  const timestamp = getJSTTimestamp();
+  // Mutex lock to prevent double-spend
+  const lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(10000);
+  } catch (e) {
+    return errorResponse('Server busy, please retry', 'LOCK_TIMEOUT');
+  }
 
-  const sheet = getOrCreateQuestSheet(userName);
-  const data = sheet.getDataRange().getValues();
-  
-  let existingRow = -1;
-  for (let i = 1; i < data.length; i++) {
-    if (String(data[i][0]) === testId) {
-      existingRow = i + 1;
-      break;
+  try {
+    const userName = (params.user_name || '').trim();
+    if (!userName) return errorResponse('user_name is missing');
+    
+    const testId = params.test_id;
+    const score = Number(params.score);
+    const total = Number(params.total);
+    const passed = score >= Math.ceil(total * 0.9);
+    const timestamp = getJSTTimestamp();
+    const tokenDelta = Number(params.token_delta) || 0; // +reward or -fee or cashback net
+
+    const sheet = getOrCreateQuestSheet(userName);
+    const data = sheet.getDataRange().getValues();
+    
+    let existingRow = -1;
+    for (let i = 1; i < data.length; i++) {
+      if (String(data[i][0]) === testId) {
+        existingRow = i + 1;
+        break;
+      }
     }
+
+    if (existingRow > 0) {
+      const currentBest = Number(data[existingRow - 1][1]);
+      const currentAttempts = Number(data[existingRow - 1][5]) || 1;
+      const prevTokenDelta = Number(data[existingRow - 1][6]) || 0;
+      const newBest = Math.max(currentBest, score);
+      const newPassed = newBest >= Math.ceil(total * 0.9);
+      // Accumulate token deltas for this test
+      sheet.getRange(existingRow, 1, 1, 7).setValues([
+        [testId, newBest, total, newPassed, timestamp, currentAttempts + 1, prevTokenDelta + tokenDelta]
+      ]);
+    } else {
+      sheet.appendRow([testId, score, total, passed, timestamp, 1, tokenDelta]);
+    }
+
+    return successResponse({
+      saved: true,
+      test_id: testId,
+      score,
+      passed,
+      token_delta: tokenDelta,
+      best: existingRow > 0 ? Math.max(Number(data[existingRow - 1][1]), score) : score
+    });
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+/**
+ * handleUpdateWallet — Wallet transaction API
+ * Records a token payment or reward as a standalone transaction row in Quest sheet.
+ * Used for quest fee payments (-200, -5000) and rewards (+1000, +15000, cashback).
+ */
+function handleUpdateWallet(params) {
+  const lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(10000);
+  } catch (e) {
+    return errorResponse('Server busy, please retry', 'LOCK_TIMEOUT');
   }
 
-  if (existingRow > 0) {
-    // UPSERT: only update if new score is higher
-    const currentBest = Number(data[existingRow - 1][1]);
-    const currentAttempts = Number(data[existingRow - 1][5]) || 1;
-    const newBest = Math.max(currentBest, score);
-    const newPassed = newBest >= Math.ceil(total * 0.9);
-    sheet.getRange(existingRow, 1, 1, 6).setValues([[testId, newBest, total, newPassed, timestamp, currentAttempts + 1]]);
-  } else {
-    sheet.appendRow([testId, score, total, passed, timestamp, 1]);
-  }
+  try {
+    const userName = (params.user_name || '').trim();
+    if (!userName) return errorResponse('user_name is missing');
 
-  return successResponse({ saved: true, test_id: testId, score, best: existingRow > 0 ? Math.max(Number(data[existingRow - 1][1]), score) : score });
+    const txType = params.tx_type || '';    // 'quest_fee', 'quest_reward', 'quest_cashback'
+    const testId = params.test_id || '';    // e.g., 'advanced_03'
+    const amount = Number(params.amount) || 0; // Positive for earn, negative for spend
+    const timestamp = getJSTTimestamp();
+
+    // Record in quest sheet as a transaction row (TestID = tx_type:testId)
+    const sheet = getOrCreateQuestSheet(userName);
+    const txId = `${txType}:${testId}:${Date.now()}`;
+    sheet.appendRow([txId, 0, 0, false, timestamp, 0, amount]);
+
+    return successResponse({
+      saved: true,
+      tx_type: txType,
+      test_id: testId,
+      amount: amount
+    });
+  } finally {
+    lock.releaseLock();
+  }
 }
 
 function handleGetQuestProgress(params) {
@@ -655,14 +737,26 @@ function handleGetQuestProgress(params) {
   const sheet = ss.getSheetByName(questSheetName);
 
   if (!sheet) {
-    return successResponse({ progress: {} });
+    return successResponse({ progress: {}, spent_tokens: 0, quest_earned: 0 });
   }
 
   const data = sheet.getDataRange().getValues();
   const progress = {};
+  let spentTokens = 0;
+  let questEarned = 0;
 
   for (let i = 1; i < data.length; i++) {
     const testId = String(data[i][0]);
+    const tokenDelta = Number(data[i][6]) || 0;
+
+    // Transaction rows (fee/reward/cashback) start with tx prefix
+    if (testId.startsWith('quest_fee:') || testId.startsWith('quest_reward:') || testId.startsWith('quest_cashback:')) {
+      if (tokenDelta < 0) spentTokens += Math.abs(tokenDelta);
+      if (tokenDelta > 0) questEarned += tokenDelta;
+      continue;
+    }
+
+    // Regular quest result rows
     progress[testId] = {
       bestScore: Number(data[i][1]),
       total: Number(data[i][2]),
@@ -670,7 +764,10 @@ function handleGetQuestProgress(params) {
       lastAttempt: String(data[i][4]),
       attemptCount: Number(data[i][5]) || 1
     };
+    // Also count token deltas from result rows
+    if (tokenDelta < 0) spentTokens += Math.abs(tokenDelta);
+    if (tokenDelta > 0) questEarned += tokenDelta;
   }
 
-  return successResponse({ progress: progress });
+  return successResponse({ progress, spent_tokens: spentTokens, quest_earned: questEarned });
 }

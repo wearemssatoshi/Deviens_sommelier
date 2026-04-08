@@ -1,6 +1,11 @@
 /**
- * DEVIENS SOMMELIER — Quest Progression System v1.0
- * ワインの旅：Grape → Vine → Cellar → Candidate → Resident Sommelier
+ * DEVIENS SOMMELIER — Quest Progression System v2.0
+ * 100,000 Token Economy + Médoc 1855 Classification Status
+ * 
+ * - 中級: 累計トークンゲート（自動解放・無料）
+ * - 上級: 200トークン支払い → クリアで1,000トークン（周回OK）
+ * - 最上級: 5,000トークン支払い → クリアで15,000トークン（周回OK）
+ * - 卒業: 累計100,000トークンでResident Sommelierディプロマ
  * 
  * Je serai Sommelier — 私はソムリエになる
  */
@@ -8,118 +13,76 @@
 (function() {
     // ========== CONFIG ==========
     const GAS_URL = "https://script.google.com/macros/s/AKfycbz7SNH0irHiarYDDzpJF1Jgr8UM8qX6Z4v-r_aGlQPIXTnx2cZaqkYrfixay4g37K1i_A/exec";
-    const QUEST_QUIZ_COUNT = 50;
-    const PASS_THRESHOLD = 0.9; // 90%
+    const QUEST_QUIZ_COUNT = TOKEN_ECONOMY.questQuizCount;        // 50
+    const PASS_THRESHOLD   = TOKEN_ECONOMY.passThreshold;          // 0.9
+    const DIPLOMA_THRESHOLD = TOKEN_ECONOMY.diplomaThreshold;      // 100,000
 
     // ========== DEVELOPER OVERRIDE ==========
-    // 開発者は全ティアをアンロックし、すべての機能にフルアクセスできる
     const DEV_USERS = ['伊賀智史'];
     function isDevUser() {
         return questState.currentUser && DEV_USERS.includes(questState.currentUser.name);
     }
 
-    // ========== RANK DEFINITIONS ==========
+    // ========== RANK DEFINITIONS (Journey Milestones) ==========
     const RANKS = [
         {
-            id: 'grape',
-            title: 'Grape',
-            titleJa: 'グレープ',
-            subtitle: '学びの種',
+            id: 'grape', title: 'Grape', titleJa: 'グレープ', subtitle: '学びの種',
             icon: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3"/><circle cx="8" cy="13" r="3"/><circle cx="16" cy="13" r="3"/><circle cx="12" cy="18" r="3"/><path d="M12 2v3"/><path d="M10 2h4"/></svg>`,
-            color: '#9B59B6',
-            unlockCondition: '初期ランク',
-            requirement: null
+            color: '#9B59B6', unlockCondition: '初期ランク', requirement: null
         },
         {
-            id: 'vine',
-            title: 'Vine',
-            titleJa: 'ヴァイン',
-            subtitle: '成長の証',
+            id: 'vine', title: 'Vine', titleJa: 'ヴァイン', subtitle: '成長の証',
             icon: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5"/><path d="M14.5 8.5c0 0-1.87 1-3.5 3.5a22 22 0 0 0-3 7"/><path d="M3 21c0 0 3-1 6-6"/></svg>`,
-            color: '#27AE60',
-            unlockCondition: '10日間学習 & 正答率70%以上',
-            requirement: { days: 10, accuracy: 70 }
+            color: '#27AE60', unlockCondition: '累計200トークン到達', requirement: { cumulativeTokens: 200 }
         },
         {
-            id: 'cellar',
-            title: 'Cellar',
-            titleJa: 'セラー',
-            subtitle: '知識の熟成',
+            id: 'cellar', title: 'Cellar', titleJa: 'セラー', subtitle: '知識の熟成',
             icon: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.58 16.5h12.85"/></svg>`,
-            color: '#E67E22',
-            unlockCondition: '中級テスト全10回を90%以上でクリア',
-            requirement: { tier: 'intermediate', passAll: true }
+            color: '#E67E22', unlockCondition: '中級テスト全10回クリア', requirement: { tier: 'intermediate', passAll: true }
         },
         {
-            id: 'candidate',
-            title: 'Candidate',
-            titleJa: 'カンディダ',
-            subtitle: 'ソムリエ候補生',
+            id: 'candidate', title: 'Candidate', titleJa: 'カンディダ', subtitle: 'ソムリエ候補生',
             icon: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>`,
-            color: '#2980B9',
-            unlockCondition: '上級テスト30回中5回を90%以上クリア',
-            requirement: { tier: 'advanced', passCount: 5 }
+            color: '#2980B9', unlockCondition: '上級テスト全10回クリア', requirement: { tier: 'advanced', passAll: true }
         },
         {
-            id: 'resident',
-            title: 'Resident Sommelier',
-            titleJa: 'レジデント・ソムリエ',
-            subtitle: 'エクセレンス級',
+            id: 'resident', title: 'Resident Sommelier', titleJa: 'レジデント・ソムリエ', subtitle: 'ディプロマ取得',
             icon: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>`,
-            color: '#C9A94E',
-            unlockCondition: '最上級テスト全10回をクリア',
-            requirement: { tier: 'supreme', passAll: true }
+            color: '#C9A94E', unlockCondition: '累計100,000トークン到達', requirement: { cumulativeTokens: DIPLOMA_THRESHOLD }
         }
     ];
 
-    // ========== TIER DEFINITIONS ==========
+    // ========== TIER DEFINITIONS (Token Economy v2) ==========
     const TIERS = [
-        {
-            id: 'intermediate',
-            title: 'Intermédiaire',
-            titleJa: '中級',
-            testCount: 10,
-            passCondition: 'all', // all tests must be 90%+
-            passCount: 10,
-            color: '#E67E22',
-            rankOnClear: 'cellar',
-            description: '基礎から応用まで幅広い知識を問う中級テスト'
-        },
-        {
-            id: 'advanced',
-            title: 'Avancé',
-            titleJa: '上級',
-            testCount: 30,
-            passCondition: 'count', // 5 out of 30 must be 90%+
-            passCount: 5,
-            color: '#2980B9',
-            rankOnClear: 'candidate',
-            description: '産地・品種・法律を深く掘り下げる難関テスト'
-        },
-        {
-            id: 'supreme',
-            title: 'Suprême',
-            titleJa: '最上級',
-            testCount: 10,
-            passCondition: 'all',
-            passCount: 10,
-            color: '#C9A94E',
-            rankOnClear: 'resident',
-            description: 'エクセレンス級の域に到達する最終試練'
-        }
+        TOKEN_ECONOMY.tiers.intermediate,
+        TOKEN_ECONOMY.tiers.advanced,
+        TOKEN_ECONOMY.tiers.supreme
     ];
 
     // ========== STATE ==========
     let questState = {
         currentUser: null,
-        userStats: null,     // { distinct_days, accuracy, ... }
-        questProgress: {},   // { intermediate_01: { bestScore, total, passed }, ... }
+        userStats: null,
+        questProgress: {},
+        spentTokens: 0,
+        questEarned: 0,
         currentTier: null,
         currentTestId: null,
         questions: [],
         currentQuestionIndex: 0,
-        userAnswers: []
+        userAnswers: [],
+        pendingFee: 0       // Fee paid for current attempt (for cashback calc)
     };
+
+    // ========== WALLET HELPERS ==========
+    function getTotalTokens() {
+        const quizTokens = questState.userStats?.total_tokens || 0;
+        return quizTokens; // GAS now includes quest_earned in total_tokens
+    }
+
+    function getWalletBalance() {
+        return (questState.userStats?.wallet_balance) || 0;
+    }
 
     // ========== INIT ==========
     function init() {
@@ -132,17 +95,14 @@
         if (!overlay) return;
         overlay.classList.remove('hidden');
 
-        // Stage-Gate: require auth
         DSMAuth.requireAuth(async (user) => {
             questState.currentUser = user;
-
             renderQuestLoading(overlay);
 
-            // Fetch user stats and quest progress
             try {
                 const [statsRes, questRes] = await Promise.all([
-                    fetch(`${GAS_URL}?action=getDetailedStats&user_name=${encodeURIComponent(questState.currentUser.name)}`),
-                    fetch(`${GAS_URL}?action=getQuestProgress&user_name=${encodeURIComponent(questState.currentUser.name)}`)
+                    fetch(`${GAS_URL}?action=getDetailedStats&user_name=${encodeURIComponent(user.name)}`),
+                    fetch(`${GAS_URL}?action=getQuestProgress&user_name=${encodeURIComponent(user.name)}`)
                 ]);
                 
                 const statsData = await statsRes.json();
@@ -153,10 +113,12 @@
                 const questData = await questRes.json();
                 if (questData.status === 'success') {
                     questState.questProgress = questData.data.progress || {};
+                    questState.spentTokens = questData.data.spent_tokens || 0;
+                    questState.questEarned = questData.data.quest_earned || 0;
                 }
             } catch (e) {
                 console.warn('[Quest] Failed to load data:', e);
-                questState.userStats = questState.userStats || { distinct_days: 0, accuracy: 0 };
+                questState.userStats = questState.userStats || { distinct_days: 0, accuracy: 0, total_tokens: 0, wallet_balance: 0 };
                 questState.questProgress = questState.questProgress || {};
             }
 
@@ -166,20 +128,14 @@
 
     // ========== DETERMINE CURRENT RANK ==========
     function getCurrentRank() {
-        const stats = questState.userStats;
+        const totalTokens = getTotalTokens();
         const progress = questState.questProgress;
-        if (!stats) return RANKS[0]; // Grape
 
-        // Check Resident Sommelier
-        if (isTierCleared('supreme', progress)) return RANKS[4];
-        // Check Candidate
-        if (isTierCleared('advanced', progress)) return RANKS[3];
-        // Check Cellar
-        if (isTierCleared('intermediate', progress)) return RANKS[2];
-        // Check Vine (quest unlock)
-        if (stats.distinct_days >= 10 && stats.accuracy >= 70) return RANKS[1];
-        // Default: Grape
-        return RANKS[0];
+        if (totalTokens >= DIPLOMA_THRESHOLD) return RANKS[4]; // Resident
+        if (isTierCleared('advanced', progress)) return RANKS[3]; // Candidate
+        if (isTierCleared('intermediate', progress)) return RANKS[2]; // Cellar
+        if (totalTokens >= 200) return RANKS[1]; // Vine
+        return RANKS[0]; // Grape
     }
 
     function isTierCleared(tierId, progress) {
@@ -194,29 +150,41 @@
                 passedCount++;
             }
         }
-
-        if (tier.passCondition === 'all') return passedCount >= tier.testCount;
-        if (tier.passCondition === 'count') return passedCount >= tier.passCount;
-        return false;
+        return passedCount >= tier.testCount;
     }
 
     function isTierUnlocked(tierId) {
-        // Developer override: all tiers unlocked
         if (isDevUser()) return true;
 
-        const stats = questState.userStats;
+        const totalTokens = getTotalTokens();
         const progress = questState.questProgress;
-        if (!stats) return false;
-
-        // Quest itself must be unlocked (Vine rank)
-        if (stats.distinct_days < 10 || stats.accuracy < 70) return false;
 
         switch (tierId) {
-            case 'intermediate': return true; // Unlocked with Vine
-            case 'advanced': return isTierCleared('intermediate', progress);
-            case 'supreme': return isTierCleared('advanced', progress);
-            default: return false;
+            case 'intermediate':
+                return totalTokens >= 200; // Need at least 200 cumulative to start
+            case 'advanced':
+                return isTierCleared('intermediate', progress);
+            case 'supreme':
+                return isTierCleared('advanced', progress) && totalTokens >= 10000;
+            default:
+                return false;
         }
+    }
+
+    function isTestUnlocked(tierId, testNum) {
+        if (isDevUser()) return true;
+
+        const tierConfig = TOKEN_ECONOMY.tiers[tierId];
+        if (!tierConfig) return false;
+
+        if (tierId === 'intermediate') {
+            // Cumulative token gate: test N requires N*200 cumulative tokens
+            const requiredTokens = testNum * tierConfig.tokenGateStep;
+            return getTotalTokens() >= requiredTokens;
+        }
+
+        // Advanced & Supreme: always accessible if tier is unlocked (pay per attempt)
+        return isTierUnlocked(tierId);
     }
 
     // ========== RENDER: LOADING ==========
@@ -230,32 +198,61 @@
         `;
     }
 
-    // ========== RENDER: NO USER ==========
-    function renderQuestNoUser(overlay) {
-        const body = overlay.querySelector('.quest-body');
-        body.innerHTML = `
-            <div class="quest-empty">
-                <div class="quest-empty-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="#999" stroke-width="1.5" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                </div>
-                <h3>まだログインしていません</h3>
-                <p>クイズ画面からログインしてください</p>
-            </div>
-        `;
-    }
-
     // ========== RENDER: MAIN QUEST PAGE ==========
     function renderQuestMain(overlay) {
         const body = overlay.querySelector('.quest-body');
         const rank = getCurrentRank();
-        const stats = questState.userStats || { distinct_days: 0, accuracy: 0 };
-        const questUnlocked = isDevUser() || (stats.distinct_days >= 10 && stats.accuracy >= 70);
+        const totalTokens = getTotalTokens();
+        const walletBalance = getWalletBalance();
+        const sessionCount = questState.userStats?.session_count || 0;
+        const medocRank = getMedocRank(sessionCount);
+        const nextMedoc = getNextMedocRank(sessionCount);
+        const sessionsLeft = sessionsToNextRank(sessionCount);
 
-        // Rank Progress Bar
         const rankIndex = RANKS.findIndex(r => r.id === rank.id);
         const rankPercent = ((rankIndex) / (RANKS.length - 1)) * 100;
 
         let html = `
+            <!-- Wallet & Médoc Status -->
+            <div class="quest-wallet-bar">
+                <div class="quest-wallet-section">
+                    <div class="quest-wallet-label">WALLET</div>
+                    <div class="quest-wallet-value">${walletBalance.toLocaleString()} <span class="quest-wallet-unit">G</span></div>
+                </div>
+                <div class="quest-wallet-divider"></div>
+                <div class="quest-wallet-section">
+                    <div class="quest-wallet-label">TOTAL EARNED</div>
+                    <div class="quest-wallet-value quest-wallet-total">${totalTokens.toLocaleString()} <span class="quest-wallet-unit">G</span></div>
+                </div>
+            </div>
+
+            <!-- Médoc 1855 Status -->
+            <div class="quest-medoc-card">
+                <div class="quest-medoc-grade">${medocRank.gradeJa}</div>
+                <div class="quest-medoc-name">${medocRank.name}</div>
+                <div class="quest-medoc-name-ja">${medocRank.nameJa}</div>
+                ${nextMedoc ? `
+                    <div class="quest-medoc-next">
+                        次: <strong>${nextMedoc.name}</strong>（あと${sessionsLeft}セッション）
+                    </div>
+                    <div class="quest-medoc-progress-wrap">
+                        <div class="quest-medoc-progress-bar">
+                            <div class="quest-medoc-progress-fill" style="width: ${Math.round(((3 - sessionsLeft) / 3) * 100)}%"></div>
+                        </div>
+                    </div>
+                ` : `<div class="quest-medoc-next" style="color:#C9A94E">🏆 最高位到達！</div>`}
+                <div class="quest-medoc-level">Lev. ${medocRank.level} / 65</div>
+            </div>
+
+            <!-- Diploma Progress -->
+            <div class="quest-diploma-bar">
+                <div class="quest-diploma-label">DIPLOMA GOAL</div>
+                <div class="quest-diploma-track">
+                    <div class="quest-diploma-fill" style="width: ${Math.min(100, (totalTokens / DIPLOMA_THRESHOLD) * 100)}%"></div>
+                </div>
+                <div class="quest-diploma-text">${totalTokens.toLocaleString()} / ${DIPLOMA_THRESHOLD.toLocaleString()} G</div>
+            </div>
+
             <!-- Current Rank Card -->
             <div class="quest-rank-card" style="--rank-color: ${rank.color}">
                 <div class="quest-rank-icon">${rank.icon}</div>
@@ -286,38 +283,13 @@
             </div>
         `;
 
-        if (!questUnlocked) {
-            // Show unlock requirements
-            const daysLeft = Math.max(0, 10 - stats.distinct_days);
-            const accDiff = Math.max(0, 70 - stats.accuracy);
-            html += `
-                <div class="quest-lock-notice">
-                    <div class="quest-lock-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    </div>
-                    <h3>クエストはまだロックされています</h3>
-                    <p>日常クイズを継続して、クエストをアンロックしましょう</p>
-                    <div class="quest-lock-conditions">
-                        <div class="quest-lock-cond ${stats.distinct_days >= 10 ? 'met' : ''}">
-                            <span class="quest-cond-check">${stats.distinct_days >= 10 ? '✓' : '○'}</span>
-                            <span>学習日数: <strong>${stats.distinct_days} / 10日</strong>${daysLeft > 0 ? ` (残り${daysLeft}日)` : ''}</span>
-                        </div>
-                        <div class="quest-lock-cond ${stats.accuracy >= 70 ? 'met' : ''}">
-                            <span class="quest-cond-check">${stats.accuracy >= 70 ? '✓' : '○'}</span>
-                            <span>通算正答率: <strong>${stats.accuracy}% / 70%</strong>${accDiff > 0 ? ` (あと${accDiff}%必要)` : ''}</span>
-                        </div>
-                    </div>
-                </div>
-            `;
-        } else {
-            // Show tier cards
-            html += `<div class="quest-tiers-title">QUEST EXAMINATIONS</div>`;
-            TIERS.forEach(tier => {
-                const unlocked = isTierUnlocked(tier.id);
-                const cleared = isTierCleared(tier.id, questState.questProgress);
-                html += renderTierCard(tier, unlocked, cleared);
-            });
-        }
+        // TIER CARDS
+        html += `<div class="quest-tiers-title">QUEST EXAMINATIONS</div>`;
+        TIERS.forEach(tier => {
+            const unlocked = isTierUnlocked(tier.id);
+            const cleared = isTierCleared(tier.id, questState.questProgress);
+            html += renderTierCard(tier, unlocked, cleared);
+        });
 
         body.innerHTML = html;
 
@@ -335,7 +307,101 @@
                 e.stopPropagation();
                 const tierId = btn.dataset.tier;
                 const testNum = parseInt(btn.dataset.test);
-                startQuestTest(tierId, testNum);
+                handleTestAttempt(tierId, testNum);
+            });
+        });
+    }
+
+    // ========== HANDLE TEST ATTEMPT (Fee + Confirmation) ==========
+    async function handleTestAttempt(tierId, testNum) {
+        const tierConfig = TOKEN_ECONOMY.tiers[tierId];
+        if (!tierConfig) return;
+
+        if (tierConfig.unlockType === 'wallet' && tierConfig.unlockCost > 0) {
+            const wallet = getWalletBalance();
+            const cost = tierConfig.unlockCost;
+
+            if (wallet < cost) {
+                showQuestModal(
+                    'トークン不足',
+                    `受験には${cost.toLocaleString()} Gが必要です。\n現在のウォレット残高: ${wallet.toLocaleString()} G`,
+                    [{ text: '戻る', action: 'close' }]
+                );
+                return;
+            }
+
+            // Confirmation modal
+            showQuestModal(
+                `${tierConfig.titleJa}試験 — 受験確認`,
+                `受験料として <strong style="color:#D4002A;font-size:1.2em">${cost.toLocaleString()} G</strong> を支払います。\n\n` +
+                `🏆 合格すると <strong style="color:#C9A94E">${tierConfig.clearReward.toLocaleString()} G</strong> を獲得！\n` +
+                `💡 不合格でも正答率に応じてキャッシュバックあり\n\n` +
+                `<span style="color:#999;font-size:0.85em">残高: ${wallet.toLocaleString()} G → ${(wallet - cost).toLocaleString()} G</span>`,
+                [
+                    { text: 'キャンセル', action: 'close', style: 'secondary' },
+                    { text: `${cost.toLocaleString()} G 支払って挑戦`, action: 'pay', style: 'danger' }
+                ],
+                async (action) => {
+                    if (action === 'pay') {
+                        // Record fee payment to GAS
+                        questState.pendingFee = cost;
+                        try {
+                            await fetch(GAS_URL, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'text/plain' },
+                                body: JSON.stringify({
+                                    action: 'updateWallet',
+                                    user_name: questState.currentUser.name,
+                                    tx_type: 'quest_fee',
+                                    test_id: `${tierId}_${String(testNum).padStart(2, '0')}`,
+                                    amount: -cost
+                                })
+                            });
+                            // Update local wallet
+                            if (questState.userStats) {
+                                questState.userStats.wallet_balance -= cost;
+                                questState.userStats.spent_tokens = (questState.userStats.spent_tokens || 0) + cost;
+                            }
+                        } catch (e) {
+                            console.error('[Quest] Fee payment failed:', e);
+                        }
+                        startQuestTest(tierId, testNum);
+                    }
+                }
+            );
+        } else {
+            // Free (intermediate) — just start
+            questState.pendingFee = 0;
+            startQuestTest(tierId, testNum);
+        }
+    }
+
+    // ========== MODAL ==========
+    function showQuestModal(title, message, buttons, callback) {
+        const overlay = document.getElementById('questOverlay');
+        const existing = overlay.querySelector('.quest-modal-backdrop');
+        if (existing) existing.remove();
+
+        const backdrop = document.createElement('div');
+        backdrop.className = 'quest-modal-backdrop';
+        backdrop.innerHTML = `
+            <div class="quest-modal">
+                <div class="quest-modal-title">${title}</div>
+                <div class="quest-modal-body">${message.replace(/\n/g, '<br>')}</div>
+                <div class="quest-modal-actions">
+                    ${buttons.map(b => `
+                        <button class="quest-modal-btn ${b.style || ''}" data-action="${b.action}">${b.text}</button>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        overlay.appendChild(backdrop);
+
+        backdrop.querySelectorAll('.quest-modal-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const action = btn.dataset.action;
+                backdrop.remove();
+                if (action !== 'close' && callback) callback(action);
             });
         });
     }
@@ -343,6 +409,8 @@
     // ========== RENDER: TIER CARD ==========
     function renderTierCard(tier, unlocked, cleared) {
         const progress = questState.questProgress;
+        const totalTokens = getTotalTokens();
+        const wallet = getWalletBalance();
         let passedCount = 0;
         let testListHtml = '';
 
@@ -353,28 +421,82 @@
             const passed = bestScore !== null && bestScore >= Math.ceil(QUEST_QUIZ_COUNT * PASS_THRESHOLD);
             if (passed) passedCount++;
 
-            const statusClass = !unlocked ? 'locked' : passed ? 'passed' : bestScore !== null ? 'attempted' : 'available';
+            const testUnlocked = isTestUnlocked(tier.id, i);
             const scoreDisplay = bestScore !== null ? `${bestScore}/${QUEST_QUIZ_COUNT}` : '—';
             const pctDisplay = bestScore !== null ? `${Math.round((bestScore / QUEST_QUIZ_COUNT) * 100)}%` : '';
+
+            let statusClass = 'locked';
+            let actionHtml = '';
+
+            if (!unlocked || !testUnlocked) {
+                statusClass = 'locked';
+                if (tier.id === 'intermediate') {
+                    const requiredTokens = i * tier.tokenGateStep;
+                    actionHtml = `<span class="quest-test-gate">🔒 累計 ${requiredTokens.toLocaleString()} G</span>`;
+                }
+            } else if (passed && !tier.clearRewardRepeatable) {
+                statusClass = 'passed';
+                actionHtml = '<span class="quest-test-check">✓</span>';
+            } else if (passed && tier.clearRewardRepeatable) {
+                // Passed but can replay for tokens
+                statusClass = 'passed';
+                actionHtml = `
+                    <span class="quest-test-check">✓</span>
+                    <button class="quest-test-btn quest-test-replay" data-tier="${tier.id}" data-test="${i}">💰 周回</button>
+                `;
+            } else {
+                statusClass = bestScore !== null ? 'attempted' : 'available';
+                if (tier.unlockType === 'wallet') {
+                    actionHtml = `<button class="quest-test-btn quest-test-pay" data-tier="${tier.id}" data-test="${i}">💰 ${tier.unlockCost.toLocaleString()} G</button>`;
+                } else {
+                    actionHtml = `<button class="quest-test-btn" data-tier="${tier.id}" data-test="${i}">${bestScore !== null ? '再挑戦' : '挑戦'}</button>`;
+                }
+            }
 
             testListHtml += `
                 <div class="quest-test-row ${statusClass}">
                     <div class="quest-test-num">Test ${i}</div>
                     <div class="quest-test-score">${scoreDisplay}</div>
                     <div class="quest-test-pct ${passed ? 'pass' : ''}">${pctDisplay}</div>
-                    ${unlocked && !passed ? `<button class="quest-test-btn" data-tier="${tier.id}" data-test="${i}">${bestScore !== null ? '再挑戦' : '挑戦'}</button>` : ''}
-                    ${passed ? '<span class="quest-test-check">✓</span>' : ''}
+                    <div class="quest-test-action">${actionHtml}</div>
                 </div>
             `;
         }
 
-        const progressPct = tier.passCondition === 'all' 
-            ? Math.round((passedCount / tier.testCount) * 100)
-            : Math.round((Math.min(passedCount, tier.passCount) / tier.passCount) * 100);
+        const progressPct = Math.round((passedCount / tier.testCount) * 100);
+        const conditionText = `全${tier.testCount}テスト 90%以上: ${passedCount}/${tier.testCount}`;
 
-        const conditionText = tier.passCondition === 'all'
-            ? `全${tier.testCount}テスト 90%以上: ${passedCount}/${tier.testCount}`
-            : `${tier.testCount}テスト中${tier.passCount}回 90%以上: ${passedCount}/${tier.passCount}`;
+        // Tier-specific info
+        let tierInfoHtml = '';
+        if (tier.unlockType === 'wallet') {
+            tierInfoHtml = `
+                <div class="quest-tier-economy">
+                    <span class="quest-tier-eco-item cost">受験料: ${tier.unlockCost.toLocaleString()} G</span>
+                    <span class="quest-tier-eco-item reward">報酬: +${tier.clearReward.toLocaleString()} G</span>
+                    ${tier.cashbackOnFail ? '<span class="quest-tier-eco-item cashback">不合格時は正答率に応じてキャッシュバック</span>' : ''}
+                </div>
+            `;
+        } else {
+            tierInfoHtml = `
+                <div class="quest-tier-economy">
+                    <span class="quest-tier-eco-item free">受験料: 無料</span>
+                    <span class="quest-tier-eco-item reward">初回クリア報酬: +${tier.clearReward.toLocaleString()} G</span>
+                </div>
+            `;
+        }
+
+        let lockReason = '';
+        if (!unlocked) {
+            if (tier.id === 'intermediate') {
+                lockReason = `累計 ${tier.tokenGateStart.toLocaleString()} トークンでアンロック（現在: ${totalTokens.toLocaleString()} G）`;
+            } else if (tier.prerequisite) {
+                const prereqTier = TIERS.find(t => t.id === tier.prerequisite);
+                lockReason = `${prereqTier?.titleJa || '前提ティア'}を全クリアで解放`;
+                if (tier.cumulativeGate) {
+                    lockReason += ` + 累計 ${tier.cumulativeGate.toLocaleString()} G 必要`;
+                }
+            }
+        }
 
         return `
             <div class="quest-tier-card ${unlocked ? '' : 'locked'} ${cleared ? 'cleared' : ''}" style="--tier-color: ${tier.color}">
@@ -384,6 +506,7 @@
                         <div>
                             <div class="quest-tier-title">${tier.title}</div>
                             <div class="quest-tier-subtitle">${tier.titleJa} — ${tier.description}</div>
+                            ${!unlocked ? `<div class="quest-tier-lock-reason">${lockReason}</div>` : ''}
                         </div>
                     </div>
                     <div class="quest-tier-right">
@@ -394,6 +517,7 @@
                 </div>
                 ${unlocked ? `
                     <div class="quest-tier-body">
+                        ${tierInfoHtml}
                         <div class="quest-tier-progress-bar">
                             <div class="quest-tier-progress-fill" style="width: ${progressPct}%"></div>
                         </div>
@@ -495,16 +619,10 @@
         const q = questState.questions[questState.currentQuestionIndex];
         const isCorrect = selectedIndex === q.correct_index;
 
-        questState.userAnswers.push({
-            selectedIndex,
-            isCorrect,
-            questionData: q
-        });
+        questState.userAnswers.push({ selectedIndex, isCorrect, questionData: q });
 
-        // Disable buttons
         body.querySelectorAll('.quest-choice-btn').forEach(b => b.style.pointerEvents = 'none');
 
-        // Highlight
         const buttons = body.querySelectorAll('.quest-choice-btn');
         if (selectedIndex >= 0) {
             buttons[selectedIndex].classList.add(isCorrect ? 'correct' : 'wrong');
@@ -527,6 +645,47 @@
         const pct = Math.round((correctCount / total) * 100);
         const passed = pct >= 90;
         const tierDef = TIERS.find(t => t.id === questState.currentTier);
+        const tierConfig = TOKEN_ECONOMY.tiers[questState.currentTier];
+
+        // Calculate token changes
+        let tokenDelta = 0;
+        let rewardAmount = 0;
+        let cashbackAmount = 0;
+        let feeAmount = questState.pendingFee;
+
+        if (passed) {
+            // Check if first clear (for non-repeatable rewards)
+            const testResult = questState.questProgress[questState.currentTestId];
+            const isFirstClear = !testResult || !testResult.passed;
+
+            if (tierConfig.clearRewardRepeatable || isFirstClear) {
+                rewardAmount = tierConfig.clearReward;
+                tokenDelta = rewardAmount;
+            }
+        } else if (feeAmount > 0 && tierConfig.cashbackOnFail) {
+            // Cashback based on score percentage
+            cashbackAmount = calculateCashback(feeAmount, correctCount, total);
+            tokenDelta = cashbackAmount; // Positive: partial refund
+        }
+
+        // Build result HTML
+        let tokenResultHtml = '';
+        if (feeAmount > 0 || rewardAmount > 0 || cashbackAmount > 0) {
+            tokenResultHtml = `<div class="quest-results-token-section">`;
+            if (feeAmount > 0) {
+                tokenResultHtml += `<div class="quest-token-line fee">受験料: <span>-${feeAmount.toLocaleString()} G</span></div>`;
+            }
+            if (passed && rewardAmount > 0) {
+                tokenResultHtml += `<div class="quest-token-line reward">🏆 クリア報酬: <span>+${rewardAmount.toLocaleString()} G</span></div>`;
+            }
+            if (!passed && cashbackAmount > 0) {
+                tokenResultHtml += `<div class="quest-token-line cashback">💡 キャッシュバック (${pct}%): <span>+${cashbackAmount.toLocaleString()} G</span></div>`;
+            }
+            const netResult = -feeAmount + (passed ? rewardAmount : cashbackAmount);
+            const netColor = netResult >= 0 ? '#C9A94E' : '#D4002A';
+            tokenResultHtml += `<div class="quest-token-line net" style="color:${netColor}">純増減: <span>${netResult >= 0 ? '+' : ''}${netResult.toLocaleString()} G</span></div>`;
+            tokenResultHtml += `</div>`;
+        }
 
         body.innerHTML = `
             <div class="quest-results">
@@ -540,6 +699,8 @@
                 <div class="quest-results-score" style="color: ${passed ? '#C9A94E' : '#D4002A'}">${correctCount} / ${total}</div>
                 <div class="quest-results-pct">${pct}%</div>
                 <div class="quest-results-threshold">${passed ? '90%基準をクリア' : '90%以上で合格 — もう一度挑戦しましょう'}</div>
+
+                ${tokenResultHtml}
 
                 <div class="quest-results-details">
                     ${questState.userAnswers.map((ans, i) => {
@@ -564,28 +725,63 @@
             </div>
         `;
 
-        // Bind back button
         document.getElementById('questBackToMain').addEventListener('click', () => {
             openQuest();
         });
 
-        // Save to GAS
-        await saveQuestResult(correctCount, total);
+        // Save result & reward to GAS
+        await saveQuestResult(correctCount, total, tokenDelta);
+
+        // Record reward/cashback transaction if applicable
+        if (passed && rewardAmount > 0) {
+            try {
+                await fetch(GAS_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify({
+                        action: 'updateWallet',
+                        user_name: questState.currentUser.name,
+                        tx_type: 'quest_reward',
+                        test_id: questState.currentTestId,
+                        amount: rewardAmount
+                    })
+                });
+            } catch (e) {
+                console.warn('[Quest] Reward save failed:', e);
+            }
+        } else if (!passed && cashbackAmount > 0) {
+            try {
+                await fetch(GAS_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify({
+                        action: 'updateWallet',
+                        user_name: questState.currentUser.name,
+                        tx_type: 'quest_cashback',
+                        test_id: questState.currentTestId,
+                        amount: cashbackAmount
+                    })
+                });
+            } catch (e) {
+                console.warn('[Quest] Cashback save failed:', e);
+            }
+        }
+
+        // Reset pending fee
+        questState.pendingFee = 0;
     }
 
     // ========== SAVE RESULT ==========
-    async function saveQuestResult(score, total) {
+    async function saveQuestResult(score, total, tokenDelta) {
         const testKey = questState.currentTestId;
         const userName = questState.currentUser?.name || '';
         if (!userName || !testKey) return;
 
-        // Update local progress
         const existing = questState.questProgress[testKey];
         if (!existing || score > existing.bestScore) {
             questState.questProgress[testKey] = { bestScore: score, total: total, passed: score >= Math.ceil(total * PASS_THRESHOLD) };
         }
 
-        // Save to GAS
         try {
             await fetch(GAS_URL, {
                 method: 'POST',
@@ -596,6 +792,7 @@
                     test_id: testKey,
                     score: score,
                     total: total,
+                    token_delta: tokenDelta,
                     timestamp: new Date().toISOString()
                 })
             });

@@ -4057,11 +4057,190 @@ body {
     font-weight: 600;
 }
 
+/* =========================================================================
+   MEDOC CLASSIFICATION & TOKEN WALLET UI
+   ========================================================================= */
+
+/* -- Wallet & Tracker (Dashboard & Quest shared logic basically) -- */
+.dash-wallet-bar, .quest-wallet-bar {
+    display: flex;
+    background: linear-gradient(to right, #000, #1a1a1a);
+    border: 1px solid var(--gold-dark);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.dash-wallet-box, .quest-wallet-section {
+    flex: 1;
+    padding: 16px;
+    text-align: center;
+}
+
+.quest-wallet-divider {
+    width: 1px;
+    background: radial-gradient(circle, var(--gold-dark) 0%, transparent 100%);
+}
+
+.dash-wallet-title, .quest-wallet-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gold-primary);
+    margin-bottom: 6px;
+}
+
+.dash-wallet-val, .quest-wallet-value {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1;
+}
+
+.dash-wallet-unit, .quest-wallet-unit {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--gold-muted);
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+/* -- Médoc Hero Card (Dashboard) -- */
+.dash-medoc-hero, .quest-medoc-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.dash-medoc-hero::before, .quest-medoc-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #D4002A, #8B0015);
+}
+
+.dash-medoc-grade, .quest-medoc-grade {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #D4002A;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.dash-medoc-level, .quest-medoc-level {
+    color: var(--text-tertiary);
+    margin-left: 8px;
+    font-size: 11px;
+    background: var(--bg-secondary);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.quest-medoc-level {
+    margin-left:0; margin-top:12px; display:inline-block;
+}
+
+.dash-medoc-name, .quest-medoc-name {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.dash-medoc-ja, .quest-medoc-name-ja {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.dash-medoc-next, .quest-medoc-next {
+    background: var(--bg-body);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.dash-medoc-next-text, .quest-medoc-next {
+    font-size: 12px;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.dash-medoc-next-text strong, .quest-medoc-next strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.dash-medoc-progress, .quest-medoc-progress-bar {
+    height: 6px;
+    background: var(--border-light);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.dash-medoc-fill, .quest-medoc-progress-fill {
+    height: 100%;
+    background: #D4002A;
+    border-radius: 3px;
+    transition: width 0.8s ease-out;
+}
+
+/* -- Diploma Track -- */
+.dash-diploma-track, .quest-diploma-bar {
+    margin-bottom: 32px;
+    padding: 0 8px;
+}
+
+.dash-diploma-title, .quest-diploma-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold-dark);
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dash-diploma-bar, .quest-diploma-track {
+    height: 8px;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 6px;
+    border: 1px solid var(--border-light);
+}
+
+.dash-diploma-fill, .quest-diploma-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #C9A94E, #F2D98D);
+    border-radius: 4px;
+    transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.dash-diploma-status, .quest-diploma-text {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    text-align: right;
+    font-family: var(--font-sans);
+}
+
 /* -- Mobile Responsive -- */
 @media (max-width: 600px) {
     .token-hero-value { font-size: 40px; }
     .token-hero-unit { font-size: 20px; }
     .td-kpi-num { font-size: 28px; }
     .td-roster-stat-num { font-size: 14px; }
+    .dash-medoc-name, .quest-medoc-name { font-size: 22px; }
+    .dash-wallet-val, .quest-wallet-value { font-size: 20px; }
 }
-
