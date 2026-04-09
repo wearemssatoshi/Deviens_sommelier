@@ -471,6 +471,15 @@ body {
     }
 }
 
+/* ---- NAV AVATAR ---- */
+.nav-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
 /* ---- GRID ---- */
 .grid {
     display: grid;

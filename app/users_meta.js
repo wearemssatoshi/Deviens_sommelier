@@ -59,5 +59,23 @@ async function loadDynamicUserMeta() {
         console.warn('[UserMeta] Dynamic fetch failed, using fallback:', e.message);
     } finally {
         _metaReadyResolve(); // Signal readiness even on error (fallback data is valid)
+        updateNavAvatar(); // Update bottom nav avatar with photo
     }
+}
+
+/**
+ * Replace the bottom nav SVG icon with the current user's photo.
+ */
+function updateNavAvatar() {
+    const navAvatar = document.getElementById('navAvatar');
+    if (!navAvatar) return;
+
+    // Get current user name from localStorage (set by quiz login)
+    const userName = localStorage.getItem('sommelier_user_name');
+    if (!userName) return;
+
+    const userData = SOMMELIER_USERS[userName];
+    if (!userData || !userData.photo) return;
+
+    navAvatar.innerHTML = `<img src="${userData.photo}" alt="${userName}" style="width:24px; height:24px; border-radius:50%; object-fit:cover; border:1.5px solid var(--gold-primary);">`;
 }
