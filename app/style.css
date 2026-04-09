@@ -397,6 +397,86 @@ body {
     font-weight: 700;
 }
 
+/* ---- HOW TO PLAY ---- */
+.how-to-play {
+    margin: 24px 0 28px;
+}
+
+.htp-header {
+    margin-bottom: 12px;
+}
+
+.htp-badge {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+}
+
+.htp-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.htp-card {
+    border-radius: 14px;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.htp-card-rank {
+    background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 100%);
+}
+
+.htp-card-token {
+    background: linear-gradient(135deg, #0a1628 0%, #1b2d4e 100%);
+}
+
+.htp-icon {
+    flex-shrink: 0;
+    opacity: 0.7;
+    margin-top: 2px;
+}
+
+.htp-content {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.htp-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 8px;
+}
+
+.htp-desc {
+    font-size: 11.5px;
+    opacity: 0.6;
+    line-height: 1.6;
+}
+
+.htp-hint {
+    font-size: 10px;
+    opacity: 0.3;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .htp-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ---- GRID ---- */
 .grid {
     display: grid;
