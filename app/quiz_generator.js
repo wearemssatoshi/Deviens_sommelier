@@ -87,10 +87,34 @@
         // Restore user from DSMAuth
         quizState.currentUser = DSMAuth.getUser();
 
+        // 2025 UPDATE chapters — individually too table-heavy for quiz generation,
+        // but combined as one "2025 UPDATE" option they provide enough context
+        const UPDATE_2025_IDS = new Set([
+            'ch26_2025_france', 'ch27_2025_switzerland', 'ch28_2025_tasting',
+            'ch29_2025_greece', 'ch30_2025_germany', 'ch31_2025_management',
+            'ch32_2025_usa', 'ch33_2025_italy', 'ch34_2025_japan',
+            'ch35_2025_chile', 'ch36_2025_spain', 'ch37_2025_sa', 'ch38_2025_argentina'
+        ]);
+
         try {
             const res = await fetch('../data/summaries/summary_index.json');
             const data = await res.json();
-            quizState.chapters = data.chapters || [];
+            const allChapters = data.chapters || [];
+
+            // Separate: base chapters + 2025 updates
+            quizState.chapters = allChapters.filter(ch => !UPDATE_2025_IDS.has(ch.id));
+
+            // Add combined "2025 UPDATE" as a single quiz option
+            const updateChapters = allChapters.filter(ch => UPDATE_2025_IDS.has(ch.id));
+            if (updateChapters.length > 0) {
+                quizState.chapters.push({
+                    id: '_2025_update_combined',
+                    title: '2025 UPDATE（全産地統合）',
+                    title_en: '2025 Update Combined',
+                    category: 'UPDATE_2025',
+                    _sourceIds: Array.from(UPDATE_2025_IDS)
+                });
+            }
         } catch (e) {
             console.error("Failed to load chapters for quiz", e);
         }
@@ -427,10 +451,21 @@
             }
             quizState.selectedChapter = quizState.chapters.find(c => c.id === targetChId) || { id: targetChId, title: targetChId };
 
-            const res = await fetch(`../data/chapters/${targetChId}.json`);
-            const chapterData = await res.json();
+            // Combined 2025 UPDATE: load all source chapters and merge pages
+            let pages = [];
+            if (targetChId === '_2025_update_combined' && quizState.selectedChapter._sourceIds) {
+                const sourceIds = quizState.selectedChapter._sourceIds;
+                const fetches = sourceIds.map(id => fetch(`../data/chapters/${id}.json`).then(r => r.json()).catch(() => null));
+                const results = await Promise.all(fetches);
+                results.forEach(chData => {
+                    if (chData && chData.pages) pages.push(...chData.pages);
+                });
+            } else {
+                const res = await fetch(`../data/chapters/${targetChId}.json`);
+                const chapterData = await res.json();
+                pages = chapterData.pages || [];
+            }
 
-            const pages = chapterData.pages || [];
             if (pages.length === 0) throw new Error("No pages found in chapter");
 
             // Pick 10 random pages (with replacement allowed)
