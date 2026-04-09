@@ -191,21 +191,19 @@
                 <div class="dash-diploma-status">${totalTokens.toLocaleString()} / ${diplomaThreshold.toLocaleString()} トークン</div>
             </div>
 
-            <!-- Game Guide -->
+            <!-- LEARN to EARN -->
             <div class="dash-section" style="margin-top:16px;">
-                <div class="dash-section-title">HOW TO PLAY</div>
+                <div class="dash-section-title">LEARN to EARN <span style="font-weight:400; font-size:10px; opacity:0.5; margin-left:6px;">Gamification</span></div>
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:8px;">
-                    <div style="background:linear-gradient(135deg,#1a0a2e,#2d1b4e); border-radius:12px; padding:14px; color:#fff;">
-                        <div style="font-size:11px; opacity:0.7; letter-spacing:1px;">RANK UP</div>
-                        <div style="font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:600; margin:6px 0 4px;">クイズを極めて<br>ラフィットを目指せ</div>
-                        <div style="font-size:11px; opacity:0.6; line-height:1.5;">3セッションごとにメドック格付けが昇格。全65階級を駆け上がり、第1級ラフィットの頂へ。</div>
-                        <div style="font-size:10px; opacity:0.35; margin-top:8px; font-style:italic;">...その先に、世界のカルトワインが待つ</div>
+                    <div style="background:linear-gradient(145deg,#2a0a0f,#4a1525,#3d1020); border:1px solid rgba(139,69,80,0.3); border-radius:12px; padding:16px; color:#fff; text-align:center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="opacity:0.5; margin-bottom:8px;"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M20 3H4l1.86 7.43A4.64 4.64 0 0 0 10.38 14h3.24a4.64 4.64 0 0 0 4.52-3.57z"/></svg>
+                        <div style="font-family:'Cormorant Garamond',serif; font-size:15px; font-weight:700; margin-bottom:6px; line-height:1.4;">クイズを極めて<br>メドックの頂へ！</div>
+                        <div style="font-size:10.5px; opacity:0.55; line-height:1.6;">3セッションごとにメドック格付けが昇格。全65階級を駆け上がり、第1級ラフィットの頂を目指そう。</div>
                     </div>
-                    <div style="background:linear-gradient(135deg,#0a1628,#1b2d4e); border-radius:12px; padding:14px; color:#fff;">
-                        <div style="font-size:11px; opacity:0.7; letter-spacing:1px;">TOKEN</div>
-                        <div style="font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:600; margin:6px 0 4px;">トークンを貯めて<br>ディプロマを目指せ</div>
-                        <div style="font-size:11px; opacity:0.6; line-height:1.5;">クイズ正解でトークン獲得。100,000トークン到達で Resident Sommelier Diploma を授与。</div>
-                        <div style="font-size:10px; opacity:0.4; margin-top:8px;">上級クエストは高リスク・高リターン</div>
+                    <div style="background:linear-gradient(145deg,#2a0a0f,#4a1525,#3d1020); border:1px solid rgba(139,69,80,0.3); border-radius:12px; padding:16px; color:#fff; text-align:center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="opacity:0.5; margin-bottom:8px;"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M20 3H4l1.86 7.43A4.64 4.64 0 0 0 10.38 14h3.24a4.64 4.64 0 0 0 4.52-3.57z"/></svg>
+                        <div style="font-family:'Cormorant Garamond',serif; font-size:15px; font-weight:700; margin-bottom:6px; line-height:1.4;">トークンを貯めて<br>ディプロマを目指そう！</div>
+                        <div style="font-size:10.5px; opacity:0.55; line-height:1.6;">クイズ正解でトークン獲得。100,000トークンに到達すると Resident Sommelier Diploma を授与。</div>
                     </div>
                 </div>
             </div>
