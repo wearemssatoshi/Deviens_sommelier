@@ -70,8 +70,14 @@ function updateNavAvatar() {
     const navAvatar = document.getElementById('navAvatar');
     if (!navAvatar) return;
 
-    // Get current user name from localStorage (set by quiz login)
-    const userName = localStorage.getItem('sommelier_user_name');
+    // Get current user name from auth storage
+    let userName = localStorage.getItem('sommelier_user_name');
+    if (!userName) {
+        try {
+            const u = JSON.parse(localStorage.getItem('sommelier_quiz_user') || '{}');
+            userName = u.name || '';
+        } catch (_) {}
+    }
     if (!userName) return;
 
     const userData = SOMMELIER_USERS[userName];
