@@ -144,11 +144,17 @@
         body.innerHTML = `
             <!-- Header -->
             <div class="dash-user-header">
-                <span class="dash-user-avatar" style="overflow:hidden">
-                    ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[d.user_name]?.photo 
-                        ? `<img src="${SOMMELIER_USERS[d.user_name].photo}" alt="${d.user_name}" style="width:100%;height:100%;object-fit:cover;">` 
-                        : (d.user_name || '?').charAt(0)}
-                </span>
+                <div class="dash-avatar-wrap" id="dashAvatarWrap">
+                    <span class="dash-user-avatar" style="overflow:hidden" id="dashUserAvatar">
+                        ${typeof SOMMELIER_USERS !== 'undefined' && SOMMELIER_USERS[d.user_name]?.photo
+                            ? `<img src="${SOMMELIER_USERS[d.user_name].photo}" alt="${d.user_name}" style="width:100%;height:100%;object-fit:cover;">`
+                            : (d.user_name || '?').charAt(0)}
+                    </span>
+                    <button class="dash-avatar-edit-btn" id="dashAvatarEditBtn" title="写真を変更">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    </button>
+                    <input type="file" accept="image/*" capture="environment" id="dashPhotoInput" style="display:none">
+                </div>
                 <div class="dash-user-info">
                     <div class="dash-user-name">${d.user_name}</div>
                     <div class="dash-user-sub">Learning Analytics</div>
@@ -286,6 +292,18 @@
             });
         }
 
+        // Photo upload handler
+        const avatarEditBtn = document.getElementById('dashAvatarEditBtn');
+        const photoInput = document.getElementById('dashPhotoInput');
+        if (avatarEditBtn && photoInput) {
+            avatarEditBtn.addEventListener('click', () => photoInput.click());
+            photoInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                resizeAndUploadPhoto(file, d.user_name);
+            });
+        }
+
         // ========== PREMIUM TOKEN: Odometer Count-Up + Particles ==========
         const odo = document.getElementById('tokenOdometer');
         if (odo) {
@@ -328,6 +346,62 @@
             }
             setTimeout(() => { container.innerHTML = ''; }, 2500);
         }
+    }
+
+    // ========== PHOTO UPLOAD (Canvas 256x256, JPEG 70%) ==========
+    function resizeAndUploadPhoto(file, userName) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const img = new Image();
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                canvas.width = 256;
+                canvas.height = 256;
+                const ctx = canvas.getContext('2d');
+
+                // Center-crop to square
+                const size = Math.min(img.width, img.height);
+                const sx = (img.width - size) / 2;
+                const sy = (img.height - size) / 2;
+                ctx.drawImage(img, sx, sy, size, size, 0, 0, 256, 256);
+
+                const base64 = canvas.toDataURL('image/jpeg', 0.7);
+
+                // Show preview immediately
+                const avatar = document.getElementById('dashUserAvatar');
+                if (avatar) {
+                    avatar.innerHTML = `<img src="${base64}" alt="${userName}" style="width:100%;height:100%;object-fit:cover;">`;
+                }
+
+                // Save to GAS
+                DSMToast.info('写真を保存中...');
+                fetch(GAS_URL, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        action: 'updateUserMeta',
+                        user_name: userName,
+                        photo: base64
+                    })
+                })
+                .then(r => r.json())
+                .then(res => {
+                    if (res.status === 'success') {
+                        DSMToast.success('写真を保存しました');
+                        // Update live data & nav avatar
+                        if (typeof SOMMELIER_USERS !== 'undefined') {
+                            if (!SOMMELIER_USERS[userName]) SOMMELIER_USERS[userName] = {};
+                            SOMMELIER_USERS[userName].photo = base64;
+                        }
+                        if (typeof updateNavAvatar === 'function') updateNavAvatar();
+                    } else {
+                        DSMToast.error('保存に失敗しました');
+                    }
+                })
+                .catch(() => DSMToast.error('サーバーに接続できません'));
+            };
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
     }
 
     // ========== DAILY TREND CHART ==========

@@ -2472,6 +2472,11 @@ body {
     padding-top: 8px;
 }
 
+.dash-avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
 .dash-user-avatar {
     width: 48px;
     height: 48px;
@@ -2484,6 +2489,24 @@ body {
     font-weight: 800;
     font-size: 20px;
     flex-shrink: 0;
+}
+
+.dash-avatar-edit-btn {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    background: var(--gold-primary, #C9A94E);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 .dash-user-name {
