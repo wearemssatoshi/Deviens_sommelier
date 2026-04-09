@@ -1,6 +1,6 @@
 {
-  "name": "Deviens sommelier",
-  "short_name": "Deviens sommelier",
+  "name": "Sommelier PRO",
+  "short_name": "Sommelier PRO",
   "description": "【ソムリエになる】世界のワインを体系的に学べるアプリ",
   "start_url": "./index.html",
   "display": "standalone",

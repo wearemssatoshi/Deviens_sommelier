@@ -1,5 +1,5 @@
 /**
- * DEVIENS SOMMELIER — Service Worker (MINDFUL Blueprint)
+ * SOMMELIER PRO — Service Worker (MINDFUL Blueprint)
  * 
  * Strategy: Cache-First with Network Update (Stale-While-Revalidate)
  * - Serves cached content instantly for speed

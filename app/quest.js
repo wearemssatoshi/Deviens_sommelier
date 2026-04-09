@@ -1,5 +1,5 @@
 /**
- * DEVIENS SOMMELIER — Quest Progression System v2.0
+ * SOMMELIER PRO — Quest Progression System v2.0
  * 100,000 Token Economy + Médoc 1855 Classification Status
  * 
  * - 中級: 累計トークンゲート（自動解放・無料）

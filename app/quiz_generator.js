@@ -158,7 +158,7 @@
                     <button class="quiz-switch-user" id="quizSwitchUser">変更</button>
                 </div>
 
-                <h2 class="quiz-setup-title">Deviens sommelier</h2>
+                <h2 class="quiz-setup-title">Sommelier PRO</h2>
                 <p class="quiz-setup-subtitle">4ヶ月でソムリエ試験突破！毎日30問のスキマ時間テスト</p>
 
                 <div class="quiz-today-progress" id="quizTodayProgress">
@@ -181,6 +181,12 @@
                     <select id="quizChapterSelect">
                         ${chapterOptionsHtml}
                     </select>
+                </div>
+
+                <div style="margin:16px 0; padding:14px 16px; background:rgba(212,0,42,0.06); border-left:3px solid #D4002A; border-radius:0 8px 8px 0; font-size:11px; line-height:1.7; color:var(--text-secondary);">
+                    <div style="font-weight:700; color:#D4002A; margin-bottom:4px;">AI生成に関する注意</div>
+                    AI生成は常にハルシネーション（捏造）リスクが伴います。AIのトラップを乗り越え真のソムリエを目指しましょう！<br>
+                    <span style="opacity:0.7;">※クイズのあとにはハルシネーションチェックを行いましょう</span>
                 </div>
 
                 <button id="quizStartBtn" class="quiz-btn-primary" disabled>セッションを選んでください</button>
@@ -323,7 +329,7 @@
         loginDiv.id = 'quizStateLogin';
         loginDiv.innerHTML = `
             <div class="quiz-setup-inner">
-                <h2 class="quiz-setup-title">Deviens sommelier</h2>
+                <h2 class="quiz-setup-title">Sommelier PRO</h2>
                 <p class="quiz-setup-subtitle">割り当てられたユーザー名と提供されたAPIキーを入力してください</p>
 
                 <div class="quiz-register-row" style="flex-direction: column; gap: 12px; margin-top: 24px;">

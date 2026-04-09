@@ -1,5 +1,5 @@
 /**
- * DEVIENS SOMMELIER — Unified Auth Module (MINDFUL Blueprint)
+ * SOMMELIER PRO — Unified Auth Module (MINDFUL Blueprint)
  * 
  * Single Source of Truth for authentication state.
  * All modules MUST use DSMAuth instead of direct localStorage access.
@@ -116,7 +116,7 @@ const DSMAuth = (function() {
         _modalElement.innerHTML = `
             <div class="dsm-auth-card">
                 <div class="dsm-auth-header">
-                    <h2 class="dsm-auth-title">Deviens sommelier</h2>
+                    <h2 class="dsm-auth-title">Sommelier PRO</h2>
                     <p class="dsm-auth-subtitle">割り当てられたユーザー名とAPIキーを入力してください</p>
                 </div>
                 <div class="dsm-auth-form">
@@ -192,7 +192,7 @@ const DSMAuth = (function() {
 })();
 
 /**
- * DEVIENS SOMMELIER — Unified Toast Notification System
+ * SOMMELIER PRO — Unified Toast Notification System
  * 
  * Usage:
  *   DSMToast.success('保存しました');

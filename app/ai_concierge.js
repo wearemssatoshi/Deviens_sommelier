@@ -163,7 +163,7 @@ async function localRAG(query) {
         `【引用${i + 1}】[ナレッジベース「${c.chapter_title}」より]\n${c.text}`
     ).join('\n\n');
 
-    const systemPrompt = `あなたは「Deviens sommelier」のAIワインコンシェルジュである。
+    const systemPrompt = `あなたは「Sommelier PRO」のAIワインコンシェルジュである。
 以下のプロフェッショナル・ワイン知識データベースを最優先の参照元として、質問に正確に回答せよ。
 
 ルール:

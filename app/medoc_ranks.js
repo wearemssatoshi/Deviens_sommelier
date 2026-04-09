@@ -1,5 +1,5 @@
 /**
- * DEVIENS SOMMELIER — Médoc 1855 Classification Rank System
+ * SOMMELIER PRO — Médoc 1855 Classification Rank System
  * 
  * 3セッションごとにステータスが昇格。
  * Bordeaux AOC → … → Ch. Lafite Rothschild（全65階級）
