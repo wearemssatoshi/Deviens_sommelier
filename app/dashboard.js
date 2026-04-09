@@ -169,18 +169,18 @@
 
             <!-- Médoc Status -->
             <div class="dash-medoc-hero">
-                <div class="dash-medoc-grade">${medocRank ? medocRank.gradeJa : ''} <span class="dash-medoc-level">Lev. ${medocRank ? medocRank.level : 0} / 65</span></div>
+                <div class="dash-medoc-grade">${medocRank ? medocRank.gradeJa : ''} <span class="dash-medoc-level">Lev. ${medocRank ? medocRank.level : 0} / ${medocRank && medocRank.hidden ? '???' : '65'}</span></div>
                 <div class="dash-medoc-name">${medocRank ? medocRank.name : ''}</div>
                 <div class="dash-medoc-ja">${medocRank ? medocRank.nameJa : ''}</div>
-                
+
                 ${nextMedoc ? `
                     <div class="dash-medoc-next">
-                        <div class="dash-medoc-next-text">次まであと <strong>${sessionsLeft}</strong> セッション（${nextMedoc.name}）</div>
+                        <div class="dash-medoc-next-text">${nextMedoc.hidden ? '???' : '次まであと'} <strong>${sessionsLeft}</strong> セッション${nextMedoc.hidden ? '' : `（${nextMedoc.name}）`}</div>
                         <div class="dash-medoc-progress">
                             <div class="dash-medoc-fill" style="width: ${Math.round(((3 - sessionsLeft) / 3) * 100)}%"></div>
                         </div>
                     </div>
-                ` : `<div class="dash-medoc-next"><div class="dash-medoc-next-text" style="color:var(--gold-primary)">🏆 最高位に到達しました！</div></div>`}
+                ` : `<div class="dash-medoc-next"><div class="dash-medoc-next-text" style="color:var(--gold-primary)">${medocRank && medocRank.level >= 75 ? '&#127942; 伝説に到達しました' : '&#127942; 最高位に到達しました！'}</div></div>`}
             </div>
 
             <div class="dash-diploma-track">
@@ -189,6 +189,25 @@
                     <div class="dash-diploma-fill" style="width: ${Math.min(100, (totalTokens / diplomaThreshold) * 100)}%"></div>
                 </div>
                 <div class="dash-diploma-status">${totalTokens.toLocaleString()} / ${diplomaThreshold.toLocaleString()} トークン</div>
+            </div>
+
+            <!-- Game Guide -->
+            <div class="dash-section" style="margin-top:16px;">
+                <div class="dash-section-title">HOW TO PLAY</div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:8px;">
+                    <div style="background:linear-gradient(135deg,#1a0a2e,#2d1b4e); border-radius:12px; padding:14px; color:#fff;">
+                        <div style="font-size:11px; opacity:0.7; letter-spacing:1px;">RANK UP</div>
+                        <div style="font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:600; margin:6px 0 4px;">クイズを極めて<br>ラフィットを目指せ</div>
+                        <div style="font-size:11px; opacity:0.6; line-height:1.5;">3セッションごとにメドック格付けが昇格。全65階級を駆け上がり、第1級ラフィットの頂へ。</div>
+                        <div style="font-size:10px; opacity:0.35; margin-top:8px; font-style:italic;">...その先に、世界のカルトワインが待つ</div>
+                    </div>
+                    <div style="background:linear-gradient(135deg,#0a1628,#1b2d4e); border-radius:12px; padding:14px; color:#fff;">
+                        <div style="font-size:11px; opacity:0.7; letter-spacing:1px;">TOKEN</div>
+                        <div style="font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:600; margin:6px 0 4px;">トークンを貯めて<br>ディプロマを目指せ</div>
+                        <div style="font-size:11px; opacity:0.6; line-height:1.5;">クイズ正解でトークン獲得。100,000トークン到達で Resident Sommelier Diploma を授与。</div>
+                        <div style="font-size:10px; opacity:0.4; margin-top:8px;">上級クエストは高リスク・高リターン</div>
+                    </div>
+                </div>
             </div>
 
             <!-- KPI Cards -->

@@ -84,7 +84,58 @@ const MEDOC_RANKS = [
     { level: 62, sessions: 183,  name: 'Ch. Haut-Brion',           nameJa: 'オー・ブリオン',            grade: '1er Cru',   gradeJa: '第1級' },
     { level: 63, sessions: 186,  name: 'Ch. Margaux',              nameJa: 'マルゴー',                grade: '1er Cru',   gradeJa: '第1級' },
     { level: 64, sessions: 189,  name: 'Ch. Latour',               nameJa: 'ラトゥール',               grade: '1er Cru',   gradeJa: '第1級' },
-    { level: 65, sessions: 192,  name: 'Ch. Lafite Rothschild',    nameJa: 'ラフィット・ロートシルト',    grade: '1er Cru',   gradeJa: '第1級' }
+    { level: 65, sessions: 192,  name: 'Ch. Lafite Rothschild',    nameJa: 'ラフィット・ロートシルト',    grade: '1er Cru',   gradeJa: '第1級' },
+
+    // =================================================================
+    // 隠しステージ / Hidden Stage: LA FRANCE ÉTERNELLE (Lev 66–100)
+    // ラフィット到達者のみが踏み入れる、フランスワインの魂
+    // ボルドーで「力」を知り、シャンパーニュで「華」を知り、
+    // ブルゴーニュで「魂」を知る。Lv.100 ロマネ・コンティへの道
+    // =================================================================
+
+    // --- ボルドー超特ステージ / Bordeaux Beyond 1855 (Lev 66–75) ---
+    // 1855年格付けの外に存在する、右岸と甘口の伝説たち
+    { level: 66, sessions: 198,  name: 'Ch. Figeac',                          nameJa: 'フィジャック',                   grade: '1er GCC',       gradeJa: 'サンテミリオン第1特別級', hidden: true },
+    { level: 67, sessions: 204,  name: 'Ch. Pavie',                           nameJa: 'パヴィ',                        grade: '1er GCC A',     gradeJa: 'サンテミリオン第1特別級A', hidden: true },
+    { level: 68, sessions: 210,  name: 'Ch. Angélus',                         nameJa: 'アンジェリュス',                  grade: '1er GCC A',     gradeJa: 'サンテミリオン第1特別級A', hidden: true },
+    { level: 69, sessions: 216,  name: 'Ch. Cheval Blanc',                    nameJa: 'シュヴァル・ブラン',               grade: '1er GCC A',     gradeJa: 'サンテミリオン第1特別級A', hidden: true },
+    { level: 70, sessions: 222,  name: 'Ch. Ausone',                          nameJa: 'オーゾンヌ',                     grade: '1er GCC A',     gradeJa: 'サンテミリオン第1特別級A', hidden: true },
+    { level: 71, sessions: 228,  name: 'Ch. Lafleur',                         nameJa: 'ラフルール',                     grade: 'Cult Pomerol',  gradeJa: 'カルト・ポムロル', hidden: true },
+    { level: 72, sessions: 234,  name: 'Le Pin',                              nameJa: 'ル・パン',                       grade: 'Cult Pomerol',  gradeJa: 'カルト・ポムロル', hidden: true },
+    { level: 73, sessions: 240,  name: 'Pétrus',                              nameJa: 'ペトリュス',                     grade: 'Cult Pomerol',  gradeJa: 'カルト・ポムロル', hidden: true },
+    { level: 74, sessions: 248,  name: "Ch. d'Yquem",                         nameJa: 'ディケム',                       grade: '1er Cru Sup.',  gradeJa: 'ソーテルヌ特別第1級', hidden: true },
+    { level: 75, sessions: 256,  name: "Ch. d'Yquem 1811",                    nameJa: 'ディケム 1811',                  grade: 'Légende',       gradeJa: '伝説', hidden: true },
+
+    // --- シャンパーニュ超特ステージ / Champagne Prestige (Lev 76–83) ---
+    // 泡の向こうに見える、至高のプレスティージュ・キュヴェ
+    { level: 76, sessions: 264,  name: 'Bollinger Vieilles Vignes Françaises', nameJa: 'ボランジェ VVF',                grade: 'Prestige',      gradeJa: 'プレスティージュ', hidden: true },
+    { level: 77, sessions: 272,  name: 'Taittinger Comtes de Champagne',      nameJa: 'テタンジェ コント・ド・シャンパーニュ', grade: 'Prestige',   gradeJa: 'プレスティージュ', hidden: true },
+    { level: 78, sessions: 280,  name: 'Louis Roederer Cristal',              nameJa: 'ルイ・ロデレール クリスタル',       grade: 'Prestige',      gradeJa: 'プレスティージュ', hidden: true },
+    { level: 79, sessions: 288,  name: 'Dom Pérignon P3',                     nameJa: 'ドン・ペリニヨン P3',             grade: 'Prestige',      gradeJa: 'プレスティージュ', hidden: true },
+    { level: 80, sessions: 296,  name: 'Krug Clos d\'Ambonnay',               nameJa: 'クリュッグ クロ・ダンボネ',        grade: 'Clos',          gradeJa: 'クロ', hidden: true },
+    { level: 81, sessions: 304,  name: 'Krug Clos du Mesnil',                 nameJa: 'クリュッグ クロ・デュ・メニル',     grade: 'Clos',          gradeJa: 'クロ', hidden: true },
+    { level: 82, sessions: 312,  name: 'Salon Le Mesnil',                     nameJa: 'サロン ル・メニル',               grade: 'Légende',       gradeJa: '伝説', hidden: true },
+    { level: 83, sessions: 320,  name: 'Jacques Selosse Substance',           nameJa: 'ジャック・セロス シュブスタンス',   grade: 'Légende',       gradeJa: '伝説', hidden: true },
+
+    // --- ブルゴーニュ・グラン・クリュ最終章 / Burgundy: The Final Ascension (Lev 84–100) ---
+    // フランスワインの魂。テロワールの究極。神の畑へ
+    { level: 84, sessions: 330,  name: 'Corton-Charlemagne (Coche-Dury)',     nameJa: 'コルトン・シャルルマーニュ（コシュ・デュリ）', grade: 'Grand Cru', gradeJa: '特級畑', hidden: true },
+    { level: 85, sessions: 340,  name: 'Clos de Vougeot (Leroy)',             nameJa: 'クロ・ド・ヴージョ（ルロワ）',       grade: 'Grand Cru',     gradeJa: '特級畑', hidden: true },
+    { level: 86, sessions: 350,  name: 'Bâtard-Montrachet (Leflaive)',        nameJa: 'バタール・モンラッシェ（ルフレーヴ）', grade: 'Grand Cru',    gradeJa: '特級畑', hidden: true },
+    { level: 87, sessions: 360,  name: 'Clos de la Roche (Ponsot)',           nameJa: 'クロ・ド・ラ・ロッシュ（ポンソ）',   grade: 'Grand Cru',     gradeJa: '特級畑', hidden: true },
+    { level: 88, sessions: 370,  name: 'Bonnes-Mares (G. Roumier)',           nameJa: 'ボンヌ・マール（ルーミエ）',        grade: 'Grand Cru',     gradeJa: '特級畑', hidden: true },
+    { level: 89, sessions: 380,  name: 'Chambertin (A. Rousseau)',            nameJa: 'シャンベルタン（ルソー）',          grade: 'Grand Cru',     gradeJa: '特級畑', hidden: true },
+    { level: 90, sessions: 390,  name: 'Musigny (Leroy)',                     nameJa: 'ミュジニー（ルロワ）',             grade: 'Grand Cru',     gradeJa: '特級畑', hidden: true },
+    { level: 91, sessions: 400,  name: 'Montrachet (DRC)',                    nameJa: 'モンラッシェ（DRC）',              grade: 'Grand Cru',     gradeJa: '特級畑', hidden: true },
+    { level: 92, sessions: 410,  name: 'Échézeaux (DRC)',                     nameJa: 'エシェゾー（DRC）',               grade: 'Grand Cru DRC', gradeJa: 'DRC', hidden: true },
+    { level: 93, sessions: 420,  name: 'Grands Échézeaux (DRC)',              nameJa: 'グラン・エシェゾー（DRC）',         grade: 'Grand Cru DRC', gradeJa: 'DRC', hidden: true },
+    { level: 94, sessions: 430,  name: 'Richebourg (DRC)',                    nameJa: 'リシュブール（DRC）',              grade: 'Grand Cru DRC', gradeJa: 'DRC', hidden: true },
+    { level: 95, sessions: 440,  name: 'La Tâche (DRC)',                      nameJa: 'ラ・ターシュ（DRC）',              grade: 'Monopole DRC',  gradeJa: 'DRC独占畑', hidden: true },
+    { level: 96, sessions: 450,  name: 'Cros Parantoux (Henri Jayer)',        nameJa: 'クロ・パラントゥー（アンリ・ジャイエ）', grade: 'Légende',  gradeJa: '伝説', hidden: true },
+    { level: 97, sessions: 460,  name: 'Richebourg 1985 (Henri Jayer)',       nameJa: 'リシュブール 1985（アンリ・ジャイエ）', grade: 'Légende',  gradeJa: '伝説', hidden: true },
+    { level: 98, sessions: 475,  name: 'Romanée-St-Vivant (DRC)',             nameJa: 'ロマネ・サン・ヴィヴァン（DRC）',    grade: 'Grand Cru DRC', gradeJa: 'DRC', hidden: true },
+    { level: 99, sessions: 490,  name: 'La Romanée (Cte Liger-Belair)',       nameJa: 'ラ・ロマネ（リジェ・ベレール）',     grade: 'Monopole',      gradeJa: '独占畑', hidden: true },
+    { level: 100, sessions: 500, name: 'Romanée-Conti (DRC)',                 nameJa: 'ロマネ・コンティ（DRC）',           grade: 'Monopole DRC',  gradeJa: 'DRC独占畑', hidden: true }
 ];
 
 // ========== TOKEN ECONOMY CONFIG ==========
